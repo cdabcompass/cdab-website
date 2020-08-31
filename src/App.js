@@ -100,7 +100,7 @@ const styles = theme => ({
         color: "white"
     },
     txtUs:{
-        padding: "110px",
+        padding: "40px",
         fontSize: 20
     },
     dwlPdf:{

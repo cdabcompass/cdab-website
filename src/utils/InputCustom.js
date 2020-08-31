@@ -20,7 +20,7 @@ const styles = theme => ({
         borderColor: "#E58F1E !important",
     },
     styleInput:{
-        width: "500px",
+        width: "100%",
         "& .MuiFormLabel-root":{
             color: "black"
         }
@@ -48,7 +48,7 @@ class InputCustom extends Component {
                         onChange={onChange}
                         helperText={errorText}
                         variant="outlined"
-                        className={classes.styleInput}
+                        className="styleInput"
                         error
                         type={this.state.showPassword ? type : "text"}
                         required={required}
@@ -79,7 +79,7 @@ class InputCustom extends Component {
                         onChange={onChange}
                         helperText={errorText}
                         variant="outlined"
-                        className={classes.styleInput}
+                        className="styleInput"
                         error
                         type={this.state.showPassword ? type : "text"}
                         required={required}

@@ -151,7 +151,43 @@ code {
   overflow: auto;
 }
 
+.formControl{
+  margin-bottom: 10px;
+  width: 500px;
+}
+
+.styleInput{
+  width: 500px;
+}
+
+.styleInput .MuiFormLabel-root{
+  color: black !important;
+}
+
+.title-temoignage{
+  font-size: 60px;
+  font-weight: bold;
+  text-decoration: underline
+}
+
+.stripe { overflow: visible!important; }
+
+
+
 @media (max-width: 500px) {
+
+  .title-temoignage{
+    font-size: 16px !important;
+  }
+
+  .formControl{
+    width: 100% !important;
+  }
+
+  .styleInput{
+    width: 100% !important;
+  }
+
   .coach-cdab-container{
     margin: 0 auto;
     width: 100%;
@@ -224,6 +260,7 @@ code {
 
   .textAboutUs{
     flex-direction: column !important;
+    width: 100%;
   }
 
   .textAboutUs div:first-child{

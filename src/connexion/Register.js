@@ -23,7 +23,7 @@ const styles = theme => ({
     },
     formControl: {
         marginBottom: "10px",
-        width: "500px"
+        width: "100%"
     },
     selectBorder: {
         '& .MuiOutlinedInput-notchedOutline': {
@@ -182,7 +182,7 @@ class Register extends Component {
                                 type={"text"}
                                 required={true}
                             />
-                            <FormControl variant="outlined" className={classes.formControl}>
+                            <FormControl variant="outlined" className="formControl">
                                 <InputLabel htmlFor="outlined-age-native-simple">Continent</InputLabel>
                                 <Select
                                     native
@@ -202,7 +202,7 @@ class Register extends Component {
                                 </Select>
                             </FormControl>
                             <br/>
-                            <FormControl variant="outlined" className={classes.formControl}>
+                            <FormControl variant="outlined" className="formControl">
                                 <InputLabel htmlFor="outlined-age-native-simple">Situation</InputLabel>
                                 <Select
                                     native
