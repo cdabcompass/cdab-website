@@ -15,8 +15,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
 
-// pdf dowload
-import magPdf from '../othersfiles/Mag-08-20.pdf';
+
 
 const useStyles = makeStyles({
     root: {
@@ -111,11 +110,28 @@ function CheckoutForm(props) {
                 setMsgAlert('Votre paiement à été effectué, veuillez consulter vos mails');
 
                 if(props.amount === "e-book"){
-                    window.open(magPdf,'_blank');
-                    setTimeout(
-                        ()=>{window.location.href="/"},
-                        5000
-                    )
+                    axios.post('/users/mailing', {
+                        userEmail: "paiement@cdabcompass.com,"+localStorage.getItem("email"),
+                        subject: "Cdab magazine",
+                        attachment: "mag-1",
+                        container: "<p>Mr,Mme "+ localStorage.getItem("lastName") + "<br><br>"
+                            + "Voici en pièce jointe votre magazine. Bonne lecture " +
+                            "<br><br><br>Cordialement, <br>L'équie Cdab Compass </p>"
+                    })
+                        .then(res=>{
+                            if(res.status === 200){
+                                setMsgAlert('Veuillez consulter vos mails');
+                                setTimeout(
+                                    ()=>{window.location.href="/"},
+                                    3000
+                                )
+                            }
+                            else{alert("Une erreur est survenue, veuillez nous joindre afin de savoir si votre transaction à bien été éffectuée.")}
+                        })
+                        .catch(err=>{
+                            if(err.response.status === 409){
+                            }
+                        });
                 }
                 else if(props.amount === "student-profil"){
                     axios.post('/users/update', {

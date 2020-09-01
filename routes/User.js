@@ -139,9 +139,10 @@ route.post('/mailing', async(req,res)=>{
     let userEmail = req.body.userEmail;
     let subject = req.body.subject;
     let container = req.body.container;
+    let attachment = req.body.attachment;
 
-    //console.log(userEmail + ":"+subject+":"+container);
-    EmailSender.sendEmail(userEmail,subject,container)
+    //console.log("attachment step 1 : "+attachment);
+    EmailSender.sendEmail(userEmail,subject,container,attachment)
         .then(_res => {
             return res.status(200).json({text : 'Email send to cdab'});
         })
