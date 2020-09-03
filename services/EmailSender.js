@@ -8,6 +8,7 @@ module.exports = {
             let mailOptions = {};
             if(attachment === "mag-1"){
 
+                console.log("mailer : "+subject);
                 mailOptions = {
                     from: 'answers-quiz@cdabcompass.com',
                     to: userEmail,

@@ -8,6 +8,7 @@ const user = require('./routes/User');
 const path = require('path');
 
 const stripe = require("stripe")("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");
+//const stripe = require("stripe")("sk_test_51HJF8DBsL4DtxhISvKXTDOT9cRhRrc0g1toW4BNaXs3zJp4QPKkIGtlxkBgEuDcWqQZHmeKcRsRMZPoNV8m2GpmZ00VPAMOfO0");
 
 
 app.get('/test', (req, res) => {

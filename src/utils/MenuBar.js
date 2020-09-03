@@ -95,7 +95,7 @@ class MenuBar extends Component {
                         <img onClick={this.homePage} className={classes.imglogo} src={require("../assets/logo.png")} alt=""/>
                     </div>
                     <Typography onClick={this.homePage} variant="h4" className="title">
-                        Cdab Compass
+                        Qui sommes-nous
                     </Typography>
                     <Button className={classes.btnMenu} href="/expertises" color="inherit">Nos expertises</Button>
                     <Button className={classes.btnMenu} href="/training" color="inherit">Training</Button>

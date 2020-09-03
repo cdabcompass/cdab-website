@@ -14,6 +14,7 @@ import CardInput from './CardInput';
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
+import pdfDoc from '../othersfiles/Mag-08-20.pdf';
 
 
 
@@ -103,15 +104,16 @@ function CheckoutForm(props) {
                 console.log('Money is in the bank!');
                 // TODO : check {props.amount} value and set validSold to true
 
-
+                window.open(pdfDoc, "_blank");
 
                 setAlertStyle(true);
                 setOpenAlert(true);
                 setMsgAlert('Votre paiement à été effectué, veuillez consulter vos mails');
 
                 if(props.amount === "e-book"){
+                    //lert("d : "+ email);
                     axios.post('/users/mailing', {
-                        userEmail: "paiement@cdabcompass.com,"+localStorage.getItem("email"),
+                        userEmail: "paiement@cdabcompass.com,"+email,
                         subject: "Cdab magazine",
                         attachment: "mag-1",
                         container: "<p>Mr,Mme "+ localStorage.getItem("lastName") + "<br><br>"
@@ -123,7 +125,7 @@ function CheckoutForm(props) {
                                 setMsgAlert('Veuillez consulter vos mails');
                                 setTimeout(
                                     ()=>{window.location.href="/"},
-                                    3000
+                                    5000
                                 )
                             }
                             else{alert("Une erreur est survenue, veuillez nous joindre afin de savoir si votre transaction à bien été éffectuée.")}
@@ -187,7 +189,7 @@ function CheckoutForm(props) {
                 <TextField
                     label='Email'
                     id='outlined-email-input'
-                    helperText={`Email you'll recive updates and receipts on`}
+                    helperText={`Vous recevrez les informations sur cette addresse`}
                     margin='normal'
                     variant='outlined'
                     type='email'
@@ -199,7 +201,7 @@ function CheckoutForm(props) {
                 <CardInput />
                 <div className={classes.div}>
                     <Button style={{backgroundColor: "#FF9800",color: "white"}} className={classes.button} onClick={handleSubmit}>
-                        Pay
+                        Payer
                     </Button>
                 </div>
             </CardContent>
