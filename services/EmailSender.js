@@ -13,11 +13,11 @@ module.exports = {
                     from: 'answers-quiz@cdabcompass.com',
                     to: userEmail,
                     subject: subject,
-                    attachments: [{
-                        filename: 'Mag-08-20.pdf',
-                        path: path.join(__dirname,'../src/othersfiles/Mag-08-20.pdf'),
-                        contentType: 'application/pdf'
-                    }],
+                    // attachments: [{
+                    //     filename: 'Mag-08-20.pdf',
+                    //     path: path.join(__dirname,'../src/othersfiles/Mag-08-20.pdf'),
+                    //     contentType: 'application/pdf'
+                    // }],
                     html: container
                 };
             }else{

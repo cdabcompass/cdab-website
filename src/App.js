@@ -258,7 +258,16 @@ class App extends Component {
                         </div>
 
                         <Row className={classes.actu}>
-                            <Col xs={12} md={6} lg={4}>
+                            <Col xs={12} md={6} lg={3}>
+                                <CardActu
+                                    image={<img style={{height: "100%"}} src={require("./assets/actu4.png")} alt=""/>}
+                                    title={"Examens de fin d’année scolaire 2020"}
+                                    description={"Proclamation des résultats des examens de fin d’année : les taux de réussite une preuve du\n" +
+                                    "faible niveau scolaire des élèves."}
+                                    onclick={()=>{window.location="/actu/4"}}
+                                />
+                            </Col>
+                            <Col xs={12} md={6} lg={3}>
                                 <CardActu
                                     image={<img style={{height: "100%"}} src={require("./assets/actu1.jpg")} alt=""/>}
                                     title={"L’importance d’un projet d’études bien élaboré"}
@@ -268,7 +277,7 @@ class App extends Component {
                                     onclick={()=>{window.location="/actu/1"}}
                                 />
                             </Col>
-                            <Col xs={12} md={6} lg={4}>
+                            <Col xs={12} md={6} lg={3}>
                                 <CardActu
                                     image={<img style={{height: "100%"}} src={require("./assets/actu2.jpg")} alt=""/>}
                                     title={"La motivation : paramètre utile de réussite"}
@@ -278,7 +287,7 @@ class App extends Component {
                                     onclick={()=>{window.location="/actu/2"}}
                                 />
                             </Col>
-                            <Col xs={12} md={6} lg={4}>
+                            <Col xs={12} md={6} lg={3}>
                                 <CardActu
                                     image={<img style={{height: "100%"}} src={require("./assets/actu3.jpg")} alt=""/>}
                                     title={"L’importance d’une bonne orientation"}

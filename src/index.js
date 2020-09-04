@@ -36,6 +36,7 @@ import QuizPrimaire from "./Quizz/QuizPrimaire";
 import PaymentView from "./utils/PaymentView";
 import Products from "./subMenu/Products";
 import EbookPayView from "./utils/EbookPayView";
+import Actu4 from "./article/Actu4";
 
 const routing = (
     <Router>
@@ -74,6 +75,7 @@ const routing = (
                 <Route exact path="/actu/1" component={Actu1}/>
                 <Route exact path="/actu/2" component={Actu2}/>
                 <Route exact path="/actu/3" component={Actu3}/>
+                <Route exact path="/actu/4" component={Actu4}/>
 
 
                 <PrivateRoute exact path="/quiz/studentPrincipal" component={QuizPrincipal}/>

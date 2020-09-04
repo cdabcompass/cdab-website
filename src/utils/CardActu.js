@@ -12,6 +12,9 @@ const styles = theme => ({
         margin: "0 auto",
         marginBottom: "20px"
     },
+    imgActu:{
+        height: "150px"
+    },
     titleCardActu: {
         marginBottom: "10px",
         marginTop: "30px",
@@ -21,7 +24,8 @@ const styles = theme => ({
     description: {
         marginL: "10px",
         paddingLeft: "5px",
-        paddingRight: "5px"
+        paddingRight: "5px",
+        height: "150px"
     },
 });
 
@@ -33,7 +37,7 @@ class CardActu extends Component {
                 <Card onClick={onclick} className={classes.cardActu}>
                     <div>
                         {/*<div style={{height: "340px", width:"340px"}}>*/}
-                        <div>
+                        <div className={classes.imgActu}>
                             {image}
                         </div>
                         <div className={classes.titleCardActu} variant="h5" component="h2">

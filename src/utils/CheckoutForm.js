@@ -117,7 +117,7 @@ function CheckoutForm(props) {
                         subject: "Cdab magazine",
                         attachment: "mag-1",
                         container: "<p>Mr,Mme "+ localStorage.getItem("lastName") + "<br><br>"
-                            + "Voici en pièce jointe votre magazine. Bonne lecture " +
+                            + "Vous pouvez télécharger votre magazine en cliquant sur cette url : https://drive.google.com/file/d/13bjpRDDE6JhkVeve4482op9ZfGFX9cQa/view?usp=sharing . Bonne lecture " +
                             "<br><br><br>Cordialement, <br>L'équie Cdab Compass </p>"
                     })
                         .then(res=>{

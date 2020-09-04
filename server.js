@@ -6,8 +6,10 @@ const port = process.env.PORT || 5000;
 const hostname = '0.0.0.0';
 const user = require('./routes/User');
 const path = require('path');
+require('dotenv').config();
 
-const stripe = require("stripe")("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");
+const stripe = require("stripe")(process.env.STRIPE_SK_LIVE);
+//const stripe = require("stripe")("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");
 //const stripe = require("stripe")("sk_test_51HJF8DBsL4DtxhISvKXTDOT9cRhRrc0g1toW4BNaXs3zJp4QPKkIGtlxkBgEuDcWqQZHmeKcRsRMZPoNV8m2GpmZ00VPAMOfO0");
 
 
@@ -30,10 +32,10 @@ app.use((req, res, next) => {
 });
 
 // db connexion
-const url = "mongodb+srv://cdab:NfHKG]d0jJRVX{r@cluster0.5ssoi.mongodb.net/Cdabcompass?retryWrites=true&w=majority";
+//const url = "mongodb+srv://cdab:NfHKG]d0jJRVX{r@cluster0.5ssoi.mongodb.net/Cdabcompass?retryWrites=true&w=majority";
 
 // const url = "mongodb+srv://Fabrice:lqfuokPOycyg9zSQ@abloni-mc3d6.mongodb.net/Shara?retryWrites=true&w=majority";
-mongoose.connect( process.env.MONGODB_URI || url, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect( process.env.MONGODB_URI , {useNewUrlParser: true, useUnifiedTopology: true})
     .then(()=> console.log("MongoDB successfully connected"))
     .catch(err => console.log(err));
 
