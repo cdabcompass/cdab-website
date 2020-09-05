@@ -19,7 +19,7 @@ const styles = theme => ({
         padding: "5px",
     },
     contain:{
-        textAlign: "center",
+        textAlign: "initial",
         marginLeft: "250px",
         marginRight: "250px",
         marginTop: "25px"
@@ -46,9 +46,9 @@ class Actu4 extends Component {
                         "faible niveau scolaire des élèves."}
                         description={"Le ministère de l'éducation nationale, de l'enseignement technique et de la formation" +
                         "professionnelle a rendu public les résultats des examens scolaires session 2020 : " +
-                        "\n\n- le BEPC : Brevet d&#39;Etude du Premier Cycle le 28 juillet\n" +
+                        "\n\n- le BEPC : Brevet d';Etude du Premier Cycle le 28 juillet\n" +
                         "- le Baccalauréat le 14 août.\n" +
-                        "\n\nConcernant le brevet, le taux de réussite est de 53,17% contre 57,31% l&#39;an dernier. Pour le" +
+                        "\n\nConcernant le brevet, le taux de réussite est de 53,17% contre 57,31% l';an dernier. Pour le" +
                         "baccalauréat, le taux de réussite enregistré est de 40,08% contre 41,23% en 2019.On constate" +
                         "une baisse du taux de réussite. \n Certainement, cela est due à la crise sanitaire de Covid-19. Elle a" +
                         "occasionné un arrêt des cours sur environ deux mois. Beaucoup d’écoles n’ont pas su anticipé" +
@@ -88,7 +88,7 @@ class Actu4 extends Component {
                         </tr>
                     </table>
 
-                    <div className={classes.contain}>
+                    <div className="contain">
                         Autrefois, l'obtention du baccalauréat était perçue en Côte d'Ivoire comme étant la consécration
                         des études secondaires et le début des études supérieures. Son obtention conférait à la personne
                         un statut d’élite, de personne responsable aux valeurs morales intègres. Aujourd’hui fort est de

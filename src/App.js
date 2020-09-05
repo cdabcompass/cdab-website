@@ -301,9 +301,6 @@ class App extends Component {
                         </Row>
                     </div>
 
-                    <div>
-                        <FooterBar/>
-                    </div>
                 </div>
                 <div>
                     <FooterBar/>

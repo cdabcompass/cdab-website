@@ -32,19 +32,13 @@ class ActuCustom extends Component {
         const {classes,title,description} = this.props;
         return (
             <div className={classes.container}>
-                <div>
-                    <MenuBar/>
-                </div>
-                <div className={classes.contAll}>
+                <div className="contAll">
                     <h1>{title}</h1>
                     <div className={classes.containDetails}>
                         <div style={{textAlign: "justify"}}>
                             <p style={{ whiteSpace: "pre-line" }}>{description}</p>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <FooterBar/>
                 </div>
             </div>
         );
