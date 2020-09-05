@@ -7,6 +7,7 @@ import axios from 'axios';
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -72,7 +73,7 @@ class Register extends Component {
         if(this.state.password !== this.state.confirmPassword){
             this.setState({errConPassword: "Vérifiez l'écriture de votre mot de passe"})
         }else{
-            axios.post('/users/register', {
+            axios.post('/users/inscription', {
                 lastName: this.state.lastName,
                 firstName: this.state.firstName,
                 email: this.state.email,
@@ -92,7 +93,7 @@ class Register extends Component {
                         alert("Vous pouvez vous connecter!!!");
                         //localStorage.setItem("token",res.data.token);
                         setTimeout(
-                            ()=>{window.location.href="/login"},
+                            ()=>{window.location.href="/connexion"},
                             1000
                         )
                     }
@@ -245,9 +246,13 @@ class Register extends Component {
                             <br/>
                             <Button type="submit" variant="contained">Créer mon compte</Button>
                             <br/><br/>
-                            <p>Vous avez déjà un compte ? <a style={{color: "#FF5722"}} href="/login">Connectez-vous</a></p>
+                            <p>Vous avez déjà un compte ? <a style={{color: "#FF5722"}} href="/connexion">Connectez-vous</a></p>
                         </form>
                     </div>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

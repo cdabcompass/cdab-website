@@ -15,6 +15,7 @@ import filePdf6 from "../assets/activityReport/Rp6.pdf";
 import filePdf7 from "../assets/activityReport/Rp7.pdf";
 import filePdf8 from "../assets/activityReport/Rp8.pdf";
 import filePdf9 from "../assets/activityReport/Rp9.pdf";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -206,6 +207,10 @@ class StudentProfil extends Component {
                     </Accordion>
 
 
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

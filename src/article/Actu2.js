@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import ActuCustom from "../utils/ActuCustom";
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -37,6 +38,9 @@ class Actu2 extends Component {
                         "\n" +
                         "Pour un apprenant, la motivation est quasi importante pour sa réussite scolaire, universitaire et professionnelle."}
                     />
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

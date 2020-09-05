@@ -7,6 +7,7 @@ import HomeWorkIcon from '@material-ui/icons/HomeWork';
 import ReceiptIcon from '@material-ui/icons/Receipt';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -73,7 +74,7 @@ class Training extends Component {
                                 description={"La plupart du temps, les étudiants en fin de cycle sont orientés vers des stages dans le but de leur " +
                                 "permettre de découvrir le monde du travail, de mettre en pratique leurs connaissances et acquérir une expérience" +
                                 " professionnelle."}
-                                onclick={()=>{this.moreInfo("/intership")}}
+                                onclick={()=>{this.moreInfo("/stages")}}
                             />
                         </Col>
                     </Row>
@@ -85,7 +86,7 @@ class Training extends Component {
                                 description={"Le CV (curriculum vitae) est un formel de recrutement très courant. Il présente une bonne proportion " +
                                 "entre le temps passé à le lire et la quantité/qualité d’informations que nous apprenons d’un candidat. Le CV permet d’avoir les mêmes informations " +
                                 "pertinentes pendant un court temps de lecture.\n"}
-                                onclick={()=>{this.moreInfo("/advices")}}
+                                onclick={()=>{this.moreInfo("/conseils")}}
                             />
                         </Col>
                         <Col xs={12} md={6} lg={5}>
@@ -95,10 +96,14 @@ class Training extends Component {
                                 description={"Post haec Gallus Hierapolim profecturus ut expeditioni specie tenus adesset,\n" +
                                 "Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum,\n" +
                                 "quae per multas difficilisque causas adfore iam sperabatur"}
-                                onclick={()=>{this.moreInfo("/offers")}}
+                                onclick={()=>{this.moreInfo("/nos_offres")}}
                             />
                         </Col>
                     </Row>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

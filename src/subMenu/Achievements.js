@@ -6,6 +6,7 @@ import CardCustom from "../utils/CardCustom";
 import WorkIcon from '@material-ui/icons/Work';
 import PanToolIcon from '@material-ui/icons/PanTool';
 import PollIcon from '@material-ui/icons/Poll';
+import FooterBar from "../utils/FooterBar";
 
 
 const styles = theme => ({
@@ -40,7 +41,7 @@ class Achievements extends Component {
 
     moreInfo = (path) =>{
         // alert("more info"+path);
-        window.location = "/achievements"+path;
+        window.location = "/nos_realisations"+path;
     };
 
     render() {
@@ -52,7 +53,7 @@ class Achievements extends Component {
                 </div>
                 <div style={{marginTop: "200px"}}>
                     <div className={classes.titles}>
-                        <p className={classes.title}>NOS RÉALISATIONS</p>
+                        <p className="subTitle">NOS RÉALISATIONS</p>
                     </div>
                     <Row className={classes.cards}>
                         <Col xs={12} md={6} lg={4}>
@@ -83,6 +84,9 @@ class Achievements extends Component {
                             />
                         </Col>
                     </Row>
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

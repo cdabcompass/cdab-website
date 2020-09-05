@@ -8,6 +8,7 @@ import Pdf from '../assets/depositFiles/contract.pdf';
 import Snackbar from "@material-ui/core/Snackbar";
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from "@material-ui/core/IconButton";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -79,7 +80,7 @@ class StudentDeposit extends Component {
         }else{
             //alert("Veuillez tout d'abord créer un compte ou vous connecter!");
             this.setState({openAlert:true});
-            // window.location.href = '/login';
+            // window.location.href = '/connexion';
         }
     };
 
@@ -172,6 +173,9 @@ class StudentDeposit extends Component {
                             }}
                         />
                     </div>
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

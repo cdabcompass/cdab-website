@@ -3,6 +3,7 @@ import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import {Col} from "react-bootstrap";
 import Button from "@material-ui/core/Button";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -24,7 +25,7 @@ const styles = theme => ({
         color: "#f17f17"
     },
     magTitle:{
-        width: "300px",
+        width: "600px",
         margin: "0 auto",
         border: "1px solid",
         boxShadow: "4px 4px 20px 0px rgba(146, 125, 250, 0.5)"
@@ -66,8 +67,8 @@ class Products extends Component {
                         <p className={classes.title}>E-book</p>
                         <p className={classes.subTitle}>2 €</p>
                     </div>
-                    <div style={{width: "300px", margin: "0 auto"}}>
-                        <img width="100%" height="100%" title={"Magazine"} className={classes.magTitle}  src={require("../assets/MagTitle.png")} alt=""/>
+                    <div style={{textAlign: "center", margin: "0 auto"}}>
+                        <img width="100%" height="100%" title={"Magazine"} className="magTitle"  src={require("../assets/MagTitlee.png")} alt=""/>
                     </div>
                     <br/>
                     <div style={{textAlign: "center"}}>
@@ -77,6 +78,12 @@ class Products extends Component {
                             Procéder au paiement
                         </Button>
                     </div>
+                    <br/>
+                    <br/>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

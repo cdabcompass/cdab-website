@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import ActuCustom from "../utils/ActuCustom";
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -39,6 +40,10 @@ class Actu3 extends Component {
                         "\n" +
                         "Le fait de définir un objectif professionnel assorti aux moyens va : donner un sens à votre formation, vous motiver et vous donner de l’assurance ; vous permettre d’être efficace dans vos recherches, en ciblant les segments de marché et les opportunités qui vous correspondent le mieux ; aide les recruteurs à comprendre qui vous êtes, dans quelle dynamique vous vous inscrivez et à vous orienter vers un emploi qui vous correspond ; vous aider à faire plus rapidement et plus sereinement des choix ( formation ou emploi) ; vous permettre de définir les étapes et actions à mener . Il parait donc évident que tout apprenant ait un projet professionnel bien élaboré et bien suivi."}
                     />
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

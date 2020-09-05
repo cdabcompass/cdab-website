@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import ActuCustom from "../utils/ActuCustom";
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -106,6 +107,9 @@ class Actu4 extends Component {
                         meilleurs avec un projet d’études et une vision professionnelle bien élaborés et pragmatiques.
                     </div>
 
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

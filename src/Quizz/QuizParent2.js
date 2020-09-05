@@ -6,6 +6,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel/FormControlLabe
 import Radio from "@material-ui/core/Radio/Radio";
 import Button from "@material-ui/core/Button";
 import axios from 'axios';
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -370,6 +371,10 @@ class QuizParent2 extends Component {
                         </Button>
                     </div>
 
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

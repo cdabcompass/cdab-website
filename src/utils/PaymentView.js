@@ -4,6 +4,7 @@ import MenuBar from "./MenuBar";
 import {loadStripe} from "@stripe/stripe-js/pure";
 import {Elements} from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
+import FooterBar from "./FooterBar";
 
 const stripePromise = loadStripe("pk_live_51HJF8DBsL4DtxhIS66mytr08h1j0G1G5bSmww9MvEeIiK4zCyj4YV5TL8USBHNAhemvcLe0oYs4fvXQ0Tqq3HTFa00ZtXEDehe");
 //const stripePromise = loadStripe("pk_test_51HJF8DBsL4DtxhIS3PTnQGR4fwY9GMKRwaYwNAKY8tKun7lpKqtpaOXIzMdl5lGqEvBF5nao6a5l6jeSWpn5GWbN000KKwgajK");
@@ -41,6 +42,9 @@ class PaymentView extends Component {
             </Elements>
             }
           </div>
+            <div>
+                <FooterBar/>
+            </div>
         </div>
     );
   }

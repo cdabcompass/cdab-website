@@ -5,6 +5,7 @@ import InputCustom from "../utils/InputCustom";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
 import CustomAlert from "../utils/CustomAlert";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -42,7 +43,7 @@ class Login extends Component {
 
     handleSubmit = (e) =>{
         e.preventDefault();
-        axios.post('/users/login', {
+        axios.post('/users/connexion', {
             email: this.state.email,
             password: this.state.password
         })
@@ -118,13 +119,17 @@ class Login extends Component {
                             <br/>
                             <Button type="submit" variant="contained">CONNEXION</Button>
                             <br/><br/>
-                            <p>Vous n'avez pas de compte ? <a style={{color: "#FF5722"}} href="/register">Inscrivez-vous</a></p>
+                            <p>Vous n'avez pas de compte ? <a style={{color: "#FF5722"}} href="/inscription">Inscrivez-vous</a></p>
                         </form>
                         <CustomAlert
                             message={this.state.errAlert}
                             color={0}
                         />
                     </div>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

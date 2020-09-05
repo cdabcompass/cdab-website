@@ -5,7 +5,7 @@ const passwordHash = require("password-hash");
 const validator = require("email-validator");
 const EmailSender = require("../services/EmailSender");
 
-route.post('/register', async (req,res) => {
+route.post('/inscription', async (req,res) => {
     let user = new userModel();
     user.lastName = req.body.lastName;
     user.firstName = req.body.firstName;
@@ -48,7 +48,7 @@ route.post('/register', async (req,res) => {
 });
 
 
-route.post('/login', async (req,res)=>{
+route.post('/connexion', async (req,res)=>{
     let user = new userModel();
     user.email = req.body.email;
     user.password = passwordHash.generate(req.body.password);

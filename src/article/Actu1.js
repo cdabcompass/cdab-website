@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import ActuCustom from "../utils/ActuCustom";
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -38,6 +39,9 @@ class Actu1 extends Component {
                         "\n" +
                         "Le projet d’étude vous permet de faire une formation adaptée avec le métier choisi, et prend en compte vos aspirations personnelles et professionnelles immédiates et futures. Ceci permet ainsi à l’apprenant d’effectuer des choix d’études et de carrière qui soient conformes et basés sur une connaissance suffisante de sa personnalité, de  ses valeurs et ses compétences."}
                     />
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

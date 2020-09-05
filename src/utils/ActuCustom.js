@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "./MenuBar";
+import FooterBar from "./FooterBar";
 
 const styles = theme => ({
     container: {
@@ -41,6 +42,9 @@ class ActuCustom extends Component {
                             <p style={{ whiteSpace: "pre-line" }}>{description}</p>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

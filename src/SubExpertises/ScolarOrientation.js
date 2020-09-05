@@ -3,6 +3,7 @@ import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import DetailsPageBanner from "../utils/DetailsPageBanner";
 import Button from "@material-ui/core/Button";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -81,10 +82,14 @@ class ScolarOrientation extends Component {
                                 </p>
                             </div>
                         </div>
-                        <Button onClick={()=>{window.location.href = "/expertises/studentProfil"}} className={classes.btnQuiz} >
+                        <Button onClick={()=>{window.location.href = "/expertises/profil_etudiant"}} className={classes.btnQuiz} >
                             Passer le test
                         </Button>
                     </div>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

@@ -3,6 +3,7 @@ import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import Pdf from "../othersfiles/manuel.pdf";
 import Grid from "@material-ui/core/Grid";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -362,6 +363,10 @@ class Coaching extends Component {
                             <img className={classes.eachCarousel}  src={require("../assets/yb-logo.png")} alt=""/>
                         </a>
                     </div>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

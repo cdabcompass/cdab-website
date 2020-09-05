@@ -8,6 +8,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import axios from 'axios';
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -132,7 +133,7 @@ class Quiz extends Component {
             if(res.status === 200){
                 alert("Vos informations ont bien été transmises");
                 setTimeout(
-                    ()=>{window.location.href="/expertises/studentProfil"},
+                    ()=>{window.location.href="/expertises/profil_etudiant"},
                     5000
                 )
             }
@@ -552,6 +553,9 @@ class Quiz extends Component {
                         }
 
                     </div>
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

@@ -44,33 +44,33 @@ const routing = (
             <Switch>
                 <Route exact path="/" component={App}/>
 
-                <Route path="/register" component={Register}/>
-                <Route path="/login" component={Login}/>
+                <Route path="/inscription" component={Register}/>
+                <Route path="/connexion" component={Login}/>
 
                 <Route exact path="/expertises" component={Expertises}/>
-                <Route exact path="/expertises/studentProfil" component={StudentProfil}/>
-                <Route exact path="/expertises/scolarOrientation" component={ScolarOrientation}/>
-                <Route exact path="/expertises/schoolProject" component={SchoolProject}/>
-                <Route exact path="/expertises/tutoring" component={Tutoring}/>
-                <Route exact path="/expertises/studentDeposit" component={StudentDeposit}/>
-                <Route exact path="/expertises/studentHousing" component={StudentHousing}/>
+                <Route exact path="/expertises/profil_etudiant" component={StudentProfil}/>
+                <Route exact path="/expertises/orientation_scolaire" component={ScolarOrientation}/>
+                <Route exact path="/expertises/projet_etude" component={SchoolProject}/>
+                <Route exact path="/expertises/soutien_scolaire" component={Tutoring}/>
+                <Route exact path="/expertises/caution_etudiantes" component={StudentDeposit}/>
+                <Route exact path="/expertises/logement_etudiant" component={StudentHousing}/>
 
                 <Route exact path="/training" component={Training}/>
                 <Route exact path="/training/formations" component={Formations}/>
-                <Route exact path="/training/intership" component={Intership}/>
-                <Route exact path="/training/advices" component={Advices}/>
-                <Route exact path="/training/offers" component={Offers}/>
+                <Route exact path="/training/stages" component={Intership}/>
+                <Route exact path="/training/conseils" component={Advices}/>
+                <Route exact path="/training/nos_offres" component={Offers}/>
 
                 <Route exact path="/coaching" component={Coaching}/>
 
-                <Route exact path="/office" component={Offices}/>
+                <Route exact path="/nos_locaux" component={Offices}/>
 
-                <Route exact path="/products" component={Products}/>
+                <Route exact path="/nos_products" component={Products}/>
 
-                <Route exact path="/achievements" component={Achievements}/>
-                <Route exact path="/achievements/companyVisits" component={CompanyVisits}/>
-                <Route exact path="/achievements/testimonials" component={Testimonials}/>
-                <Route exact path="/achievements/activityRepport" component={ActivityReport}/>
+                <Route exact path="/nos_realisations" component={Achievements}/>
+                <Route exact path="/nos_realisations/companyVisits" component={CompanyVisits}/>
+                <Route exact path="/nos_realisations/testimonials" component={Testimonials}/>
+                <Route exact path="/nos_realisations/activityRepport" component={ActivityReport}/>
 
                 <Route exact path="/actu/1" component={Actu1}/>
                 <Route exact path="/actu/2" component={Actu2}/>
@@ -78,13 +78,13 @@ const routing = (
                 <Route exact path="/actu/4" component={Actu4}/>
 
 
-                <PrivateRoute exact path="/quiz/studentPrincipal" component={QuizPrincipal}/>
-                <PrivateRoute exact path="/quiz/PostBac" component={Quiz1}/>
-                <PrivateRoute exact path="/quiz/Primaire" component={QuizPrimaire}/>
-                <PrivateRoute exact path="/quiz/Parent1" component={QuizParent1}/>
-                <PrivateRoute exact path="/quiz/Parent2" component={QuizParent2}/>
+                <PrivateRoute exact path="/quiz/principal_quiz" component={QuizPrincipal}/>
+                <PrivateRoute exact path="/quiz/post_bac" component={Quiz1}/>
+                <PrivateRoute exact path="/quiz/primaire" component={QuizPrimaire}/>
+                <PrivateRoute exact path="/quiz/parent1" component={QuizParent1}/>
+                <PrivateRoute exact path="/quiz/parent2" component={QuizParent2}/>
 
-                <PrivateRoute exact path="/pay/studentProfil" component={PaymentView}/>
+                <PrivateRoute exact path="/pay/profil_etudiant" component={PaymentView}/>
 
                 <PrivateRoute exact path="/pay/eBook" component={EbookPayView}/>
 

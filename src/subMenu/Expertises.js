@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import ExpertisesComponents from "../utils/ExpertisesComponents";
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -42,6 +43,9 @@ class Expertises extends Component {
                         <p className={classes.subTitle}>Nous vous accompagnons durant chacun de ces processus</p>
                     </div>
                     <ExpertisesComponents/>
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

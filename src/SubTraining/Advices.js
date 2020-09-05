@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -110,6 +111,10 @@ class Advices extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

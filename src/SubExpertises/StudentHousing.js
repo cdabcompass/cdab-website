@@ -8,6 +8,7 @@ import Pdf from "../assets/studentsHouseFiles/contract.pdf";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -162,6 +163,10 @@ class StudentHousing extends Component {
                             }}
                         />
                     </div>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

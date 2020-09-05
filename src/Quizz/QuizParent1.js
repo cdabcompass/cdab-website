@@ -8,6 +8,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel/FormControlLabe
 import Radio from "@material-ui/core/Radio/Radio";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -194,7 +195,7 @@ class QuizParent1 extends Component {
                 alert("Vos informations ont bien été transmises");
                 localStorage.setItem("quizFirstStep","true");
                 setTimeout(
-                    ()=>{window.location.href="/expertises/studentProfil"},
+                    ()=>{window.location.href="/expertises/profil_etudiant"},
                     1000
                 )
             }
@@ -800,6 +801,9 @@ class QuizParent1 extends Component {
                             Envoyer
                         </Button>
                     </div>
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

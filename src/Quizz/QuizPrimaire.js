@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import Button from "@material-ui/core/Button";
 import { Multiselect } from 'multiselect-react-dropdown';
 import axios from "axios";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -461,6 +462,9 @@ class QuizPrimaire extends Component {
                             Envoyer
                         </Button>
                     </div>
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

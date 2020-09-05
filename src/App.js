@@ -8,6 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import ExpertisesComponents from "./utils/ExpertisesComponents";
 import Pdf from '../src/othersfiles/manuel.pdf';
 import Button from "react-bootstrap/Button";
+import FooterBar from "./utils/FooterBar";
 // import Modal from "@material-ui/core/Modal";
 
 const styles = theme => ({
@@ -201,7 +202,7 @@ class App extends Component {
                                     onClick={this.handleOpenModal}
                                    >En savoir plus
                                 </a>
-                                <Modal dialogClassName ={classes.ModalContent} show={this.state.openModal} onHide={this.handleCloseModal}>
+                                <Modal dialogClassName ={"ModalContent"} show={this.state.openModal} onHide={this.handleCloseModal}>
                                     <Modal.Header closeButton>
                                     </Modal.Header>
                                     <Modal.Body>
@@ -299,6 +300,13 @@ class App extends Component {
                             </Col>
                         </Row>
                     </div>
+
+                    <div>
+                        <FooterBar/>
+                    </div>
+                </div>
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -20,7 +21,7 @@ const styles = theme => ({
         marginBottom: "10px"
     },
     videoArt:{
-        width: "50%",
+        width: "100%",
         height: "100%",
     },
 
@@ -29,9 +30,9 @@ const styles = theme => ({
         width: "100%"
     },
     textArt:{
-        width: "50%",
+        width: "100%",
         textAlign: "justify",
-        paddingRight: "25px",
+        // paddingRight: "25px",
         overflowY: "auto",
     },
     textPlace:{
@@ -55,7 +56,7 @@ class Intership extends Component {
                 <div>
                     <MenuBar/>
                 </div>
-                <div style={{marginTop: "200px",marginLeft: "200px",marginRight:"200px"}}>
+                <div className="subMenu">
                     <div style={{margin: "0 auto",width:"70%"}}>
                         <div className="cardArticleWhite">
                             <div className={classes.videoArt}>
@@ -116,6 +117,10 @@ class Intership extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

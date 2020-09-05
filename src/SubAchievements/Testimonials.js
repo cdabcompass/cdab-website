@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -19,7 +20,7 @@ const styles = theme => ({
         marginBottom: "10px"
     },
     videoArt:{
-        width: "50%",
+        width: "100%",
         height: "100%",
         flex: 1
     },
@@ -28,7 +29,7 @@ const styles = theme => ({
         width: "100%"
     },
     textArt:{
-        width: "50%",
+        width: "100%",
         textAlign: "justify",
     },
     titles: {
@@ -111,6 +112,10 @@ class Testimonials extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

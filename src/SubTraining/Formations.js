@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
     container: {
@@ -23,7 +24,7 @@ class Formations extends Component {
                 <div>
                     <MenuBar/>
                 </div>
-                <div style={{marginTop: "200px",marginRight:"200px",marginLeft:"200px"}}>
+                <div className="subMenu">
                     Pourquoi se former ?<br/><br/>
                     <strong>La formation</strong> peut se définir du point de vu général comme étant un apprentissage de
                         connaissances et de méthodes de travail mais aussi d’une expérimentation nouvelle dans divers
@@ -66,6 +67,10 @@ class Formations extends Component {
                             des années à comprendre.</li>
                         <li>Enfin la formation vous permet tout simplement d’évoluer plus vite.</li>
                     </ol>
+                </div>
+
+                <div>
+                    <FooterBar/>
                 </div>
             </div>
         );

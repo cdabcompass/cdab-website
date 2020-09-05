@@ -80,7 +80,7 @@ class MenuBar extends Component {
 
     disconnect = () => {
         TokenApi.logout();
-        window.location = "/login";
+        window.location = "/connexion";
     };
 
     homePage = () => {
@@ -100,9 +100,9 @@ class MenuBar extends Component {
                     <Button className={classes.btnMenu} href="/expertises" color="inherit">Nos expertises</Button>
                     <Button className={classes.btnMenu} href="/training" color="inherit">Training</Button>
                     <Button className={classes.btnMenu} href="/coaching" color="inherit">Coach-cdab</Button>
-                    <Button className={classes.btnMenu} href="/products" color="inherit">Nos produits</Button>
-                    <Button className={classes.btnMenu} href="/achievements" color="inherit">Nos réalisations</Button>
-                    <Button className={classes.btnMenu} href="/office" color="inherit">Nos locaux</Button>
+                    <Button className={classes.btnMenu} href="/nos_products" color="inherit">Nos produits</Button>
+                    <Button className={classes.btnMenu} href="/nos_realisations" color="inherit">Nos réalisations</Button>
+                    <Button className={classes.btnMenu} href="/nos_locaux" color="inherit">Nos locaux</Button>
                     {this.state.auth && (
 
                         <Button className={classes.btnMenu} onClick={this.disconnect}>Déconnexion</Button>)}
@@ -133,8 +133,8 @@ class MenuBar extends Component {
                     >
                         {!this.state.auth &&(
                             <div>
-                                <Button className={classes.btnSubMenu} style={{display: "block",width:"100%"}} href="/login">Connexion</Button>
-                                <Button className={classes.btnSubMenu} href="/register">Inscription</Button>
+                                <Button className={classes.btnSubMenu} style={{display: "block",width:"100%"}} href="/connexion">Connexion</Button>
+                                <Button className={classes.btnSubMenu} href="/inscription">Inscription</Button>
                             </div>
                         )}
                         {/*{this.state.auth && (*/}
