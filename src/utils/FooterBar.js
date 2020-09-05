@@ -21,7 +21,7 @@ class FooterBar extends Component {
                         <p>
                             Place de la Gare<br/>
                             59000 Lille<br/>
-                            +33 (0) 3 59 82 54 92<br/>+33(0) 6 71 33 37 06
+                            +33 (0) 3 59 82 54 92<br/>+33 (0) 6 71 33 37 06
                         </p>
                     </div>
                     <div className="siegeSocial">
