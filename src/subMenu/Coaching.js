@@ -263,27 +263,55 @@ class Coaching extends Component {
                             </div>
                         </div>
 
+
                         <div className="cardArticle">
                             <div className={classes.videoArt}>
-                                <iframe className={classes.videoClass} src="https://www.youtube.com/embed/XqQcTnM_Sfo"
+                                <iframe className={classes.videoClass} src="https://www.youtube.com/embed/4kfMLdqgMZA"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen></iframe>
                             </div>
                             <div className={classes.textArt}>
                                 <div className={classes.textPlace}>
-                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la
-                                    mise en page avant impression. Le Lorem Ipsum est le faux texte standard de
-                                    l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble
-                                    des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas
-                                    fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique,
+                                    Etudiants, élèves, parents à la recherche de la bonne langue étrangère à
+                                    apprendre qui servira ? Trois critères de choix nous sont proposés.
+                                    <br/><br/>
+                                    Toutefois un quatrième survint compte-tenu de l’ordre social ou culturel ou pour
+                                    plus de connaissances.
+                                    <br/><br/>
+                                    Savoir la raison d’apprendre une nouvelle langue est primordiale. Il est donc
+                                    nécessaire d’établir un objectif. Notre premier critère est donc <strong>l’objectif</strong>. Il est
+                                    personnel à chacun de nous. L’objectif peut être d’ordre professionnel ou
+                                    personnel.
+                                    <br/><br/>
+                                    Le deuxième critère est défini à base de nos <strong>pays limitrophes</strong>.
+                                    <br/><br/>
+                                    L’apprentissage des langues des pays à proximité, nous permet, une circulation
+                                    aisée, allant même dans le domaine commercial.
+                                    <br/><br/>
+                                    Quant au troisième critère, il est en rapport avec l'<strong>actualité</strong>. Quelle est la langue
+                                    internationale de nos jours ? La langue des affaires, du commerce, des
+                                    différentes organisations ?
+                                    <br/><br/>
+                                    En ce vingt et un nième siècle, la langue internationale fleurissante est l’anglais.
+                                    Sa maîtrise permet d’avoir les bonnes informations partout dans le monde.
+                                    <br/><br/>
+                                    C’est un honneur d’assimiler plusieurs langues (trois, quatre, voir, cinq,
+                                    pourquoi pas six ?).
+                                    <br/><br/>
+                                    Le quatrième critère nous amène à des <strong>valeurs culturelles et ou d’histoire</strong>.
+                                    Ainsi, les langues anciennes comme le grec, l’hébreu et le latin peuvent être
+                                    étudiés par exemple.
+                                    <br/><br/>
+                                    L’apprentissage des langues, nous ouvre les portes. Il crée la confiance et
+                                    l’ouverture vers de nouveaux horizons.
                                 </div>
                             </div>
                         </div>
 
                         <div className="cardArticle">
                             <div className={classes.videoArt}>
-                                <iframe className={classes.videoClass} src="https://www.youtube.com/embed/4kfMLdqgMZA"
+                                <iframe className={classes.videoClass} src="https://www.youtube.com/embed/XqQcTnM_Sfo"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen></iframe>

@@ -100,7 +100,7 @@ class MenuBar extends Component {
                     <Button className={classes.btnMenu} href="/expertises" color="inherit">Nos expertises</Button>
                     <Button className={classes.btnMenu} href="/training" color="inherit">Training</Button>
                     <Button className={classes.btnMenu} href="/coaching" color="inherit">Coach-cdab</Button>
-                    <Button className={classes.btnMenu} href="/nos_products" color="inherit">Nos produits</Button>
+                    <Button className={classes.btnMenu} href="/nos_produits" color="inherit">Nos produits</Button>
                     <Button className={classes.btnMenu} href="/nos_realisations" color="inherit">Nos réalisations</Button>
                     <Button className={classes.btnMenu} href="/nos_locaux" color="inherit">Nos locaux</Button>
                     {this.state.auth && (

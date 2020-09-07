@@ -225,6 +225,7 @@ class Register extends Component {
                                     <option value={"Parent"}>Parent</option>
                                 </Select>
                             </FormControl>
+                            <br/>
                             <InputCustom
                                 name={"password"}
                                 value={this.state.password}

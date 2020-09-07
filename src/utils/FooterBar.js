@@ -19,7 +19,7 @@ class FooterBar extends Component {
                     <div className="siegeSocial">
                         <h5 className="footerTitle">SIEGE SOCIAL</h5>
                         <p>
-                            Place de la Gare<br/>
+                            1, Place de la Gare<br/>
                             59000 Lille<br/>
                             +33 (0) 3 59 82 54 92<br/>+33 (0) 6 71 33 37 06
                         </p>
@@ -27,10 +27,10 @@ class FooterBar extends Component {
                     <div className="siegeSocial">
                         <h5 className="footerTitle">CÔTE D'IVOIRE</h5>
                         <p>
-                            XL Building, 6th and 7th Floors,
-                            Corner of Dr. Crozet Street<br/>
-                            Boulevard de la Republique, Plateau, Abidjan<br/>
-                            14790<br/>
+                            Abidjan XL Plateau Centre<br/>
+                            Avenue Dr. CROZET, Immeuble XL,<br/>
+                            6ème & 7 ème  étages, Plateau Abidjan,<br/>
+                            01 BP 2785 Abidjan 01, Cote d’Ivoire<br/>
                             +225 84 94 89 25
                         </p>
                     </div>
@@ -49,6 +49,12 @@ class FooterBar extends Component {
                             Derrière la Polyclinique Saint Joseph,<br/>
                             Quartier Hédzranawoé<br/>
                             +228 91 38 49 12<br/>+228 96 35 53 07
+                        </p>
+                    </div>
+                    <div className="siegeSocial">
+                        <h5 className="footerTitle">Contact</h5>
+                        <p>
+                            contact@cdabcompass.com
                         </p>
                     </div>
                 </div>

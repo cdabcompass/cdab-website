@@ -65,7 +65,7 @@ const routing = (
 
                 <Route exact path="/nos_locaux" component={Offices}/>
 
-                <Route exact path="/nos_products" component={Products}/>
+                <Route exact path="/nos_produits" component={Products}/>
 
                 <Route exact path="/nos_realisations" component={Achievements}/>
                 <Route exact path="/nos_realisations/companyVisits" component={CompanyVisits}/>

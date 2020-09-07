@@ -158,7 +158,7 @@ code {
 }
 
 .formControl{
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
   width: 500px;
 }
 
@@ -234,7 +234,7 @@ code {
 }
 
 .magTitle{
-  width: 600px;
+  width: 50%;
   margin: 0 auto;
   border: 1px solid;
   box-shadow: 4px 4px 20px 0px rgba(146, 125, 250, 0.5)

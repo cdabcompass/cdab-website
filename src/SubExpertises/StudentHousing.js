@@ -118,7 +118,7 @@ class StudentHousing extends Component {
                         <Button onClick={this.handleOpenModal} className={classes.btnQuiz} >
                             Protocole de recherche de logement
                         </Button>
-                        <Modal dialogClassName ={classes.ModalContent} show={this.state.openModal} onHide={this.handleCloseModal}>
+                        <Modal dialogClassName ={'ModalContent'} show={this.state.openModal} onHide={this.handleCloseModal}>
                             <Modal.Header closeButton>
                                 <Button style={{backgroundColor: "#FF9800",color: "white"}} onClick={this.downloadPdf}>
                                     Telecharger
