@@ -20,7 +20,7 @@ const styles = theme => ({
         alignItems: "center",
         textAlign: "center",
         margin: "auto",
-        height: "700px"
+        // height: "700px"
     },
     formControl: {
         marginBottom: "10px",
