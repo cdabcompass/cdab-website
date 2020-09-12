@@ -4,11 +4,28 @@ import AppBar from "@material-ui/core/AppBar/AppBar";
 import {withStyles} from "@material-ui/core";
 
 const styles = theme => ({
+    adminColor: {
+        cursor: 'pointer',
+        color: '#ffeb3b',
+        fontWeight: 'bold'
+    }
 });
 
 class FooterBar extends Component {
     constructor(props){
         super(props);
+        this.state = {
+            isAdmin: false
+        }
+    }
+
+    componentDidMount() {
+        if(localStorage.getItem("email") === "admin@cdabcompass.com"
+        && localStorage.getItem("lastName") === "admin"){
+            this.setState({
+                isAdmin: true
+            })
+        }
     }
 
     render() {
@@ -56,6 +73,12 @@ class FooterBar extends Component {
                         <p>
                             contact@cdabcompass.com
                         </p>
+                        {this.state.isAdmin && (
+                            <div className={classes.adminColor}
+                                onClick={()=>{window.location.href = '/panelAdmin'}}>
+                                Gestions des utilisateurs
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

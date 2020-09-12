@@ -37,6 +37,7 @@ import PaymentView from "./utils/PaymentView";
 import Products from "./subMenu/Products";
 import EbookPayView from "./utils/EbookPayView";
 import Actu4 from "./article/Actu4";
+import PanelAdmin from "./adminAccess/PanelAdmin";
 
 const routing = (
     <Router>
@@ -87,6 +88,8 @@ const routing = (
                 <PrivateRoute exact path="/pay/profil_etudiant" component={PaymentView}/>
 
                 <PrivateRoute exact path="/pay/eBook" component={EbookPayView}/>
+
+                <PrivateRoute exact path="/panelAdmin" component={PanelAdmin}/>
 
             </Switch>
         </div>

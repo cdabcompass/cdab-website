@@ -13,9 +13,7 @@ const stripe = require("stripe")(process.env.STRIPE_SK_LIVE);
 //const stripe = require("stripe")("sk_test_51HJF8DBsL4DtxhISvKXTDOT9cRhRrc0g1toW4BNaXs3zJp4QPKkIGtlxkBgEuDcWqQZHmeKcRsRMZPoNV8m2GpmZ00VPAMOfO0");
 
 
-app.get('/test', (req, res) => {
-    res.status(200).send("Test Fab")
-});
+
 
 //bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));

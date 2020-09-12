@@ -152,5 +152,58 @@ route.post('/mailing', async(req,res)=>{
         })
 });
 
+route.post('/allUsers', async(req,res)=>{
+    let user = new userModel();
+    user.email = req.body.email;
+    user.lastName = req.body.lastName;
+    if(user.email === "admin@cdabcompass.com"
+        && user.lastName === "admin"){
+        userModel.find({}, (err,users)=>{
+            res.status(200).json(users)
+        })
+    }else{
+        res.status(409).json({text: "Identifiants non valide"})
+    }
+});
+
+route.post('/confirmUserPayment', async(req,res)=>{
+    let user = new userModel();
+    user.userId = req.body.userId;
+    user.email = req.body.email;
+    user.lastName = req.body.lastName;
+    user.firstName = req.body.firstName;
+    userEmail = user.email;
+    subject = "Confirmation de paiement";
+    container = "<p>Bonjour Mr,Mme</p>"+user.lastName+" "+user.firstName
+        +"<br><br><p>Nous vous confirmons que votre compte a été validé et votre paiement pris en compte.</p>"
+        +"<p>Cordialement,<br>Fabrice SUMSA</p>"
+    ;
+    attachment = "";
+
+
+    // console.log("ConfirmUserPayment : "+user.email);
+
+    userModel.findByIdAndUpdate(
+        user.userId,
+        {validSold: "true"},
+        {upsert: true},
+        (err,doc)=>{
+            if(err){
+                res.send(err);
+            }
+            else{
+                EmailSender.sendEmail(userEmail,subject,container,attachment)
+                    .then(_res => {
+                        return res.status(200).json({text : 'Email send to cdab'});
+                    })
+                    .catch(ex => {
+                        console.log("Err mailing : "+ex);
+                        return res.status(409).json({text : 'Erreur envois de mail'});
+                    })
+            }
+        }
+    )
+});
+
 
 module.exports = route;

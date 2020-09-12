@@ -1,0 +1,143 @@
+import React, {Component} from 'react';
+import {withStyles} from "@material-ui/core";
+import MenuBar from "../utils/MenuBar";
+import FooterBar from "../utils/FooterBar";
+import axios from "axios";
+import Button from "@material-ui/core/Button";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import Typography from "@material-ui/core/Typography";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+const styles = theme => ({
+    container: {
+        display: "flex",
+        flexDirection: "column"
+    },
+
+    btnMoreInfo: {
+        backgroundColor: "rgb(224 224 224 / 95%)",
+        '&:hover': {
+            // textDecoration: 'underline',
+            backgroundColor: "#E58F1E",
+        },
+    },
+
+    userMoreInfo: {
+        width: "100%",
+        display: "flex",
+        textAlign: "start",
+    }
+});
+
+class PanelAdmin extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            users: [],
+            moreInformation: false,
+        };
+    }
+
+    confirmPayment(userId,userMail,userLastName,userFirstName){
+        //console.log("UserId : "+userId);
+
+        axios.post("/users/confirmUserPayment", {
+            userId: userId,
+            email: userMail,
+            lastName: userLastName,
+            firstName: userFirstName,
+        })
+            .then(res=>{
+                if(res.status === 200){
+                    alert("Le compte a été validé");
+                }
+            })
+            .catch(err=>{
+                alert("Erreur de validation");
+            })
+    }
+
+    componentDidMount() {
+        axios.post('/users/allUsers',{
+            email: localStorage.getItem("email"),
+            lastName: localStorage.getItem("lastName"),
+        })
+            .then(res=>{
+                if(res.status === 200){
+                    //alert("Good User");
+                    this.setState({
+                        users: res.data
+                    });
+                    // console.log("Result : "+JSON.stringify(res.data,null,4))
+                }
+            })
+            .catch(err => {
+                if(err.response.status === 409){
+                    alert("Identifiants non valide")
+                }
+            })
+    }
+
+    render() {
+        const {classes} = this.props;
+        const {users} = this.state;
+        return (
+            <div className={classes.container}>
+                <div>
+                    <MenuBar/>
+                </div>
+                <div className="contAll">
+                    {
+                        users.map((user,index)=>
+                            <div key={user._id} style={{marginBottom: "10px"}}>
+                                <Accordion style={{backgroundColor: "#ff9800ad"}}>
+                                    <AccordionSummary
+                                        style={{color: "black"}}
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography className={classes.heading}>
+                                            {user.lastName} {user.firstName}  {user.country}
+                                        </Typography>
+                                    </AccordionSummary>
+
+                                    <AccordionDetails style={{backgroundColor: "white"}}>
+
+                                        <div className={classes.userMoreInfo}>
+                                            <div style={{flex: 1}}>
+                                                <Button className={classes.btnMoreInfo}
+                                                        onClick={()=>
+                                                            this.confirmPayment(user._id,user.email,user.lastName,user.firstName)
+                                                        }
+                                                >
+                                                    Valider son paiement
+                                                </Button>
+                                            </div>
+                                            <div style={{flex: 1}}>
+                                                <div>Email : {user.email} </div>
+                                                <div>Numéro : {user.number} </div>
+                                                <div>Ville : {user.city} </div>
+                                                <div>Pays : {user.country} </div>
+                                                <div>Situation : {user.situation} </div>
+                                                <div>Continent : {user.continent} </div>
+                                            </div>
+                                        </div>
+                                    </AccordionDetails>
+                                </Accordion>
+                            </div>
+                        )
+                    }
+                </div>
+                <div>
+                    <FooterBar/>
+                </div>
+            </div>
+        );
+    }
+}
+
+
+export default withStyles(styles)(PanelAdmin);
