@@ -93,9 +93,10 @@ class Training extends Component {
                             <CardCustom
                                 icon={<BusinessCenterIcon/>}
                                 title={"Nos offres"}
-                                description={"Post haec Gallus Hierapolim profecturus ut expeditioni specie tenus adesset,\n" +
-                                "Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum,\n" +
-                                "quae per multas difficilisque causas adfore iam sperabatur"}
+                                description={"\n" +
+                                " Il n’est jamais trop tard de saisir l’opportunité de franchir un nouveau pas. " +
+                                "Tous les enfants peuvent réussir. Avec un profil bien établi, le projet d’études est bien ficelé." +
+                                " Ainsi la porte est ouverte pour franchir un nouveau palier."}
                                 onclick={()=>{this.moreInfo("/nos_offres")}}
                             />
                         </Col>

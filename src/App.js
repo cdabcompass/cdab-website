@@ -262,7 +262,7 @@ class App extends Component {
                             <Col xs={12} md={6} lg={3}>
                                 <CardActu
                                     image={<img style={{height: "100%"}} src={require("./assets/actu4.png")} alt=""/>}
-                                    title={"Examens de fin d’année scolaire 2020"}
+                                    title={"Examens de fin d’année scolaire 2020 : Côte d'ivoire"}
                                     description={"Proclamation des résultats des examens de fin d’année : les taux de réussite une preuve du\n" +
                                     "faible niveau scolaire des élèves."}
                                     onclick={()=>{window.location="/actu/4"}}

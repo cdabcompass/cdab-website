@@ -22,6 +22,8 @@ const styles = theme => ({
             // textDecoration: 'underline',
             backgroundColor: "#E58F1E",
         },
+        margin: "5px",
+        display: "block"
     },
 
     userMoreInfo: {
@@ -38,6 +40,45 @@ class PanelAdmin extends Component {
             users: [],
             moreInformation: false,
         };
+    }
+
+    sendReceipt(email,lastName,firstName,receiptType){
+        let container = "";
+        if(receiptType === 1){
+            container = "<p>Mr,Mme "+ lastName + " "+ firstName + "<br><br>"
+                + "Nous vous confirmons que votre paiement concernant la caution bancaire a bien été pris en compte" +
+                "<br><br><br>Cordialement, <br>L'équie Cdab Compass </p>"
+        }else if(receiptType === 2){
+            container = "<p>Mr,Mme "+ lastName + " "+ firstName + "<br><br>"
+                + "Nous vous confirmons que votre paiement concernant le logement étudiant a bien été pris en compte" +
+                "<br><br><br>Cordialement, <br>L'équie Cdab Compass </p>"
+        }else if(receiptType === 3){
+            container = "<p>Mr,Mme "+ lastName + " "+ firstName + "<br><br>"
+                + "Nous vous confirmons que votre paiement concernant la recherche d'université a bien été pris en compte" +
+                "<br><br><br>Cordialement, <br>L'équie Cdab Compass </p>"
+        }else if(receiptType === 4){
+            container = "<p>Mr,Mme "+ lastName + " "+ firstName + "<br><br>"
+                + "Vous pouvez télécharger votre magazine en cliquant sur cette url : https://drive.google.com/file/d/13bjpRDDE6JhkVeve4482op9ZfGFX9cQa/view?usp=sharing . Bonne lecture " +
+                "<br><br><br>Cordialement, <br>L'équie Cdab Compass </p>"
+        }
+
+
+        axios.post('/users/mailing', {
+            userEmail: "paiement@cdabcompass.com,"+email,
+            subject: "Cdab magazine",
+            attachment: "mag-1",
+            container: container
+        })
+            .then(res=>{
+                if(res.status === 200){
+                    alert('Votre action a bien été pris en compte');
+                }
+                else{alert("Une erreur est survenue, veuillez nous joindre afin de savoir si votre transaction à bien été éffectuée.")}
+            })
+            .catch(err=>{
+                if(err.response.status === 409){
+                }
+            });
     }
 
     confirmPayment(userId,userMail,userLastName,userFirstName){
@@ -113,7 +154,35 @@ class PanelAdmin extends Component {
                                                             this.confirmPayment(user._id,user.email,user.lastName,user.firstName)
                                                         }
                                                 >
-                                                    Valider son paiement
+                                                    Detection de profil
+                                                </Button>
+                                                <Button className={classes.btnMoreInfo}
+                                                        onClick={()=>
+                                                            this.sendReceipt(user.email,user.lastName,user.firstName,1)
+                                                        }
+                                                >
+                                                    Caution bancaire
+                                                </Button>
+                                                <Button className={classes.btnMoreInfo}
+                                                        onClick={()=>
+                                                            this.sendReceipt(user.email,user.lastName,user.firstName,2)
+                                                        }
+                                                >
+                                                    Logement étudiant
+                                                </Button>
+                                                <Button className={classes.btnMoreInfo}
+                                                        onClick={()=>
+                                                            this.sendReceipt(user.email,user.lastName,user.firstName,3)
+                                                        }
+                                                >
+                                                    Recherche d'université
+                                                </Button>
+                                                <Button className={classes.btnMoreInfo}
+                                                        onClick={()=>
+                                                            this.sendReceipt(user.email,user.lastName,user.firstName,4)
+                                                        }
+                                                >
+                                                    Envoyer E-book
                                                 </Button>
                                             </div>
                                             <div style={{flex: 1}}>

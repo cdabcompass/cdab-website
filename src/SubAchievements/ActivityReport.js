@@ -6,15 +6,6 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from "@material-ui/core/Typography";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
-import filePdf from "../assets/activityReport/Rp1.pdf";
-import filePdf2 from "../assets/activityReport/Rp2.pdf";
-import filePdf3 from "../assets/activityReport/Rp3.pdf";
-import filePdf4 from "../assets/activityReport/Rp4.pdf";
-import filePdf5 from "../assets/activityReport/Rp5.pdf";
-import filePdf6 from "../assets/activityReport/Rp6.pdf";
-import filePdf7 from "../assets/activityReport/Rp7.pdf";
-import filePdf8 from "../assets/activityReport/Rp8.pdf";
-import filePdf9 from "../assets/activityReport/Rp9.pdf";
 import FooterBar from "../utils/FooterBar";
 
 const styles = theme => ({
@@ -65,7 +56,7 @@ class StudentProfil extends Component {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                <a target="_blank" href={filePdf}>Voir le contenu</a>
+                                <a target="_blank" href={"https://drive.google.com/file/d/1Dg4ptHf2h7mulvi8NVGh0Ea-YRy21VoV/view?usp=sharing"}>Voir le contenu</a>
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -82,7 +73,7 @@ class StudentProfil extends Component {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                <a target="_blank" href={filePdf2}>Voir le contenu</a>
+                                <a target="_blank" href={"https://drive.google.com/file/d/17m_Z_4VV5aspf2jFMT7jgoklqwrHcmM_/view?usp=sharing"}>Voir le contenu</a>
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -99,7 +90,7 @@ class StudentProfil extends Component {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                <a target="_blank" href={filePdf3}>Voir le contenu</a>
+                                <a target="_blank" href={"https://drive.google.com/file/d/16DaW-Cxe6XiqktGk9tgjA6PsItiYNCoO/view?usp=sharing"}>Voir le contenu</a>
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -116,7 +107,7 @@ class StudentProfil extends Component {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                <a target="_blank" href={filePdf4}>Voir le contenu</a>
+                                <a target="_blank" href={"https://drive.google.com/file/d/1_mtPJfP7kLbW1lQypAq2OuqdCdzk4bTS/view?usp=sharing"}>Voir le contenu</a>
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -133,7 +124,7 @@ class StudentProfil extends Component {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                <a target="_blank" href={filePdf5}>Voir le contenu</a>
+                                <a target="_blank" href={"https://drive.google.com/file/d/1qdtbsBi2hvAX7jGKfhXktNYfUsKOu8A7/view?usp=sharing"}>Voir le contenu</a>
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -150,7 +141,7 @@ class StudentProfil extends Component {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                <a target="_blank" href={filePdf6}>Voir le contenu</a>
+                                <a target="_blank" href={"https://drive.google.com/file/d/1Loesg4kDwDLkk0rdjD3m_A4VjhJ_GU0S/view?usp=sharing"}>Voir le contenu</a>
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -167,7 +158,7 @@ class StudentProfil extends Component {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                <a target="_blank" href={filePdf7}>Voir le contenu</a>
+                                <a target="_blank" href={"https://drive.google.com/file/d/1QEyhTAWuBFKX3ek_kwufp3R0w7u2PbX0/view?usp=sharing"}>Voir le contenu</a>
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -184,7 +175,7 @@ class StudentProfil extends Component {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                <a target="_blank" href={filePdf8}>Voir le contenu</a>
+                                <a target="_blank" href={"https://drive.google.com/file/d/17_PpPRlylSxSAYXbAknrJlqqEver4K4p/view?usp=sharing"}>Voir le contenu</a>
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -201,7 +192,7 @@ class StudentProfil extends Component {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                <a target="_blank" href={filePdf9}>Voir le contenu</a>
+                                <a target="_blank" href={"https://drive.google.com/file/d/1BBEeHETzw_b1-QYNOac2J7OkdYcgHyIp/view?usp=sharing"}>Voir le contenu</a>
                             </Typography>
                         </AccordionDetails>
                     </Accordion>

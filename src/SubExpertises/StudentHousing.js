@@ -4,7 +4,6 @@ import MenuBar from "../utils/MenuBar";
 import DetailsPageBanner from "../utils/DetailsPageBanner";
 import Button from "@material-ui/core/Button";
 import {Modal} from "react-bootstrap";
-import Pdf from "../assets/studentsHouseFiles/contract.pdf";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
@@ -74,7 +73,7 @@ class StudentHousing extends Component {
 
     downloadPdf = () => {
         if(localStorage.getItem("token") !== null){
-            window.open(Pdf);
+            window.open("https://drive.google.com/uc?export=view&id=1hpJCym8tat3DdpJlJTncVxgvYUJRxIKZ");
         }else{
             this.setState({openAlert:true});
         }
@@ -125,9 +124,9 @@ class StudentHousing extends Component {
                                 </Button>
                             </Modal.Header>
                             <Modal.Body>
-                                <img style={{width: "100%"}}  src={require("../assets/studentsHouseFiles/Cl1.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/studentsHouseFiles/Cl2.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/studentsHouseFiles/Cl3.png")} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=136oIlj_YpzHS8Ei8e3PJrkBS-kC1o3rF"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1PcSONPScTUpZu1VIhbajNKcZL16YmrbZ"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=11ZehpXucyGMJBe6eEGbGXJ9lsRrElqFB"} alt=""/>
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button style={{backgroundColor: "#FF9800",color: "white"}} onClick={this.downloadPdf}>

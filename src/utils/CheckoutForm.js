@@ -104,7 +104,7 @@ function CheckoutForm(props) {
                 console.log('Money is in the bank!');
                 // TODO : check {props.amount} value and set validSold to true
 
-                window.open(pdfDoc, "_blank");
+                window.open("https://drive.google.com/file/d/13bjpRDDE6JhkVeve4482op9ZfGFX9cQa/view?usp=sharing", "_blank");
 
                 setAlertStyle(true);
                 setOpenAlert(true);

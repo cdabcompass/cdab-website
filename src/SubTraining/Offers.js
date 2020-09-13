@@ -4,7 +4,6 @@ import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
 import {Modal} from "react-bootstrap";
 import Button from "@material-ui/core/Button";
-import Pdf from "../assets/studentsHouseFiles/contract.pdf";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
@@ -127,8 +126,8 @@ class Offers extends Component {
                             </Button>
                         </Modal.Header>
                         <Modal.Body>
-                            <img style={{width: "100%"}}  src={require("../assets/offers/offers_1.png")} alt=""/>
-                            <img style={{width: "100%"}}  src={require("../assets/offers/offers_2.png")} alt=""/>
+                            <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1WZsJwarYy_xrsf_1Xb96esX7DqotM_Cb"} alt=""/>
+                            <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1SCtzi7ZxuuuApUMtEqjAAvAMtD18jNzd"} alt=""/>
                          </Modal.Body>
                         <Modal.Footer>
                             <Button style={{backgroundColor: "#FF9800",color: "white"}} onClick={this.downloadPdf}>

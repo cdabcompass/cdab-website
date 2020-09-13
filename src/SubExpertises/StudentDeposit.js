@@ -4,7 +4,6 @@ import MenuBar from "../utils/MenuBar";
 import DetailsPageBanner from "../utils/DetailsPageBanner";
 import Button from "@material-ui/core/Button";
 import {Modal} from "react-bootstrap";
-import Pdf from '../assets/depositFiles/contract.pdf';
 import Snackbar from "@material-ui/core/Snackbar";
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from "@material-ui/core/IconButton";
@@ -76,7 +75,7 @@ class StudentDeposit extends Component {
 
     downloadPdf = () => {
         if(localStorage.getItem("token") !== null){
-            window.open(Pdf);
+            window.open("https://drive.google.com/uc?export=view&id=19aIha7RnkX4JeQ4ZF1hdtc-accf5hbEF","_blank");
         }else{
             //alert("Veuillez tout d'abord créer un compte ou vous connecter!");
             this.setState({openAlert:true});
@@ -128,17 +127,17 @@ class StudentDeposit extends Component {
                                 </Button>
                             </Modal.Header>
                             <Modal.Body>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St1.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St2.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St3.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St4.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St5.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St6.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St7.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St8.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St9.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St10.png")} alt=""/>
-                                <img style={{width: "100%"}}  src={require("../assets/depositFiles/St11.png")} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1Mdn7TdO16TOrJ1I1pE4fLqLzCAOqto17"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1Hz9bFKp1vC_FYnaWR59bjzfEeW8uu45C"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1VLruWYl95UMaSorMuA3rqiC4C9Bqbmdo"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1VrZg9eMccnXRJDevileBMwyHUW6vnLO_"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1kt_zeyz78FLbz88lKg0IMgc5y2jxRCZ3"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1gjs2WmHgXP6bCg90AqHXjr5cpYEJ3u4U"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=19NykBpZ6g73f7kNyA56IY_3MOeF8hkbs"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1_IXxf2yL2hWw_XqQS2p5NxR0ju46sNRt"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1wjHzgJAV5t0PvPzeUWE6hVX5XC6RBNQH"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1GdSJtXmyiFOXNaZp7XMGsLsyydj39XDZ"} alt=""/>
+                                <img style={{width: "100%"}}  src={"https://drive.google.com/uc?export=view&id=1kUxGdJySrRNJaxK3uDS_xyMRWJ273beX"} alt=""/>
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button style={{backgroundColor: "#FF9800",color: "white"}} onClick={this.downloadPdf}>
