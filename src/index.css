@@ -271,6 +271,7 @@ code {
 
   .contAll{
     margin: auto !important;
+    width: 100%;
   }
 
   .contain{
