@@ -176,7 +176,7 @@ route.post('/confirmUserPayment', async(req,res)=>{
     subject = "Confirmation de paiement";
     container = "<p>Bonjour Mr,Mme</p>"+user.lastName+" "+user.firstName
         +"<br><br><p>Nous vous confirmons que votre compte a été validé et votre paiement pris en compte.</p>"
-        +"<p>Cordialement,<br>Fabrice SUMSA</p>"
+        +"<p>Cordialement,<br>L'équie Cdab Compass</p>"
     ;
     attachment = "";
 

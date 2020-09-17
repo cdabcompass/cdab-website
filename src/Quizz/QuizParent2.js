@@ -109,9 +109,10 @@ class QuizParent2 extends Component {
             "<p>Avoir un avenir professionnel sans études supérieures, c’est :</p>"
             +"<h3>"+this.state.question15+"</h3>";
 
+        let username = localStorage.getItem('lastName')+" "+localStorage.getItem('firstName');
         axios.post('/users/mailing', {
             userEmail: "answers-quiz@cdabcompass.com",
-            subject: "Quiz phase 2 - parent",
+            subject: "Questionnaire phase 2 - "+username,
             container: result
         })
             .then(res=>{

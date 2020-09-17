@@ -185,9 +185,10 @@ class QuizParent1 extends Component {
             "<h3>"+this.state.iDontWantToPay+"</h3>";
 
 
+        let username = localStorage.getItem('lastName')+" "+localStorage.getItem('firstName');
         axios.post("/users/mailing", {
             userEmail: "answers-quiz@cdabcompass.com",
-            subject: "Quiz phase 1 - parent",
+            subject: "Questionnaire phase 1 - "+username,
             container: result
         }).then(res=>{
             console.log(res.data.text);

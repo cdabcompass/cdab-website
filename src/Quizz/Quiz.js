@@ -124,9 +124,10 @@ class Quiz extends Component {
             "    </tbody>\n" +
             "</table>";
 
+        let username = localStorage.getItem('lastName')+" "+localStorage.getItem('firstName');
         axios.post("/users/mailing", {
             userEmail: "answers-quiz@cdabcompass.com",
-            subject: "Quiz phase 2 - élève",
+            subject: "Questionnaire phase 2 - "+username,
             container: result
         }).then(res=>{
             console.log(res.data.text);
