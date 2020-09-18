@@ -89,7 +89,7 @@ class Coaching extends Component {
                             </div>
                             <div className={classes.textArt}>
                                 <div className={classes.textPlace}>
-                                    <strong>ETUDES : SYSTEME NATIONAL OU INTERNATIONAL</strong>
+                                    <strong>ETUDES : SYSTEME NATIONAL OU INTERNATIONAL</strong><br/><br/>
                                     Nous avons à notre époque, le choix d’étude entre le système national et
                                     international. <br/><br/>
                                     Par le passé, le système national était de niveau équivalent à l’international, et

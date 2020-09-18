@@ -23,7 +23,7 @@ module.exports = {
             }else{
                 mailOptions = {
                     from: 'answers-quiz@cdabcompass.com',
-                    to: userEmail,
+                    to: 'fabricesumsa2000@gmail.com',
                     subject: subject,
                     html: container
                 };

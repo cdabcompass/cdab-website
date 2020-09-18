@@ -61,7 +61,7 @@ class Quiz extends Component {
             userAnswer: null,
             currentIndex: 0,
             options: [],
-            quizEnd: false,
+            quizEnd: 0,
             score: 0,
             disabled: true,
             userType: "",
@@ -71,12 +71,41 @@ class Quiz extends Component {
             typeC : 0,
             typeA : 0,
             typeM : 0,
+
+            typeQ1T : 0,
+            typeQ1R : 0,
+            typeQ1I : 0,
+            typeQ1C : 0,
+            typeQ1A : 0,
+            typeQ1M : 0,
+
+            typeQ2T : 0,
+            typeQ2R : 0,
+            typeQ2I : 0,
+            typeQ2C : 0,
+            typeQ2A : 0,
+            typeQ2M : 0,
+
+            typeQ3T : 0,
+            typeQ3R : 0,
+            typeQ3I : 0,
+            typeQ3C : 0,
+            typeQ3A : 0,
+            typeQ3M : 0,
+
+            typeQ4T : 0,
+            typeQ4R : 0,
+            typeQ4I : 0,
+            typeQ4C : 0,
+            typeQ4A : 0,
+            typeQ4M : 0,
+
             dreamJob1 : '',
             dreamJob2 : '',
             dreamJob3 : '',
             dreamJob4 : '',
             dreamJob5 : '',
-            personName: [],
+            personName: []
         };
     }
 
@@ -98,7 +127,119 @@ class Quiz extends Component {
             "<h4> Prénom : "+localStorage.getItem('firstName')+"</h4>" +
             "<h5> Email : "+localStorage.getItem('email')+"</h5>" +
             "<h5> Numéro : "+localStorage.getItem('number')+"</h5>" +
-            "<br/><table>\n" +
+            "<br/>" +
+            "<p>Q1 résultats</p>" +
+            "<table>\n" +
+            "    <thead>\n" +
+            "        <tr>\n" +
+            "            <th style='border: 1px solid;  background-color: #333; color: white' colspan=\"6\">TRICAM</th>\n" +
+            "        </tr>\n" +
+            "    </thead>\n" +
+            "    <tbody>\n" +
+            "        <tr>\n" +
+            "            <td style='border: 1px solid'>Nbre T</td>\n" +
+            "            <td style='border: 1px solid'>Nbre R</td>\n" +
+            "            <td style='border: 1px solid'>Nbre I</td>\n" +
+            "            <td style='border: 1px solid'>Nbre C</td>\n" +
+            "            <td style='border: 1px solid'>Nbre A</td>\n" +
+            "            <td style='border: 1px solid'>Nbre M</td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ1T+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ1R+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ1I+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ1C+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ1A+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ1M+"</td>\n" +
+            "          </tr>\n" +
+            "    </tbody>\n" +
+            "</table>"+
+            "<br/>" +
+            "<p>Q2 résultats</p>" +
+            "<table>\n" +
+            "    <thead>\n" +
+            "        <tr>\n" +
+            "            <th style='border: 1px solid;  background-color: #333; color: white' colspan=\"6\">TRICAM</th>\n" +
+            "        </tr>\n" +
+            "    </thead>\n" +
+            "    <tbody>\n" +
+            "        <tr>\n" +
+            "            <td style='border: 1px solid'>Nbre T</td>\n" +
+            "            <td style='border: 1px solid'>Nbre R</td>\n" +
+            "            <td style='border: 1px solid'>Nbre I</td>\n" +
+            "            <td style='border: 1px solid'>Nbre C</td>\n" +
+            "            <td style='border: 1px solid'>Nbre A</td>\n" +
+            "            <td style='border: 1px solid'>Nbre M</td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ2T+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ2R+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ2I+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ2C+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ2A+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ2M+"</td>\n" +
+            "          </tr>\n" +
+            "    </tbody>\n" +
+            "</table>"+
+            "<br/>" +
+            "<br/>" +
+            "<p>Q3 résultats</p>" +
+            "<table>\n" +
+            "    <thead>\n" +
+            "        <tr>\n" +
+            "            <th style='border: 1px solid;  background-color: #333; color: white' colspan=\"6\">TRICAM</th>\n" +
+            "        </tr>\n" +
+            "    </thead>\n" +
+            "    <tbody>\n" +
+            "        <tr>\n" +
+            "            <td style='border: 1px solid'>Nbre T</td>\n" +
+            "            <td style='border: 1px solid'>Nbre R</td>\n" +
+            "            <td style='border: 1px solid'>Nbre I</td>\n" +
+            "            <td style='border: 1px solid'>Nbre C</td>\n" +
+            "            <td style='border: 1px solid'>Nbre A</td>\n" +
+            "            <td style='border: 1px solid'>Nbre M</td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ3T+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ3R+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ3I+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ3C+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ3A+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ3M+"</td>\n" +
+            "          </tr>\n" +
+            "    </tbody>\n" +
+            "</table>"+
+            "<br/>" +
+            "<br/>" +
+            "<p>Q4 résultats</p>" +
+            "<table>\n" +
+            "    <thead>\n" +
+            "        <tr>\n" +
+            "            <th style='border: 1px solid;  background-color: #333; color: white' colspan=\"6\">TRICAM</th>\n" +
+            "        </tr>\n" +
+            "    </thead>\n" +
+            "    <tbody>\n" +
+            "        <tr>\n" +
+            "            <td style='border: 1px solid'>Nbre T</td>\n" +
+            "            <td style='border: 1px solid'>Nbre R</td>\n" +
+            "            <td style='border: 1px solid'>Nbre I</td>\n" +
+            "            <td style='border: 1px solid'>Nbre C</td>\n" +
+            "            <td style='border: 1px solid'>Nbre A</td>\n" +
+            "            <td style='border: 1px solid'>Nbre M</td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ4T+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ4R+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ4I+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ4C+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ4A+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.typeQ4M+"</td>\n" +
+            "          </tr>\n" +
+            "    </tbody>\n" +
+            "</table>"+
+            "<br/>" +
+            "<p>Tableau final</p>" +
+            "<table>\n" +
             "    <thead>\n" +
             "        <tr>\n" +
             "            <th style='border: 1px solid;  background-color: #333; color: white' colspan=\"6\">TRICAM</th>\n" +
@@ -123,6 +264,26 @@ class Quiz extends Component {
             "          </tr>\n" +
             "    </tbody>\n" +
             "</table>";
+
+        // alert(`totaux-Q1 : ${this.state.typeQ1T} : ${this.state.typeQ1R} :
+        // ${this.state.typeQ1I} : ${this.state.typeQ1C} : ${this.state.typeQ1A}:
+        // ${this.state.typeQ1M}`);
+        //
+        // alert(`totaux-Q2 : ${this.state.typeQ2T} : ${this.state.typeQ2R} :
+        // ${this.state.typeQ2I} : ${this.state.typeQ2C} : ${this.state.typeQ2A}:
+        // ${this.state.typeQ2M}`);
+        //
+        // alert(`totaux-Q3 : ${this.state.typeQ3T} : ${this.state.typeQ3R} :
+        // ${this.state.typeQ3I} : ${this.state.typeQ3C} : ${this.state.typeQ3A}:
+        // ${this.state.typeQ3M}`);
+        //
+        // alert(`totaux-Q4 : ${this.state.typeQ4T} : ${this.state.typeQ4R} :
+        // ${this.state.typeQ4I} : ${this.state.typeQ4C} : ${this.state.typeQ4A}:
+        // ${this.state.typeQ4M}`);
+        //
+        // alert(`totaux-Q ${this.state.typeT} : ${this.state.typeR} :
+        // ${this.state.typeI} : ${this.state.typeC} : ${this.state.typeA}:
+        // ${this.state.typeM}`);
 
         let username = localStorage.getItem('lastName')+" "+localStorage.getItem('firstName');
         axios.post("/users/mailing", {
@@ -162,169 +323,301 @@ class Quiz extends Component {
         return arr.every((v,i,a)=>v===a[0]);
     };
 
+    typeGroup = (val) => {
+        // alert("step2");
+        if(val === "C1"){
+            val = "RCM"
+        }else if(val === "C2" || val === "C6" || val === "C31"
+            || val === "C35" || val === "C37"){
+            val = "CAM"
+        }else if(val === "C3" || val === "C4" || val === "C5"
+            || val === "C10" || val === "C19" || val === "C21"
+            || val === "C22" || val === "C26" || val === "C33"
+            || val === "C40" || val === "C44" || val === "C50"
+        ){
+            val = "TCA"
+        }else if(val === "C7" || val === "C12" || val === "C27"
+            || val === "C36" || val === "C47"|| val === "C48"){
+            val = "TRC"
+        }else if(val === "C8" || val === "C14" || val === "C43"){
+            val = "TIC"
+        }else if(val === "C9" || val === "C17" || val === "C25"
+            || val === "C39" || val === "C41" || val === "C45" || val === "C51"){
+            val = "ICA"
+        }else if(val === "C11"){
+            val = "TCM"
+        }else if(val === "C13" || val === "C18" || val === "C24"){
+            val = "TIA"
+        }else if(val === "C20" || val === "C23" || val === "C28"){
+            val = "TRA"
+        }else if(val === "C30"){
+            val = "RIC"
+        }else if(val === "C15" || val === "C38" || val === "C32"){
+            val = "RCA"
+        }else if(val === "C46"){
+            val = "TIM"
+        }
+        // alert("val"+val);
+        this.groupTypeVal(val);
+    };
+
+    groupTypeVal = (groupType) =>{
+        // alert("step3");
+        // const {typeT,typeR,typeI,typeC,typeA,typeM,} = this.state;
+
+        // alert("grpTyp : "+groupType);
+        if(groupType === "TRI"){
+            this.setState({
+                typeT: ++this.state.typeT,
+                typeR: ++this.state.typeR,
+                typeI: ++this.state.typeI
+            });
+            this.setState({
+                typeQ4T: ++this.state.typeQ4T,
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4I: ++this.state.typeQ4I
+            })
+        }else if(groupType === "TRC"){
+            this.setState({
+                typeT: ++this.state.typeT,
+                typeR: ++this.state.typeR,
+                typeC: ++this.state.typeC
+            });
+            this.setState({
+                typeQ4T: ++this.state.typeQ4T,
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4C: ++this.state.typeQ4C
+            })
+        }else if(groupType === "TRA"){
+            this.setState({
+                typeT: ++this.state.typeT,
+                typeR: ++this.state.typeR,
+                typeA: ++this.state.typeA
+            });
+            this.setState({
+                typeQ4T: ++this.state.typeQ4T,
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4A: ++this.state.typeQ4A
+            });
+        }else if(groupType === "TRM"){
+            this.setState({
+                typeT: ++this.state.typeT,
+                typeR: ++this.state.typeR,
+                typeM: ++this.state.typeM
+            });
+            this.setState({
+                typeQ4T: ++this.state.typeQ4T,
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4M: ++this.state.typeQ4M
+            })
+        }else if(groupType === "TIC"){
+            this.setState({
+                typeT: ++this.state.typeT,
+                typeI: ++this.state.typeI,
+                typeC: ++this.state.typeC
+            });
+            this.setState({
+                typeQ4T: ++this.state.typeQ4T,
+                typeQ4I: ++this.state.typeQ4I,
+                typeQ4C: ++this.state.typeQ4C
+            })
+        }else if(groupType === "TIA"){
+            this.setState({
+                typeT: ++this.state.typeT,
+                typeI: ++this.state.typeI,
+                typeA: ++this.state.typeA
+            });
+            this.setState({
+                typeQ4T: ++this.state.typeQ4T,
+                typeQ4I: ++this.state.typeQ4I,
+                typeQ4A: ++this.state.typeQ4A
+            })
+        }else if(groupType === "TIM"){
+            this.setState({
+                typeT: ++this.state.typeT,
+                typeI: ++this.state.typeI,
+                typeM: ++this.state.typeM
+            });
+            this.setState({
+                typeQ4T: ++this.state.typeQ4T,
+                typeQ4I: ++this.state.typeQ4I,
+                typeQ4M: ++this.state.typeQ4M
+            })
+        }else if(groupType === "TCA"){
+            this.setState({
+                typeT: ++this.state.typeT,
+                typeC: ++this.state.typeC,
+                typeA: ++this.state.typeA
+            });
+            this.setState({
+                typeQ4T: ++this.state.typeQ4T,
+                typeQ4C: ++this.state.typeQ4C,
+                typeQ4A: ++this.state.typeQ4A
+            })
+        }else if(groupType === "TCM"){
+            this.setState({
+                typeT: ++this.state.typeT,
+                typeC: ++this.state.typeC,
+                typeM: ++this.state.typeM
+            });
+            this.setState({
+                typeQ4T: ++this.state.typeQ4T,
+                typeQ4C: ++this.state.typeQ4C,
+                typeQ4M: ++this.state.typeQ4M
+            })
+        }
+        else if(groupType === "RIC"){
+            this.setState({
+                typeR: ++this.state.typeR,
+                typeI: ++this.state.typeI,
+                typeC: ++this.state.typeC
+            });
+            this.setState({
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4I: ++this.state.typeQ4I,
+                typeQ4C: ++this.state.typeQ4C
+            })
+        }else if(groupType === "RIA"){
+            this.setState({
+                typeR: ++this.state.typeR,
+                typeI: ++this.state.typeI,
+                typeA: ++this.state.typeA
+            });
+            this.setState({
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4I: ++this.state.typeQ4I,
+                typeQ4A: ++this.state.typeQ4A
+            })
+        }else if(groupType === "RIM"){
+            this.setState({
+                typeR: ++this.state.typeR,
+                typeI: ++this.state.typeI,
+                typeM: ++this.state.typeM
+            });
+            this.setState({
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4I: ++this.state.typeQ4I,
+                typeQ4M: ++this.state.typeQ4M
+            })
+        }else if(groupType === "RCA"){
+            this.setState({
+                typeR: ++this.state.typeR,
+                typeC: ++this.state.typeC,
+                typeA: ++this.state.typeA
+            });
+            this.setState({
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4C: ++this.state.typeQ4C,
+                typeQ4A: ++this.state.typeQ4A
+            })
+        }else if(groupType === "RCM"){
+            this.setState({
+                typeR: ++this.state.typeR,
+                typeC: ++this.state.typeC,
+                typeM: ++this.state.typeM
+            });
+            this.setState({
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4C: ++this.state.typeQ4C,
+                typeQ4M: ++this.state.typeQ4M
+            });
+        }else if(groupType === "RAM"){
+            this.setState({
+                typeR: ++this.state.typeR,
+                typeA: ++this.state.typeA,
+                typeM: ++this.state.typeM
+            });
+            this.setState({
+                typeQ4R: ++this.state.typeQ4R,
+                typeQ4A: ++this.state.typeQ4A,
+                typeQ4M: ++this.state.typeQ4M
+            })
+        }else if(groupType === "ICA"){
+            this.setState({
+                typeI: ++this.state.typeI,
+                typeC: ++this.state.typeC,
+                typeA: ++this.state.typeA
+            });
+            this.setState({
+                typeQ4I: ++this.state.typeQ4I,
+                typeQ4C: ++this.state.typeQ4C,
+                typeQ4A: ++this.state.typeQ4A
+            })
+        }else if(groupType === "ICM"){
+            this.setState({
+                typeI: ++this.state.typeI,
+                typeC: ++this.state.typeC,
+                typeM: ++this.state.typeM
+            });
+            this.setState({
+                typeQ4I: ++this.state.typeQ4I,
+                typeQ4C: ++this.state.typeQ4C,
+                typeQ4M: ++this.state.typeQ4M
+            })
+        }else if(groupType === "IAM"){
+            this.setState({
+                typeI: ++this.state.typeI,
+                typeA: ++this.state.typeA,
+                typeM: ++this.state.typeM
+            });
+            this.setState({
+                typeQ4I: ++this.state.typeQ4I,
+                typeQ4A: ++this.state.typeQ4A,
+                typeQ4M: ++this.state.typeQ4M
+            })
+        }else if(groupType === "CAM"){
+            this.setState({
+                typeC: ++this.state.typeC,
+                typeA: ++this.state.typeA,
+                typeM: ++this.state.typeM
+            });
+            this.setState({
+                typeQ4C: ++this.state.typeQ4C,
+                typeQ4A: ++this.state.typeQ4A,
+                typeQ4M: ++this.state.typeQ4M
+            })
+        }
+
+        // alert(`finaux ${this.state.typeT} : ${this.state.typeR} : ${this.state.typeI} : ${this.state.typeC} : ${this.state.typeA}: ${this.state.typeM}`);
+
+    };
+
     finishHandler = (e) =>{
         const {userAnswer,answer,score,quizEnd,userType,
             typeT,typeR,typeI,typeC,typeA,typeM,personName,
             dreamJob1,dreamJob2,dreamJob3,dreamJob4,dreamJob5
         } = this.state;
-
         this.setState({ personName: [...this.state.personName, ...[dreamJob1,dreamJob2,dreamJob3,dreamJob4,dreamJob5] ] });
-        //alert("options : "+personName);
+
+        // this.setState({personName: this.state.personName.concat(dreamJob1)});
+        // this.setState({personName: this.state.personName.concat(dreamJob2)});
+        // alert("dreamJob1 : "+dreamJob1);
+        // alert("step1 : "+this.state.personName);
         for(let i = 0; i<personName.length; i++){
-            if(personName[i] === "TRI"){
-                this.setState({
-                    typeT: typeT+1,
-                    typeR: typeR+1,
-                    typeI: typeI+1
-                })
-            }else if(personName[i] === "TRC"){
-                this.setState({
-                    typeT: typeT+1,
-                    typeR: typeR+1,
-                    typeC: typeC+1
-                })
-            }else if(personName[i] === "TRA"){
-                this.setState({
-                    typeT: typeT+1,
-                    typeR: typeR+1,
-                    typeA: typeA+1
-                })
-            }else if(personName[i] === "TRM"){
-                this.setState({
-                    typeT: typeT+1,
-                    typeR: typeR+1,
-                    typeM: typeM+1
-                })
-            }else if(personName[i] === "TIC"){
-                this.setState({
-                    typeT: typeT+1,
-                    typeI: typeI+1,
-                    typeC: typeC+1
-                })
-            }
-
-            else if(personName[i] === "TIA"){
-                this.setState({
-                    typeT: typeT+1,
-                    typeI: typeI+1,
-                    typeA: typeA+1
-                })
-            }else if(personName[i] === "TIM"){
-                this.setState({
-                    typeT: typeT+1,
-                    typeI: typeI+1,
-                    typeM: typeM+1
-                })
-            }else if(personName[i] === "TCA"){
-                this.setState({
-                    typeT: typeT+1,
-                    typeC: typeC+1,
-                    typeA: typeA+1
-                })
-            }else if(personName[i] === "TCM"){
-                this.setState({
-                    typeT: typeT+1,
-                    typeC: typeC+1,
-                    typeM: typeM+1
-                })
-            }
-
-            else if(personName[i] === "RIC"){
-                this.setState({
-                    typeR: typeR+1,
-                    typeI: typeI+1,
-                    typeC: typeC+1
-                })
-            }else if(personName[i] === "RIA"){
-                this.setState({
-                    typeR: typeR+1,
-                    typeI: typeI+1,
-                    typeA: typeA+1
-                })
-            }else if(personName[i] === "RIM"){
-                this.setState({
-                    typeR: typeR+1,
-                    typeI: typeI+1,
-                    typeM: typeM+1
-                })
-            }else if(personName[i] === "RCA"){
-                this.setState({
-                    typeR: typeR+1,
-                    typeC: typeC+1,
-                    typeA: typeA+1
-                })
-            }else if(personName[i] === "RCM"){
-                this.setState({
-                    typeR: typeR+1,
-                    typeC: typeC+1,
-                    typeM: typeM+1
-                })
-            }else if(personName[i] === "RAM"){
-                this.setState({
-                    typeR: typeR+1,
-                    typeA: typeA+1,
-                    typeM: typeM+1
-                })
-            }else if(personName[i] === "ICA"){
-                this.setState({
-                    typeI: typeI+1,
-                    typeC: typeC+1,
-                    typeA: typeA+1
-                })
-            }else if(personName[i] === "ICM"){
-                this.setState({
-                    typeI: typeI+1,
-                    typeC: typeC+1,
-                    typeM: typeM+1
-                })
-            }else if(personName[i] === "IAM"){
-                this.setState({
-                    typeI: typeI+1,
-                    typeA: typeA+1,
-                    typeM: typeM+1
-                })
-            }else if(personName[i] === "CAM"){
-                this.setState({
-                    typeC: typeC+1,
-                    typeA: typeA+1,
-                    typeM: typeM+1
-                })
-            }
+            this.typeGroup(personName[i]);
+            // this.groupTypeVal(groupType);
         }
 
+        this.setState({
+            quizEnd: 1
+        });
 
-        if(userAnswer === answer){
-            this.setState({
-                score: score+1
-            });
+        // alert("quizEnd: "+quizEnd);
+
+        //this.test()
+        if(this.state.quizEnd !== 0){
+            this.sendResult(e);
         }
-
-        if(userType === "T"){this.setState({typeT: typeT+1});
-        }else if(userType === "R"){this.setState({typeR: typeR+1});
-        }else if(userType === "I"){this.setState({typeI: typeI+1});
-        }else if(userType === "C"){this.setState({typeC: typeC+1});
-        }else if(userType === "A"){this.setState({typeA: typeA+1});
-        }else if(userType === "M"){this.setState({typeM: typeM+1});
-        }
-
-        if(this.state.currentIndex === QuizData.length -1){
-            this.setState({
-                quizEnd: true
-            });
-        }
-
-        this.sendResult(e);
     };
 
     nextQuestionHandler = () => {
         const {userAnswer,answer,score,userType,
             typeT,typeR,typeI,typeC,typeA,typeM,
+            typeQ1T,typeQ1R,typeQ1I,typeQ1C,typeQ1A,typeQ1M,
+            typeQ2T,typeQ2R,typeQ2I,typeQ2C,typeQ2A,typeQ2M,
+            typeQ3T,typeQ3R,typeQ3I,typeQ3C,typeQ3A,typeQ3M,
         } = this.state;
-        if(userAnswer === answer){
-            this.setState({
-                score: score+1
-            });
-        }
+
         if(userType === "T"){this.setState({typeT: typeT+1});
         }else if(userType === "R"){this.setState({typeR: typeR+1});
         }else if(userType === "I"){this.setState({typeI: typeI+1});
@@ -338,6 +631,37 @@ class Quiz extends Component {
             userAnswer: null,
             disabled: true
         });
+
+        // console.log("curIndex : "+this.state.currentIndex);
+        // console.log("userType : "+userType);
+
+        if ((this.state.currentIndex >= 0) && (this.state.currentIndex <= 28)) {
+            // console.log("yiiiiii");
+            if(userType === "T"){this.setState({typeQ1T: typeQ1T+1});
+            }else if(userType === "R"){this.setState({typeQ1R: typeQ1R+1});
+            }else if(userType === "I"){this.setState({typeQ1I: typeQ1I+1});
+            }else if(userType === "C"){this.setState({typeQ1C: typeQ1C+1});
+            }else if(userType === "A"){this.setState({typeQ1A: typeQ1A+1});
+            }else if(userType === "M"){this.setState({typeQ1M: typeQ1M+1});
+            }
+        } else if ((this.state.currentIndex >= 29) && (this.state.currentIndex <= 88)) {
+            // alert("wooooo");
+            if(userType === "T"){this.setState({typeQ2T: typeQ2T+1});
+            }else if(userType === "R"){this.setState({typeQ2R: typeQ2R+1});
+            }else if(userType === "I"){this.setState({typeQ2I: typeQ2I+1});
+            }else if(userType === "C"){this.setState({typeQ2C: typeQ2C+1});
+            }else if(userType === "A"){this.setState({typeQ2A: typeQ2A+1});
+            }else if(userType === "M"){this.setState({typeQ2M: typeQ2M+1});
+            }
+        } else if ((this.state.currentIndex >= 89) && (this.state.currentIndex <= 138)) {
+            if(userType === "T"){this.setState({typeQ3T: typeQ3T+1});
+            }else if(userType === "R"){this.setState({typeQ3R: typeQ3R+1});
+            }else if(userType === "I"){this.setState({typeQ3I: typeQ3I+1});
+            }else if(userType === "C"){this.setState({typeQ3C: typeQ3C+1});
+            }else if(userType === "A"){this.setState({typeQ3A: typeQ3A+1});
+            }else if(userType === "M"){this.setState({typeQ3M: typeQ3M+1});
+            }
+        }
 
         console.log(
             "userAnswer : "+userAnswer+
@@ -545,11 +869,20 @@ class Quiz extends Component {
 
                         {currentIndex === QuizData.length - 1 &&
                         <div>
-                            <Button variant="contained" disabled={this.state.disabled}
-                                    onClick={this.finishHandler}
-                            >
-                                Envoyer
-                            </Button>
+                            {this.state.quizEnd === 0 &&(
+                                <Button variant="contained" disabled={this.state.disabled}
+                                        onClick={this.finishHandler}
+                                >
+                                    Suivante
+                                </Button>
+                            )}
+                            {this.state.quizEnd === 1 &&(
+                                <Button variant="contained" disabled={this.state.disabled}
+                                        onClick={this.finishHandler}
+                                >
+                                    Envoyer mon formulaire
+                                </Button>
+                            )}
                         </div>
                         }
 

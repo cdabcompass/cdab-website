@@ -141,6 +141,7 @@ route.post('/mailing', async(req,res)=>{
     let container = req.body.container;
     let attachment = req.body.attachment;
 
+    console.log("container : "+container);
     //console.log("attachment step 1 : "+attachment);
     EmailSender.sendEmail(userEmail,subject,container,attachment)
         .then(_res => {
