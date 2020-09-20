@@ -126,7 +126,7 @@ class Coaching extends Component {
                                     baisse de note dans une discipline scolaire ou universitaire. Nous pensons faire
                                     ainsi un choix judicieux pour nos enfants. Ainsi la question est de savoir l’intérêt
                                     du cours de répétition et l’aide à apporter à nos enfants pour rattraper le retard
-                                    cumulé ?
+                                    cumulé ? <br/>
 
                                     <strong>La répétition sur le long terme,</strong> c’est-à dire, payer un professeur pour la survie
                                     scolaire de votre enfant toute l’année, n’aide pas du tout ce dernier. L’enfant ou
@@ -318,11 +318,42 @@ class Coaching extends Component {
                             </div>
                             <div className={classes.textArt}>
                                 <div className={classes.textPlace}>
-                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la
-                                    mise en page avant impression. Le Lorem Ipsum est le faux texte standard de
-                                    l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble
-                                    des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas
-                                    fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique,
+                                    L’échec est toujours dur à encaisser mais il peut aussi permettre de réajuster ses projets et de
+                                    rebondir. Alors, comment faire de l’échec un tremplin et non un naufrage ? comment
+                                    retrouver sa confiance en soi et sa motivation ? <br/>
+                                    L’échec est une situation très difficile qui nous emplit de négativité. Mais il faut adopter la
+                                    bonne attitude pour lui faire face : <br/>
+                                    - Attention à la perte de l’estime de soi, <br/>
+                                    - Analyser l’échec pour mieux le digérer, <br/>
+                                    - En tirer les bons enseignements, <br/>
+                                    - Ne pas rester seul, <br/>
+                                    - Construire un nouveau projet, <br/>
+                                    - Elargir son horizon, s’ouvrir à de nouveaux projets, <br/>
+                                    - Se fixer de petits objectifs de réussite, être agile. <br/>
+                                    <br/><br/>
+                                    Face à l’échec, il ne faut pas baisser les bras mais au contraire se ressaisir, apprendre de cet
+                                    échec et chercher à tenter de nouvelles approches. Certains des esprits les plus brillants n&#39;ont
+                                    pas seulement toléré l'échec, ils l'ont encouragé : <br/><br/>
+                                    <ul>
+                                        <li>
+                                            « L'échec est une option ici. Si les choses n'échouent pas, c'est que vous n'êtes pas assez
+                                            innovant. » - <strong>Elon Musk</strong>
+                                        </li>
+                                        <li>
+                                            « Il est bon de célébrer le succès, mais il est plus important de tenir compte des leçons
+                                            de l’échec. » - <strong>Bill Gates</strong>
+                                        </li>
+                                        <li>
+                                            « Vous devez être prêt à agir. Vous devez être prêt à vous planter complètement, sinon,
+                                            vous n'irez pas très loin. » - <strong>Steve Jobs.</strong>
+                                        </li>
+                                    </ul>
+                                    <br/>
+                                    Sources :
+                                    <link href={""}/>
+                                    https://www.reussirmavie.net/Comment-rebondir-apres-un-echec_a953.html
+                                    https://www.wrike.com/fr/blog/comment-vaincre-la-peur-de-lechec-et-adopter-un-etat-desprit-axe-
+                                    sur-la-croissance/
                                 </div>
                             </div>
                         </div>
@@ -336,11 +367,43 @@ class Coaching extends Component {
                             </div>
                             <div className={classes.textArt}>
                                 <div className={classes.textPlace}>
-                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la
-                                    mise en page avant impression. Le Lorem Ipsum est le faux texte standard de
-                                    l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble
-                                    des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas
-                                    fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique,
+                                    Être facile n’est pas tâche facile, et cela s’apprend. Un vrai parent, c’est pouvoir éduquer,
+                                    accompagner dans sa réussite, cependant on distingue aussi de faux parents : ils ne
+                                    connaissent pas la personnalité de l’enfant, ne communiquent pas avec lui et ne restent pas à
+                                    l’écoute de l’enfant.
+                                    D’après le livre de Claire Leduc, Le parent entraîneur, des Éditions logiques, il y aurait 5
+                                    types de parents : parent absent, parent débonnaire, parent entraîneur (objectif à atteindre),
+                                    parent autoritaire, parent abusif. <br/><br/>
+                                    <ul>
+                                        <li>
+                                            <strong>Le parent absent : </strong>C’est le parent qui ne s’intéresse pas au développement de son
+                                            enfant et qui n’investit pas dans l’éducation, ne prend pas le temps de communiquer
+                                            avec l’enfant et n’est préoccupé que par lui-même.
+                                        </li>
+                                        <br/>
+                                        <li>
+                                            <strong>Le parent débonnaire : </strong>Le parent est préoccupé du développement de son enfant. Il
+                                            donne les soins à son enfant sans toutefois le contraindre. Ce type de parent laisse
+                                            l’enfant prendre ses propres décisions et faire ses expériences.
+                                        </li><br/>
+                                        <li>
+                                            <strong>Le parent entraîneur : </strong>Le parent est préoccupé par l’éducation de ses enfants au
+                                            même titre que ses propres activités (travail, relation de couple, relations sociales). Il y
+                                            a la communication, on s’écoute.
+                                        </li><br/>
+                                        <li>
+                                            <strong>Le parent autoritaire : </strong>les enfants doivent obéir aux règles, pas de place à la
+                                            personnalité de l’enfant, goûts, différences.
+                                        </li><br/>
+                                        <li>
+                                            <strong>Le parent abusif : </strong>type de parent qui ignore totalement les besoins de l’enfant, les
+                                            problèmes des parents sont prédominants, la communication est déficiente, la violence
+                                            et l’abus sont présents et dont les enfants sont les premières victimes.
+                                        </li>
+                                    </ul>
+                                    <br/>
+                                    Tout parent doit faire de son possible pour être un bon parent, rester à l’écoute de ce dernier et
+                                    l’accompagner dans sa vision pour la réalisation de ses rêves.
                                 </div>
                             </div>
                         </div>
@@ -354,11 +417,33 @@ class Coaching extends Component {
                             </div>
                             <div className={classes.textArt}>
                                 <div style={{margin: "0 auto", width: "70%"}}>
-                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la
-                                    mise en page avant impression. Le Lorem Ipsum est le faux texte standard de
-                                    l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble
-                                    des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas
-                                    fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique,
+                                    COMMENT RECONNAITRE ET SURMONTER LES DIFFICULTES
+                                    SCOLAIRES <br/><br/>
+                                    Le chemin pour réussir son cursus scolaire est semé d’embuches. Ces difficultés peuvent
+                                    freiner les objectifs fixés. Pour se faire il faut reconnaître et surmonter ses problèmes. Il existe
+                                    plusieurs moyens : <br/><br/>
+                                    <ul>
+                                        <li>
+                                            Identifier clairement le but souhaité : au lieu de se focaliser sur ce qui ne va pas, il
+                                            faut plutôt définir précisément et clairement ce qu’on veut, visualiser clairement le
+                                            résultat souhaité et le ressentir comme déjà acquis.
+                                        </li><br/>
+                                        <li>
+                                            Repérer et changer la pensée qui empêche la progression : il ne faut surtout pas
+                                            perdre confiance en soi et laisser place au désespoir, la dépression, le découragement,
+                                            bien au contraire se rebooster, faire le plein de courage, se dire des choses positives.
+                                        </li><br/>
+                                        <li>
+                                            Trouver une nouvelle solution pour passer à l’action : Continuer de faire la même
+                                            chose conduira toujours au même résultat, il faut donc chercher à chercher ce qui ne
+                                            va pas et essayer de nouvelles techniques d’approche.
+                                        </li>
+                                    </ul>
+                                    <br/>
+                                    Face aux difficultés, il ne faut pas se laisser aller par le découragement. En revanche il faut
+                                    développer et entretenir sa confiance en soi, ses talents, ses capacités, essayer de nouvelles
+                                    méthodes, savoir entretenir un état d’esprit positif et dynamique pour mieux rebondir.
+                                    Il faut traiter les difficultés comme un défi à surmonter.
                                 </div>
                             </div>
                         </div>
@@ -372,11 +457,25 @@ class Coaching extends Component {
                             </div>
                             <div className={classes.textArt}>
                                 <div className={classes.textPlace}>
-                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la
-                                    mise en page avant impression. Le Lorem Ipsum est le faux texte standard de
-                                    l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble
-                                    des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas
-                                    fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique,
+                                    Pour briller dans l’univers professionnel, il faut se fixer des objectifs.
+                                    Néanmoins, plusieurs raisons peuvent nous empêcher d’atteindre ses objectifs : la
+                                    procrastination, les contraintes de santé, une mauvaise appréciation du projet en lui-même, et
+                                    bien d’autres… <br/><br/>
+                                    Mener à bien ses objectifs professionnels nécessite l’élaboration de méthodes. Seulement
+                                    toutes les méthodes ne se valent pas, il faut donc trouver celle qui nous convient, la bonne
+                                    méthode. <br/><br/>
+                                    La méthode SMART : <br/><br/>
+                                    <strong>S pour spécifique : </strong>la première des choses à faire est de définir clairement l’objectif à
+                                    atteindre. Il doit être clair, précis et bien détaillé
+                                    <br/><br/>
+                                    <strong>M comme mesurable : </strong>on doit pouvoir évaluer la progression de l’objectif
+                                    <br/><br/>
+                                    <strong>A comme accessible : </strong>l’objectif doit être accessible, pour cela il faut commencer par atteindre
+                                    un objectif plus simple.
+                                    <br/><br/>
+                                    <strong>R comme réaliste : </strong>Chaque objectif ou sous-objectif doit être réaliste, atteignable, sérieux.
+                                    <br/><br/>
+                                    <strong>T comme temporel : </strong>l’objectif doit être mené selon un calendrier temporel bien précis.
                                 </div>
                             </div>
                         </div>
