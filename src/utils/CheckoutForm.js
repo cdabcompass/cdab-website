@@ -154,6 +154,8 @@ function CheckoutForm(props) {
                         subject: "Preuve de paiement",
                         container: "<p>Mr,Mme "+ localStorage.getItem("lastName") + " "
                             + localStorage.getItem("firstName")  +" vient d'effectuer son paiement. " +
+                            "<br>Vous pouvez passer vos différents tests en vous rendant sur l'onglet 'Detection de profil'. " +
+                            "Si ces derniers ne s'affichent pas d'eux même vous devrez alors vous déconnectez et vous reconnectez " +
                             "<br><br><br>Cordialement, <br>L'équie Cdab Compass </p>"
                     })
                         .then(res=>{

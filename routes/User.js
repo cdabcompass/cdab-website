@@ -176,7 +176,9 @@ route.post('/confirmUserPayment', async(req,res)=>{
     userEmail = user.email;
     subject = "Confirmation de paiement";
     container = "<p>Bonjour Mr,Mme</p>"+user.lastName+" "+user.firstName
-        +"<br><br><p>Nous vous confirmons que votre compte a été validé et votre paiement pris en compte.</p>"
+        +"<br><br><p>Nous vous confirmons que votre compte a été validé et votre paiement pris en compte.</p>"+
+        "<br>Vous pouvez passer vos différents tests en vous rendant sur l'onglet 'Detection de profil'. " +
+        "Si ces derniers ne s'affichent pas d'eux même vous devrez alors vous déconnectez et vous reconnectez " +
         +"<p>Cordialement,<br>L'équie Cdab Compass</p>"
     ;
     attachment = "";
