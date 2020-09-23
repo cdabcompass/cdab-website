@@ -275,25 +275,38 @@ class QuizPrincipal extends Component {
 
             "<p>Matières principales et notes</p>"+
             "<table>\n" +
-            "    <thead>\n" +
-            "        <tr>\n" +
-            "            <th style='border: 1px solid;  background-color: #333; color: white' colspan=\"6\">TRICAM</th>\n" +
-            "        </tr>\n" +
-            "    </thead>\n" +
             "    <tbody>\n" +
             "        <tr>\n" +
             "            <td style='border: 1px solid'>Matières - Notes générales</td>\n" +
             "        </tr>\n" +
             "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat1+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat2+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat3+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat4+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat5+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat6+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat7+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat8+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat9+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.principMat10+"</td>\n" +
             "          </tr>\n" +
             "    </tbody>\n" +
@@ -311,22 +324,29 @@ class QuizPrincipal extends Component {
             "    <li>Cela ne m’intéresse pas</li>" +
             "</ol>"+
             "<table>\n" +
-            "    <thead>\n" +
-            "        <tr>\n" +
-            "            <th style='border: 1px solid;  background-color: #333; color: white' colspan=\"6\">TRICAM</th>\n" +
-            "        </tr>\n" +
-            "    </thead>\n" +
             "    <tbody>\n" +
             "        <tr>\n" +
             "            <td style='border: 1px solid'>Matières - Comportements générales</td>\n" +
             "        </tr>\n" +
             "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.comportMat1+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.comportMat2+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.comportMat3+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.comportMat4+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.comportMat5+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.comportMat6+"</td>\n" +
+            "          </tr>\n" +
+            "        <tr>\n" +
             "              <td style='border: 1px solid'>"+this.state.comportMat7+"</td>\n" +
             "          </tr>\n" +
             "    </tbody>\n" +
@@ -1293,7 +1313,7 @@ class QuizPrincipal extends Component {
                                 <p style={{color: "black"}}>Matières principales et leurs moyennes : </p>
                                 <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Ecrivez la matière et sa moyenne générale </p>
                                 <TextField
-                                    label="Maths - 15"
+                                    label="Nom de la matière - Moyenne générale (Maths-15)"
                                     value={this.state.principMat1}
                                     name={"principMat1"}
                                     onChange={this.handleChange}
@@ -1302,7 +1322,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Physique - 15"
+                                    label="Nom de la matière - Moyenne générale"
                                     value={this.state.principMat2}
                                     name={"principMat2"}
                                     onChange={this.handleChange}
@@ -1311,7 +1331,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Svt - 15"
+                                    label="Nom de la matière - Moyenne générale"
                                     value={this.state.principMat3}
                                     name={"principMat3"}
                                     onChange={this.handleChange}
@@ -1320,7 +1340,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Histoire - 15"
+                                    label="Nom de la matière - Moyenne générale"
                                     value={this.state.principMat4}
                                     name={"principMat4"}
                                     onChange={this.handleChange}
@@ -1329,7 +1349,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière - 15"
+                                    label="Nom de la matière - Moyenne générale"
                                     value={this.state.principMat5}
                                     name={"principMat5"}
                                     onChange={this.handleChange}
@@ -1338,7 +1358,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière - 15"
+                                    label="Nom de la matière - Moyenne générale"
                                     value={this.state.principMat6}
                                     name={"principMat6"}
                                     onChange={this.handleChange}
@@ -1347,7 +1367,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière - 15"
+                                    label="Nom de la matière - Moyenne générale"
                                     value={this.state.principMat7}
                                     name={"principMat7"}
                                     onChange={this.handleChange}
@@ -1356,7 +1376,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière - 15"
+                                    label="Nom de la matière - Moyenne générale"
                                     value={this.state.principMat8}
                                     name={"principMat8"}
                                     onChange={this.handleChange}
@@ -1365,7 +1385,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière - 15"
+                                    label="Nom de la matière - Moyenne générale"
                                     value={this.state.principMat9}
                                     name={"principMat9"}
                                     onChange={this.handleChange}
@@ -1374,7 +1394,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière - 15"
+                                    label="Nom de la matière - Moyenne générale"
                                     value={this.state.principMat10}
                                     name={"principMat10"}
                                     onChange={this.handleChange}
@@ -1399,7 +1419,7 @@ class QuizPrincipal extends Component {
                                     </ol>
                                 </p>
                                 <TextField
-                                    label="Maths : 1"
+                                    label="Nom de la matière - Note (1~7) (Maths - 2)"
                                     value={this.state.comportMat1}
                                     name={"comportMat1"}
                                     onChange={this.handleChange}
@@ -1408,7 +1428,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Physique : 3"
+                                    label="Nom de la matière - Note (1~7)"
                                     value={this.state.comportMat2}
                                     name={"comportMat2"}
                                     onChange={this.handleChange}
@@ -1417,7 +1437,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière : 5"
+                                    label="Nom de la matière - Note (1~7)"
                                     value={this.state.comportMat3}
                                     name={"comportMat3"}
                                     onChange={this.handleChange}
@@ -1426,7 +1446,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière : 5"
+                                    label="Nom de la matière - Note (1~7)"
                                     value={this.state.comportMat4}
                                     name={"comportMat4"}
                                     onChange={this.handleChange}
@@ -1435,7 +1455,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière : 5"
+                                    label="Nom de la matière - Note (1~7)"
                                     value={this.state.comportMat5}
                                     name={"comportMat5"}
                                     onChange={this.handleChange}
@@ -1444,7 +1464,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière : 5"
+                                    label="Nom de la matière - Note (1~7)"
                                     value={this.state.comportMat6}
                                     name={"comportMat6"}
                                     onChange={this.handleChange}
@@ -1453,7 +1473,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière : 5"
+                                    label="Nom de la matière - Note (1~7)"
                                     value={this.state.comportMat7}
                                     name={"comportMat7"}
                                     onChange={this.handleChange}
@@ -1462,7 +1482,7 @@ class QuizPrincipal extends Component {
                                     className={classes.textField}
                                 />
                                 <TextField
-                                    label="Matière : 5"
+                                    label="Nom de la matière - Note (1~7)"
                                     value={this.state.comportMat8}
                                     name={"comportMat8"}
                                     onChange={this.handleChange}

@@ -218,9 +218,9 @@ class App extends Component {
                             <Grid alignItems={"center"} item xs={5}>
                                 {/*<img style={{width: "100%"}}  src={require("./assets/lightbulb.jpg")} alt=""/>*/}
                                 <div className={classes.videoPres}>
-                                    <iframe className="videoPresentation" src="https://www.youtube.com/embed/MEswVvG8Atg"
+                                    <iframe className="videoPresentation" src="https://www.youtube.com/embed/Cv9Xiyd9IOY"
                                             frameBorder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen></iframe>
                                 </div>
                             </Grid>
