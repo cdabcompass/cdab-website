@@ -296,7 +296,7 @@ class Quiz extends Component {
                 alert("Vos informations ont bien été transmises");
                 setTimeout(
                     ()=>{window.location.href="/expertises/profil_etudiant"},
-                    5000
+                    1000
                 )
             }
         })
@@ -602,12 +602,32 @@ class Quiz extends Component {
             quizEnd: 1
         });
 
+
         // alert("quizEnd: "+quizEnd);
 
         //this.test()
         if(this.state.quizEnd !== 0){
-            this.sendResult(e);
+            // let x = this.sameValues(personName);
+            // let y = this.dreamChoice();
+            // console.log("xx : "+x+" yy : "+y);
+            if(this.sameValues(personName)===false && this.dreamChoice()){
+                this.sendResult(e);
+            }else{
+                this.setState({
+                    personName: [],
+                    quizEnd: 0
+                });
+                alert("Veuillez sélectionner 5 métiers différents");
+            }
         }
+    };
+
+    dreamChoice = () => {
+        const {dreamJob1,dreamJob2,dreamJob3,dreamJob4,dreamJob5} = this.state;
+        if(dreamJob1 !== "" && dreamJob2 !== "" && dreamJob3 !== ""
+            && dreamJob4 !== "" && dreamJob5 !== ""){
+            return true
+        }else {return false}
     };
 
     nextQuestionHandler = () => {
@@ -705,6 +725,8 @@ class Quiz extends Component {
             disabled: false
         });
 
+        console.log("dream1 : "+this.state.dreamJob1);
+
         // if(!personName.includes(dreamJob1)){
         //     this.setState(prevState => ({
         //         personName: [...prevState.personName, dreamJob1]
@@ -722,6 +744,8 @@ class Quiz extends Component {
         this.setState({
             disabled: false
         });
+
+        console.log("dream2 : "+this.state.dreamJob2);
     };
 
     handlerChangeDream3 = (e) =>{
@@ -766,7 +790,7 @@ class Quiz extends Component {
                         <h1 style={{color: "#b36233"}}>Questionnaire</h1>
                         <h3>{question}</h3>
                         <span>Question {currentIndex+1} / {QuizData.length}</span>
-                        {currentIndex < 138 &&
+                        {currentIndex < 1 &&
                             options.map((option,index) =>
                                 <div key={option.id} className={this.state.userAnswer === option? classes.questionSelected : classes.questions}
                                      onClick={()=> this.checkAnswer(option,type[index])}
@@ -776,7 +800,7 @@ class Quiz extends Component {
                             )
                         }
 
-                        {currentIndex >= 138 &&
+                        {currentIndex >= 1 &&
                             <div>
                                 <InputLabel id="demo-simple-select-label">Choisissez 5 métiers de vos rêves</InputLabel>
                                 <FormControl className={classes.formControl}>
