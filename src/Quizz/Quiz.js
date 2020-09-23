@@ -790,7 +790,7 @@ class Quiz extends Component {
                         <h1 style={{color: "#b36233"}}>Questionnaire</h1>
                         <h3>{question}</h3>
                         <span>Question {currentIndex+1} / {QuizData.length}</span>
-                        {currentIndex < 1 &&
+                        {currentIndex < 138 &&
                             options.map((option,index) =>
                                 <div key={option.id} className={this.state.userAnswer === option? classes.questionSelected : classes.questions}
                                      onClick={()=> this.checkAnswer(option,type[index])}
@@ -800,7 +800,7 @@ class Quiz extends Component {
                             )
                         }
 
-                        {currentIndex >= 1 &&
+                        {currentIndex >= 138 &&
                             <div>
                                 <InputLabel id="demo-simple-select-label">Choisissez 5 métiers de vos rêves</InputLabel>
                                 <FormControl className={classes.formControl}>

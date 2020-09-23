@@ -156,6 +156,24 @@ class QuizPrincipal extends Component {
             outWith : "",
             goTo: "",
             msgUserPay: "",
+            principMat1: "",
+            principMat2: "",
+            principMat3: "",
+            principMat4: "",
+            principMat5: "",
+            principMat6: "",
+            principMat7: "",
+            principMat8: "",
+            principMat9: "",
+            principMat10: "",
+
+            comportMat1: "",
+            comportMat2: "",
+            comportMat3: "",
+            comportMat4: "",
+            comportMat5: "",
+            comportMat6: "",
+            comportMat7: "",
 
 
             errBirthday: "",
@@ -254,6 +272,66 @@ class QuizPrincipal extends Component {
             "<p>Moyenne générale en 5eme : </p><h3>"+this.state.moyCl5+"</h3>"+
             "<p>Moyenne générale en 4eme : </p><h3>"+this.state.moyCl4+"</h3>"+
             "<p>Moyenne générale en 3eme : </p><h3>"+this.state.moyCl3+"</h3>"+
+
+            "<p>Matières principales et notes</p>"+
+            "<table>\n" +
+            "    <thead>\n" +
+            "        <tr>\n" +
+            "            <th style='border: 1px solid;  background-color: #333; color: white' colspan=\"6\">TRICAM</th>\n" +
+            "        </tr>\n" +
+            "    </thead>\n" +
+            "    <tbody>\n" +
+            "        <tr>\n" +
+            "            <td style='border: 1px solid'>Matières - Notes générales</td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat1+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat2+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat3+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat4+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat5+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat6+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat7+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat8+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat9+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.principMat10+"</td>\n" +
+            "          </tr>\n" +
+            "    </tbody>\n" +
+            "</table>"+
+
+            "<p>Comportement en fonction des matières</p>"+
+            "<p>Les numérotations de 1-7 sont basés sur : </p>"+
+            " <ol>" +
+            "    <li>Je suis passionné</li>" +
+            "    <li>Je suis concentré</li>" +
+            "    <li>Je suis intéressé mais ne comprends pas</li>" +
+            "    <li>Je suis juste présent</li>" +
+            "    <li>Je ne comprends pas</li>" +
+            "    <li>Je m’ennuye</li>" +
+            "    <li>Cela ne m’intéresse pas</li>" +
+            "</ol>"+
+            "<table>\n" +
+            "    <thead>\n" +
+            "        <tr>\n" +
+            "            <th style='border: 1px solid;  background-color: #333; color: white' colspan=\"6\">TRICAM</th>\n" +
+            "        </tr>\n" +
+            "    </thead>\n" +
+            "    <tbody>\n" +
+            "        <tr>\n" +
+            "            <td style='border: 1px solid'>Matières - Comportements générales</td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "              <td style='border: 1px solid'>"+this.state.comportMat1+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.comportMat2+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.comportMat3+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.comportMat4+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.comportMat5+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.comportMat6+"</td>\n" +
+            "              <td style='border: 1px solid'>"+this.state.comportMat7+"</td>\n" +
+            "          </tr>\n" +
+            "    </tbody>\n" +
+            "</table>"+
+
             "<p>Collège d’obtention du diplôme national du brevet ou brevet d’études du premier cycle : </p><h3>"+this.state.collegeSchool+"</h3>"+
             "<p>Système d’études au lycée  : </p><h3>"+this.state.schoolSystemLyc+"</h3>"+
             "<p>Lequel :</p><h3>"+this.state.schoolSystemDescLyc+"</h3>"+
@@ -1210,6 +1288,192 @@ class QuizPrincipal extends Component {
                                     </div>
                                 )}
                             </div>
+
+                            <div><br/>
+                                <p style={{color: "black"}}>Matières principales et leurs moyennes : </p>
+                                <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Ecrivez la matière et sa moyenne générale </p>
+                                <TextField
+                                    label="Maths - 15"
+                                    value={this.state.principMat1}
+                                    name={"principMat1"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={true}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Physique - 15"
+                                    value={this.state.principMat2}
+                                    name={"principMat2"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={true}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Svt - 15"
+                                    value={this.state.principMat3}
+                                    name={"principMat3"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={true}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Histoire - 15"
+                                    value={this.state.principMat4}
+                                    name={"principMat4"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière - 15"
+                                    value={this.state.principMat5}
+                                    name={"principMat5"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière - 15"
+                                    value={this.state.principMat6}
+                                    name={"principMat6"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière - 15"
+                                    value={this.state.principMat7}
+                                    name={"principMat7"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière - 15"
+                                    value={this.state.principMat8}
+                                    name={"principMat8"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière - 15"
+                                    value={this.state.principMat9}
+                                    name={"principMat9"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière - 15"
+                                    value={this.state.principMat10}
+                                    name={"principMat10"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                            </div>
+
+                            <div><br/>
+                                <p style={{color: "black"}}>Comment je me comporte en classe: </p>
+                                <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Ecrivez la matière et choisissez la manière dont vous vous comportez entre ses options </p>
+                                <p style={{color: "rgba(0, 0, 0, 0.54)"}}>
+                                    <ol>
+                                        <li>Je suis passionné</li>
+                                        <li>Je suis concentré</li>
+                                        <li>Je suis intéressé mais ne comprends pas</li>
+                                        <li>Je suis juste présent</li>
+                                        <li>Je ne comprends pas</li>
+                                        <li>Je m’ennuye</li>
+                                        <li>Cela ne m’intéresse pas</li>
+                                    </ol>
+                                </p>
+                                <TextField
+                                    label="Maths : 1"
+                                    value={this.state.comportMat1}
+                                    name={"comportMat1"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={true}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Physique : 3"
+                                    value={this.state.comportMat2}
+                                    name={"comportMat2"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière : 5"
+                                    value={this.state.comportMat3}
+                                    name={"comportMat3"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière : 5"
+                                    value={this.state.comportMat4}
+                                    name={"comportMat4"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière : 5"
+                                    value={this.state.comportMat5}
+                                    name={"comportMat5"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière : 5"
+                                    value={this.state.comportMat6}
+                                    name={"comportMat6"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière : 5"
+                                    value={this.state.comportMat7}
+                                    name={"comportMat7"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+                                <TextField
+                                    label="Matière : 5"
+                                    value={this.state.comportMat8}
+                                    name={"comportMat8"}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={false}
+                                    className={classes.textField}
+                                />
+
+
+                            </div>
+
                             <div><br/>
                                 <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Moyenne générale 2nd-1ère-Tle : </p>
                                 <TextField
