@@ -4,6 +4,7 @@ const route = express.Router();
 const passwordHash = require("password-hash");
 const validator = require("email-validator");
 const EmailSender = require("../services/EmailSender");
+const randomstring = require("randomstring");
 
 route.post('/inscription', async (req,res) => {
     let user = new userModel();
@@ -206,6 +207,65 @@ route.post('/confirmUserPayment', async(req,res)=>{
             }
         }
     )
+});
+
+route.post('/recoverAccount/1', async (req, res) => {
+    console.log("step1...");
+    let randomCode = randomstring.generate({
+        length: 6,
+        charset: 'numeric'
+    });
+    let user = new userModel();
+
+    userEmail = req.body.email;
+    subject = "Récuperation de compte";
+    container = "<p>Bonjour Mr,Mme</p>"
+        +"<br><p>Votre code de confirmation est : </p><strong>"+randomCode
+        +"</strong><br><p>Cordialement,<br>L'équie Cdab Compass</p>"
+    ;
+    attachment = "";
+    // send code to user's email and set confirmationCode
+    userModel.find({email: userEmail}, async (err, doc) => {
+        if (err) {
+            res.status(401).json({text: "Cet adresse n'existe pas!"});
+        } else {
+            EmailSender.sendEmail(userEmail,subject,container,attachment)
+                .then(_res => {
+                    userModel.update({email: userEmail},
+                        {$set: {verificationCode: randomCode}},
+                        {upsert: true}, (err, doc) => {
+                            if (doc.length !== 0) {
+                                return res.status(200).json({text: "Votre code a été envoyé sur votre adresse mail"});
+                            }
+                        }
+                    );
+                }).catch(ex => {
+                return res.status(401).json({text: "Erreur envois de mail"})
+            })
+        }
+    })
+});
+
+
+route.post('/recoverAccount/2', async (req, res) => {
+    let user = new userModel();
+    user.email = req.body.email;
+    user.confirmationCode = req.body.confirmationCode;
+    user.password = req.body.password;
+    EmailSender.confirmEmailPin(user.email, user.confirmationCode)
+        .then(_res => {
+            userModel.update({email: user.email},
+                {$set: {password: passwordHash.generate(user.password)}},
+                {upsert: true}, (err, doc) => {
+                    if (err) {
+                        return res.send(err);
+                    }
+                    return res.status(200).json({text: "Votre mot de passe à été changé"});
+                }
+            );
+        }).catch(ex => {
+        return res.status(401).json({text: "Mauvais code"})
+    })
 });
 
 

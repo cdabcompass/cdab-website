@@ -120,6 +120,7 @@ class Login extends Component {
                             <Button type="submit" variant="contained">CONNEXION</Button>
                             <br/><br/>
                             <p>Vous n'avez pas de compte ? <a style={{color: "#FF5722"}} href="/inscription">Inscrivez-vous</a></p>
+                            <p>Vous avez oublié votre mot de passe ? <a style={{color: "#FF5722"}} href="/recuperation/compte/1">Récupérer mon compte</a></p>
                         </form>
                         <CustomAlert
                             message={this.state.errAlert}

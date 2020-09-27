@@ -35,8 +35,9 @@ class ActuCustom extends Component {
                 <div className="contAll">
                     <h1>{title}</h1>
                     <div className={classes.containDetails}>
-                        <div style={{textAlign: "justify"}}>
-                            <p style={{ whiteSpace: "pre-line" }}>{description}</p>
+                        <div style={{textAlign: "justify",whiteSpace: "pre-line"}}>
+                            {description}
+                            {/*<p style={{ whiteSpace: "pre-line" }}></p>*/}
                         </div>
                     </div>
                 </div>

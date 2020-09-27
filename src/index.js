@@ -38,6 +38,9 @@ import Products from "./subMenu/Products";
 import EbookPayView from "./utils/EbookPayView";
 import Actu4 from "./article/Actu4";
 import PanelAdmin from "./adminAccess/PanelAdmin";
+import RecoverAccount1 from "./RecoverAccount/RecoverAccount1";
+import RecoverAccount2 from "./RecoverAccount/RecoverAccount2";
+import EntrepriseMoreInfo from "./subMenu/EntrepriseMoreInfo";
 
 const routing = (
     <Router>
@@ -77,6 +80,13 @@ const routing = (
                 <Route exact path="/actu/2" component={Actu2}/>
                 <Route exact path="/actu/3" component={Actu3}/>
                 <Route exact path="/actu/4" component={Actu4}/>
+
+
+                <Route exact path="/cdab/plus_infos" component={EntrepriseMoreInfo}/>
+
+
+                <Route exact path="/recuperation/compte/1" component={RecoverAccount1}/>
+                <Route exact path="/recuperation/compte/2" component={RecoverAccount2}/>
 
 
                 <PrivateRoute exact path="/quiz/principal_quiz" component={QuizPrincipal}/>

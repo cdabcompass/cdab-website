@@ -51,4 +51,15 @@ module.exports = {
             transporter.close();
         });
     },
+
+    confirmEmailPin: async (userEmail, userCode) => {
+        return new Promise((resolve, reject) => {
+            userModel.find({email: userEmail, verificationCode: userCode}, async (err, docs) => {
+                if (docs.length !== 0) {
+                    return resolve(docs)
+                }
+                return reject(err)
+            })
+        })
+    }
 };

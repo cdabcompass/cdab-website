@@ -149,7 +149,8 @@ class App extends Component {
     }
 
     handleOpenModal = (e) =>{
-        this.setState({openModal: true});
+        window.location.href = "/cdab/plus_infos"
+        // this.setState({openModal: true});
     };
 
     handleCloseModal = (e) =>{
