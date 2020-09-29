@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import DetailsPageBanner from "../utils/DetailsPageBanner";
 import Button from "@material-ui/core/Button";
 import FooterBar from "../utils/FooterBar";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     container: {
@@ -46,6 +47,22 @@ class Tutoring extends Component {
         const {classes} = this.props;
         return (
             <div className={classes.container}>
+                <Helmet>
+                    <meta
+                        name="CDAB COMPASS"
+                        content="
+                            La caution bancaire pour
+                            vous aider à asseoir le projet
+                            d’études financièrement et un
+                            bon logement étudiant pour
+                            se tenir au chaud pour
+                            concrétiser le dit
+                            projet d’études.
+                            #Afrique #Europe #Caution Bancaire #Voyage
+                            "
+                    />
+                </Helmet>
+
                 <div>
                     <MenuBar/>
                 </div>

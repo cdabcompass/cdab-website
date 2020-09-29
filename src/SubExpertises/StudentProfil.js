@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import DetailsPageBanner from "../utils/DetailsPageBanner";
 import Button from "@material-ui/core/Button";
 import FooterBar from "../utils/FooterBar";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     container: {
@@ -94,6 +95,22 @@ class StudentProfil extends Component {
         const {classes} = this.props;
         return (
             <div className={classes.container}>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <meta
+                        name="CDAB COMPASS"
+                        content="Travailler les notions
+                                d’espace, de temps,
+                                d’organisation et de
+                                priorité menant à
+                                l’autonomie et
+                                la responsabilité
+                                Organisation - Méthodologie
+                                Progrès - Confiance en soi
+                                Définir les priorités
+                                "
+                    />
+                </Helmet>
                 <div>
                     <MenuBar/>
                 </div>

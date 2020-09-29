@@ -8,6 +8,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from "@material-ui/core/IconButton";
 import FooterBar from "../utils/FooterBar";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     container: {
@@ -91,6 +92,20 @@ class StudentDeposit extends Component {
         const {classes} = this.props;
         return (
             <div className={classes.container}>
+                <Helmet>
+                    <meta
+                        name="CDAB COMPASS"
+                        content="
+                            Un bon collaborateur
+                            s’organise à l’avance afin
+                            d’être présent à l’heure fixée.
+                            Face aux imprévus, il préfère
+                            venir à l’avance, quitte à
+                            devoir attendre.
+                            #Afrique #Enfant #Europe #Education #Meilleur
+                            "
+                    />
+                </Helmet>
                 <div>
                     <MenuBar/>
                 </div>

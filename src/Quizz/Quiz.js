@@ -9,6 +9,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import axios from 'axios';
 import FooterBar from "../utils/FooterBar";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     container: {
@@ -778,6 +779,17 @@ class Quiz extends Component {
 
         return (
             <div className={classes.container}>
+                <Helmet>
+                    <meta
+                        name="CDAB COMPASS"
+                        content="
+                            Questionnaire enfant
+                            Tests logiques et detection de profil
+                            #Afrique #Formations #Reconvertion #Professionel
+                            "
+                    />
+                </Helmet>
+
                 <div>
                     <MenuBar/>
                 </div>

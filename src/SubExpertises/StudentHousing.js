@@ -8,6 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
 import FooterBar from "../utils/FooterBar";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     container: {
@@ -87,6 +88,23 @@ class StudentHousing extends Component {
         const {classes} = this.props;
         return (
             <div className={classes.container}>
+                <Helmet>
+                    <meta
+                        name="CDAB COMPASS"
+                        content="
+                            Mettre en valeur ses
+                            études sur le terrain
+                            professionnel
+                            Etre opérationnel
+                            par des formations
+                            complémentaires
+                            Assurer la transition
+                            études-stage
+                            -emploi
+                            #Afrique #Enfant #Europe #Education #Meilleur
+                            "
+                    />
+                </Helmet>
                 <div>
                     <MenuBar/>
                 </div>

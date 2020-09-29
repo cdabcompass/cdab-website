@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import DetailsPageBanner from "../utils/DetailsPageBanner";
 import Button from "@material-ui/core/Button";
 import FooterBar from "../utils/FooterBar";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     container: {
@@ -46,6 +47,17 @@ class ScolarOrientation extends Component {
         const {classes} = this.props;
         return (
             <div className={classes.container}>
+                <Helmet>
+                    <meta
+                        name="CDAB COMPASS"
+                        content="
+                                Votre vocation se trouve là
+                                où les besoins du monde et
+                                vos talents se rencontrent”
+                                (Aristote)
+                                "
+                    />
+                </Helmet>
                 <div>
                     <MenuBar/>
                 </div>

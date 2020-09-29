@@ -9,6 +9,8 @@ import ExpertisesComponents from "./utils/ExpertisesComponents";
 import Pdf from '../src/othersfiles/manuel.pdf';
 import Button from "react-bootstrap/Button";
 import FooterBar from "./utils/FooterBar";
+import Helmet from "react-helmet";
+import ReactGA from 'react-ga';
 // import Modal from "@material-ui/core/Modal";
 
 const styles = theme => ({
@@ -157,12 +159,28 @@ class App extends Component {
         this.setState({openModal: false});
     };
 
-
-
     render(){
         const {classes} = this.props;
         return (
             <div className="App">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>CDAB COMPASS</title>
+                    <meta
+                        name="CDAB COMPASS"
+                        content="CDAB COMPASS est une structure
+                                éducative élaborant le profil de
+                                l’apprenant. Du profil de l’apprenant,
+                                tout se clarifie à l’horizon: le potentiel à
+                                optimiser, le projet d’études à élaborer,
+                                le monde professionnel à apprivoiser
+                                selon le marché. A CDAB COMPASS,
+                                nous détectons vos talents et les
+                                mettons en valeur pour
+                                assurer votre avenir!"
+                    />
+                </Helmet>
+
                 <div className={classes.container}>
                     <div className={classes.header}>
                         <MenuBar/>

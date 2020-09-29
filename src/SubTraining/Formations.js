@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     container: {
@@ -21,6 +22,21 @@ class Formations extends Component {
         const {classes} = this.props;
         return (
             <div className={classes.container}>
+                <Helmet>
+                    <meta
+                        name="CDAB COMPASS"
+                        content="
+				La formation continue
+				ou la reconversion
+				professionnelle sont des
+				étapes de recyclage
+				pour donner un nouveau
+				cap à son épanouissement
+				professionnel
+				#Afrique #Formations #Reconvertion #Professionel
+				"
+                    />
+                </Helmet>
                 <div>
                     <MenuBar/>
                 </div>

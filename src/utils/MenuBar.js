@@ -10,6 +10,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from '@material-ui/core/Menu';
 import Popover from "@material-ui/core/Popover";
 import TokenApi from "./TokenApi";
+import ReactGA from "react-ga";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     logo:{
@@ -60,6 +62,10 @@ class MenuBar extends Component {
     }
 
     componentDidMount() {
+        ReactGA.initialize('UA-179270106-1');
+        ReactGA.pageview(window.location.pathname + window.location.search);
+        // console.log("route : "+window.location.pathname + window.location.search)
+
         if(localStorage.getItem("token") !== null){
             this.setState({auth: true})
         }
@@ -90,6 +96,11 @@ class MenuBar extends Component {
         const {classes} = this.props;
         return (
             <AppBar className="apbar">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>CDAB COMPASS</title>
+                </Helmet>
+
                 <Toolbar className="dv-toolbar">
                     <div className="logo">
                         <img onClick={this.homePage} className={classes.imglogo} src={require("../assets/logo.png")} alt=""/>

@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import axios from "axios";
 import CustomAlert from "../utils/CustomAlert";
 import FooterBar from "../utils/FooterBar";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     container: {
@@ -92,6 +93,23 @@ class Login extends Component {
         const {classes} = this.props;
         return (
             <div className={classes.container}>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <meta
+                        name="CDAB COMPASS"
+                        content="CDAB COMPASS est une structure
+                                éducative élaborant le profil de
+                                l’apprenant. Du profil de l’apprenant,
+                                tout se clarifie à l’horizon: le potentiel à
+                                optimiser, le projet d’études à élaborer,
+                                le monde professionnel à apprivoiser
+                                selon le marché. A CDAB COMPASS,
+                                nous détectons vos talents et les
+                                mettons en valeur pour
+                                assurer votre avenir!"
+                    />
+                </Helmet>
+
                 <div>
                     <MenuBar/>
                 </div>

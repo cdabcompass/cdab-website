@@ -3,6 +3,7 @@ import {withStyles} from "@material-ui/core";
 import ExpertisesComponents from "../utils/ExpertisesComponents";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
+import Helmet from "react-helmet";
 
 const styles = theme => ({
     container: {
@@ -34,6 +35,22 @@ class Expertises extends Component {
         const {classes} = this.props;
         return (
             <div className={classes.container}>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>CDAB COMPASS</title>
+                    <meta
+                        name="CDAB COMPASS"
+                        content="Déterminer le profil de
+                                l’apprenant, la base pour
+                                développer son potentiel et
+                                explorer ses talents.
+                                Profil de l’enfant
+                                Attention - Représentation
+                                Évocation -Image mentale
+                                "
+                    />
+                </Helmet>
+
                 <div >
                     <MenuBar/>
                 </div>
