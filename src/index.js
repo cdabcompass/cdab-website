@@ -41,6 +41,8 @@ import PanelAdmin from "./adminAccess/PanelAdmin";
 import RecoverAccount1 from "./RecoverAccount/RecoverAccount1";
 import RecoverAccount2 from "./RecoverAccount/RecoverAccount2";
 import EntrepriseMoreInfo from "./subMenu/EntrepriseMoreInfo";
+import Potential from "./SubExpertises/Potential";
+import Professional from "./SubExpertises/Professional";
 
 const routing = (
     <Router>
@@ -58,6 +60,8 @@ const routing = (
                 <Route exact path="/expertises/soutien_scolaire" component={Tutoring}/>
                 <Route exact path="/expertises/caution_etudiantes" component={StudentDeposit}/>
                 <Route exact path="/expertises/logement_etudiant" component={StudentHousing}/>
+                <Route exact path="/expertises/potential" component={Potential}/>
+                <Route exact path="/expertises/professional" component={Professional}/>
 
                 <Route exact path="/training" component={Training}/>
                 <Route exact path="/training/formations" component={Formations}/>

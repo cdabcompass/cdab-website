@@ -40,19 +40,10 @@ class ExpertisesComponents extends Component {
                     <Col xs={12} md={6} lg={4}>
                         <CardCustom
                             icon={<FindInPageIcon/>}
-                            title={"Détection du profil de l'apprenant"}
+                            title={"Le Profil"}
                             description={"La phase détection du profil demeure un mystère pour certains et une partie de jeux pour d’autres.\n" +
                             "En effet cette phase consiste à découvrir l’enfant et son environnement tout simplement."}
                             onclick={()=>{this.moreInfo("/profil_etudiant")}}
-                        />
-                    </Col>
-                    <Col xs={12} md={6} lg={4}>
-                        <CardCustom
-                            icon={<AccountCircleIcon/>}
-                            title={"Accompagnement et orientation scolaire"}
-                            description={"La structure éducative CDAB COMPASS, spécialisée aussi dans l’accompagnement et l’orientation des apprenants " +
-                            "sur tous les plans scolaire, universitaire et même professionnel, accorde une importance à cette expertise."}
-                            onclick={()=>{this.moreInfo("/orientation_scolaire")}}
                         />
                     </Col>
                     <Col xs={12} md={6} lg={4}>
@@ -68,32 +59,20 @@ class ExpertisesComponents extends Component {
                 <Row className={classes.cards}>
                     <Col xs={12} md={6} lg={4}>
                         <CardCustom
+                            icon={<AccountCircleIcon/>}
+                            title={"Le Potentiel"}
+                            description={"La structure éducative CDAB COMPASS, spécialisée aussi dans l’accompagnement et l’orientation des apprenants " +
+                            "sur tous les plans scolaire, universitaire et même professionnel, accorde une importance à cette expertise."}
+                            onclick={()=>{this.moreInfo("/potential")}}
+                        />
+                    </Col>
+                    <Col xs={12} md={6} lg={4}>
+                        <CardCustom
                             icon={<MenuBookIcon/>}
-                            title={"Soutien scolaire - Répétition"}
-                            description={"Suivant les différentes caractéristiques de l’apprenant, un soutien scolaire à court (deux mois maximum) ou " +
-                            "moyen terme (mois alternatif) est mis en place. Il permet de travailler l’autonomie de ce dernier. Ce soutien scolaire " +
-                            "(encore appelée répétition) est libre et au rythme convenu avec la famille."}
-                            onclick={()=>{this.moreInfo("/soutien_scolaire")}}
-                        />
-                    </Col>
-                    <Col xs={12} md={6} lg={4}>
-                        <CardCustom
-                            icon={<AccountBalanceWalletIcon/>}
-                            title={"Caution étudiante à l’étranger"}
-                            description={"Dans le souci de propulser le projet d’étude des apprenants ou parents de CDABCOMPASS, " +
-                            "la société éducative offre une caution bancaire aux apprenants désireux de faire leurs études à l’étranger" +
-                            " par exemple en France."}
-                            onclick={()=>{this.moreInfo("/caution_etudiantes")}}
-                        />
-                    </Col>
-                    <Col xs={12} md={6} lg={4}>
-                        <CardCustom
-                            icon={<HomeIcon/>}
-                            title={"Logement étudiant à l’étranger"}
-                            description={"L’accompagnement hébergement consiste pour CDAB COMPASS à alléger la tâche et le souci" +
-                            " de la recherche d’un logement, aux apprenants. Ainsi la structure prend sur elle la charge de faire la" +
-                            " recherche des logements aux apprenants. Ces logements répondent au standard minimum requis pour le logement étudiant en France "}
-                            onclick={()=>{this.moreInfo("/logement_etudiant")}}
+                            title={"Professionnel"}
+                            description={"Beaucoup sont ceux qui n’ont pas de projet professionnel, qui se lancent dans une carrière\n" +
+                            "juste parce que leurs parents veulent qu’ils exercent ce métier."}
+                            onclick={()=>{this.moreInfo("/professional")}}
                         />
                     </Col>
                 </Row>

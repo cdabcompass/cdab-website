@@ -2,11 +2,15 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
-import {Modal} from "react-bootstrap";
+import {Col, Modal, Row} from "react-bootstrap";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
+import CardCustom from "../utils/CardCustom";
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 
 const styles = theme => ({
     container: {
@@ -53,7 +57,14 @@ const styles = theme => ({
     snackRoot: {
         backgroundColor: "red",
         color: "white"
-    }
+    },
+    cards:{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+        marginBottom: "20px",
+        width: "100%"
+    },
 });
 
 class Offers extends Component {
@@ -87,6 +98,11 @@ class Offers extends Component {
         this.setState({openModal: false});
     };
 
+    moreInfo = (path) =>{
+        // alert("more info"+path);
+        window.location = "/expertises"+path;
+    };
+
     render() {
         const {classes} = this.props;
         return (
@@ -112,12 +128,46 @@ class Offers extends Component {
                             </div>
                         </div>
                     </div>
+                    <br/>
 
                     <div style={{textAlign: "center"}}>
                         <Button onClick={this.handleOpenModal} className={classes.btnQuiz} >
                             Protocole d'accord de recherche d'université
                         </Button>
                     </div>
+                    <br/>
+
+                    <Row className={classes.cards}>
+                        <Col xs={12} md={6} lg={4}>
+                            <CardCustom
+                                icon={<AccountCircleIcon/>}
+                                title={"Accompagnement et orientation scolaire"}
+                                description={"La structure éducative CDAB COMPASS, spécialisée aussi dans l’accompagnement et l’orientation des apprenants " +
+                                "sur tous les plans scolaire, universitaire et même professionnel, accorde une importance à cette expertise."}
+                                onclick={()=>{this.moreInfo("/orientation_scolaire")}}
+                            />
+                        </Col>
+                        <Col xs={12} md={6} lg={4}>
+                            <CardCustom
+                                icon={<AccountBalanceWalletIcon/>}
+                                title={"Caution étudiante à l’étranger"}
+                                description={"Dans le souci de propulser le projet d’étude des apprenants ou parents de CDABCOMPASS, " +
+                                "la société éducative offre une caution bancaire aux apprenants désireux de faire leurs études à l’étranger" +
+                                " par exemple en France."}
+                                onclick={()=>{this.moreInfo("/caution_etudiantes")}}
+                            />
+                        </Col>
+                        <Col xs={12} md={6} lg={4}>
+                            <CardCustom
+                                icon={<MenuBookIcon/>}
+                                title={"Soutien scolaire - Répétition"}
+                                description={"Suivant les différentes caractéristiques de l’apprenant, un soutien scolaire à court (deux mois maximum) ou " +
+                                "moyen terme (mois alternatif) est mis en place. Il permet de travailler l’autonomie de ce dernier. Ce soutien scolaire " +
+                                "(encore appelée répétition) est libre et au rythme convenu avec la famille."}
+                                onclick={()=>{this.moreInfo("/soutien_scolaire")}}
+                            />
+                        </Col>
+                    </Row>
 
                     <Modal dialogClassName ={'ModalContent'} show={this.state.openModal} onHide={this.handleCloseModal}>
                         <Modal.Header closeButton>
