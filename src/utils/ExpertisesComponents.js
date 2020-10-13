@@ -40,7 +40,7 @@ class ExpertisesComponents extends Component {
                     <Col xs={12} md={6} lg={4}>
                         <CardCustom
                             icon={<FindInPageIcon/>}
-                            title={"Le Profil"}
+                            title={"Profil"}
                             description={"La phase détection du profil demeure un mystère pour certains et une partie de jeux pour d’autres.\n" +
                             "En effet cette phase consiste à découvrir l’enfant et son environnement tout simplement."}
                             onclick={()=>{this.moreInfo("/profil_etudiant")}}
@@ -60,7 +60,7 @@ class ExpertisesComponents extends Component {
                     <Col xs={12} md={6} lg={4}>
                         <CardCustom
                             icon={<AccountCircleIcon/>}
-                            title={"Le Potentiel"}
+                            title={"Potentiel"}
                             description={"La structure éducative CDAB COMPASS, spécialisée aussi dans l’accompagnement et l’orientation des apprenants " +
                             "sur tous les plans scolaire, universitaire et même professionnel, accorde une importance à cette expertise."}
                             onclick={()=>{this.moreInfo("/potential")}}

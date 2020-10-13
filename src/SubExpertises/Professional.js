@@ -65,7 +65,7 @@ class Professional extends Component {
                 <div style={{marginTop: "100px",marginBottom: "100px"}}>
                     <DetailsPageBanner
                         image={<img className={classes.profilImage}  src={require("../assets/professional.jpg")} alt=""/>}
-                        title={"Le Professional"}/>
+                        title={"Le Professionel"}/>
                     <div className={classes.subContext}>
                         <div className="subContainer">
                             <div style={{flex: 1}}>
