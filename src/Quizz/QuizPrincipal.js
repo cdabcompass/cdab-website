@@ -849,7 +849,9 @@ class QuizPrincipal extends Component {
                                 />
                             </div>
                         </div>
-                        {localStorage.getItem("situation") !== "Primaire" && (
+                        {(localStorage.getItem("situation") !== "Primaire") &&
+                        (localStorage.getItem("situation") !== "College")
+                        && (
                             <div className={classes.containerQuizs}>
                                 <div>
                                     <h3>Relation Intime</h3><br/>
@@ -1284,15 +1286,15 @@ class QuizPrincipal extends Component {
 
 
 
-
-                            <div>
+                            {localStorage.getItem("situation") !== "College" &&
+                                <div>
                                 <FormLabel required={true} component="legend">Système d’études au lycée : </FormLabel>
                                 <RadioGroup style={{display: "block"}}
-                                            name="schoolSystemLyc" value={this.state.schoolSystemLyc} onChange={this.handleChange}>
-                                    <FormControlLabel value="National" control={<Radio required={true}
-                                        classes={{root: classes.radio, checked: classes.checked}}/>} label="National" />
-                                    <FormControlLabel value="International" control={<Radio required={true}
-                                        classes={{root: classes.radio, checked: classes.checked}}/>} label="International" />
+                                name="schoolSystemLyc" value={this.state.schoolSystemLyc} onChange={this.handleChange}>
+                                <FormControlLabel value="National" control={<Radio required={true}
+                                                                                   classes={{root: classes.radio, checked: classes.checked}}/>} label="National" />
+                                <FormControlLabel value="International" control={<Radio required={true}
+                                                                                        classes={{root: classes.radio, checked: classes.checked}}/>} label="International" />
                                 </RadioGroup>
                                 {this.state.schoolSystemLyc === "International" &&(
                                     <div>
@@ -1307,7 +1309,8 @@ class QuizPrincipal extends Component {
                                         />
                                     </div>
                                 )}
-                            </div>
+                                </div>
+                            }
 
                             <div><br/>
                                 <p style={{color: "black"}}>Matières principales et leurs moyennes : </p>
@@ -1494,48 +1497,55 @@ class QuizPrincipal extends Component {
 
                             </div>
 
-                            <div><br/>
-                                <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Moyenne générale 2nd-1ère-Tle : </p>
-                                <TextField
-                                    label="16.78"
-                                    value={this.state.moy2nd}
-                                    name={"moy2nd"}
-                                    onChange={this.handleChange}
-                                    type={"text"}
-                                    required={true}
-                                    className={classes.textField}
-                                />
-                                <TextField
-                                    label="16.78"
-                                    value={this.state.moy1ere}
-                                    name={"moy1ere"}
-                                    onChange={this.handleChange}
-                                    type={"text"}
-                                    required={true}
-                                    className={classes.textField}
-                                />
-                                <TextField
-                                    label="16.78"
-                                    value={this.state.moyTle}
-                                    name={"moyTle"}
-                                    onChange={this.handleChange}
-                                    type={"text"}
-                                    required={true}
-                                    className={classes.textField}
-                                />
-                            </div>
-                            <div><br/>
-                                <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Lycée de l'obtention du brevet : </p>
-                                <TextField
-                                    label="Ets lycée"
-                                    name={"lyceeSchool"}
-                                    value={this.state.lyceeSchool}
-                                    onChange={this.handleChange}
-                                    type={"text"}
-                                    required={true}
-                                    className={classes.textField}
-                                />
-                            </div>
+
+                            {localStorage.getItem("situation") !== "College" &&
+
+                                <div>
+                                    <div><br/>
+                                        <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Moyenne générale 2nd-1ère-Tle : </p>
+                                        <TextField
+                                            label="16.78"
+                                            value={this.state.moy2nd}
+                                            name={"moy2nd"}
+                                            onChange={this.handleChange}
+                                            type={"text"}
+                                            required={true}
+                                            className={classes.textField}
+                                        />
+                                        <TextField
+                                            label="16.78"
+                                            value={this.state.moy1ere}
+                                            name={"moy1ere"}
+                                            onChange={this.handleChange}
+                                            type={"text"}
+                                            required={true}
+                                            className={classes.textField}
+                                        />
+                                        <TextField
+                                            label="16.78"
+                                            value={this.state.moyTle}
+                                            name={"moyTle"}
+                                            onChange={this.handleChange}
+                                            type={"text"}
+                                            required={true}
+                                            className={classes.textField}
+                                        />
+                                    </div>
+
+                                    <div><br/>
+                                        <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Lycée de l'obtention du brevet : </p>
+                                        <TextField
+                                            label="Ets lycée"
+                                            name={"lyceeSchool"}
+                                            value={this.state.lyceeSchool}
+                                            onChange={this.handleChange}
+                                            type={"text"}
+                                            required={true}
+                                            className={classes.textField}
+                                        />
+                                    </div>
+                                </div>
+                            }
 
 
                             <div>
