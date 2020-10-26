@@ -48,7 +48,7 @@ const routing = (
     <Router>
         <div>
             <Switch>
-                <Route exact path="*" component={App}/>
+//                 <Route exact path="*" component={App}/>
                 <Route exact path="/" component={App}/>
 
                 <Route path="/inscription" component={Register}/>
