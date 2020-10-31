@@ -239,6 +239,8 @@ class PanelAdmin extends Component {
                     <MenuBar/>
                 </div>
                 <div className="contAll">
+                    <div>Nous avons actuellement : {users.length} utilisateurs</div>
+                    <br/>
                     <Modal dialogClassName ={"ModalContent"} show={this.state.openModal} onHide={this.handleCloseModal}>
                         <Modal.Header closeButton>
                         </Modal.Header>
@@ -411,7 +413,12 @@ class PanelAdmin extends Component {
                     {
                         users.map((user,index)=>
                             <div key={user._id} style={{marginBottom: "10px"}}>
-                                <Accordion style={{backgroundColor: "#ff9800ad"}}>
+                                {(user.lastName !== undefined
+                                    && user.firstName !== undefined
+                                    && user.email !== undefined
+                                )
+                                    &&
+                                    <Accordion style={{backgroundColor: "#ff9800ad"}}>
                                     <AccordionSummary
                                         style={{color: "black"}}
                                         expandIcon={<ExpandMoreIcon />}
@@ -479,6 +486,8 @@ class PanelAdmin extends Component {
                                         </div>
                                     </AccordionDetails>
                                 </Accordion>
+                                }
+
                             </div>
                         )
                     }

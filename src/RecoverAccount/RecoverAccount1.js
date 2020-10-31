@@ -47,13 +47,16 @@ class RecoverAccount1 extends Component {
                 if(res.status === 200){
                     localStorage.setItem("userMail",this.state.email);
                     window.location.href = "/recuperation/compte/2"
+                }else{
+                    alert(res.data.text);
                 }
             })
             .catch(err=>{
                 if(err.response.status === 401){
-                    alert("Vérifiez le code saisie");
+                    console.log("Err = "+err.response.data.text)
+                    alert(err.response.data.text);
                 }else{
-                    alert("..")
+                    alert("Erreur"+err)
                 }
             })
     };
@@ -69,7 +72,7 @@ class RecoverAccount1 extends Component {
                     marginRight: "auto",
                     marginLeft: "auto",}}>
                     <div className={classes.title}>
-                        Vous recevrez une code sur cette addresse mail pour changer votre addresse mail.
+                        Vous recevrez une code sur cette addresse mail pour changer votre mot de passe.
                     </div>
                     <div className={classes.contain}>
                         <form onSubmit={this.handleSubmit}>

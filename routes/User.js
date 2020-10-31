@@ -229,19 +229,24 @@ route.post('/recoverAccount/1', async (req, res) => {
         if (err) {
             res.status(401).json({text: "Cet adresse n'existe pas!"});
         } else {
-            EmailSender.sendEmail(userEmail,subject,container,attachment)
-                .then(_res => {
-                    userModel.update({email: userEmail},
-                        {$set: {verificationCode: randomCode}},
-                        {upsert: true}, (err, doc) => {
-                            if (doc.length !== 0) {
-                                return res.status(200).json({text: "Votre code a été envoyé sur votre adresse mail"});
+            console.log("User ask : "+doc);
+            if(doc.length !== 0){
+                EmailSender.sendEmail(userEmail,subject,container,attachment)
+                    .then(_res => {
+                        userModel.update({email: userEmail},
+                            {$set: {verificationCode: randomCode}},
+                            {upsert: true}, (err, doc) => {
+                                if (doc.length !== 0) {
+                                    return res.status(200).json({text: "Votre code a été envoyé sur votre adresse mail"});
+                                }
                             }
-                        }
-                    );
-                }).catch(ex => {
-                return res.status(401).json({text: "Erreur envois de mail"})
-            })
+                        );
+                    }).catch(ex => {
+                    return res.status(401).json({text: "Erreur envois de mail"})
+                })
+            }else{
+                return res.status(401).json({text: "Aucun compte n'existe à cette adresse mail"})
+            }
         }
     })
 });
