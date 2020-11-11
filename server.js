@@ -30,9 +30,7 @@ app.use((req, res, next) => {
 });
 
 // db connexion
-//const url = "mongodb+srv://cdab:NfHKG]d0jJRVX{r@cluster0.5ssoi.mongodb.net/Cdabcompass?retryWrites=true&w=majority";
 
-// const url = "mongodb+srv://Fabrice:lqfuokPOycyg9zSQ@abloni-mc3d6.mongodb.net/Shara?retryWrites=true&w=majority";
 mongoose.connect( process.env.MONGODB_URI , {useNewUrlParser: true, useUnifiedTopology: true})
     .then(()=> console.log("MongoDB successfully connected"))
     .catch(err => console.log(err));
