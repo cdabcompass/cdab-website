@@ -22,7 +22,7 @@ const styles = theme => ({
     videoArt:{
         width: "100%",
         height: "100%",
-        flex: 1
+        // flex: 1
     },
     videoClass:{
         height: "100%",
