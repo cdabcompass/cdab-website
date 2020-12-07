@@ -105,6 +105,8 @@ const routing = (
 
                 <PrivateRoute exact path="/panelAdmin" component={PanelAdmin}/>
 
+                <Route exact path="*" component={App}/>
+
             </Switch>
         </div>
     </Router>

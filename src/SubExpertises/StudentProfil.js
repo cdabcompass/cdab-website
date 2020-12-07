@@ -121,10 +121,12 @@ class StudentProfil extends Component {
                     <div className={classes.subContext}>
                         <div className="subContainer">
                             <div style={{flex: 1}}>
-                                <iframe width="" height="186" src="https://www.youtube.com/embed/wdEhQ2xPVOQ"
+                                <iframe width="" height="186"
+                                        src="https://www.youtube.com/embed/KZ8xRuxYLRI"
                                         frameBorder="0"
-                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen></iframe></div>
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen></iframe>
+                            </div>
                             <div style={{flex: 1}}>
                                 <p style={{fontSize: "20px",textAlign:"justify"}}>
                                     La phase détection du profil demeure un mystère pour certains et une partie de jeux pour d’autres.

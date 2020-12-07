@@ -107,6 +107,7 @@ const styles = theme => ({
         fontSize: 20
     },
     dwlPdf:{
+        lineHeight: "37px",
         position: "relative",
         top: "80%",
         textDecoration: "none",
@@ -115,12 +116,29 @@ const styles = theme => ({
         border: "1px solid #EDBA2D",
         borderRadius: "6px",
         textAlign: "center",
-        lineHeight: "32px",
         background: "#1d1d1da8",
         color: "#EDBA2D",
         '&:hover':{
             background: "#1d1d1d",
             textDecoration: "none",
+            color: "#EDBA2D",
+        }
+    },
+    btnreport:{
+        lineHeight: "37px",
+        position: "relative",
+        top: "80%",
+        textDecoration: "none",
+        width: "200px",
+        height: "40px",
+        border: "1px solid #EDBA2D",
+        borderRadius: "6px",
+        textAlign: "center",
+        background: "#1d1d1d",
+        color: "#EDBA2D",
+        '&:hover':{
+            textDecoration: "none",
+            background: "#1d1d1da8",
             color: "#EDBA2D",
         }
     },
@@ -152,6 +170,11 @@ class App extends Component {
 
     handleOpenModal = (e) =>{
         window.location.href = "/cdab/plus_infos"
+        // this.setState({openModal: true});
+    };
+
+    redirectReportage = (e) =>{
+        window.location.href = "/nos_realisations/testimonials"
         // this.setState({openModal: true});
     };
 
@@ -210,10 +233,19 @@ class App extends Component {
                         <div className="textAboutUs">
                             {/*<Grid item xs={1}></Grid>*/}
                             <Grid alignItems={"center"} item xs={6} className={classes.txtUs}>
-                                La structure éducative CDAB COMPASS, spécialisée dans l’accompagnement et l’orientation des apprenants sur tous les plans scolaire,
-                                universitaire et même professionnel, aide les apprenants à renforcer leur niveau et à s’orienter pour atteindre leur objectif professionnel.
-                                En effet, elle détermine et constitue le socle des apprenants vers un monde professionnel adéquat. En la matière, elle est dotée d’une expérience
-                                de plus de dix ans (10 ans) ayant fait ses preuves en France, au Sénégal, en Côte d’Ivoire et au Togo.
+                                CDAB COMPASS est une structure éducative détectant le profil de l’apprenant. De ce fait,
+                                cher parent, connaitre le profil de l’enfant vous aide :
+                                <br/><br/>
+                                <ul>
+                                    <li><strong>sur la personnalité à</strong> à détecter son potentiel et ses talents, le rendre autonome, le
+                                        rendre responsable,</li>
+                                    <li><strong>sur le plan scolaire à</strong> l’aider à étudier et s’organiser, l’aider à travailler seul, l’aider à
+                                        avoir la méthodologie de travail,</li>
+                                    <li><strong>sur le plan de la confiance à</strong> l’aider à établir une bonne communication en famille,
+                                        l’aider à avoir confiance en lui, l’aider à définir ses priorités,</li>
+                                    <li><strong>sur l’avenir professionnel à</strong> l’aider à se projeter dans l’avenir, l’aider à élaborer son
+                                        projet d’études, l’aider à choisir les différents métiers possibles correspondant.</li>
+                                </ul>
                             </Grid>
                             <Grid alignItems={"center"} item xs={1}>
                                 <a type="button"
@@ -253,6 +285,49 @@ class App extends Component {
                         </div>
 
                         <ExpertisesComponents/>
+                    </div>
+
+                    {/*<div className="notices">*/}
+                    {/*    <div style={{height: 150, padding: 15}}>*/}
+                    {/*        <Carousel className="notice-carousel">*/}
+                    {/*            <Carousel.Item>*/}
+                    {/*                <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong>*/}
+                    {/*                <p>Professeur</p>*/}
+                    {/*            </Carousel.Item>*/}
+                    {/*            <Carousel.Item>*/}
+                    {/*                <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong>*/}
+                    {/*                <p>Professeur</p>*/}
+                    {/*            </Carousel.Item>*/}
+                    {/*            <Carousel.Item>*/}
+                    {/*                <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong>*/}
+                    {/*                <p>Professeur</p>*/}
+                    {/*            </Carousel.Item>*/}
+                    {/*            <Carousel.Item>*/}
+                    {/*                <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong>*/}
+                    {/*                <p>Professeur</p>*/}
+                    {/*            </Carousel.Item>*/}
+                    {/*        </Carousel>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+
+                    <div className={classes.expertises}>
+                        <div style={{marginBottom: "100px"}}>
+                            <p className="expTitle">NOS REPORTAGES</p>
+                        </div>
+                        <div>
+                            <iframe className="videoReport" src="https://www.youtube.com/embed/DGYnbGv7Csw"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen></iframe>
+                        </div>
+                        <br/>
+                        <div>
+                            <a type="button"
+                               className={classes.btnreport}
+                               onClick={this.redirectReportage}
+                            >Voir plus
+                            </a>
+                        </div>
                     </div>
 
                     <div className={classes.countries}>

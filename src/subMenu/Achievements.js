@@ -68,7 +68,7 @@ class Achievements extends Component {
                         <Col xs={12} md={6} lg={4}>
                             <CardCustom
                                 icon={<PanToolIcon/>}
-                                title={"Temoignages"}
+                                title={"REPORTAGES"}
                                 description={"La structure éducative CDAB COMPASS, spécialisée aussi dans l’accompagnement et l’orientation des apprenants " +
                                 "sur tous les plans scolaire, universitaire et même professionnel, accorde une importance à cette expertise."}
                                 onclick={()=>{this.moreInfo("/testimonials")}}
