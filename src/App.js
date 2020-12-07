@@ -269,7 +269,12 @@ class App extends Component {
                             <Grid alignItems={"center"} item xs={5}>
                                 {/*<img style={{width: "100%"}}  src={require("./assets/lightbulb.jpg")} alt=""/>*/}
                                 <div className={classes.videoPres}>
-                                    <iframe className="videoPresentation" src="https://www.youtube.com/embed/Cv9Xiyd9IOY"
+                                    {/*<iframe className="videoPresentation" src="https://www.youtube.com/embed/Cv9Xiyd9IOY"*/}
+                                    {/*        frameBorder="0"*/}
+                                    {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
+                                    {/*        allowFullScreen></iframe>*/}
+                                    <iframe className="videoPresentation"
+                                            src="https://www.youtube.com/embed/KZ8xRuxYLRI"
                                             frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen></iframe>
