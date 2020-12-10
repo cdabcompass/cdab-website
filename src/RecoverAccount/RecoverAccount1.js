@@ -72,7 +72,7 @@ class RecoverAccount1 extends Component {
                     marginRight: "auto",
                     marginLeft: "auto",}}>
                     <div className={classes.title}>
-                        Vous recevrez une code sur cette addresse mail pour changer votre mot de passe.
+                        Vous recevrez un code sur cette addresse mail pour changer votre mot de passe.
                     </div>
                     <div className={classes.contain}>
                         <form onSubmit={this.handleSubmit}>

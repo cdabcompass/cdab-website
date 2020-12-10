@@ -241,6 +241,7 @@ class Register extends Component {
                                     <option value={"Lycee"}>Lycée</option>
                                     <option value={"PostBac"}>Post-bac</option>
                                     <option value={"Parent"}>Parent</option>
+                                    <option value={"IntervenantCdab"}>Prof-a-cdab</option>
                                 </Select>
                             </FormControl>
                             <br/>

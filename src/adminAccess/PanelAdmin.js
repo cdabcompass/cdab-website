@@ -91,7 +91,7 @@ class PanelAdmin extends Component {
         };
     }
 
-    sendReceipt(email,lastName,firstName,receiptType){
+    sendReceipt(email,lastName,firstName,receiptType) {
         let container = "";
         if(receiptType === 1){
             container = "<p>Mr,Mme "+ lastName + " "+ firstName + "<br><br>"
@@ -283,7 +283,7 @@ class PanelAdmin extends Component {
                                     </div>
                                     <div>
                                         <TextField
-                                            label="Apprenant"
+                                            label="Numéro de l'Apprenant"
                                             name={"student"}
                                             value={this.state.student}
                                             onChange={this.handleChange}
@@ -312,6 +312,7 @@ class PanelAdmin extends Component {
                                     </div>
                                     <div>
                                         <TextField
+                                            multiline={true}
                                             label="Date et lieu de naissance"
                                             name={"birthday"}
                                             value={this.state.birthday}
@@ -330,6 +331,7 @@ class PanelAdmin extends Component {
                                             className={classes.textField}
                                         />
                                         <TextField
+                                            multiline={true}
                                             label="Année d'étude"
                                             name={"year"}
                                             value={this.state.year}
@@ -341,6 +343,7 @@ class PanelAdmin extends Component {
                                     </div>
                                     <div>
                                         <TextField
+                                            multiline={true}
                                             label="Etablissement"
                                             name={"school"}
                                             value={this.state.school}
@@ -350,6 +353,7 @@ class PanelAdmin extends Component {
                                             className={classes.textField}
                                         />
                                         <TextField
+                                            multiline={true}
                                             label="Niveau d’études actuel :"
                                             name={"actualLevel"}
                                             value={this.state.actualLevel}
@@ -359,6 +363,7 @@ class PanelAdmin extends Component {
                                             className={classes.textField}
                                         />
                                         <TextField
+                                            multiline={true}
                                             label="Système d’études :"
                                             name={"schoolSystem"}
                                             value={this.state.schoolSystem}
@@ -370,6 +375,7 @@ class PanelAdmin extends Component {
                                     </div>
                                     <div>
                                         <TextField
+                                            multiline={true}
                                             label="Bilan de consultation"
                                             name={"resumeConsult"}
                                             value={this.state.resumeConsult}
@@ -379,6 +385,7 @@ class PanelAdmin extends Component {
                                             className={classes.textField}
                                         />
                                         <TextField
+                                            multiline={true}
                                             label="Métier envisagé"
                                             name={"dreamJob"}
                                             value={this.state.dreamJob}
@@ -388,6 +395,7 @@ class PanelAdmin extends Component {
                                             className={classes.textField}
                                         />
                                         <TextField
+                                            multiline={true}
                                             label="Recommandations :"
                                             name={"reference"}
                                             value={this.state.reference}

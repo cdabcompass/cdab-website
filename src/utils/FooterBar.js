@@ -79,6 +79,12 @@ class FooterBar extends Component {
                                 Gestions des utilisateurs
                             </div>
                         )}
+                        {localStorage.getItem("situation")==="IntervenantCdab" && (
+                            <div className={classes.adminColor}
+                                 onClick={()=>{window.location.href = '/teacherPanel'}}>
+                                Rapport
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

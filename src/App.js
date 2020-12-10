@@ -317,7 +317,7 @@ class App extends Component {
 
                     <div className={classes.expertises}>
                         <div style={{marginBottom: "100px"}}>
-                            <p className="expTitle">NOS REPORTAGES</p>
+                            <p className="expTitle">TEMOIGNAGES</p>
                         </div>
                         <div>
                             <iframe className="videoReport" src="https://www.youtube.com/embed/DGYnbGv7Csw"

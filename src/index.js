@@ -43,6 +43,7 @@ import RecoverAccount2 from "./RecoverAccount/RecoverAccount2";
 import EntrepriseMoreInfo from "./subMenu/EntrepriseMoreInfo";
 import Potential from "./SubExpertises/Potential";
 import Professional from "./SubExpertises/Professional";
+import PanelTeacher from "./teacherPanel/PanelTeacher";
 
 const routing = (
     <Router>
@@ -104,6 +105,8 @@ const routing = (
                 <PrivateRoute exact path="/pay/eBook" component={EbookPayView}/>
 
                 <PrivateRoute exact path="/panelAdmin" component={PanelAdmin}/>
+
+                <PrivateRoute exact path="/teacherPanel" component={PanelTeacher}/>
 
                 <Route exact path="*" component={App}/>
 

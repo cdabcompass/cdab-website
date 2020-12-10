@@ -62,7 +62,7 @@ class Testimonials extends Component {
                     marginLeft: "auto",}}>
 
                     <div className={classes.titles}>
-                        <p className="title-temoignage">TÉMOIGNAGES</p>
+                        <p className="title-temoignage">REPORTAGES</p>
                     </div>
 
                     <div className="cardArticleWhite">
