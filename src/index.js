@@ -101,6 +101,10 @@ const routing = (
                 <Route exact path="/recuperation/compte/1" component={RecoverAccount1}/>
                 <Route exact path="/recuperation/compte/2" component={RecoverAccount2}/>
 
+                <Route exact path="/temoignages" component={Temoignages}/>
+                <Route exact path="/temoignages/educateurs" component={Educateurs}/>
+                <Route exact path="/temoignages/parents" component={Parents}/>
+                <Route exact path="/temoignages/apprenants" component={Apprenants}/>
 
                 <PrivateRoute exact path="/quiz/principal_quiz" component={QuizPrincipal}/>
                 <PrivateRoute exact path="/quiz/post_bac" component={Quiz1}/>
@@ -116,10 +120,6 @@ const routing = (
 
                 <PrivateRoute exact path="/teacherPanel" component={PanelTeacher}/>
 
-                <PrivateRoute exact path="/temoignages" component={Temoignages}/>
-                <PrivateRoute exact path="/temoignages/educateurs" component={Educateurs}/>
-                <PrivateRoute exact path="/temoignages/parents" component={Parents}/>
-                <PrivateRoute exact path="/temoignages/apprenants" component={Apprenants}/>
 
                 <Route exact path="*" component={App}/>
 
