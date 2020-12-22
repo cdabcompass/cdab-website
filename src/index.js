@@ -46,6 +46,10 @@ import Professional from "./SubExpertises/Professional";
 import PanelTeacher from "./teacherPanel/PanelTeacher";
 import ProductsEvents from "./subMenu/ProductsEvents";
 import Evenements from "./subMenu/Evenements";
+import Temoignages from "./subMenu/Temoignages";
+import Educateurs from "./SubTemoignages/Educateurs";
+import Parents from "./SubTemoignages/Parents";
+import Apprenants from "./SubTemoignages/Apprenants";
 
 const routing = (
     <Router>
@@ -111,6 +115,11 @@ const routing = (
                 <PrivateRoute exact path="/panelAdmin" component={PanelAdmin}/>
 
                 <PrivateRoute exact path="/teacherPanel" component={PanelTeacher}/>
+
+                <PrivateRoute exact path="/temoignages" component={Temoignages}/>
+                <PrivateRoute exact path="/temoignages/educateurs" component={Educateurs}/>
+                <PrivateRoute exact path="/temoignages/parents" component={Parents}/>
+                <PrivateRoute exact path="/temoignages/apprenants" component={Apprenants}/>
 
                 <Route exact path="*" component={App}/>
 

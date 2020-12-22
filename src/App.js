@@ -174,7 +174,7 @@ class App extends Component {
     };
 
     redirectReportage = (e) =>{
-        window.location.href = "/nos_realisations/testimonials"
+        window.location.href = "/temoignages"
         // this.setState({openModal: true});
     };
 
