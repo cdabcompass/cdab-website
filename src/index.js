@@ -44,6 +44,8 @@ import EntrepriseMoreInfo from "./subMenu/EntrepriseMoreInfo";
 import Potential from "./SubExpertises/Potential";
 import Professional from "./SubExpertises/Professional";
 import PanelTeacher from "./teacherPanel/PanelTeacher";
+import ProductsEvents from "./subMenu/ProductsEvents";
+import Evenements from "./subMenu/Evenements";
 
 const routing = (
     <Router>
@@ -74,7 +76,9 @@ const routing = (
 
                 <Route exact path="/nos_locaux" component={Offices}/>
 
-                <Route exact path="/nos_produits" component={Products}/>
+                <Route exact path="/nos_produits" component={ProductsEvents}/>
+                <Route exact path="/nos_produits_evenements/produits" component={Products}/>
+                <Route exact path="/nos_produits_evenements/evenements" component={Evenements}/>
 
                 <Route exact path="/nos_realisations" component={Achievements}/>
                 <Route exact path="/nos_realisations/companyVisits" component={CompanyVisits}/>

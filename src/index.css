@@ -284,6 +284,15 @@ code {
     height: 500px;
 }
 
+.productsEvents{
+    text-align: center;
+    display: flex;
+}
+
+.productsEvents div{
+    flex: 1;
+}
+
 @media (min-width: 501px) {
   .ModalContent{
     width: 700px !important;
@@ -444,5 +453,9 @@ code {
   .videoReport{
       width: 100%;
       height: 100%;
+  }
+
+  .productsEvents{
+      display: block !important;
   }
 }

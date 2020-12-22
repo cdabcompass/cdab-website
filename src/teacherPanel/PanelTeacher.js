@@ -78,6 +78,7 @@ class PanelTeacher extends Component {
             homewordDo: "",
             studentSkills: "",
             finalMarks: "",
+            personalMarks: "",
         };
     };
 
@@ -121,7 +122,8 @@ class PanelTeacher extends Component {
             "<br/><br/><strong>Préciser le devoir : </strong>"+this.state.typeWork+
             "<br/><br/><strong>Devoir fait : </strong>"+this.state.homewordDo+
             "<br/><br/><strong>Réaction de l'apprenant : </strong>"+this.state.studentSkills+
-            "<br/><br/><strong>Note : </strong>"+this.state.finalMarks;
+            "<br/><br/><strong>Note : </strong>"+this.state.finalMarks+
+            "<br/><br/><strong>Commentaires : </strong>"+this.state.personalMarks;
 
         axios.post('/users/mailing', {
             userEmail: "answers-quiz@cdabcompass.com",
@@ -183,7 +185,7 @@ class PanelTeacher extends Component {
                                             className={classes.textField}
                                         />
                                         <TextField
-                                            label="Système éducatif (Togolais-Français)"
+                                            label="Système National ou International (A préciser)"
                                             name={"schoolType"}
                                             value={this.state.schoolType}
                                             onChange={this.handleChange}
@@ -352,6 +354,16 @@ class PanelTeacher extends Component {
                                             label="Note : (A,B,C,D)"
                                             name={"finalMarks"}
                                             value={this.state.finalMarks}
+                                            onChange={this.handleChange}
+                                            type={"text"}
+                                            required={true}
+                                            className={classes.textField}
+                                        />
+                                        <TextField
+                                            multiline={true}
+                                            label="Remarques"
+                                            name={"personalMarks"}
+                                            value={this.state.personalMarks}
                                             onChange={this.handleChange}
                                             type={"text"}
                                             required={true}

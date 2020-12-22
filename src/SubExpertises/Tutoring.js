@@ -73,10 +73,11 @@ class Tutoring extends Component {
                     <div className={classes.subContext}>
                         <div className="subContainer">
                             <div style={{flex: 1}}>
-                                <iframe width="" height="303" src="https://www.youtube.com/embed/MEswVvG8Atg"
+                                <iframe height="303" src="https://www.youtube.com/embed/q6GArTQ_cbo"
                                         frameBorder="0"
-                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen></iframe></div>
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen></iframe>
+                            </div>
                             <div style={{flex: 1}}>
                                 <p style={{fontSize: "20px",textAlign:"justify"}}>
                                     Suivant les différentes caractéristiques de l’apprenant, un soutien scolaire à court
