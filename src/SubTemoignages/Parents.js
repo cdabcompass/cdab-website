@@ -35,7 +35,7 @@ class Parents extends Component {
                 </div>
                 <div style={{marginTop: "200px"}}>
                     <div className={classes.titles}>
-                        <p className={classes.title}>Evenements</p>
+                        <p className={classes.title}>Témoignages</p>
                     </div>
                     <br/>
                     <div style={{textAlign: "center"}}>

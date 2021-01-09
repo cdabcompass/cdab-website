@@ -35,10 +35,17 @@ class Apprenants extends Component {
                 </div>
                 <div style={{marginTop: "200px"}}>
                     <div className={classes.titles}>
-                        <p className={classes.title}>Evenements</p>
+                        <p className={classes.title}>Témoignages</p>
                     </div>
                     <br/>
                     <div style={{textAlign: "center"}}>
+                        <iframe width="876" height="490" src="https://www.youtube.com/embed/SlWh5HJzK7s" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen></iframe>
+                        <br/><br/>
+                        <iframe width="876" height="490" src="https://www.youtube.com/embed/B4nRUr0FBCM" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen></iframe>
                     </div>
                     <br/>
                     <br/>

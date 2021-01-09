@@ -156,7 +156,14 @@ const styles = theme => ({
         marginTop: '10%',
         marginBottom: '10%',
         maxWidth: "50% !important"
-    }
+    },
+    btnQuiz: {
+        backgroundColor: "#EDBA2D",
+        '&:hover': {
+            // textDecoration: 'underline',
+            backgroundColor: "#E58F1E",
+        },
+    },
 
 });
 
@@ -180,6 +187,15 @@ class App extends Component {
 
     handleCloseModal = (e) =>{
         this.setState({openModal: false});
+    };
+
+    specificPath = (path) =>{
+        if(localStorage.getItem("token") !== null){
+            window.location.href = "/quiz"+path;
+        }else{
+            alert("Veuillez tout d'abord créer un compte ou vous connecter!");
+            window.location.href = '/connexion';
+        }
     };
 
     render(){
@@ -290,6 +306,14 @@ class App extends Component {
                         </div>
 
                         <ExpertisesComponents/>
+
+                        <br/>
+                        <button type="button"
+                                style={{background: "rgba(28,27,27,0.94)"}}
+                           className={classes.dwlPdf}
+                                onClick={() => this.specificPath("/principal_quiz")}
+                        >PASSER VOTRE TEST
+                        </button>
                     </div>
 
                     {/*<div className="notices">*/}
@@ -330,7 +354,7 @@ class App extends Component {
                             <a type="button"
                                className={classes.btnreport}
                                onClick={this.redirectReportage}
-                            >Voir plus
+                            >VOIR PLUS
                             </a>
                         </div>
                     </div>
