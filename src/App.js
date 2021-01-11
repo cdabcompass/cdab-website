@@ -227,7 +227,7 @@ class App extends Component {
                     <div className="imageCarousel">
                         <Carousel className={classes.carousell}>
                             <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP1.jpg")} alt=""/></Carousel.Item>
-                            <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P8.jpg")} alt=""/></Carousel.Item>
+                            <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p8.jpg")} alt=""/></Carousel.Item>
                             <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP2.jpg")} alt=""/></Carousel.Item>
 
                             <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P14.jpg")} alt=""/></Carousel.Item>
@@ -235,9 +235,9 @@ class App extends Component {
 
                             <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P10.JPG")} alt=""/></Carousel.Item>
                             <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P5.jpg")} alt=""/></Carousel.Item>
-                            <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P3.JPG")} alt=""/></Carousel.Item>
+                            <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p3.jpg")} alt=""/></Carousel.Item>
                             <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P7.jpg")} alt=""/></Carousel.Item>
-                            <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P9.JPG")} alt=""/></Carousel.Item>
+                            <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p9.jpeg")} alt=""/></Carousel.Item>
                         </Carousel>
                     </div>
 
