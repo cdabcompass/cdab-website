@@ -21,7 +21,7 @@ const styles = theme => ({
         width: 300,
     },
 
-    containerQuizs:{
+    containerQuizs: {
         width: "85%",
         boxShadow: "4px 4px 20px 0px rgb(212 198 74 / 64%)",
         borderRadius: 10,
@@ -53,7 +53,7 @@ const styles = theme => ({
 });
 
 class PanelTeacher extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             openModal: false,
@@ -82,48 +82,48 @@ class PanelTeacher extends Component {
         };
     };
 
-    handleChange = (e) =>{
+    handleChange = (e) => {
         this.setState({
-            [e.target.name] : e.target.value
+            [e.target.name]: e.target.value
         });
         // console.log(e.target.name + " : "+e.target.value);
     };
 
-    handleOpenModal = () =>{
+    handleOpenModal = () => {
         this.setState({openModal: true});
     };
 
-    handleCloseModal = (e) =>{
+    handleCloseModal = (e) => {
         this.setState({openModal: false});
     };
 
-    submitAnswers = (e) =>{
+    submitAnswers = (e) => {
         console.log("send all");
 
         e.preventDefault();
-        let rapport = "<p>Bonjour, </p>"+
-            "<h3>RAPPORT DE L'ENSEIGNANT : </h3>"+
-            localStorage.getItem("lastName")+" "+localStorage.getItem("firstName")+
+        let rapport = "<p>Bonjour, </p>" +
+            "<h3>RAPPORT DE L'ENSEIGNANT : </h3>" +
+            localStorage.getItem("lastName") + " " + localStorage.getItem("firstName") +
             "<br/><br/><strong>Nom et prénom de l'apprenant : </strong>"
-            +this.state.lastName+this.state.firstName+
-            "<br/><br/><strong>Système éducatif : </strong>"+this.state.schoolType+
-            "<br/><br/><strong>Etablissement scolaire : </strong>"+this.state.schoolName+
-            "<br/><br/><strong>Niveau d'étude : </strong>"+this.state.schoolGrade+
-            "<br/><br/><strong>Chapitres étudiés : </strong>"+this.state.chapterStudy+
-            "<br/><br/><strong>Attitude de l'apprenant : </strong>"+this.state.studentAbility+
-            "<br/><br/><strong>Lieu de prestation : </strong>"+this.state.coursesPlace+
-            "<br/><br/><strong>Date du cours : </strong>"+this.state.consultation+
-            "<br/><br/><strong>Heure de début : </strong>"+this.state.startHour+
-            "<br/><br/><strong>Heure de fin : </strong>"+this.state.endHour+
-            "<br/><br/><strong>Durée : </strong>"+this.state.dateDuration+
-            "<br/><br/><strong>Date : </strong>"+this.state.profDate+
-            "<br/><br/><strong>Chapitres révisés : </strong>"+this.state.chapterRevise+
-            "<br/><br/><strong>Niveau de compréhension de l'élève : </strong>"+this.state.studentLevel+
-            "<br/><br/><strong>Préciser le devoir : </strong>"+this.state.typeWork+
-            "<br/><br/><strong>Devoir fait : </strong>"+this.state.homewordDo+
-            "<br/><br/><strong>Réaction de l'apprenant : </strong>"+this.state.studentSkills+
-            "<br/><br/><strong>Note : </strong>"+this.state.finalMarks+
-            "<br/><br/><strong>Commentaires : </strong>"+this.state.personalMarks;
+            + this.state.lastName + this.state.firstName +
+            "<br/><br/><strong>Système éducatif : </strong>" + this.state.schoolType +
+            "<br/><br/><strong>Etablissement scolaire : </strong>" + this.state.schoolName +
+            "<br/><br/><strong>Niveau d'étude : </strong>" + this.state.schoolGrade +
+            "<br/><br/><strong>Chapitres étudiés : </strong>" + this.state.chapterStudy +
+            "<br/><br/><strong>Attitude de l'apprenant : </strong>" + this.state.studentAbility +
+            "<br/><br/><strong>Lieu de prestation : </strong>" + this.state.coursesPlace +
+            "<br/><br/><strong>Date du cours : </strong>" + this.state.consultation +
+            "<br/><br/><strong>Heure de début : </strong>" + this.state.startHour +
+            "<br/><br/><strong>Heure de fin : </strong>" + this.state.endHour +
+            "<br/><br/><strong>Durée : </strong>" + this.state.dateDuration +
+            "<br/><br/><strong>Date : </strong>" + this.state.profDate +
+            "<br/><br/><strong>Chapitres révisés : </strong>" + this.state.chapterRevise +
+            "<br/><br/><strong>Niveau de compréhension de l'élève : </strong>" + this.state.studentLevel +
+            "<br/><br/><strong>Préciser le devoir : </strong>" + this.state.typeWork +
+            "<br/><br/><strong>Devoir fait : </strong>" + this.state.homewordDo +
+            "<br/><br/><strong>Réaction de l'apprenant : </strong>" + this.state.studentSkills +
+            "<br/><br/><strong>Note : </strong>" + this.state.finalMarks +
+            "<br/><br/><strong>Commentaires : </strong>" + this.state.personalMarks;
 
         axios.post('/users/mailing', {
             userEmail: "answers-quiz@cdabcompass.com",
@@ -131,15 +131,16 @@ class PanelTeacher extends Component {
             attachment: "",
             container: rapport
         })
-            .then(res=>{
-                if(res.status === 200){
+            .then(res => {
+                if (res.status === 200) {
                     alert('Votre rapport à bien été envoyé');
-                    window.location="/"
+                    window.location = "/"
+                } else {
+                    alert("Une erreur est survenue, veuillez nous joindre afin de savoir si votre transaction à bien été éffectuée.")
                 }
-                else{alert("Une erreur est survenue, veuillez nous joindre afin de savoir si votre transaction à bien été éffectuée.")}
             })
-            .catch(err=>{
-                if(err.response.status === 409){
+            .catch(err => {
+                if (err.response.status === 409) {
                 }
             });
     }
@@ -155,7 +156,7 @@ class PanelTeacher extends Component {
                     <MenuBar/>
                 </div>
                 <div className="contAll">
-                    <Modal dialogClassName ={"ModalContent"}
+                    <Modal dialogClassName={"ModalContent"}
                            show={this.state.openModal}
                            onHide={this.handleCloseModal}>
                         <Modal.Header closeButton>
@@ -394,7 +395,7 @@ class PanelTeacher extends Component {
                             {localStorage.getItem("lastName")}
                         </h2>
                         <Button className={classes.btnMoreInfo}
-                                onClick={()=>this.handleOpenModal()}
+                                onClick={() => this.handleOpenModal()}
                         >
                             Editer le rapport
                         </Button>

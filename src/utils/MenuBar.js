@@ -4,10 +4,6 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import {withStyles} from "@material-ui/core";
-import IconButton from "@material-ui/core/IconButton";
-import {AccountCircle} from "@material-ui/icons";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from '@material-ui/core/Menu';
 import Popover from "@material-ui/core/Popover";
 import TokenApi from "./TokenApi";
 import ReactGA from "react-ga";
@@ -148,11 +144,6 @@ class MenuBar extends Component {
                                 <Button className={classes.btnSubMenu} href="/inscription">Inscription</Button>
                             </div>
                         )}
-                        {/*{this.state.auth && (*/}
-                        {/*    <div>*/}
-                        {/*        <Button className={classes.btnMenu} onClick={this.disconnect}>Déconnexion</Button>*/}
-                        {/*    </div>*/}
-                        {/*)}*/}
                     </Popover>
                 </Toolbar>
             </AppBar>

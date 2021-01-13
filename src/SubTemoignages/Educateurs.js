@@ -20,10 +20,9 @@ const styles = theme => ({
 });
 
 class Educateurs extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {
-        };
+        this.state = {};
     }
 
     render() {

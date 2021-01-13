@@ -6,12 +6,9 @@ import CardActu from "./utils/CardActu";
 import MenuBar from "./utils/MenuBar";
 import Grid from "@material-ui/core/Grid";
 import ExpertisesComponents from "./utils/ExpertisesComponents";
-import Pdf from '../src/othersfiles/manuel.pdf';
 import Button from "react-bootstrap/Button";
 import FooterBar from "./utils/FooterBar";
 import Helmet from "react-helmet";
-import ReactGA from 'react-ga';
-// import Modal from "@material-ui/core/Modal";
 
 const styles = theme => ({
     container: {
@@ -143,10 +140,6 @@ const styles = theme => ({
         }
     },
     videoPres:{
-        // width: "80%",
-        // height: "80%",
-        // margin: "7% auto",
-
         textAlign: "center",
         height: "100%",
         padding: "10%",
@@ -315,29 +308,6 @@ class App extends Component {
                         >PASSER VOTRE TEST
                         </button>
                     </div>
-
-                    {/*<div className="notices">*/}
-                    {/*    <div style={{height: 150, padding: 15}}>*/}
-                    {/*        <Carousel className="notice-carousel">*/}
-                    {/*            <Carousel.Item>*/}
-                    {/*                <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong>*/}
-                    {/*                <p>Professeur</p>*/}
-                    {/*            </Carousel.Item>*/}
-                    {/*            <Carousel.Item>*/}
-                    {/*                <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong>*/}
-                    {/*                <p>Professeur</p>*/}
-                    {/*            </Carousel.Item>*/}
-                    {/*            <Carousel.Item>*/}
-                    {/*                <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong>*/}
-                    {/*                <p>Professeur</p>*/}
-                    {/*            </Carousel.Item>*/}
-                    {/*            <Carousel.Item>*/}
-                    {/*                <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong>*/}
-                    {/*                <p>Professeur</p>*/}
-                    {/*            </Carousel.Item>*/}
-                    {/*        </Carousel>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
 
                     <div className={classes.expertises}>
                         <div style={{marginBottom: "100px"}}>

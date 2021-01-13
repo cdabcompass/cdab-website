@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
-import {Col} from "react-bootstrap";
 import Button from "@material-ui/core/Button";
 import FooterBar from "../utils/FooterBar";
 

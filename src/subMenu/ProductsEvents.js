@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import CardCustom from "../utils/CardCustom";
 
 const styles = theme => ({

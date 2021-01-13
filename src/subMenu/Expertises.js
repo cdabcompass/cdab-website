@@ -19,16 +19,13 @@ const styles = theme => ({
         fontWeight: "bold",
         textDecoration: "underline"
     },
-    subTitle:{
-
-    }
+    subTitle: {}
 });
 
 class Expertises extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {
-        };
+        this.state = {};
     }
 
     render() {
@@ -36,7 +33,7 @@ class Expertises extends Component {
         return (
             <div className={classes.container}>
                 <Helmet>
-                    <meta charSet="utf-8" />
+                    <meta charSet="utf-8"/>
                     <title>CDAB COMPASS</title>
                     <meta
                         name="CDAB COMPASS"
@@ -51,7 +48,7 @@ class Expertises extends Component {
                     />
                 </Helmet>
 
-                <div >
+                <div>
                     <MenuBar/>
                 </div>
                 <div style={{marginTop: "200px"}}>
