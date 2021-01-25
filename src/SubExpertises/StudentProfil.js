@@ -178,7 +178,8 @@ class StudentProfil extends Component {
                                     localStorage.getItem("quizSecondStep") === "false"
                                 ) && (
                                     <div>
-                                        {localStorage.getItem("situation") !== "Primaire" && (
+                                        {(localStorage.getItem("situation") !== "Primaire" &&
+                                            localStorage.getItem("situation") !== "College") && (
                                             <Button className={classes.btnQuiz}
                                                     onClick={() => this.specificPath("/post_bac")}
                                                     // disabled={this.state.specificTest}
@@ -186,7 +187,8 @@ class StudentProfil extends Component {
                                                 Passer le test spécifique
                                             </Button>
                                         )}
-                                        {localStorage.getItem("situation") === "Primaire" && (
+                                        {(localStorage.getItem("situation") === "Primaire" ||
+                                            localStorage.getItem("situation") === "College") && (
                                             <Button className={classes.btnQuiz}
                                                     onClick={() => this.specificPath("/primaire")}
                                                     // disabled={this.state.specificTest}
