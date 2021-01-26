@@ -9,6 +9,7 @@ import ExpertisesComponents from "./utils/ExpertisesComponents";
 import Button from "react-bootstrap/Button";
 import FooterBar from "./utils/FooterBar";
 import Helmet from "react-helmet";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 const styles = theme => ({
     container: {
@@ -396,6 +397,10 @@ class App extends Component {
 
                 </div>
                 <div>
+                    <MessengerCustomerChat
+                        pageId="454141181441870"
+                        appId="238909897689414"
+                    />
                     <FooterBar/>
                 </div>
             </div>
