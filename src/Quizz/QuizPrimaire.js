@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import { Multiselect } from 'multiselect-react-dropdown';
 import axios from "axios";
 import FooterBar from "../utils/FooterBar";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -383,91 +384,93 @@ class QuizPrimaire extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <div>
-                    <MenuBar/>
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <div>
+                        <MenuBar/>
+                    </div>
+                    <div style={{marginTop: "200px"}}>
+                        <h2 style={{textAlign: "center",color:"#000"}}>LA FONCTION</h2><br/><br/>
+                        <h4 style={{textAlign: "center"}}>Le réaliste</h4>
+                        <div style={{marginLeft: "20%",marginRight: "20%"}}>
+                            <Multiselect
+                                options={this.state.optionsRealiste} // Options to display in the dropdown
+                                onSelect={selectedList=>this.setState({selectListReal: selectedList})}
+                                onRemove={selectedList=>this.setState({selectListReal: selectedList})}
+                                displayValue="name" // Property name to display in the dropdown options
+                                groupBy="cat"
+                                showCheckbox={true}
+                            />
+                        </div>
+                        <br/>
+                        <h3 style={{textAlign: "center"}}>L’investigateur</h3>
+                        <div style={{marginLeft: "20%",marginRight: "20%"}}>
+                            <Multiselect
+                                options={this.state.optionsInvestigateur}
+                                onSelect={selectedList=>this.setState({selectListInve: selectedList})}
+                                onRemove={selectedList=>this.setState({selectListInve: selectedList})}
+                                displayValue="name"
+                                groupBy="cat"
+                                showCheckbox={true}
+                            />
+                        </div>
+                        <h4 style={{textAlign: "center"}}>L’artistique</h4>
+                        <div style={{marginLeft: "20%",marginRight: "20%"}}>
+                            <Multiselect
+                                options={this.state.optionsArtistique}
+                                onSelect={selectedList=>this.setState({selectListArt: selectedList})}
+                                onRemove={selectedList=>this.setState({selectListArt: selectedList})}
+                                displayValue="name"
+                                groupBy="cat"
+                                showCheckbox={true}
+                            />
+                        </div>
+                        <h4 style={{textAlign: "center"}}>Le social</h4>
+                        <div style={{marginLeft: "20%",marginRight: "20%"}}>
+                            <Multiselect
+                                options={this.state.optionsSocial}
+                                onSelect={selectedList=>this.setState({selectListSoc: selectedList})}
+                                onRemove={selectedList=>this.setState({selectListSoc: selectedList})}
+                                displayValue="name"
+                                groupBy="cat"
+                                showCheckbox={true}
+                            />
+                        </div>
+                        <h4 style={{textAlign: "center"}}>L'entreprenant</h4>
+                        <div style={{marginLeft: "20%",marginRight: "20%"}}>
+                            <Multiselect
+                                options={this.state.optionsEntreprenant}
+                                onSelect={selectedList=>this.setState({selectListEntr: selectedList})}
+                                onRemove={selectedList=>this.setState({selectListEntr: selectedList})}
+                                displayValue="name"
+                                groupBy="cat"
+                                showCheckbox={true}
+                            />
+                        </div>
+                        <h4 style={{textAlign: "center"}}>Le conventionnel</h4>
+                        <div style={{marginLeft: "20%",marginRight: "20%"}}>
+                            <Multiselect
+                                options={this.state.optionsConventionnel}
+                                onSelect={selectedList=>this.setState({selectListConv: selectedList})}
+                                onRemove={selectedList=>this.setState({selectListConv: selectedList})}
+                                displayValue="name"
+                                groupBy="cat"
+                                showCheckbox={true}
+                            />
+                        </div>
+                        <div style={{textAlign: "center"}}>
+                            <Button className={classes.btnQuiz}
+                                    onClick={this.submit}
+                            >
+                                Envoyer
+                            </Button>
+                        </div>
+                    </div>
+                    <div>
+                        <FooterBar/>
+                    </div>
                 </div>
-                <div style={{marginTop: "200px"}}>
-                    <h2 style={{textAlign: "center",color:"#000"}}>LA FONCTION</h2><br/><br/>
-                    <h4 style={{textAlign: "center"}}>Le réaliste</h4>
-                    <div style={{marginLeft: "20%",marginRight: "20%"}}>
-                        <Multiselect
-                            options={this.state.optionsRealiste} // Options to display in the dropdown
-                            onSelect={selectedList=>this.setState({selectListReal: selectedList})}
-                            onRemove={selectedList=>this.setState({selectListReal: selectedList})}
-                            displayValue="name" // Property name to display in the dropdown options
-                            groupBy="cat"
-                            showCheckbox={true}
-                        />
-                    </div>
-                    <br/>
-                    <h3 style={{textAlign: "center"}}>L’investigateur</h3>
-                    <div style={{marginLeft: "20%",marginRight: "20%"}}>
-                        <Multiselect
-                            options={this.state.optionsInvestigateur}
-                            onSelect={selectedList=>this.setState({selectListInve: selectedList})}
-                            onRemove={selectedList=>this.setState({selectListInve: selectedList})}
-                            displayValue="name"
-                            groupBy="cat"
-                            showCheckbox={true}
-                        />
-                    </div>
-                    <h4 style={{textAlign: "center"}}>L’artistique</h4>
-                    <div style={{marginLeft: "20%",marginRight: "20%"}}>
-                        <Multiselect
-                            options={this.state.optionsArtistique}
-                            onSelect={selectedList=>this.setState({selectListArt: selectedList})}
-                            onRemove={selectedList=>this.setState({selectListArt: selectedList})}
-                            displayValue="name"
-                            groupBy="cat"
-                            showCheckbox={true}
-                        />
-                    </div>
-                    <h4 style={{textAlign: "center"}}>Le social</h4>
-                    <div style={{marginLeft: "20%",marginRight: "20%"}}>
-                        <Multiselect
-                            options={this.state.optionsSocial}
-                            onSelect={selectedList=>this.setState({selectListSoc: selectedList})}
-                            onRemove={selectedList=>this.setState({selectListSoc: selectedList})}
-                            displayValue="name"
-                            groupBy="cat"
-                            showCheckbox={true}
-                        />
-                    </div>
-                    <h4 style={{textAlign: "center"}}>L'entreprenant</h4>
-                    <div style={{marginLeft: "20%",marginRight: "20%"}}>
-                        <Multiselect
-                            options={this.state.optionsEntreprenant}
-                            onSelect={selectedList=>this.setState({selectListEntr: selectedList})}
-                            onRemove={selectedList=>this.setState({selectListEntr: selectedList})}
-                            displayValue="name"
-                            groupBy="cat"
-                            showCheckbox={true}
-                        />
-                    </div>
-                    <h4 style={{textAlign: "center"}}>Le conventionnel</h4>
-                    <div style={{marginLeft: "20%",marginRight: "20%"}}>
-                        <Multiselect
-                            options={this.state.optionsConventionnel}
-                            onSelect={selectedList=>this.setState({selectListConv: selectedList})}
-                            onRemove={selectedList=>this.setState({selectListConv: selectedList})}
-                            displayValue="name"
-                            groupBy="cat"
-                            showCheckbox={true}
-                        />
-                    </div>
-                    <div style={{textAlign: "center"}}>
-                        <Button className={classes.btnQuiz}
-                                onClick={this.submit}
-                        >
-                            Envoyer
-                        </Button>
-                    </div>
-                </div>
-                <div>
-                    <FooterBar/>
-                </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

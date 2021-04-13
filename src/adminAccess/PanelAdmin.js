@@ -11,6 +11,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import TextField from "@material-ui/core/TextField/TextField";
 import {Modal} from "react-bootstrap";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -234,276 +235,278 @@ class PanelAdmin extends Component {
         const {classes} = this.props;
         const {users} = this.state;
         return (
-            <div className={classes.container}>
-                <div>
-                    <MenuBar/>
-                </div>
-                <div className="contAll">
-                    <div>Nous avons actuellement : {users.length} utilisateurs</div>
-                    <br/>
-                    <Modal dialogClassName ={"ModalContent"} show={this.state.openModal} onHide={this.handleCloseModal}>
-                        <Modal.Header closeButton>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <div className={classes.containerQuizs}>
-                                <h2>Rapport de consultation</h2>
-                                <form onSubmit={this.submitAnswers}>
-                                    <div>
-                                        <TextField
-                                            id="date"
-                                            label="Date de consultation"
-                                            type="date"
-                                            value={this.state.consultation}
-                                            className={classes.textField}
-                                            name={"consultation"}
-                                            required={true}
-                                            onChange={this.handleChange}
-                                            InputLabelProps={{
-                                                shrink: true,
-                                            }}
-                                        />
-                                        <TextField
-                                            label="Nom"
-                                            value={this.state.lastName}
-                                            name={"lastName"}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                        <TextField
-                                            label="Prénom"
-                                            name={"firstName"}
-                                            value={this.state.firstName}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                    </div>
-                                    <div>
-                                        <TextField
-                                            label="Numéro de l'Apprenant"
-                                            name={"student"}
-                                            value={this.state.student}
-                                            onChange={this.handleChange}
-                                            type={"tel"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                        <TextField
-                                            label="Père"
-                                            name={"studentFather"}
-                                            value={this.state.studentFather}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={false}
-                                            className={classes.textField}
-                                        />
-                                        <TextField
-                                            label="Mère"
-                                            name={"studentMother"}
-                                            value={this.state.studentMother}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={false}
-                                            className={classes.textField}
-                                        />
-                                    </div>
-                                    <div>
-                                        <TextField
-                                            multiline={true}
-                                            label="Date et lieu de naissance"
-                                            name={"birthday"}
-                                            value={this.state.birthday}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                        <TextField
-                                            label="Sexe"
-                                            name={"sexe"}
-                                            value={this.state.sexe}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                        <TextField
-                                            multiline={true}
-                                            label="Année d'étude"
-                                            name={"year"}
-                                            value={this.state.year}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                    </div>
-                                    <div>
-                                        <TextField
-                                            multiline={true}
-                                            label="Etablissement"
-                                            name={"school"}
-                                            value={this.state.school}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                        <TextField
-                                            multiline={true}
-                                            label="Niveau d’études actuel :"
-                                            name={"actualLevel"}
-                                            value={this.state.actualLevel}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                        <TextField
-                                            multiline={true}
-                                            label="Système d’études :"
-                                            name={"schoolSystem"}
-                                            value={this.state.schoolSystem}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                    </div>
-                                    <div>
-                                        <TextField
-                                            multiline={true}
-                                            label="Bilan de consultation"
-                                            name={"resumeConsult"}
-                                            value={this.state.resumeConsult}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                        <TextField
-                                            multiline={true}
-                                            label="Métier envisagé"
-                                            name={"dreamJob"}
-                                            value={this.state.dreamJob}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                        <TextField
-                                            multiline={true}
-                                            label="Recommandations :"
-                                            name={"reference"}
-                                            value={this.state.reference}
-                                            onChange={this.handleChange}
-                                            type={"text"}
-                                            required={true}
-                                            className={classes.textField}
-                                        />
-                                    </div>
-                                    <Button type="submit" className={classes.btnQuiz}
-                                    >
-                                        Envoyer
-                                    </Button>
-                                </form>
-                            </div>
-                        </Modal.Body>
-                        <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleCloseModal}>
-                                Close
-                            </Button>
-                        </Modal.Footer>
-                    </Modal>
-                    {
-                        users.map((user,index)=>
-                            <div key={user._id} style={{marginBottom: "10px"}}>
-                                {(user.lastName !== undefined
-                                    && user.firstName !== undefined
-                                    && user.email !== undefined
-                                )
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <div>
+                        <MenuBar/>
+                    </div>
+                    <div className="contAll">
+                        <div>Nous avons actuellement : {users.length} utilisateurs</div>
+                        <br/>
+                        <Modal dialogClassName ={"ModalContent"} show={this.state.openModal} onHide={this.handleCloseModal}>
+                            <Modal.Header closeButton>
+                            </Modal.Header>
+                            <Modal.Body>
+                                <div className={classes.containerQuizs}>
+                                    <h2>Rapport de consultation</h2>
+                                    <form onSubmit={this.submitAnswers}>
+                                        <div>
+                                            <TextField
+                                                id="date"
+                                                label="Date de consultation"
+                                                type="date"
+                                                value={this.state.consultation}
+                                                className={classes.textField}
+                                                name={"consultation"}
+                                                required={true}
+                                                onChange={this.handleChange}
+                                                InputLabelProps={{
+                                                    shrink: true,
+                                                }}
+                                            />
+                                            <TextField
+                                                label="Nom"
+                                                value={this.state.lastName}
+                                                name={"lastName"}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                            <TextField
+                                                label="Prénom"
+                                                name={"firstName"}
+                                                value={this.state.firstName}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                        </div>
+                                        <div>
+                                            <TextField
+                                                label="Numéro de l'Apprenant"
+                                                name={"student"}
+                                                value={this.state.student}
+                                                onChange={this.handleChange}
+                                                type={"tel"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                            <TextField
+                                                label="Père"
+                                                name={"studentFather"}
+                                                value={this.state.studentFather}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={false}
+                                                className={classes.textField}
+                                            />
+                                            <TextField
+                                                label="Mère"
+                                                name={"studentMother"}
+                                                value={this.state.studentMother}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={false}
+                                                className={classes.textField}
+                                            />
+                                        </div>
+                                        <div>
+                                            <TextField
+                                                multiline={true}
+                                                label="Date et lieu de naissance"
+                                                name={"birthday"}
+                                                value={this.state.birthday}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                            <TextField
+                                                label="Sexe"
+                                                name={"sexe"}
+                                                value={this.state.sexe}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                            <TextField
+                                                multiline={true}
+                                                label="Année d'étude"
+                                                name={"year"}
+                                                value={this.state.year}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                        </div>
+                                        <div>
+                                            <TextField
+                                                multiline={true}
+                                                label="Etablissement"
+                                                name={"school"}
+                                                value={this.state.school}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                            <TextField
+                                                multiline={true}
+                                                label="Niveau d’études actuel :"
+                                                name={"actualLevel"}
+                                                value={this.state.actualLevel}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                            <TextField
+                                                multiline={true}
+                                                label="Système d’études :"
+                                                name={"schoolSystem"}
+                                                value={this.state.schoolSystem}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                        </div>
+                                        <div>
+                                            <TextField
+                                                multiline={true}
+                                                label="Bilan de consultation"
+                                                name={"resumeConsult"}
+                                                value={this.state.resumeConsult}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                            <TextField
+                                                multiline={true}
+                                                label="Métier envisagé"
+                                                name={"dreamJob"}
+                                                value={this.state.dreamJob}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                            <TextField
+                                                multiline={true}
+                                                label="Recommandations :"
+                                                name={"reference"}
+                                                value={this.state.reference}
+                                                onChange={this.handleChange}
+                                                type={"text"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
+                                        </div>
+                                        <Button type="submit" className={classes.btnQuiz}
+                                        >
+                                            Envoyer
+                                        </Button>
+                                    </form>
+                                </div>
+                            </Modal.Body>
+                            <Modal.Footer>
+                                <Button variant="secondary" onClick={this.handleCloseModal}>
+                                    Close
+                                </Button>
+                            </Modal.Footer>
+                        </Modal>
+                        {
+                            users.map((user,index)=>
+                                <div key={user._id} style={{marginBottom: "10px"}}>
+                                    {(user.lastName !== undefined
+                                        && user.firstName !== undefined
+                                        && user.email !== undefined
+                                    )
                                     &&
                                     <Accordion style={{backgroundColor: "#ff9800ad"}}>
-                                    <AccordionSummary
-                                        style={{color: "black"}}
-                                        expandIcon={<ExpandMoreIcon />}
-                                        aria-controls="panel1a-content"
-                                        id="panel1a-header"
-                                    >
-                                        <Typography className={classes.heading}>
-                                            {user.lastName} {user.firstName}  {user.country}
-                                        </Typography>
-                                    </AccordionSummary>
+                                        <AccordionSummary
+                                            style={{color: "black"}}
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography className={classes.heading}>
+                                                {user.lastName} {user.firstName}  {user.country}
+                                            </Typography>
+                                        </AccordionSummary>
 
-                                    <AccordionDetails style={{backgroundColor: "white"}}>
+                                        <AccordionDetails style={{backgroundColor: "white"}}>
 
-                                        <div className={classes.userMoreInfo}>
-                                            <div style={{flex: 1}}>
-                                                <Button className={classes.btnMoreInfo}
-                                                        onClick={()=>
-                                                            this.confirmPayment(user._id,user.email,user.lastName,user.firstName)
-                                                        }
-                                                >
-                                                    Detection de profil
-                                                </Button>
-                                                <Button className={classes.btnMoreInfo}
-                                                        onClick={()=>
-                                                            this.sendReceipt(user.email,user.lastName,user.firstName,1)
-                                                        }
-                                                >
-                                                    Caution bancaire
-                                                </Button>
-                                                <Button className={classes.btnMoreInfo}
-                                                        onClick={()=>
-                                                            this.sendReceipt(user.email,user.lastName,user.firstName,2)
-                                                        }
-                                                >
-                                                    Logement étudiant
-                                                </Button>
-                                                <Button className={classes.btnMoreInfo}
-                                                        onClick={()=>
-                                                            this.sendReceipt(user.email,user.lastName,user.firstName,3)
-                                                        }
-                                                >
-                                                    Recherche d'université
-                                                </Button>
-                                                <Button className={classes.btnMoreInfo}
-                                                        onClick={()=>
-                                                            this.sendReceipt(user.email,user.lastName,user.firstName,4)
-                                                        }
-                                                >
-                                                    Envoyer E-book
-                                                </Button>
-                                                <Button className={classes.btnMoreInfo}
-                                                        onClick={()=>this.handleOpenModal(user.email)}
-                                                >
-                                                    Editer le rapport
-                                                </Button>
+                                            <div className={classes.userMoreInfo}>
+                                                <div style={{flex: 1}}>
+                                                    <Button className={classes.btnMoreInfo}
+                                                            onClick={()=>
+                                                                this.confirmPayment(user._id,user.email,user.lastName,user.firstName)
+                                                            }
+                                                    >
+                                                        Detection de profil
+                                                    </Button>
+                                                    <Button className={classes.btnMoreInfo}
+                                                            onClick={()=>
+                                                                this.sendReceipt(user.email,user.lastName,user.firstName,1)
+                                                            }
+                                                    >
+                                                        Caution bancaire
+                                                    </Button>
+                                                    <Button className={classes.btnMoreInfo}
+                                                            onClick={()=>
+                                                                this.sendReceipt(user.email,user.lastName,user.firstName,2)
+                                                            }
+                                                    >
+                                                        Logement étudiant
+                                                    </Button>
+                                                    <Button className={classes.btnMoreInfo}
+                                                            onClick={()=>
+                                                                this.sendReceipt(user.email,user.lastName,user.firstName,3)
+                                                            }
+                                                    >
+                                                        Recherche d'université
+                                                    </Button>
+                                                    <Button className={classes.btnMoreInfo}
+                                                            onClick={()=>
+                                                                this.sendReceipt(user.email,user.lastName,user.firstName,4)
+                                                            }
+                                                    >
+                                                        Envoyer E-book
+                                                    </Button>
+                                                    <Button className={classes.btnMoreInfo}
+                                                            onClick={()=>this.handleOpenModal(user.email)}
+                                                    >
+                                                        Editer le rapport
+                                                    </Button>
+                                                </div>
+                                                <div style={{flex: 1}}>
+                                                    <div>Email : {user.email} </div>
+                                                    <div>Numéro : {user.number} </div>
+                                                    <div>Ville : {user.city} </div>
+                                                    <div>Pays : {user.country} </div>
+                                                    <div>Situation : {user.situation} </div>
+                                                    <div>Continent : {user.continent} </div>
+                                                </div>
                                             </div>
-                                            <div style={{flex: 1}}>
-                                                <div>Email : {user.email} </div>
-                                                <div>Numéro : {user.number} </div>
-                                                <div>Ville : {user.city} </div>
-                                                <div>Pays : {user.country} </div>
-                                                <div>Situation : {user.situation} </div>
-                                                <div>Continent : {user.continent} </div>
-                                            </div>
-                                        </div>
-                                    </AccordionDetails>
-                                </Accordion>
-                                }
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    }
 
-                            </div>
-                        )
-                    }
+                                </div>
+                            )
+                        }
+                    </div>
+                    <div>
+                        <FooterBar/>
+                    </div>
                 </div>
-                <div>
-                    <FooterBar/>
-                </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

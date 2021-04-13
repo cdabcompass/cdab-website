@@ -10,6 +10,7 @@ import FormControl from "@material-ui/core/FormControl";
 import axios from 'axios';
 import FooterBar from "../utils/FooterBar";
 import Helmet from "react-helmet";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -778,31 +779,32 @@ class Quiz extends Component {
         const {question,options,currentIndex,userAnswer,quizEnd,type} = this.state;
 
         return (
-            <div className={classes.container}>
-                <Helmet>
-                    <meta
-                        name="CDAB COMPASS"
-                        content="
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <Helmet>
+                        <meta
+                            name="CDAB COMPASS"
+                            content="
                             Questionnaire enfant
                             Tests logiques et detection de profil
                             #Afrique #Formations #Reconvertion #Professionel
                             "
-                    />
-                </Helmet>
+                        />
+                    </Helmet>
 
-                <div>
-                    <MenuBar/>
-                </div>
-                {/*ok*/}
-                <div style={{marginTop: "200px",
-                    marginRight: "auto",
-                    marginLeft: "auto",}}>
+                    <div>
+                        <MenuBar/>
+                    </div>
+                    {/*ok*/}
+                    <div style={{marginTop: "200px",
+                        marginRight: "auto",
+                        marginLeft: "auto",}}>
 
-                    <div className={classes.containerQuizs}>
-                        <h1 style={{color: "#b36233"}}>Questionnaire</h1>
-                        <h3>{question}</h3>
-                        <span>Question {currentIndex+1} / {QuizData.length}</span>
-                        {currentIndex < 138 &&
+                        <div className={classes.containerQuizs}>
+                            <h1 style={{color: "#b36233"}}>Questionnaire</h1>
+                            <h3>{question}</h3>
+                            <span>Question {currentIndex+1} / {QuizData.length}</span>
+                            {currentIndex < 138 &&
                             options.map((option,index) =>
                                 <div key={option.id} className={this.state.userAnswer === option? classes.questionSelected : classes.questions}
                                      onClick={()=> this.checkAnswer(option,type[index])}
@@ -810,9 +812,9 @@ class Quiz extends Component {
                                     <div className={classes.optionDiv}>{option}</div>
                                 </div>
                             )
-                        }
+                            }
 
-                        {currentIndex >= 138 &&
+                            {currentIndex >= 138 &&
                             <div>
                                 <InputLabel id="demo-simple-select-label">Choisissez 5 métiers de vos rêves</InputLabel>
                                 <FormControl className={classes.formControl}>
@@ -893,41 +895,42 @@ class Quiz extends Component {
                                     </Select>
                                 </FormControl>
                             </div>
-                        }
+                            }
 
-                        {currentIndex < QuizData.length - 1 &&
-                        <Button variant="contained" disabled={this.state.disabled}
-                                onClick={this.nextQuestionHandler}
-                        >
-                            Suivante
-                        </Button>
-                        }
+                            {currentIndex < QuizData.length - 1 &&
+                            <Button variant="contained" disabled={this.state.disabled}
+                                    onClick={this.nextQuestionHandler}
+                            >
+                                Suivante
+                            </Button>
+                            }
 
-                        {currentIndex === QuizData.length - 1 &&
-                        <div>
-                            {this.state.quizEnd === 0 &&(
-                                <Button variant="contained" disabled={this.state.disabled}
-                                        onClick={this.finishHandler}
-                                >
-                                    Suivante
-                                </Button>
-                            )}
-                            {this.state.quizEnd === 1 &&(
-                                <Button variant="contained" disabled={this.state.disabled}
-                                        onClick={this.finishHandler}
-                                >
-                                    Envoyer mon formulaire
-                                </Button>
-                            )}
+                            {currentIndex === QuizData.length - 1 &&
+                            <div>
+                                {this.state.quizEnd === 0 &&(
+                                    <Button variant="contained" disabled={this.state.disabled}
+                                            onClick={this.finishHandler}
+                                    >
+                                        Suivante
+                                    </Button>
+                                )}
+                                {this.state.quizEnd === 1 &&(
+                                    <Button variant="contained" disabled={this.state.disabled}
+                                            onClick={this.finishHandler}
+                                    >
+                                        Envoyer mon formulaire
+                                    </Button>
+                                )}
+                            </div>
+                            }
+
                         </div>
-                        }
-
+                    </div>
+                    <div>
+                        <FooterBar/>
                     </div>
                 </div>
-                <div>
-                    <FooterBar/>
-                </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

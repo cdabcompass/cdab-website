@@ -3,6 +3,7 @@ import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import {Col, Row} from "react-bootstrap";
 import FooterBar from "../utils/FooterBar";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -32,65 +33,67 @@ class CompanyVisits extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <div>
-                    <MenuBar/>
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <div>
+                        <MenuBar/>
+                    </div>
+                    <div style={{marginTop: "200px"}}>
+                        <h1 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Polyclinique Internationale St. Joseph</h1>
+                        <Row className={classes.loc}>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Vc1.jpg")} alt=""/>
+                            </Col>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Vc2.JPG")} alt=""/>
+                            </Col>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Vc3.jpg")} alt=""/>
+                            </Col>
+                        </Row>
+                        <br/><br/>
+                        <Row className={classes.loc}>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Vc4.jpg")} alt=""/>
+                            </Col>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Vc5.JPG")} alt=""/>
+                            </Col>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Vc6.JPG")} alt=""/>
+                            </Col>
+                        </Row>
+                        <br/><br/>
+                        <h1 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Radio Lomé</h1>
+                        <Row className={classes.loc}>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Rl1.JPG")} alt=""/>
+                            </Col>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Rl2.JPG")} alt=""/>
+                            </Col>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Rl3.JPG")} alt=""/>
+                            </Col>
+                        </Row>
+                        <h1 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Deloitte - CFAO</h1>
+                        <Row className={classes.loc}>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Del1.jpg")} alt=""/>
+                            </Col>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Del2.jpg")} alt=""/>
+                            </Col>
+                            <Col xs={12} md={6} lg={4}>
+                                <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Del3.jpg")} alt=""/>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div>
+                        <FooterBar/>
+                    </div>
                 </div>
-                <div style={{marginTop: "200px"}}>
-                    <h1 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Polyclinique Internationale St. Joseph</h1>
-                    <Row className={classes.loc}>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Vc1.jpg")} alt=""/>
-                        </Col>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Vc2.JPG")} alt=""/>
-                        </Col>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Vc3.jpg")} alt=""/>
-                        </Col>
-                    </Row>
-                    <br/><br/>
-                    <Row className={classes.loc}>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Vc4.jpg")} alt=""/>
-                        </Col>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Vc5.JPG")} alt=""/>
-                        </Col>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Vc6.JPG")} alt=""/>
-                        </Col>
-                    </Row>
-                    <br/><br/>
-                    <h1 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Radio Lomé</h1>
-                    <Row className={classes.loc}>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Rl1.JPG")} alt=""/>
-                        </Col>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Rl2.JPG")} alt=""/>
-                        </Col>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Rl3.JPG")} alt=""/>
-                        </Col>
-                    </Row>
-                    <h1 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Deloitte - CFAO</h1>
-                    <Row className={classes.loc}>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Del1.jpg")} alt=""/>
-                        </Col>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Del2.jpg")} alt=""/>
-                        </Col>
-                        <Col xs={12} md={6} lg={4}>
-                            <img title={"Côte d'ivoire"} className="locaux" src={require("../assets/Del3.jpg")} alt=""/>
-                        </Col>
-                    </Row>
-                </div>
-                <div>
-                    <FooterBar/>
-                </div>
-            </div>
+            </IntlProvider>
         );
     }
 }
