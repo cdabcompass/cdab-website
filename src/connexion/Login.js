@@ -7,6 +7,7 @@ import axios from "axios";
 import CustomAlert from "../utils/CustomAlert";
 import FooterBar from "../utils/FooterBar";
 import Helmet from "react-helmet";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -92,12 +93,13 @@ class Login extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <meta
-                        name="CDAB COMPASS"
-                        content="CDAB COMPASS est une structure
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <meta
+                            name="CDAB COMPASS"
+                            content="CDAB COMPASS est une structure
                                 éducative élaborant le profil de
                                 l’apprenant. Du profil de l’apprenant,
                                 tout se clarifie à l’horizon: le potentiel à
@@ -107,50 +109,51 @@ class Login extends Component {
                                 nous détectons vos talents et les
                                 mettons en valeur pour
                                 assurer votre avenir!"
-                    />
-                </Helmet>
-
-                <div>
-                    <MenuBar/>
-                </div>
-                <div style={{marginTop: "200px"}}>
-                    <div className={classes.signIn}>
-                        <form onSubmit={this.handleSubmit}>
-                            <InputCustom
-                                name={"email"}
-                                value={this.state.email}
-                                placeholder="Example@mail.com"
-                                errorText={this.state.errEmail}
-                                onChange={this.handleChange}
-                                type={"email"}
-                                required={true}
-                            />
-                            <InputCustom
-                                name={"password"}
-                                value={this.state.password}
-                                placeholder="Mot de passe"
-                                errorText={this.state.errPassword}
-                                onChange={this.handleChange}
-                                type={"password"}
-                                required={true}
-                            />
-                            <br/>
-                            <Button type="submit" variant="contained">CONNEXION</Button>
-                            <br/><br/>
-                            <p>Vous n'avez pas de compte ? <a style={{color: "#FF5722"}} href="/inscription">Inscrivez-vous</a></p>
-                            <p>Vous avez oublié votre mot de passe ? <a style={{color: "#FF5722"}} href="/recuperation/compte/1">Récupérer mon compte</a></p>
-                        </form>
-                        <CustomAlert
-                            message={this.state.errAlert}
-                            color={0}
                         />
+                    </Helmet>
+
+                    <div>
+                        <MenuBar/>
+                    </div>
+                    <div style={{marginTop: "200px"}}>
+                        <div className={classes.signIn}>
+                            <form onSubmit={this.handleSubmit}>
+                                <InputCustom
+                                    name={"email"}
+                                    value={this.state.email}
+                                    placeholder="Example@mail.com"
+                                    errorText={this.state.errEmail}
+                                    onChange={this.handleChange}
+                                    type={"email"}
+                                    required={true}
+                                />
+                                <InputCustom
+                                    name={"password"}
+                                    value={this.state.password}
+                                    placeholder="Mot de passe"
+                                    errorText={this.state.errPassword}
+                                    onChange={this.handleChange}
+                                    type={"password"}
+                                    required={true}
+                                />
+                                <br/>
+                                <Button type="submit" variant="contained">CONNEXION</Button>
+                                <br/><br/>
+                                <p>Vous n'avez pas de compte ? <a style={{color: "#FF5722"}} href="/inscription">Inscrivez-vous</a></p>
+                                <p>Vous avez oublié votre mot de passe ? <a style={{color: "#FF5722"}} href="/recuperation/compte/1">Récupérer mon compte</a></p>
+                            </form>
+                            <CustomAlert
+                                message={this.state.errAlert}
+                                color={0}
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <FooterBar/>
                     </div>
                 </div>
-
-                <div>
-                    <FooterBar/>
-                </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

@@ -3,6 +3,7 @@ import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import Button from "@material-ui/core/Button";
 import FooterBar from "../utils/FooterBar";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -57,34 +58,36 @@ class Products extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <div>
-                    <MenuBar/>
-                </div>
-                <div style={{marginTop: "200px"}}>
-                    <div className={classes.titles}>
-                        <p className={classes.title}>E-book</p>
-                        <p className={classes.subTitle}>2 €</p>
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <div>
+                        <MenuBar/>
                     </div>
-                    <div style={{textAlign: "center", margin: "0 auto"}}>
-                        <img width="100%" height="100%" title={"Magazine"} className="magTitle"  src={require("../assets/MagTitlee.png")} alt=""/>
+                    <div style={{marginTop: "200px"}}>
+                        <div className={classes.titles}>
+                            <p className={classes.title}>E-book</p>
+                            <p className={classes.subTitle}>2 €</p>
+                        </div>
+                        <div style={{textAlign: "center", margin: "0 auto"}}>
+                            <img width="100%" height="100%" title={"Magazine"} className="magTitle"  src={require("../assets/MagTitlee.png")} alt=""/>
+                        </div>
+                        <br/>
+                        <div style={{textAlign: "center"}}>
+                            <Button className={classes.btnQuizPayment}
+                                    onClick={this.payProducts}
+                            >
+                                Procéder au paiement
+                            </Button>
+                        </div>
+                        <br/>
+                        <br/>
                     </div>
-                    <br/>
-                    <div style={{textAlign: "center"}}>
-                        <Button className={classes.btnQuizPayment}
-                                onClick={this.payProducts}
-                        >
-                            Procéder au paiement
-                        </Button>
-                    </div>
-                    <br/>
-                    <br/>
-                </div>
 
-                <div>
-                    <FooterBar/>
+                    <div>
+                        <FooterBar/>
+                    </div>
                 </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

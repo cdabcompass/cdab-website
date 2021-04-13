@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import axios from 'axios';
 import InputCustom from "../utils/InputCustom";
 import Button from "@material-ui/core/Button";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -64,32 +65,34 @@ class RecoverAccount1 extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <div>
-                    <MenuBar/>
-                </div>
-                <div style={{marginTop: "200px",
-                    marginRight: "auto",
-                    marginLeft: "auto",}}>
-                    <div className={classes.title}>
-                        Vous recevrez un code sur cette addresse mail pour changer votre mot de passe.
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <div>
+                        <MenuBar/>
                     </div>
-                    <div className={classes.contain}>
-                        <form onSubmit={this.handleSubmit}>
-                            <InputCustom
-                                name={"email"}
-                                value={this.state.email}
-                                placeholder="Example@mail.com"
-                                errorText={this.state.errEmail}
-                                onChange={this.handleChange}
-                                type={"email"}
-                                required={true}
-                            />
-                            <Button type="submit" variant="contained">Valider</Button>
-                        </form>
+                    <div style={{marginTop: "200px",
+                        marginRight: "auto",
+                        marginLeft: "auto",}}>
+                        <div className={classes.title}>
+                            Vous recevrez un code sur cette addresse mail pour changer votre mot de passe.
+                        </div>
+                        <div className={classes.contain}>
+                            <form onSubmit={this.handleSubmit}>
+                                <InputCustom
+                                    name={"email"}
+                                    value={this.state.email}
+                                    placeholder="Example@mail.com"
+                                    errorText={this.state.errEmail}
+                                    onChange={this.handleChange}
+                                    type={"email"}
+                                    required={true}
+                                />
+                                <Button type="submit" variant="contained">Valider</Button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

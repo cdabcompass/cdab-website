@@ -4,6 +4,8 @@ import ExpertisesComponents from "../utils/ExpertisesComponents";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
 import Helmet from "react-helmet";
+import translate from "../i18n/messages/translate";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -31,13 +33,14 @@ class Expertises extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <Helmet>
-                    <meta charSet="utf-8"/>
-                    <title>CDAB COMPASS</title>
-                    <meta
-                        name="CDAB COMPASS"
-                        content="Déterminer le profil de
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <Helmet>
+                        <meta charSet="utf-8"/>
+                        <title>CDAB COMPASS</title>
+                        <meta
+                            name="CDAB COMPASS"
+                            content="Déterminer le profil de
                                 l’apprenant, la base pour
                                 développer son potentiel et
                                 explorer ses talents.
@@ -45,23 +48,24 @@ class Expertises extends Component {
                                 Attention - Représentation
                                 Évocation -Image mentale
                                 "
-                    />
-                </Helmet>
+                        />
+                    </Helmet>
 
-                <div>
-                    <MenuBar/>
-                </div>
-                <div style={{marginTop: "200px"}}>
-                    <div className={classes.titles}>
-                        <p className={classes.title}>NOS EXPERTISES</p>
-                        <p className={classes.subTitle}>Nous vous accompagnons durant chacun de ces processus</p>
+                    <div>
+                        <MenuBar/>
                     </div>
-                    <ExpertisesComponents/>
+                    <div style={{marginTop: "200px"}}>
+                        <div className={classes.titles}>
+                            <p className={classes.title}>{translate("NOS_EXPERTISES")}</p>
+                            <p className={classes.subTitle}>{translate("Expr_desc")}</p>
+                        </div>
+                        <ExpertisesComponents/>
+                    </div>
+                    <div>
+                        <FooterBar/>
+                    </div>
                 </div>
-                <div>
-                    <FooterBar/>
-                </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

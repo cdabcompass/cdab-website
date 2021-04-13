@@ -3,6 +3,7 @@ import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
 import CardCustom from "../utils/CardCustom";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -35,43 +36,45 @@ class Temoignages extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <div>
-                    <MenuBar/>
-                </div>
-                <div style={{marginTop: "200px"}}>
-                    <div className={classes.titles}>
-                        <p className={classes.title}>Témoignages</p>
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <div>
+                        <MenuBar/>
                     </div>
-                    <br/>
-                    <div className='productsEvents'>
-                        <CardCustom
-                            // icon={<AccountCircleIcon/>}
-                            title={"Apprenants"}
-                            onclick={()=>{this.moreInfo("/Apprenants")}}
-                        />
+                    <div style={{marginTop: "200px"}}>
+                        <div className={classes.titles}>
+                            <p className={classes.title}>Témoignages</p>
+                        </div>
+                        <br/>
+                        <div className='productsEvents'>
+                            <CardCustom
+                                // icon={<AccountCircleIcon/>}
+                                title={"Apprenants"}
+                                onclick={()=>{this.moreInfo("/Apprenants")}}
+                            />
+                            <br/>
+                            <br/>
+                            <CardCustom
+                                // icon={<AccountCircleIcon/>}
+                                title={"Parents"}
+                                onclick={()=>{this.moreInfo("/Parents")}}
+                            />
+                            <br/>
+                            <br/>
+                            <CardCustom
+                                // icon={<AccountCircleIcon/>}
+                                title={"Educateurs"}
+                                onclick={()=>{this.moreInfo("/Educateurs")}}
+                            />
+                        </div>
                         <br/>
                         <br/>
-                        <CardCustom
-                            // icon={<AccountCircleIcon/>}
-                            title={"Parents"}
-                            onclick={()=>{this.moreInfo("/Parents")}}
-                        />
-                        <br/>
-                        <br/>
-                        <CardCustom
-                            // icon={<AccountCircleIcon/>}
-                            title={"Educateurs"}
-                            onclick={()=>{this.moreInfo("/Educateurs")}}
-                        />
                     </div>
-                    <br/>
-                    <br/>
+                    <div>
+                        <FooterBar/>
+                    </div>
                 </div>
-                <div>
-                    <FooterBar/>
-                </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

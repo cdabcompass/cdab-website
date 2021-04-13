@@ -3,6 +3,7 @@ import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import {Col, Row} from "react-bootstrap";
 import FooterBar from "../utils/FooterBar";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -50,87 +51,89 @@ class Office extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <div>
-                    <MenuBar/>
-                </div>
-                <div style={{marginTop: "200px"}}>
-                    <div className={classes.titles}>
-                        <p className={classes.title}>Nos locaux</p>
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <div>
+                        <MenuBar/>
                     </div>
-                    <div className={classes.offices}>
-                        <div >
+                    <div style={{marginTop: "200px"}}>
+                        <div className={classes.titles}>
+                            <p className={classes.title}>Nos locaux</p>
+                        </div>
+                        <div className={classes.offices}>
                             <div >
-                                <img title={"France"} className="drapeau"  src={require("../assets/fr.png")} alt=""/>
-                                <h3 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>France</h3>
-                                <img title={"France"} className="drapeau"  src={require("../assets/fr.png")} alt=""/>
+                                <div >
+                                    <img title={"France"} className="drapeau"  src={require("../assets/fr.png")} alt=""/>
+                                    <h3 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>France</h3>
+                                    <img title={"France"} className="drapeau"  src={require("../assets/fr.png")} alt=""/>
+                                    <Row className={classes.loc}>
+                                        <Col xs={12} md={6} lg={4}>
+                                            <img title={"France"} className="locaux"  src={require("../assets/L15.png")} alt=""/>
+                                        </Col>
+                                        <Col xs={12} md={6} lg={4}>
+                                            <img title={"France"} className="locaux"  src={require("../assets/Ll3.jpg")} alt=""/>
+                                        </Col>
+                                        <Col xs={12} md={6} lg={4}>
+                                            <img title={"France"} className="locaux"  src={require("../assets/Ll4.jpeg")} alt=""/>
+                                        </Col>
+                                    </Row>
+                                </div>
+                                <br/><br/>
+                                <div >
+                                    <img title={"Sénégal"} className="drapeau"  src={require("../assets/sn.png")} alt=""/>
+                                    <h3 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Sénégal</h3>
+                                    <img title={"Sénégal"} className="drapeau"  src={require("../assets/sn.png")} alt=""/>
+                                    <Row className={classes.loc}>
+                                        <Col xs={12} md={6} lg={4}>
+                                            <img title={"Sénégal"} className="locaux"  src={require("../assets/Sn1.JPG")} alt=""/>
+                                        </Col>
+                                        <Col xs={12} md={6} lg={4}>
+                                            <img title={"Sénégal"} className="locaux"  src={require("../assets/Sn2.jpg")} alt=""/>
+                                        </Col>
+                                        <Col xs={12} md={6} lg={4}>
+                                            <img title={"Sénégal"} className="locaux"  src={require("../assets/Sn4.jpg")} alt=""/>
+                                        </Col>
+                                    </Row>
+                                </div>
+                                <br/><br/>
+                                <img title={"Côte d'ivoire"} className="drapeau"  src={require("../assets/ci.png")} alt=""/>
+                                <h3 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Côte d'ivoire</h3>
+                                <img title={"Côte d'ivoire"} className="drapeau" src={require("../assets/ci.png")} alt=""/>
                                 <Row className={classes.loc}>
                                     <Col xs={12} md={6} lg={4}>
-                                        <img title={"France"} className="locaux"  src={require("../assets/L15.png")} alt=""/>
+                                        <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Ci1.jpg")} alt=""/>
                                     </Col>
                                     <Col xs={12} md={6} lg={4}>
-                                        <img title={"France"} className="locaux"  src={require("../assets/Ll3.jpg")} alt=""/>
+                                        <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Ci2.jpg")} alt=""/>
                                     </Col>
                                     <Col xs={12} md={6} lg={4}>
-                                        <img title={"France"} className="locaux"  src={require("../assets/Ll4.jpeg")} alt=""/>
+                                        <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Ci4.jpg")} alt=""/>
+                                    </Col>
+                                </Row>
+                                <br/><br/>
+                                <img title={"Togo"} className="drapeau"  src={require("../assets/tg.png")} alt=""/>
+                                <h3 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Togo</h3>
+                                <img title={"Togo"} className="drapeau"  src={require("../assets/tg.png")} alt=""/>
+                                <Row className={classes.loc}>
+                                    <Col xs={12} md={6} lg={4}>
+                                        <img title={"Togo"} className="locaux" src={require("../assets/Tg1.jpg")} alt=""/>
+                                    </Col>
+                                    <Col xs={12} md={6} lg={4}>
+                                        <img title={"Togo"} className="locaux"  src={require("../assets/Tg2.jpg")} alt=""/>
+                                    </Col>
+                                    <Col xs={12} md={6} lg={4}>
+                                        <img title={"Togo"} className="locaux"  src={require("../assets/Tg4.jpg")} alt=""/>
                                     </Col>
                                 </Row>
                             </div>
-                            <br/><br/>
-                            <div >
-                                <img title={"Sénégal"} className="drapeau"  src={require("../assets/sn.png")} alt=""/>
-                                <h3 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Sénégal</h3>
-                                <img title={"Sénégal"} className="drapeau"  src={require("../assets/sn.png")} alt=""/>
-                                <Row className={classes.loc}>
-                                    <Col xs={12} md={6} lg={4}>
-                                        <img title={"Sénégal"} className="locaux"  src={require("../assets/Sn1.JPG")} alt=""/>
-                                    </Col>
-                                    <Col xs={12} md={6} lg={4}>
-                                        <img title={"Sénégal"} className="locaux"  src={require("../assets/Sn2.jpg")} alt=""/>
-                                    </Col>
-                                    <Col xs={12} md={6} lg={4}>
-                                        <img title={"Sénégal"} className="locaux"  src={require("../assets/Sn4.jpg")} alt=""/>
-                                    </Col>
-                                </Row>
-                            </div>
-                            <br/><br/>
-                            <img title={"Côte d'ivoire"} className="drapeau"  src={require("../assets/ci.png")} alt=""/>
-                            <h3 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Côte d'ivoire</h3>
-                            <img title={"Côte d'ivoire"} className="drapeau" src={require("../assets/ci.png")} alt=""/>
-                            <Row className={classes.loc}>
-                                <Col xs={12} md={6} lg={4}>
-                                    <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Ci1.jpg")} alt=""/>
-                                </Col>
-                                <Col xs={12} md={6} lg={4}>
-                                    <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Ci2.jpg")} alt=""/>
-                                </Col>
-                                <Col xs={12} md={6} lg={4}>
-                                    <img title={"Côte d'ivoire"} className="locaux"  src={require("../assets/Ci4.jpg")} alt=""/>
-                                </Col>
-                            </Row>
-                            <br/><br/>
-                            <img title={"Togo"} className="drapeau"  src={require("../assets/tg.png")} alt=""/>
-                            <h3 style={{display: "inline",marginLeft:"20px",marginRight:"20px"}}>Togo</h3>
-                            <img title={"Togo"} className="drapeau"  src={require("../assets/tg.png")} alt=""/>
-                            <Row className={classes.loc}>
-                                <Col xs={12} md={6} lg={4}>
-                                    <img title={"Togo"} className="locaux" src={require("../assets/Tg1.jpg")} alt=""/>
-                                </Col>
-                                <Col xs={12} md={6} lg={4}>
-                                    <img title={"Togo"} className="locaux"  src={require("../assets/Tg2.jpg")} alt=""/>
-                                </Col>
-                                <Col xs={12} md={6} lg={4}>
-                                    <img title={"Togo"} className="locaux"  src={require("../assets/Tg4.jpg")} alt=""/>
-                                </Col>
-                            </Row>
                         </div>
                     </div>
-                </div>
 
-                <div>
-                    <FooterBar/>
+                    <div>
+                        <FooterBar/>
+                    </div>
                 </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

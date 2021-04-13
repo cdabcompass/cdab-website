@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import axios from 'axios';
 import InputCustom from "../utils/InputCustom";
 import Button from "@material-ui/core/Button";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -63,41 +64,43 @@ class RecoverAccount2 extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <div>
-                    <MenuBar/>
-                </div>
-                <div style={{marginTop: "200px",
-                    marginRight: "auto",
-                    marginLeft: "auto",}}>
-                    <div className={classes.title}>
-                        Vous recevrez un code sur cette addresse mail pour changer votre mot de passe.
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <div>
+                        <MenuBar/>
                     </div>
-                    <div className={classes.contain}>
-                        <form onSubmit={this.handleSubmit}>
-                            <InputCustom
-                                name={"code"}
-                                value={this.state.code}
-                                placeholder="Code"
-                                errorText={this.state.errCode}
-                                onChange={this.handleChange}
-                                type={"text"}
-                                required={true}
-                            />
-                            <InputCustom
-                                name={"password"}
-                                value={this.state.password}
-                                placeholder="Nouveau mot de passe"
-                                errorText={this.state.errPassword}
-                                onChange={this.handleChange}
-                                type={"password"}
-                                required={true}
-                            />
-                            <Button type="submit" variant="contained">Valider</Button>
-                        </form>
+                    <div style={{marginTop: "200px",
+                        marginRight: "auto",
+                        marginLeft: "auto",}}>
+                        <div className={classes.title}>
+                            Vous recevrez un code sur cette addresse mail pour changer votre mot de passe.
+                        </div>
+                        <div className={classes.contain}>
+                            <form onSubmit={this.handleSubmit}>
+                                <InputCustom
+                                    name={"code"}
+                                    value={this.state.code}
+                                    placeholder="Code"
+                                    errorText={this.state.errCode}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={true}
+                                />
+                                <InputCustom
+                                    name={"password"}
+                                    value={this.state.password}
+                                    placeholder="Nouveau mot de passe"
+                                    errorText={this.state.errPassword}
+                                    onChange={this.handleChange}
+                                    type={"password"}
+                                    required={true}
+                                />
+                                <Button type="submit" variant="contained">Valider</Button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </IntlProvider>
         );
     }
 }

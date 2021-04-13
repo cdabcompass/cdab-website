@@ -9,6 +9,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import FooterBar from "../utils/FooterBar";
 import Helmet from "react-helmet";
+import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
     container: {
@@ -123,12 +124,13 @@ class Register extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.container}>
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <meta
-                        name="CDAB COMPASS"
-                        content="CDAB COMPASS est une structure
+            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <div className={classes.container}>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <meta
+                            name="CDAB COMPASS"
+                            content="CDAB COMPASS est une structure
                                 éducative élaborant le profil de
                                 l’apprenant. Du profil de l’apprenant,
                                 tout se clarifie à l’horizon: le potentiel à
@@ -138,143 +140,145 @@ class Register extends Component {
                                 nous détectons vos talents et les
                                 mettons en valeur pour
                                 assurer votre avenir!"
-                    />
-                </Helmet>
+                        />
+                    </Helmet>
 
-                <div>
-                    <MenuBar/>
-                </div>
-                <div style={{marginTop: "200px"}}>
-                    <div className={classes.signUp}>
-                        <form onSubmit={this.handleSubmit}>
-                            <InputCustom
-                                name={"lastName"}
-                                value={this.state.lastName}
-                                placeholder="Nom"
-                                errorText={this.state.errLastName}
-                                onChange={this.handleChange}
-                                type={"text"}
-                                required={true}
-                            />
-                            <InputCustom
-                                name={"firstName"}
-                                value={this.state.firstName}
-                                placeholder="Prénom"
-                                errorText={this.state.errFirstName}
-                                onChange={this.handleChange}
-                                type={"text"}
-                                required={true}
-                            />
-                            <InputCustom
-                                name={"email"}
-                                value={this.state.email}
-                                placeholder="Example@mail.com"
-                                errorText={this.state.errEmail}
-                                onChange={this.handleChange}
-                                type={"email"}
-                                required={true}
-                            />
-                            <InputCustom
-                                name={"number"}
-                                value={this.state.number}
-                                placeholder="(+33) 605157614"
-                                errorText={this.state.errNumber}
-                                onChange={this.handleChange}
-                                type={"tel"}
-                                required={true}
-                            />
-                            <InputCustom
-                                name={"country"}
-                                value={this.state.country}
-                                placeholder="Pays"
-                                errorText={this.state.errCountry}
-                                onChange={this.handleChange}
-                                type={"text"}
-                                required={true}
-                            />
-                            <InputCustom
-                                name={"city"}
-                                value={this.state.city}
-                                placeholder="Ville"
-                                errorText={this.state.errCity}
-                                onChange={this.handleChange}
-                                type={"text"}
-                                required={true}
-                            />
-                            <FormControl variant="outlined" className="formControl">
-                                <InputLabel htmlFor="outlined-age-native-simple">Continent</InputLabel>
-                                <Select
-                                    native
-                                    value={this.state.continent}
+                    <div>
+                        <MenuBar/>
+                    </div>
+                    <div style={{marginTop: "200px"}}>
+                        <div className={classes.signUp}>
+                            <form onSubmit={this.handleSubmit}>
+                                <InputCustom
+                                    name={"lastName"}
+                                    value={this.state.lastName}
+                                    placeholder="Nom"
+                                    errorText={this.state.errLastName}
                                     onChange={this.handleChange}
-                                    label="continent"
-                                    inputProps={{
-                                        name: 'continent',
-                                        id: 'outlined-age-native-simple',
-                                    }}
-                                    className={classes.selectBorder}
+                                    type={"text"}
                                     required={true}
-                                >
-                                    <option aria-label="None" value="" />
-                                    <option value={"Afrique"}>Afrique</option>
-                                    <option value={"Europe"}>Europe</option>
-                                </Select>
-                            </FormControl>
-                            <br/>
-                            <FormControl variant="outlined" className="formControl">
-                                <InputLabel htmlFor="outlined-age-native-simple">Situation</InputLabel>
-                                <Select
-                                    native
-                                    value={this.state.situation}
+                                />
+                                <InputCustom
+                                    name={"firstName"}
+                                    value={this.state.firstName}
+                                    placeholder="Prénom"
+                                    errorText={this.state.errFirstName}
                                     onChange={this.handleChange}
-                                    label="situation"
-                                    inputProps={{
-                                        name: 'situation',
-                                        id: 'outlined-age-native-simple',
-                                    }}
-                                    className={classes.selectBorder}
+                                    type={"text"}
                                     required={true}
-                                >
-                                    <option aria-label="None" value="" />
-                                    <option value={"Primaire"}>Primaire</option>
-                                    <option value={"College"}>Collège</option>
-                                    <option value={"Lycee"}>Lycée</option>
-                                    <option value={"PostBac"}>Post-bac</option>
-                                    <option value={"Parent"}>Parent</option>
-                                    <option value={"IntervenantCdab"}>Prof-a-cdab</option>
-                                </Select>
-                            </FormControl>
-                            <br/>
-                            <InputCustom
-                                name={"password"}
-                                value={this.state.password}
-                                placeholder="Mot de passe"
-                                errorText={this.state.errPassword}
-                                onChange={this.handleChange}
-                                type={"password"}
-                                required={true}
-                            />
-                            <InputCustom
-                                name={"confirmPassword"}
-                                value={this.state.confirmPassword}
-                                placeholder="Confirme mot de passe"
-                                errorText={this.state.errConPassword}
-                                onChange={this.handleChange}
-                                type={"password"}
-                                required={true}
-                            />
-                            <br/>
-                            <Button type="submit" variant="contained">Créer mon compte</Button>
-                            <br/><br/>
-                            <p>Vous avez déjà un compte ? <a style={{color: "#FF5722"}} href="/connexion">Connectez-vous</a></p>
-                        </form>
+                                />
+                                <InputCustom
+                                    name={"email"}
+                                    value={this.state.email}
+                                    placeholder="Example@mail.com"
+                                    errorText={this.state.errEmail}
+                                    onChange={this.handleChange}
+                                    type={"email"}
+                                    required={true}
+                                />
+                                <InputCustom
+                                    name={"number"}
+                                    value={this.state.number}
+                                    placeholder="(+33) 605157614"
+                                    errorText={this.state.errNumber}
+                                    onChange={this.handleChange}
+                                    type={"tel"}
+                                    required={true}
+                                />
+                                <InputCustom
+                                    name={"country"}
+                                    value={this.state.country}
+                                    placeholder="Pays"
+                                    errorText={this.state.errCountry}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={true}
+                                />
+                                <InputCustom
+                                    name={"city"}
+                                    value={this.state.city}
+                                    placeholder="Ville"
+                                    errorText={this.state.errCity}
+                                    onChange={this.handleChange}
+                                    type={"text"}
+                                    required={true}
+                                />
+                                <FormControl variant="outlined" className="formControl">
+                                    <InputLabel htmlFor="outlined-age-native-simple">Continent</InputLabel>
+                                    <Select
+                                        native
+                                        value={this.state.continent}
+                                        onChange={this.handleChange}
+                                        label="continent"
+                                        inputProps={{
+                                            name: 'continent',
+                                            id: 'outlined-age-native-simple',
+                                        }}
+                                        className={classes.selectBorder}
+                                        required={true}
+                                    >
+                                        <option aria-label="None" value="" />
+                                        <option value={"Afrique"}>Afrique</option>
+                                        <option value={"Europe"}>Europe</option>
+                                    </Select>
+                                </FormControl>
+                                <br/>
+                                <FormControl variant="outlined" className="formControl">
+                                    <InputLabel htmlFor="outlined-age-native-simple">Situation</InputLabel>
+                                    <Select
+                                        native
+                                        value={this.state.situation}
+                                        onChange={this.handleChange}
+                                        label="situation"
+                                        inputProps={{
+                                            name: 'situation',
+                                            id: 'outlined-age-native-simple',
+                                        }}
+                                        className={classes.selectBorder}
+                                        required={true}
+                                    >
+                                        <option aria-label="None" value="" />
+                                        <option value={"Primaire"}>Primaire</option>
+                                        <option value={"College"}>Collège</option>
+                                        <option value={"Lycee"}>Lycée</option>
+                                        <option value={"PostBac"}>Post-bac</option>
+                                        <option value={"Parent"}>Parent</option>
+                                        <option value={"IntervenantCdab"}>Prof-a-cdab</option>
+                                    </Select>
+                                </FormControl>
+                                <br/>
+                                <InputCustom
+                                    name={"password"}
+                                    value={this.state.password}
+                                    placeholder="Mot de passe"
+                                    errorText={this.state.errPassword}
+                                    onChange={this.handleChange}
+                                    type={"password"}
+                                    required={true}
+                                />
+                                <InputCustom
+                                    name={"confirmPassword"}
+                                    value={this.state.confirmPassword}
+                                    placeholder="Confirme mot de passe"
+                                    errorText={this.state.errConPassword}
+                                    onChange={this.handleChange}
+                                    type={"password"}
+                                    required={true}
+                                />
+                                <br/>
+                                <Button type="submit" variant="contained">Créer mon compte</Button>
+                                <br/><br/>
+                                <p>Vous avez déjà un compte ? <a style={{color: "#FF5722"}} href="/connexion">Connectez-vous</a></p>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div>
+                        <FooterBar/>
                     </div>
                 </div>
+            </IntlProvider>
 
-                <div>
-                    <FooterBar/>
-                </div>
-            </div>
         );
     }
 }

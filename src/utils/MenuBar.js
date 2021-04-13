@@ -8,6 +8,7 @@ import Popover from "@material-ui/core/Popover";
 import TokenApi from "./TokenApi";
 import ReactGA from "react-ga";
 import Helmet from "react-helmet";
+import translate from "../i18n/messages/translate";
 
 const styles = theme => ({
     logo:{
@@ -102,17 +103,17 @@ class MenuBar extends Component {
                         <img onClick={this.homePage} className={classes.imglogo} src={require("../assets/logo.png")} alt=""/>
                     </div>
                     <Typography onClick={this.homePage} variant="h4" className="title">
-                        Qui sommes-nous
+                        {translate("QUI_SOMMES_NOUS")}
                     </Typography>
-                    <Button className={classes.btnMenu} href="/expertises" color="inherit">Nos expertises</Button>
-                    <Button className={classes.btnMenu} href="/training" color="inherit">Training</Button>
-                    <Button className={classes.btnMenu} href="/coaching" color="inherit">Coach-cdab</Button>
-                    <Button className={classes.btnMenu} href="/nos_produits" color="inherit">Nos produits/Nos evenements</Button>
-                    <Button className={classes.btnMenu} href="/nos_realisations" color="inherit">Nos réalisations</Button>
-                    <Button className={classes.btnMenu} href="/nos_locaux" color="inherit">Nos locaux</Button>
+                    <Button className={classes.btnMenu} href="/expertises" color="inherit">{translate("Nos_expertises")}</Button>
+                    <Button className={classes.btnMenu} href="/training" color="inherit">{translate("Training")}</Button>
+                    <Button className={classes.btnMenu} href="/coaching" color="inherit">{translate("Coach_cdab")}</Button>
+                    <Button className={classes.btnMenu} href="/nos_produits" color="inherit">{translate("Nos_produits_Nos_evenements")}</Button>
+                    <Button className={classes.btnMenu} href="/nos_realisations" color="inherit">{translate("Nos_realisations")}</Button>
+                    <Button className={classes.btnMenu} href="/nos_locaux" color="inherit">{translate("Nos_locaux")}</Button>
                     {this.state.auth && (
 
-                        <Button className={classes.btnMenu} onClick={this.disconnect}>Déconnexion</Button>)}
+                        <Button className={classes.btnMenu} onClick={this.disconnect}>{translate("Deconnexion")}</Button>)}
                     {!this.state.auth && (
                         <Button className={classes.btnMenu}
                                 aria-label="account of current user"
@@ -121,7 +122,7 @@ class MenuBar extends Component {
                                 onClick={this.handleMenu}
                                 color="inherit"
                         >
-                            Connexion-Inscription
+                            {translate("Connexion_Inscription")}
                         </Button>)}
                     <Popover
                         id="simple-menu"
@@ -140,8 +141,8 @@ class MenuBar extends Component {
                     >
                         {!this.state.auth &&(
                             <div>
-                                <Button className={classes.btnSubMenu} style={{display: "block",width:"100%"}} href="/connexion">Connexion</Button>
-                                <Button className={classes.btnSubMenu} href="/inscription">Inscription</Button>
+                                <Button className={classes.btnSubMenu} style={{display: "block",width:"100%"}} href="/connexion">{translate("Connexion")}</Button>
+                                <Button className={classes.btnSubMenu} href="/inscription">{translate("Inscription")}</Button>
                             </div>
                         )}
                     </Popover>
