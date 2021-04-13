@@ -160,6 +160,11 @@ const styles = theme => ({
             backgroundColor: "#E58F1E",
         },
     },
+    btnTrade:{
+        textDecoration: "none",
+        border: "1px solid",
+        margin: "0 15px",
+    }
 
 });
 
@@ -170,6 +175,15 @@ class App extends Component {
             openModal: false,
             locale: LOCALES.FRENCH
         };
+    }
+
+    componentDidMount() {
+        if(localStorage.getItem("locale_lg")===null ||
+            localStorage.getItem("locale_lg")===undefined){
+            this.changeLangue(this.state.locale);
+        }else {
+            this.changeLangue(localStorage.getItem("locale_lg"));
+        }
     }
 
     handleOpenModal = (e) =>{
@@ -198,13 +212,17 @@ class App extends Component {
     changeLangue = (lg) =>{
         localStorage.setItem("locale_lg",lg);
         console.log("test test test "+localStorage.getItem("locale_lg"));
+        // if(localStorage.getItem("locale_lg")===null || localStorage.getItem("locale_lg")===undefined){
+        //     console.log(this.state.locale);
+        //     localStorage.setItem("locale_lg",this.state.locale);
+        // }
         this.setState({locale: localStorage.getItem("locale_lg") });
     }
 
     render(){
         const {classes} = this.props;
         return (
-            <IntlProvider locale={localStorage.getItem("locale_lg")}>
+            <IntlProvider locale={this.state.locale}>
                 <div className="App">
                     <Helmet>
                         <meta charSet="utf-8" />
@@ -247,8 +265,6 @@ class App extends Component {
 
                         <div className={classes.aboutUs}>
                             <div style={{marginBottom: "100px"}}>
-                                <button onClick={()=>this.changeLangue(LOCALES.ENGLISH)}>EN</button>
-                                <button onClick={()=>this.changeLangue(LOCALES.FRENCH)}>FR</button>
                                 <p className="expTitle">{translate("QUI_SOMMES_NOUS")}</p>
                             </div>
 
@@ -473,6 +489,8 @@ class App extends Component {
                             pageId="454141181441870"
                             appId="238909897689414"
                         />
+                        <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.ENGLISH)}>🇬🇧</button>
+                        <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.FRENCH)}>🇫🇷</button>
                         <FooterBar/>
                     </div>
                 </div>

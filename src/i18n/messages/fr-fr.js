@@ -9,7 +9,7 @@ export default {
         'PASSER_VOTRE_TEST': 'PASSER VOTRE TEST',
         'Emplacement': 'Nous sommes actuellement présents dans 4 pays',
         'Emplacement_contact': 'N’hésitez pas à nous contacter en ligne si vous êtes dans un autre pays.',
-        'NOS_ACTUALITES': 'OUR_NEWS',
+        'NOS_ACTUALITES': 'NOS ACTUALITES',
         'VOIR_PLUS': 'VOIR PLUS',
         'En_savoir_plus': 'En savoir plus',
         'Nos_expertises': 'Nos expertises',
