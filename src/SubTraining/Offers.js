@@ -143,10 +143,9 @@ class Offers extends Component {
                             <Col xs={12} md={6} lg={4}>
                                 <CardCustom
                                     icon={<AccountCircleIcon/>}
-                                    title={"Accompagnement et orientation scolaire"}
-                                    description={"La structure éducative CDAB COMPASS, spécialisée aussi dans l’accompagnement et l’orientation des apprenants " +
-                                    "sur tous les plans scolaire, universitaire et même professionnel, accorde une importance à cette expertise."}
-                                    onclick={()=>{this.moreInfo("/orientation_scolaire")}}
+                                    title={"Logement"}
+                                    description={"L’accompagnement hébergement consiste pour CDAB COMPASS à alléger la tâche et le souci de la recherche d’un logement, aux apprenants."}
+                                    onclick={()=>{this.moreInfo("/logement_etudiant")}}
                                 />
                             </Col>
                             <Col xs={12} md={6} lg={4}>
