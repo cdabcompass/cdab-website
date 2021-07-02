@@ -489,8 +489,8 @@ class App extends Component {
                             pageId="454141181441870"
                             appId="238909897689414"
                         />
-                        <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.ENGLISH)}>🇬🇧</button>
-                        <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.FRENCH)}>🇫🇷</button>
+                        <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><img width={25} src={require("./assets/state_dr.png")}/></button>
+                        <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.FRENCH)}><img width={25} src={require("./assets/france_dr.png")}/></button>
                         <FooterBar/>
                     </div>
                 </div>
