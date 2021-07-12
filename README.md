@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Stack MERN
+
+Front : ReactJs<br />
+Back : Nodejs-Express<br />
+DB : Mongo<br />
+Deployment : Heroku redirection url from Ovh<br />
+Payment : Stripe<br />
+
+## ARCHI
+Front : All front files are in ./src
+Back : server.js is main file which content principal config
+Responsive web : This was handled in the app.css file
+
+
 ## Available Scripts
 
 In the project directory, you can run:
