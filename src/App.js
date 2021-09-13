@@ -349,12 +349,23 @@ class App extends Component {
                             <ExpertisesComponents/>
 
                             <br/>
-                            <button type="button"
-                                    style={{background: "rgba(28,27,27,0.94)"}}
-                                    className={classes.dwlPdf}
-                                    onClick={() => this.specificPath("/principal_quiz")}
-                            >{translate("PASSER_VOTRE_TEST")}
-                            </button>
+                            { localStorage.getItem("situation") !== "Parent" && (
+                                            
+                                <button type="button"
+                                style={{background: "rgba(28,27,27,0.94)"}}
+                                className={classes.dwlPdf}
+                                onClick={() => this.specificPath("/principal_quiz")}
+                                >{translate("PASSER_VOTRE_TEST")}
+                                </button>
+                            )}
+                            { localStorage.getItem("situation") === "Parent" && (
+                                <button type="button"
+                                        style={{background: "rgba(28,27,27,0.94)"}}
+                                        className={classes.dwlPdf}
+                                        onClick={() => this.specificPath("/parent1")}
+                                >{translate("PASSER_VOTRE_TEST")}
+                                </button>
+                            )}
                         </div>
 
                         <div className={classes.expertises}>
