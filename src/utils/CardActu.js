@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import Card from "@material-ui/core/Card/Card";
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 
 const styles = theme => ({
     cardActu:{
-        width: "50%",
-        borderRadius: 10,
-        textAlign: "center",
-        boxShadow: "4px 4px 20px 0px rgba(146, 125, 250, 0.5)",
+        width: "90%",
         cursor: "pointer",
         margin: "0 auto",
-        marginBottom: "20px"
+        boxShadow: "4px 4px 20px 0px rgb(146 125 250 / 50%)",
+        borderRadius: "10px",
+        marginBottom: "5px",
+        padding: "11px",
     },
     imgActu:{
         height: "150px"
@@ -22,10 +23,8 @@ const styles = theme => ({
         whiteSpace: "pre-line"
     },
     description: {
-        marginL: "10px",
-        paddingLeft: "5px",
-        paddingRight: "5px",
-        height: "150px"
+        height: "150px",
+        textAlign: "justify"
     },
 });
 
@@ -36,16 +35,13 @@ class CardActu extends Component {
             <div>
                 <Card onClick={onclick} className={classes.cardActu}>
                     <div>
-                        {/*<div style={{height: "340px", width:"340px"}}>*/}
-                        <div className={classes.imgActu}>
-                            {image}
-                        </div>
                         <div className={classes.titleCardActu} variant="h5" component="h2">
                             {title}
                         </div>
                         <div className={classes.description} variant="body2" component="p">
                             {description}
                         </div>
+                        <PlayCircleOutlineIcon style={{fill: "#fd7137", fontSize: 30}}/>
                     </div>
                 </Card>
             </div>

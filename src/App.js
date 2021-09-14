@@ -12,6 +12,7 @@ import Helmet from "react-helmet";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import {LOCALES,IntlProvider} from "./i18n";
 import translate from "./i18n/messages/translate";
+import {FrenshData, EnglishData} from "./articlesData/articleData"
 
 const styles = theme => ({
     container: {
@@ -81,7 +82,8 @@ const styles = theme => ({
         textAlign: "center",
         flexDirection: "row",
         justifyContent: "space-evenly",
-        width: "100%"
+        width: "100%",
+        overflowX: "scroll"
     },
     aboutUs: {
         display: "flex",
@@ -164,7 +166,9 @@ const styles = theme => ({
         textDecoration: "none",
         border: "1px solid",
         margin: "0 15px",
-    }
+    },
+    mainCard: {
+    },
 
 });
 
@@ -410,88 +414,52 @@ class App extends Component {
                                 <p className={classes.sTitle}>{translate("NOS_ACTUALITES")}</p>
                             </div>
 
-                            <Row className={classes.actu}>
-                                <Col xs={12} md={6} lg={3}>
-                                    {localStorage.getItem("locale_lg")==="fr-fr" &&
-                                    (<CardActu
-                                        image={<img style={{height: "100%"}} src={require("./assets/actu4.png")} alt=""/>}
-                                        title={"Examens de fin d’année scolaire 2020 : Côte d'ivoire"}
-                                        description={"Proclamation des résultats des examens de fin d’année : les taux de réussite une preuve du\n" +
-                                        "faible niveau scolaire des élèves."}
-                                        onclick={()=>{window.location="/actu/4"}}
-                                    />)}
-                                    {localStorage.getItem("locale_lg")==="en-us" &&
-                                    (<CardActu
-                                        image={<img style={{height: "100%"}} src={require("./assets/actu4.png")} alt=""/>}
-                                        title={"2020 end of school year exams: Ivory Coast"}
-                                        description = {"Proclamation of end-of-year exam results: pass rates proof of"+
-                                        "low educational level of the pupils."}
-                                        onclick={()=>{window.location="/actu/4"}}
-                                    />)}
-                                </Col>
-                                <Col xs={12} md={6} lg={3}>
-                                    {localStorage.getItem("locale_lg")==="fr-fr" &&(
-                                        <CardActu
-                                            image={<img style={{height: "100%"}} src={require("./assets/actu1.jpg")} alt=""/>}
-                                            title={"L’importance d’un projet d’études bien élaboré"}
-                                            description={"La plupart du temps, l’échec des jeunes apprenants " +
-                                            "est dû au projet d’étude presque inexistant ou encore mal élaboré. " +
-                                            "Car beaucoup  se lancent dans les études sans une vision globale. …"}
-                                            onclick={()=>{window.location="/actu/1"}}
-                                        />
-                                    )}
-                                    {localStorage.getItem("locale_lg")==="en-us" &&(
-                                        <CardActu
-                                            image={<img style={{height: "100%"}} src={require("./assets/actu1.jpg")} alt=""/>}
-                                            title={"The importance of a well-developed study plan"}
-                                            description={"Most of the time, young learners fail " +
-                                            "is due to the study project almost non-existent or still poorly developed." +
-                                            "Because many embark on studies without a global vision. ..."}
-                                            onclick={()=>{window.location="/actu/1"}}
-                                        />
-                                    )}
-                                </Col>
-                                <Col xs={12} md={6} lg={3}>
-                                    {localStorage.getItem("locale_lg")==="fr-fr" &&(
-                                        <CardActu
-                                            image={<img style={{height: "100%"}} src={require("./assets/actu2.jpg")} alt=""/>}
-                                            title={"La motivation : paramètre utile de réussite"}
-                                            description={"L’une des causes les plus courantes de l’échec est de" +
-                                            " commencer un projet sans le terminer.  L’absence de motivation en " +
-                                            "est l’une des raisons. Cela arrive à tout un chacun …"}
-                                            onclick={()=>{window.location="/actu/2"}}
-                                        />)}
-                                    {localStorage.getItem("locale_lg")==="en-us" &&(
-                                        <CardActu
-                                            image={<img style={{height: "100%"}} src={require("./assets/actu2.jpg")} alt=""/>}
-                                            title={"Motivation: a useful parameter of success"}
-                                            description={"One of the most common causes of failure is" +
-                                            " start a project without completing it. The lack of motivation in" +
-                                            "is one of the reasons. It happens to everyone ..."}
-                                            onclick={()=>{window.location="/actu/2"}}
-                                        />)}
-                                </Col>
-                                <Col xs={12} md={6} lg={3}>
-                                    {localStorage.getItem("locale_lg")==="fr-fr" &&(
-                                        <CardActu
-                                            image={<img style={{height: "100%"}} src={require("./assets/actu3.jpg")} alt=""/>}
-                                            title={"L’importance d’une bonne orientation"}
-                                            description={"Un projet professionnel se définit d’après les objectifs " +
-                                            "professionnels qui sont eux-mêmes le bilan du vécu, de la personnalité, des " +
-                                            "intérêts, des aptitudes, des motivations et des valeurs. Toute prise …"}
-                                            onclick={()=>{window.location="/actu/3"}}
-                                        />)}
-                                    {localStorage.getItem("locale_lg")==="en-us" &&(
-                                        <CardActu
-                                            image={<img style={{height: "100%"}} src={require("./assets/actu3.jpg")} alt=""/>}
-                                            title={"The importance of a good orientation"}
-                                            description={"A professional project is defined according to the objectives" +
-                                            "professionals who are themselves the balance sheet of experience, personality," +
-                                            "interests, skills, motivations and values. Any take ..."}
-                                            onclick={()=>{window.location="/actu/3"}}
-                                        />)}
-                                </Col>
-                            </Row>
+                            {/* <div className={classes.actuCard}>
+                                <div className={classes.cardBody}>
+                                    <h5>Examens de fin d’année scolaire 2020 : Côte d'ivoire</h5>
+                                    <p>Proclamation des résultats des examens de fin d’année : 
+                                        les taux de réussite une preuve du 
+                                        faible niveau scolaire des élèves.
+                                    </p>
+                                </div>
+                            </div> */}
+
+                            <div>
+                            {localStorage.getItem("locale_lg")==="fr-fr" && (
+                                <div className={classes.mainCard}>
+                                    <Grid container
+                                        alignItems="center"
+                                        spacing={3}>
+                                        {FrenshData.map((item, index) => (
+                                            <Grid key={item.title} item xs={12} sm={4} >
+                                                <CardActu
+                                                    title={item.title}
+                                                    description={item.description}
+                                                    onclick={()=>{window.location=item.link}}
+                                                />
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+                                </div>
+                            )}
+                            {localStorage.getItem("locale_lg")==="en-us" && (
+                                <div className={classes.mainCard}>
+                                    <Grid container
+                                        alignItems="center"
+                                        spacing={3}>
+                                        {EnglishData.map((item, index) => (
+                                            <Grid key={item.title} item xs={12} sm={4} >
+                                                <CardActu
+                                                    title={item.title}
+                                                    description={item.description}
+                                                    onclick={()=>{window.location=item.link}}
+                                                />
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+                                </div>
+                            )}
+                            </div>
                         </div>
 
                     </div>
