@@ -436,6 +436,7 @@ class App extends Component {
                                                     title={item.title}
                                                     description={item.description}
                                                     onclick={()=>{window.location=item.link}}
+                                                    image={item.image}
                                                 />
                                             </Grid>
                                         ))}
@@ -453,6 +454,7 @@ class App extends Component {
                                                     title={item.title}
                                                     description={item.description}
                                                     onclick={()=>{window.location=item.link}}
+                                                    image={item.image}
                                                 />
                                             </Grid>
                                         ))}
