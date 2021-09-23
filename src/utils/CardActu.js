@@ -45,7 +45,7 @@ class CardActu extends Component {
             <div>
                 <Card onClick={onclick} className={classes.cardActu}>
                     <div>
-                        <div style={{width: "200px", height: "250px"}}>
+                        <div style={{ height: "250px"}}>
                             <img className={classes.imgActu}
                                 src={image}
                             />

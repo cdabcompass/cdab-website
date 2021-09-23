@@ -9,6 +9,8 @@ import TokenApi from "./TokenApi";
 import ReactGA from "react-ga";
 import Helmet from "react-helmet";
 import translate from "../i18n/messages/translate";
+import {LOCALES,IntlProvider} from "../../src/i18n";
+
 
 const styles = theme => ({
     logo:{
@@ -55,6 +57,8 @@ class MenuBar extends Component {
         this.state = {
             anchor: false,
             auth: false,
+            openModal: false,
+            locale: LOCALES.FRENCH
         };
     }
 
@@ -65,6 +69,12 @@ class MenuBar extends Component {
 
         if(localStorage.getItem("token") !== null){
             this.setState({auth: true})
+        }
+        if(localStorage.getItem("locale_lg")===null ||
+            localStorage.getItem("locale_lg")===undefined){
+            this.changeLangue(this.state.locale);
+        }else {
+            this.changeLangue(localStorage.getItem("locale_lg"));
         }
         //alert("auth : "+this.state.auth + " token : "+localStorage.getItem("token"))
     }
@@ -89,9 +99,22 @@ class MenuBar extends Component {
     homePage = () => {
         window.location = "/";
     };
+
+    changeLangue = (lg) =>{
+        localStorage.setItem("locale_lg",lg);
+        console.log("test test test "+localStorage.getItem("locale_lg"));
+        // if(localStorage.getItem("locale_lg")===null || localStorage.getItem("locale_lg")===undefined){
+        //     console.log(this.state.locale);
+        //     localStorage.setItem("locale_lg",this.state.locale);
+        // }
+        this.setState({locale: localStorage.getItem("locale_lg") });
+    }
+
     render() {
         const {classes} = this.props;
         return (
+            <IntlProvider locale={this.state.locale}>
+                
             <AppBar className="apbar">
                 <Helmet>
                     <meta charSet="utf-8" />
@@ -146,8 +169,13 @@ class MenuBar extends Component {
                             </div>
                         )}
                     </Popover>
+
+
+                    <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><img width={25} src={require("../assets/state_dr.png")}/></button>
+                    <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.FRENCH)}><img width={25} src={require("../assets/france_dr.png")}/></button>
                 </Toolbar>
             </AppBar>
+            </IntlProvider>
         );
     }
 }
