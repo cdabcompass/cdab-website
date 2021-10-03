@@ -156,7 +156,7 @@ route.post('/mailing', async(req,res)=>{
 
 route.post('/allUsers', async(req,res)=>{
     let user = new userModel();
-    user.email = req.body.email;
+    user.firstName = req.body.firstName;
     user.lastName = req.body.lastName;
     if(user.firstName === "admin"
         && user.lastName === "admin"){
