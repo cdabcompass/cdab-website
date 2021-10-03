@@ -20,7 +20,7 @@ class FooterBar extends Component {
     }
 
     componentDidMount() {
-        if(localStorage.getItem("email") === "admin@cdabcompass.com"
+        if(localStorage.getItem("firstName") === "admin"
         && localStorage.getItem("lastName") === "admin"){
             this.setState({
                 isAdmin: true
