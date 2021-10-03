@@ -212,7 +212,7 @@ class PanelAdmin extends Component {
 
     componentDidMount() {
         axios.post('/users/allUsers',{
-            email: localStorage.getItem("email"),
+            firstName: localStorage.getItem("firstName"),
             lastName: localStorage.getItem("lastName"),
         })
             .then(res=>{
