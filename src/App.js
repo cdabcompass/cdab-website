@@ -3,7 +3,8 @@ import { withStyles } from '@material-ui/core/styles';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Carousel, Col, Modal, Row} from "react-bootstrap";
 import CardActu from "./utils/CardActu";
-import MenuBar from "./utils/MenuBar";
+//import MenuBar from "./utils/Header";
+import Header from "./utils/Header";
 import Grid from "@material-ui/core/Grid";
 import ExpertisesComponents from "./utils/ExpertisesComponents";
 import Button from "react-bootstrap/Button";
@@ -31,7 +32,7 @@ const styles = theme => ({
     },
     imageCarousel:{
         display: "flex",
-        marginTop: "100px",
+        marginTop: "0px",
         justifyContent: "center",
         alignItems: "center",
     },
@@ -75,7 +76,7 @@ const styles = theme => ({
     actualite:{
         display: "flex",
         flexDirection: "column",
-        marginTop: "100px",
+        marginTop: "0px",
     },
     actu:{
         display: "flex",
@@ -151,8 +152,8 @@ const styles = theme => ({
     },
     ModalContent:{
         width: "700px",
-        marginTop: '10%',
-        marginBottom: '10%',
+        marginTop: '0%',
+        marginBottom: '0%',
         maxWidth: "50% !important"
     },
     btnQuiz: {
@@ -247,9 +248,8 @@ class App extends Component {
                     </Helmet>
 
                     <div className={classes.container}>
-                        <div className={classes.header}>
-                            <MenuBar/>
-                        </div>
+                            {/* <MenuBar/>*/}
+                            <Header/>
                         <div className="imageCarousel">
                             <Carousel className={classes.carousell}>
                                 <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP1.jpg")} alt=""/></Carousel.Item>
@@ -354,7 +354,7 @@ class App extends Component {
 
                             <br/>
                             { localStorage.getItem("situation") !== "Parent" && (
-                                            
+
                                 <button type="button"
                                 style={{background: "rgba(28,27,27,0.94)"}}
                                 className={classes.dwlPdf}
@@ -417,8 +417,8 @@ class App extends Component {
                             {/* <div className={classes.actuCard}>
                                 <div className={classes.cardBody}>
                                     <h5>Examens de fin d’année scolaire 2020 : Côte d'ivoire</h5>
-                                    <p>Proclamation des résultats des examens de fin d’année : 
-                                        les taux de réussite une preuve du 
+                                    <p>Proclamation des résultats des examens de fin d’année :
+                                        les taux de réussite une preuve du
                                         faible niveau scolaire des élèves.
                                     </p>
                                 </div>
@@ -472,7 +472,7 @@ class App extends Component {
                         />
                         <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><img width={25} src={require("./assets/state_dr.png")}/></button>
                         <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.FRENCH)}><img width={25} src={require("./assets/france_dr.png")}/></button>
-                         
+
                         <FooterBar/>
                     </div>
                 </div>

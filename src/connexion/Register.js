@@ -220,6 +220,9 @@ class Register extends Component {
                                         <option aria-label="None" value="" />
                                         <option value={"Afrique"}>Afrique</option>
                                         <option value={"Europe"}>Europe</option>
+                                        <option value={"Asie"}>Asie</option>
+                                        <option value={"Amerique"}>Amérique</option>
+                                        <option value={"Oceanie"}>Océanie</option>
                                     </Select>
                                 </FormControl>
                                 <br/>
