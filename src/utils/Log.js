@@ -36,6 +36,7 @@ export default function Log() {
     <div className={classes.root}>
     <div className="logo">
         <img className={classes.imglogo} onclick="Home()" src={require("../assets/logo.png")} alt=""/>
+        
     </div>
     </div>
   );
