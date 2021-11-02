@@ -276,35 +276,26 @@ class App extends Component {
                                 {/*<Grid item xs={1}></Grid>*/}
                                 {localStorage.getItem("locale_lg")==="fr-fr" && (
                                     <Grid alignItems={"center"} item xs={6} className={classes.txtUs}>
-                                        CDAB COMPASS est une structure éducative détectant le profil de l’apprenant. De ce fait,
-                                        cher parent, connaitre le profil de l’enfant vous aide :
+                                        CDAB Compass est une structure éducative qui vous aide à détecter  le profil d'un  apprenant donné. Elle vous aide à  révéler  de façon précise et concise  le meilleur  de votre enfant, non seulement  sur sa vie éducative,  mais aussi professionnelle.  Sur ce ,cher parent , CDAD compass s'engage à vos côtés  à  connaître  le profil de votre enfant et à y apporter des solutions  qui vous aide :
                                         <br/><br/>
                                         <ul>
-                                            <li><strong>sur la personnalité à</strong> à détecter son potentiel et ses talents, le rendre autonome, le
-                                                rendre responsable,</li>
-                                            <li><strong>sur le plan scolaire à</strong> l’aider à étudier et s’organiser, l’aider à travailler seul, l’aider à
-                                                avoir la méthodologie de travail,</li>
-                                            <li><strong>sur le plan de la confiance à</strong> l’aider à établir une bonne communication en famille,
-                                                l’aider à avoir confiance en lui, l’aider à définir ses priorités,</li>
-                                            <li><strong>sur l’avenir professionnel à</strong> l’aider à se projeter dans l’avenir, l’aider à élaborer son
-                                                projet d’études, l’aider à choisir les différents métiers possibles correspondant.</li>
+                                            <li><strong>sur la personnalité à</strong> faire ressortir son potentiel et ses talents ,le rendre autonome ,le rendre responsable,</li>
+                                            <li><strong>sur le plan scolaire à</strong> l'aider a étudier et s'organiser ,l'aider à travailler seul, l'aider à avoir la méthodologie de travail,</li>
+                                            <li><strong>sur le plan de la confiance à</strong> l'aider à établir une bonne communication en famille ,l'aider à avoir confiance en lui ,l'aider à définir ses priorités,</li>
+                                            <li><strong>sur l’avenir professionnel à</strong> l'aider à se projeter dans l'avenir ,l'aider à élaborer son projet d’études et choisir les différents métiers possibles correspondant.</li>
                                         </ul>
                                     </Grid>
                                 )}
                                 {localStorage.getItem("locale_lg")==="en-us" && (
                                     <Grid alignItems={"center"} item xs={6} className={classes.txtUs}>
-                                        CDAB COMPASS is an educational structure detecting the profile of the learner. Thereby,
-                                        dear parent, knowing the child's profile helps you:
+                                        CDAB Compass is an educational facility that helps you to detect the profile of a given learner. It is our duty to assist you to accurately detect the best hidden gift or talent of your child, not only in terms of education but also in terms of profession. 
+And so dear parent, CDAD Compass devoted to your course is poised to knowing what your child is made up with and providing solutions that will help you in terms of :
                                         <br/><br/>
                                         <ul>
-                                            <li><strong>on the personality to</strong> to detect their potential and talents, make them autonomous,
-                                                make responsible,</li>
-                                            <li><strong>academically to</strong> help him study and organize himself, help him work alone, help him
-                                                have the work methodology,</li>
-                                            <li><strong>in terms of confidence in</strong> help him establish good communication with his family,
-                                                help him have self-confidence, help him define his priorities,</li>
-                                            <li><strong>on the professional future at</strong> help him plan for the future, help him develop his
-                                                study project, help him choose the various possible corresponding professions.</li>
+                                            <li><strong>Personality -</strong> to unearth his/her potential and talent so as to make him/her self-reliant and responsible,</li>
+                                            <li><strong>Academic -</strong> to help him/her to study and organize himself, to help him/her work on his own and get him/her to be familiar with work methodology,</li>
+                                            <li><strong>Confidence - </strong> helping him to establish good communication within the family setting, to develop self-confidence and define his/her priorities,</li>
+                                            <li><strong>Future career - </strong> helping him/her foresee the future, develop his/her education plan and select the various possible corresponding professions.</li>
                                         </ul>
                                     </Grid>
                                 )}
@@ -335,7 +326,7 @@ class App extends Component {
                                         {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
                                         {/*        allowFullScreen></iframe>*/}
                                         <iframe className="videoPresentation"
-                                                src="https://www.youtube.com/embed/KZ8xRuxYLRI"
+                                                src="https://www.youtube.com/embed/-cy4T6UJPdk"
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>
