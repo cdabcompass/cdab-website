@@ -25,6 +25,6 @@ export default {
         'Passer_le_test_general': 'Pass general test ',
         'Proceder_au_paiement': 'Proceed to payment',
         'Passer_test_specifique': 'Take the specific test',
-        'Connexion' : 'Login',
+        'Connexion' : 'Login/Registration',
     }
 }
