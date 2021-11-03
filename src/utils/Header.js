@@ -16,6 +16,7 @@ import {
 } from 'material-ui-flags';
 import translate from "../i18n/messages/translate";
 import {LOCALES,IntlProvider} from "../i18n";
+
 //import {FrenshData, EnglishData} from "../articlesData/articleData"
 
 const styles = theme => ({
@@ -100,7 +101,7 @@ changeLangue = (lg) =>{
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/training">{translate("Training")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/coaching">{translate("Coach_cdab")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="#">Contact</Button>
-          <Button style =  {{background : '#e59033', color : 'white' }} href="/connexion">Connexion  <AccountCircleIcon/> </Button>
+          <Button style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>Connexion</Button>
 
           </Grid>
           <IconButton onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
