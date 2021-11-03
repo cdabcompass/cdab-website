@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Carousel, Col, Modal, Row} from "react-bootstrap";
 import CardActu from "./utils/CardActu";
-//import MenuBar from "./utils/Header";
+//import MenuBar from "./utils/Deroul";
 import Header from "./utils/Header";
 import Grid from "@material-ui/core/Grid";
 import ExpertisesComponents from "./utils/ExpertisesComponents";
@@ -171,6 +171,18 @@ const styles = theme => ({
     mainCard: {
     },
 
+    stackleft:{
+       position: 'absolute', 
+       zIndex: '10', 
+       opacity: '0.8', 
+       width : '200px', 
+       height: '350px',
+       background : '#FFC300'  , 
+       marginTop: '200px', 
+       marginLeft: '50px', 
+       alignText: 'center'
+    },
+
 });
 
 class App extends Component {
@@ -250,21 +262,38 @@ class App extends Component {
                     <div className={classes.container}>
                             {/* <MenuBar/>*/}
                             <Header/>
-                        <div className="imageCarousel">
-                            <Carousel className={classes.carousell}>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP1.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p8.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP2.jpg")} alt=""/></Carousel.Item>
+                        <div style = {{position: 'relative'}} >
 
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P14.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P4.jpg")} alt=""/></Carousel.Item>
+                            <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '350px',background : '#FFC300'  , marginTop: '200px', marginLeft: '50px', alignText: 'center'}}>
+                                <Grid style =  {{}}   container   direction="column">
+            
+                                <Button style = {{border: '1px solid white',background : '#FFC300', textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/produits"><strong>Nos produits</strong></Button>
+                                <hr style = {{border: '1px solid white', width : '160px'}}/>
+                                <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/evenements"><strong>Nos événements</strong></Button>
+                                <hr style = {{border: '1px solid white', width : '160px'}}/>
+                                <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_realisations"><strong>Nos realisations</strong></Button>
+                                <hr style = {{border: '1px solid white', width : '160px'}}/>
+                                <Button style = {{border: '1px solid white', background : '#FFC300',textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_locaux"><strong>Nos locaux</strong></Button>
+                                 
+                                </Grid>
+                            </div>
+                            <div className="imageCarousel">
+                            
+                                <Carousel className={classes.carousell}>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP1.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p8.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP2.jpg")} alt=""/></Carousel.Item>
 
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P10.JPG")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P5.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p3.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P7.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p9.jpeg")} alt=""/></Carousel.Item>
-                            </Carousel>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P14.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P4.jpg")} alt=""/></Carousel.Item>
+
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P10.JPG")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P5.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p3.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P7.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p9.jpeg")} alt=""/></Carousel.Item>
+                                </Carousel>
+                            </div>
                         </div>
 
                         <div className={classes.aboutUs}>
