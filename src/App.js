@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Carousel, Col, Modal, Row} from "react-bootstrap";
 import CardActu from "./utils/CardActu";
-//import MenuBar from "./utils/Deroul";
 import Header from "./utils/Header";
 import Grid from "@material-ui/core/Grid";
 import ExpertisesComponents from "./utils/ExpertisesComponents";
@@ -267,7 +266,7 @@ class App extends Component {
                             <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '350px',background : '#FFC300'  , marginTop: '200px', marginLeft: '50px', alignText: 'center'}}>
                                 <Grid style =  {{}}   container   direction="column">
             
-                                <Button style = {{border: '1px solid white',background : '#FFC300', textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/produits"><strong>Nos produits</strong></Button>
+                                <Button style = {{border: '1px solid white',background : '#FFC300', textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/produits"><strong>{translate("Nos_produits")}</strong></Button>
                                 <hr style = {{border: '1px solid white', width : '160px'}}/>
                                 <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/evenements"><strong>Nos événements</strong></Button>
                                 <hr style = {{border: '1px solid white', width : '160px'}}/>
