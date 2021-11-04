@@ -263,16 +263,16 @@ class App extends Component {
                             <Header/>
                         <div style = {{position: 'relative'}} >
 
-                            <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '350px',background : '#FFC300'  , marginTop: '200px', marginLeft: '50px', alignText: 'center'}}>
+                            <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '360px',background : '#FFC300'  , marginTop: '200px', marginLeft: '50px', alignText: 'center'}}>
                                 <Grid style =  {{}}   container   direction="column">
             
-                                <Button style = {{border: '1px solid white',background : '#FFC300', textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/produits"><strong>{translate("Nos_produits")}</strong></Button>
+                                <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/cdab/plus_infos"><strong>{translate("QUI_SOMMES_NOUS")}</strong></Button>
                                 <hr style = {{border: '1px solid white', width : '160px'}}/>
-                                <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/evenements"><strong>Nos événements</strong></Button>
+                                <Button style = {{border: '1px solid white',background : '#FFC300', textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/produits"><strong>{translate("Nos_produits")}</strong></Button>
                                 <hr style = {{border: '1px solid white', width : '160px'}}/>
-                                <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_realisations"><strong>Nos realisations</strong></Button>
+                                <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/evenements"><strong>{translate("Nos_evenements")}</strong></Button>
                                 <hr style = {{border: '1px solid white', width : '160px'}}/>
-                                <Button style = {{border: '1px solid white', background : '#FFC300',textTransform: 'none', fontSize: '18px',  margin: '10px', color : 'white'}} href="/nos_locaux"><strong>Nos locaux</strong></Button>
+                                 <Button style = {{border: '1px solid white', background : '#FFC300',textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/nos_locaux"><strong>{translate("Nos_locaux")}</strong></Button>
                                  
                                 </Grid>
                             </div>
@@ -395,11 +395,14 @@ And so dear parent, CDAD Compass devoted to your course is poised to knowing wha
                             <div style={{marginBottom: "100px"}}>
                                 <p className="expTitle">{translate("TEMOIGNAGES")}</p>
                             </div>
-                            <div>
-                                <iframe className="videoReport" src="https://www.youtube.com/embed/DGYnbGv7Csw"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen></iframe>
+                            <div  style={{textAlign: "center"}}>
+                                <div>
+                                    <iframe className="videoReport" src="https://player.vimeo.com/video/582899743"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen></iframe>
+                                </div>
+                                
                             </div>
                             <br/>
                             <div>
