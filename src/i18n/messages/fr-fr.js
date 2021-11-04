@@ -12,12 +12,12 @@ export default {
         'NOS_ACTUALITES': 'NOS ACTUALITES',
         'VOIR_PLUS': 'VOIR PLUS',
         'En_savoir_plus': 'En savoir plus',
-        'Nos_expertises': 'Nos expertises',
-        'Training': 'Training',
-        'Coach_cdab': 'Coach-cdab',
+        'Nos_expertises': 'NOS EXPERTISES',
+        'Training': 'ENTRAINEMENT',
+        'Coach_cdab': 'COACH-CDAB',
         'Nos_produits_Nos_evenements': 'Nos produits/Nos evenements',
-        'Nos_realisations': 'Nos réalisations',
-        'Nos_locaux': 'Nos locaux',
+        'Nos_realisations': 'NOS REALISATIONS',
+        'Nos_locaux': 'NOS LOCAUX',
         'Deconnexion': 'Deconnexion',
         'Connexion_Inscription': 'Connexion-Inscription',
         'Connexion': 'Connexion',
@@ -26,5 +26,9 @@ export default {
         'Passer_le_test_general': 'Passer le test général',
         'Proceder_au_paiement': 'Procéder au paiement',
         'Passer_test_specifique': ' Passer le test spécifique',
+        'Connexion' : 'Connexion / Inscription',
+        
+        'Nos_produits' : 'NOS PRODUITS',
+        'Nos_evenements': 'NOS EVENEMENTS',
     }
 }

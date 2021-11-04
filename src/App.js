@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Carousel, Col, Modal, Row} from "react-bootstrap";
 import CardActu from "./utils/CardActu";
-//import MenuBar from "./utils/Header";
 import Header from "./utils/Header";
 import Grid from "@material-ui/core/Grid";
 import ExpertisesComponents from "./utils/ExpertisesComponents";
@@ -171,6 +170,18 @@ const styles = theme => ({
     mainCard: {
     },
 
+    stackleft:{
+       position: 'absolute', 
+       zIndex: '10', 
+       opacity: '0.8', 
+       width : '200px', 
+       height: '350px',
+       background : '#FFC300'  , 
+       marginTop: '200px', 
+       marginLeft: '50px', 
+       alignText: 'center'
+    },
+
 });
 
 class App extends Component {
@@ -250,21 +261,38 @@ class App extends Component {
                     <div className={classes.container}>
                             {/* <MenuBar/>*/}
                             <Header/>
-                        <div className="imageCarousel">
-                            <Carousel className={classes.carousell}>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP1.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p8.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP2.jpg")} alt=""/></Carousel.Item>
+                        <div style = {{position: 'relative'}} >
 
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P14.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P4.jpg")} alt=""/></Carousel.Item>
+                            <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '360px',background : '#FFC300'  , marginTop: '200px', marginLeft: '50px', alignText: 'center'}}>
+                                <Grid style =  {{}}   container   direction="column">
+            
+                                <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/cdab/plus_infos"><strong>{translate("QUI_SOMMES_NOUS")}</strong></Button>
+                                <hr style = {{border: '1px solid white', width : '160px'}}/>
+                                <Button style = {{border: '1px solid white',background : '#FFC300', textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/produits"><strong>{translate("Nos_produits")}</strong></Button>
+                                <hr style = {{border: '1px solid white', width : '160px'}}/>
+                                <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/nos_produits_evenements/evenements"><strong>{translate("Nos_evenements")}</strong></Button>
+                                <hr style = {{border: '1px solid white', width : '160px'}}/>
+                                 <Button style = {{border: '1px solid white', background : '#FFC300',textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/nos_locaux"><strong>{translate("Nos_locaux")}</strong></Button>
+                                 
+                                </Grid>
+                            </div>
+                            <div className="imageCarousel">
+                            
+                                <Carousel className={classes.carousell}>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP1.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p8.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP2.jpg")} alt=""/></Carousel.Item>
 
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P10.JPG")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P5.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p3.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P7.jpg")} alt=""/></Carousel.Item>
-                                <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p9.jpeg")} alt=""/></Carousel.Item>
-                            </Carousel>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P14.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P4.jpg")} alt=""/></Carousel.Item>
+
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P10.JPG")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P5.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p3.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P7.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p9.jpeg")} alt=""/></Carousel.Item>
+                                </Carousel>
+                            </div>
                         </div>
 
                         <div className={classes.aboutUs}>
@@ -276,7 +304,6 @@ class App extends Component {
                                 {/*<Grid item xs={1}></Grid>*/}
                                 {localStorage.getItem("locale_lg")==="fr-fr" && (
                                     <Grid alignItems={"center"} item xs={6} className={classes.txtUs}>
-<<<<<<< HEAD
                                         CDAB Compass est une structure éducative qui vous aide à détecter  le profil d'un  apprenant donné. Elle vous aide à  révéler  de façon précise et concise  le meilleur  de votre enfant, non seulement  sur sa vie éducative,  mais aussi professionnelle.  Sur ce ,cher parent , CDAD compass s'engage à vos côtés  à  connaître  le profil de votre enfant et à y apporter des solutions  qui vous aide :
                                         <br/><br/>
                                         <ul>
@@ -284,26 +311,11 @@ class App extends Component {
                                             <li><strong>sur le plan scolaire à</strong> l'aider a étudier et s'organiser ,l'aider à travailler seul, l'aider à avoir la méthodologie de travail,</li>
                                             <li><strong>sur le plan de la confiance à</strong> l'aider à établir une bonne communication en famille ,l'aider à avoir confiance en lui ,l'aider à définir ses priorités,</li>
                                             <li><strong>sur l’avenir professionnel à</strong> l'aider à se projeter dans l'avenir ,l'aider à élaborer son projet d’études et choisir les différents métiers possibles correspondant.</li>
-=======
-                                        CDAB COMPASS est une structure éducative détectant le profil de l’apprenant. De ce fait,
-                                        cher parent, connaitre le profil de l’enfant vous aide :
-                                        <br/><br/>
-                                        <ul>
-                                            <li><strong>sur la personnalité à</strong> à détecter son potentiel et ses talents, le rendre autonome, le
-                                                rendre responsable,</li>
-                                            <li><strong>sur le plan scolaire à</strong> l’aider à étudier et s’organiser, l’aider à travailler seul, l’aider à
-                                                avoir la méthodologie de travail,</li>
-                                            <li><strong>sur le plan de la confiance à</strong> l’aider à établir une bonne communication en famille,
-                                                l’aider à avoir confiance en lui, l’aider à définir ses priorités,</li>
-                                            <li><strong>sur l’avenir professionnel à</strong> l’aider à se projeter dans l’avenir, l’aider à élaborer son
-                                                projet d’études, l’aider à choisir les différents métiers possibles correspondant.</li>
->>>>>>> 4899b21b803853482288152bb87d2a16c57d151c
                                         </ul>
                                     </Grid>
                                 )}
                                 {localStorage.getItem("locale_lg")==="en-us" && (
                                     <Grid alignItems={"center"} item xs={6} className={classes.txtUs}>
-<<<<<<< HEAD
                                         CDAB Compass is an educational facility that helps you to detect the profile of a given learner. It is our duty to assist you to accurately detect the best hidden gift or talent of your child, not only in terms of education but also in terms of profession. 
 And so dear parent, CDAD Compass devoted to your course is poised to knowing what your child is made up with and providing solutions that will help you in terms of :
                                         <br/><br/>
@@ -312,20 +324,6 @@ And so dear parent, CDAD Compass devoted to your course is poised to knowing wha
                                             <li><strong>Academic -</strong> to help him/her to study and organize himself, to help him/her work on his own and get him/her to be familiar with work methodology,</li>
                                             <li><strong>Confidence - </strong> helping him to establish good communication within the family setting, to develop self-confidence and define his/her priorities,</li>
                                             <li><strong>Future career - </strong> helping him/her foresee the future, develop his/her education plan and select the various possible corresponding professions.</li>
-=======
-                                        CDAB COMPASS is an educational structure detecting the profile of the learner. Thereby,
-                                        dear parent, knowing the child's profile helps you:
-                                        <br/><br/>
-                                        <ul>
-                                            <li><strong>on the personality to</strong> to detect their potential and talents, make them autonomous,
-                                                make responsible,</li>
-                                            <li><strong>academically to</strong> help him study and organize himself, help him work alone, help him
-                                                have the work methodology,</li>
-                                            <li><strong>in terms of confidence in</strong> help him establish good communication with his family,
-                                                help him have self-confidence, help him define his priorities,</li>
-                                            <li><strong>on the professional future at</strong> help him plan for the future, help him develop his
-                                                study project, help him choose the various possible corresponding professions.</li>
->>>>>>> 4899b21b803853482288152bb87d2a16c57d151c
                                         </ul>
                                     </Grid>
                                 )}
@@ -356,11 +354,7 @@ And so dear parent, CDAD Compass devoted to your course is poised to knowing wha
                                         {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
                                         {/*        allowFullScreen></iframe>*/}
                                         <iframe className="videoPresentation"
-<<<<<<< HEAD
                                                 src="https://www.youtube.com/embed/-cy4T6UJPdk"
-=======
-                                                src="https://www.youtube.com/embed/KZ8xRuxYLRI"
->>>>>>> 4899b21b803853482288152bb87d2a16c57d151c
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>
@@ -401,11 +395,14 @@ And so dear parent, CDAD Compass devoted to your course is poised to knowing wha
                             <div style={{marginBottom: "100px"}}>
                                 <p className="expTitle">{translate("TEMOIGNAGES")}</p>
                             </div>
-                            <div>
-                                <iframe className="videoReport" src="https://www.youtube.com/embed/DGYnbGv7Csw"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen></iframe>
+                            <div  style={{textAlign: "center"}}>
+                                <div>
+                                    <iframe className="videoReport" src="https://player.vimeo.com/video/582899743"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen></iframe>
+                                </div>
+                                
                             </div>
                             <br/>
                             <div>

@@ -42,12 +42,7 @@ class ExpertisesComponents extends Component {
                             <CardCustom
                                 icon={<FindInPageIcon/>}
                                 title={"Profil"}
-<<<<<<< HEAD
                                 description={"La détection du profil est une phase à travers laquelle nous vous aidons à travers des tests adéquat à découvrir et à connaître la personnalité de l'apprenant ,à faire ressortir ses capacités, améliorer ses aptitudes et affermir son environnement Social. Ainsi dit ,cette phase est importante et primordiale pour l’apprenant et sa famille."}
-=======
-                                description={"La phase détection du profil demeure un mystère pour certains et une partie de jeux pour d’autres.\n" +
-                                "En effet cette phase consiste à découvrir l’enfant et son environnement tout simplement."}
->>>>>>> 4899b21b803853482288152bb87d2a16c57d151c
                                 onclick={()=>{this.moreInfo("/profil_etudiant")}}
                             />)}
                         {localStorage.getItem("locale_lg")==="en-us" &&(
@@ -64,12 +59,7 @@ class ExpertisesComponents extends Component {
                             <CardCustom
                                 icon={<SchoolIcon/>}
                                 title={"Projet d’étude national \n ou international"}
-<<<<<<< HEAD
                                 description={"Un projet d’étude est une feuille de route permettant à l'apprenant d’asseoir son parcours scolaire ,estudiantin ou de formation . Il fait preuve de la volonté à atteindre l’univers professionnel. Ainsi ,il comporte les aspirations post-bac et post-brevet des apprenants. "}
-=======
-                                description={"Un projet d’étude est une feuille de route permettant de profiler son parcours estudiantin. Le projet d’étude fait montre de" +
-                                "notre volonté à atteindre l’univers professionnel. Il comporte les aspirations post-bac et post-brevet des apprenants. "}
->>>>>>> 4899b21b803853482288152bb87d2a16c57d151c
                                 onclick={()=>{this.moreInfo("/projet_etude")}}
                             />)}
                         {localStorage.getItem("locale_lg")==="en-us" &&(
@@ -89,12 +79,7 @@ class ExpertisesComponents extends Component {
                             <CardCustom
                                 icon={<AccountCircleIcon/>}
                                 title={"Potentiel"}
-<<<<<<< HEAD
                                 description={"Cette expertise met en relief la méthodologie ,l’organisation de travail de l’apprenant dans son espace . il apprend à être autonome et responsable assez rapidement au bout de deux mois."}
-=======
-                                description={"La structure éducative CDAB COMPASS, spécialisée aussi dans l’accompagnement et l’orientation des apprenants " +
-                                "sur tous les plans scolaire, universitaire et même professionnel, accorde une importance à cette expertise."}
->>>>>>> 4899b21b803853482288152bb87d2a16c57d151c
                                 onclick={()=>{this.moreInfo("/potential")}}
                             />
                         )}
@@ -113,12 +98,7 @@ class ExpertisesComponents extends Component {
                             <CardCustom
                                 icon={<MenuBookIcon/>}
                                 title={"Professionnel"}
-<<<<<<< HEAD
                                 description={"S’épanouir dans son emploi est nécessaire à part l’aspect financier. On peut ainsi se recycler ou entreprendre à tout âge."}
-=======
-                                description={"Beaucoup sont ceux qui n’ont pas de projet professionnel, qui se lancent dans une carrière\n" +
-                                "juste parce que leurs parents veulent qu’ils exercent ce métier."}
->>>>>>> 4899b21b803853482288152bb87d2a16c57d151c
                                 onclick={()=>{this.moreInfo("/professional")}}
                             />
                         )}
