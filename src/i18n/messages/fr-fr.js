@@ -26,6 +26,8 @@ export default {
         'Passer_le_test_general': 'Passer le test général',
         'Proceder_au_paiement': 'Procéder au paiement',
         'Passer_test_specifique': ' Passer le test spécifique',
-        'Connexion' : 'Connexion/Inscription', 
+        'Connexion' : 'Connexion/Inscription',
+        
+        'Nos_produits' : 'Nos produits',
     }
 }

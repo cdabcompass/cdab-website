@@ -26,5 +26,7 @@ export default {
         'Proceder_au_paiement': 'Proceed to payment',
         'Passer_test_specifique': 'Take the specific test',
         'Connexion' : 'Login/Registration',
+
+        'Nos_produits' : 'Our products',
     }
 }

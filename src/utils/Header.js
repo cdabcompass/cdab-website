@@ -17,7 +17,7 @@ import {
 import translate from "../i18n/messages/translate";
 import {LOCALES,IntlProvider} from "../i18n";
 
-//import {FrenshData, EnglishData} from "../articlesData/articleData"
+import Translate from './Translate';
 
 const styles = theme => ({
   
@@ -81,10 +81,7 @@ homePage = () => {
 changeLangue = (lg) =>{
     localStorage.setItem("locale_lg",lg);
     console.log("test test test "+localStorage.getItem("locale_lg"));
-    // if(localStorage.getItem("locale_lg")===null || localStorage.getItem("locale_lg")===undefined){
-    //     console.log(this.state.locale);
-    //     localStorage.setItem("locale_lg",this.state.locale);
-    // }
+   
     this.setState({locale: localStorage.getItem("locale_lg") });
 }
 
@@ -106,7 +103,7 @@ changeLangue = (lg) =>{
           </Grid>
           <IconButton onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
           <IconButton onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
-
+          <Translate />
         </Toolbar>
       </AppBar>
       </IntlProvider>
