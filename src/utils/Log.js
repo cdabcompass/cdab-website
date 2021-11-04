@@ -35,7 +35,7 @@ export default function Log() {
   return (
     <div className={classes.root}>
     <div className="logo">
-        <img className={classes.imglogo} onclick="Home()" src={require("../assets/blanc.png")} alt=""/>
+        <img className={classes.imglogo} onclick="Home()" src={require("../assets/white.png")} alt=""/>
         
     </div>
     </div>
