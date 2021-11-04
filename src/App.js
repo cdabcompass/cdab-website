@@ -181,6 +181,7 @@ const styles = theme => ({
        marginLeft: '50px', 
        alignText: 'center'
     },
+    
 
 });
 
@@ -395,15 +396,29 @@ And so dear parent, CDAD Compass devoted to your course is poised to knowing wha
                             <div style={{marginBottom: "100px"}}>
                                 <p className="expTitle">{translate("TEMOIGNAGES")}</p>
                             </div>
-                            <div  style={{textAlign: "center"}}>
-                                <div>
-                                    <iframe className="videoReport" src="https://player.vimeo.com/video/582899743"
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen></iframe>
-                                </div>
-                                
-                            </div>
+                             
+                            <Grid style={{textAlign: "center"}} container spacing={3}>
+                                <Grid item xs={4} md={4}>
+                                    <iframe style={{height: "320px",width : "480px",marginLeft : "10px"}} src="https://player.vimeo.com/video/582899743"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen> </iframe>
+                                </Grid>
+                                <Grid item xs={4} md={4}>
+                                    <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/635224135" 
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen></iframe>
+                                </Grid>
+                                <Grid item xs={4} md={4}>
+                                    <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/583327058" 
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen></iframe>
+                                </Grid>
+                               
+                            </Grid>
+                            
                             <br/>
                             <div>
                                 <a type="button"
