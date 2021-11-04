@@ -103,7 +103,6 @@ changeLangue = (lg) =>{
           </Grid>
           <IconButton onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
           <IconButton onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
-          {/*<Translate />*/}
         </Toolbar>
       </AppBar>
       </IntlProvider>
