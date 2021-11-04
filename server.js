@@ -3,7 +3,11 @@ const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
 const port = process.env.PORT || 5000;
+<<<<<<< HEAD
+const hostname = '127.0.0.1';
+=======
 const hostname = '0.0.0.0';
+>>>>>>> 4899b21b803853482288152bb87d2a16c57d151c
 const user = require('./routes/User');
 const path = require('path');
 require('dotenv').config();
