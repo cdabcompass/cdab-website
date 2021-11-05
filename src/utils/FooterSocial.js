@@ -18,7 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default class FooterSocial extends Component {
     render() {
         return (
-            <div className="footBar">
+            <div>
                 <div className="footer">
                 <Grid container spacing={1} justify="flex-end" direction="row">
                 <div>
