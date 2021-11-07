@@ -21,7 +21,7 @@ function FooterAddress(props) {
                     <Grid container spacing={1} justify="flex-end" direction="row">
                         
                         <div>
-                        <h1>Addresse</h1>
+                        <h1>Adresses</h1>
                         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                             <Grid item xs={6}>
                                 <Item style =  {{background : '#222222' }}>
