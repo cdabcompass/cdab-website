@@ -30,7 +30,7 @@ export default class FooterSocial extends Component {
                            <Item style =  {{background : '#222222' }}>
                             <Button
                                 style =  {{background : '#0669e1', color : 'white', borderRadius: 10 }}
-                                href="#"><FacebookIcon/>
+                                href="https://www.facebook.com/CedricCoachCdab"><FacebookIcon/>
                                     facebook
                             </Button>
                            </Item> 
@@ -40,7 +40,7 @@ export default class FooterSocial extends Component {
                            <Item style =  {{background : '#222222' }}>
                             <Button
                                 style =  {{background : '#1a8cd8', color : 'white', borderRadius: 10 }}
-                                href="#"><TwitterIcon/>
+                                href="https://twitter.com/cdabcompass"><TwitterIcon/>
                                     Twitter
                             </Button>
                            </Item> 
@@ -50,7 +50,7 @@ export default class FooterSocial extends Component {
                            <Item style =  {{background : '#222222' }}>
                             <Button
                                 style =  {{background : ' #8a3ab9', color : 'white', borderRadius: 10 }}
-                                href="#"><InstagramIcon/>
+                                href="https://www.instagram.com/cdab.compass/"><InstagramIcon/>
                                     Instagram
                             </Button>
                            </Item> 
