@@ -108,16 +108,17 @@ changeLangue = (lg) =>{
       <AppBar style =  {{background : '#7c1c18' }} elevation={0} >
         <Toolbar>
           <Button href="/"> <Log/> </Button>
+
           <Grid container alignItems="flex-start" justify="center" direction="row" className="responsiveMenu"  >
-          
+
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/expertises">{translate("Nos_expertises")}</Button>
-                                 
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/training">{translate("Training")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/coaching">{translate("Coach_cdab")}</Button>
-          <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/nos_realisations">{translate("Nos_realisations")}</Button>
+          <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="#">Contact</Button>
           <Button style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Connexion")}</Button>
 
           </Grid>
+
             
           <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
           <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>

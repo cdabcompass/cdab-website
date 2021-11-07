@@ -400,7 +400,7 @@ class QuizPrincipal extends Component {
         })
             .then(res=>{
                 if(res.status === 200){
-                    alert("Vos informations ont bien été transmises");
+                    alert("Vos informations ont bien été transmises à cdab");
                     localStorage.setItem("quizFirstStep","true");
                     setTimeout(
                         ()=>{window.location.href="/expertises/profil_etudiant"},
