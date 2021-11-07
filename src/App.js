@@ -106,7 +106,8 @@ const styles = theme => ({
     },
     txtUs:{
         padding: "40px",
-        fontSize: 20
+        fontSize: 20,
+        color: "white"
     },
     dwlPdf:{
         lineHeight: "37px",
@@ -306,10 +307,10 @@ class App extends Component {
 
                         <div className={classes.aboutUs}>
                             <div style={{marginBottom: "30px"}}>
-                                <p className="expTitle">{translate("QUI_SOMMES_NOUS")}</p>
+                                <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("QUI_SOMMES_NOUS")}</p>
                             </div>
 
-                            <div className="textAboutUs" className="row" >
+                            <div style =  {{background : '#a14627' }} className="textAboutUs" className="row" >
                                 {/*<Grid item xs={1}></Grid>*/}
                                 <div className="col-sm-6 col-md-5 col-lg-6">
                                     {localStorage.getItem("locale_lg")==="fr-fr" && (
@@ -357,7 +358,7 @@ class App extends Component {
                                 
                                 {/*<Grid item xs={1}></Grid>*/}
                             </div>
-                            <div className="row" >
+                            <div className="row">
                                 <Grid alignItems={"center"}>
                                     <a type="button"
                                     className={classes.dwlPdf}
