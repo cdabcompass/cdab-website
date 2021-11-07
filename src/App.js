@@ -305,41 +305,63 @@ class App extends Component {
                         </div>
 
                         <div className={classes.aboutUs}>
-                            <div style={{marginBottom: "100px"}}>
+                            <div style={{marginBottom: "30px"}}>
                                 <p className="expTitle">{translate("QUI_SOMMES_NOUS")}</p>
                             </div>
 
-                            <div className="textAboutUs">
+                            <div className="textAboutUs" className="row" >
                                 {/*<Grid item xs={1}></Grid>*/}
-                                {localStorage.getItem("locale_lg")==="fr-fr" && (
-                                    <Grid alignItems={"center"} item xs={6} className={classes.txtUs}>
-                                        CDAB Compass est une structure éducative qui vous aide à détecter  le profil d'un  apprenant donné. Elle vous aide à  révéler  de façon précise et concise  le meilleur  de votre enfant, non seulement  sur sa vie éducative,  mais aussi professionnelle.  Sur ce ,cher parent , CDAD compass s'engage à vos côtés  à  connaître  le profil de votre enfant et à y apporter des solutions  qui vous aide :
-                                        <br/><br/>
-                                        <ul>
-                                            <li><strong>sur la personnalité à</strong> faire ressortir son potentiel et ses talents ,le rendre autonome ,le rendre responsable,</li>
-                                            <li><strong>sur le plan scolaire à</strong> l'aider a étudier et s'organiser ,l'aider à travailler seul, l'aider à avoir la méthodologie de travail,</li>
-                                            <li><strong>sur le plan de la confiance à</strong> l'aider à établir une bonne communication en famille ,l'aider à avoir confiance en lui ,l'aider à définir ses priorités,</li>
-                                            <li><strong>sur l’avenir professionnel à</strong> l'aider à se projeter dans l'avenir ,l'aider à élaborer son projet d’études et choisir les différents métiers possibles correspondant.</li>
-                                        </ul>
-                                    </Grid>
-                                )}
-                                {localStorage.getItem("locale_lg")==="en-us" && (
-                                    <Grid alignItems={"center"} item xs={6} className={classes.txtUs}>
-                                        CDAB Compass is an educational facility that helps you to detect the profile of a given learner. It is our duty to assist you to accurately detect the best hidden gift or talent of your child, not only in terms of education but also in terms of profession. 
-And so dear parent, CDAD Compass devoted to your course is poised to knowing what your child is made up with and providing solutions that will help you in terms of :
-                                        <br/><br/>
-                                        <ul>
-                                            <li><strong>Personality -</strong> to unearth his/her potential and talent so as to make him/her self-reliant and responsible,</li>
-                                            <li><strong>Academic -</strong> to help him/her to study and organize himself, to help him/her work on his own and get him/her to be familiar with work methodology,</li>
-                                            <li><strong>Confidence - </strong> helping him to establish good communication within the family setting, to develop self-confidence and define his/her priorities,</li>
-                                            <li><strong>Future career - </strong> helping him/her foresee the future, develop his/her education plan and select the various possible corresponding professions.</li>
-                                        </ul>
-                                    </Grid>
-                                )}
-                                <Grid alignItems={"center"} item xs={1}>
+                                <div className="col-sm-6 col-md-5 col-lg-6">
+                                    {localStorage.getItem("locale_lg")==="fr-fr" && (
+                                        <Grid alignItems={"center"}   className={classes.txtUs}>
+                                            CDAB Compass est une structure éducative qui vous aide à détecter  le profil d'un  apprenant donné. Elle vous aide à  révéler  de façon précise et concise  le meilleur  de votre enfant, non seulement  sur sa vie éducative,  mais aussi professionnelle.  Sur ce ,cher parent , CDAD compass s'engage à vos côtés  à  connaître  le profil de votre enfant et à y apporter des solutions  qui vous aide :
+                                            <br/><br/>
+                                            <ul>
+                                                <li><strong>sur la personnalité à</strong> faire ressortir son potentiel et ses talents ,le rendre autonome ,le rendre responsable,</li>
+                                                <li><strong>sur le plan scolaire à</strong> l'aider a étudier et s'organiser ,l'aider à travailler seul, l'aider à avoir la méthodologie de travail,</li>
+                                                <li><strong>sur le plan de la confiance à</strong> l'aider à établir une bonne communication en famille ,l'aider à avoir confiance en lui ,l'aider à définir ses priorités,</li>
+                                                <li><strong>sur l’avenir professionnel à</strong> l'aider à se projeter dans l'avenir ,l'aider à élaborer son projet d’études et choisir les différents métiers possibles correspondant.</li>
+                                            </ul>
+                                        </Grid>
+                                    )}
+                                    {localStorage.getItem("locale_lg")==="en-us" && (
+                                        <Grid alignItems={"center"}   className={classes.txtUs}>
+                                            CDAB Compass is an educational facility that helps you to detect the profile of a given learner. It is our duty to assist you to accurately detect the best hidden gift or talent of your child, not only in terms of education but also in terms of profession. 
+    And so dear parent, CDAD Compass devoted to your course is poised to knowing what your child is made up with and providing solutions that will help you in terms of :
+                                            <br/><br/>
+                                            <ul>
+                                                <li><strong>Personality -</strong> to unearth his/her potential and talent so as to make him/her self-reliant and responsible,</li>
+                                                <li><strong>Academic -</strong> to help him/her to study and organize himself, to help him/her work on his own and get him/her to be familiar with work methodology,</li>
+                                                <li><strong>Confidence - </strong> helping him to establish good communication within the family setting, to develop self-confidence and define his/her priorities,</li>
+                                                <li><strong>Future career - </strong> helping him/her foresee the future, develop his/her education plan and select the various possible corresponding professions.</li>
+                                            </ul>
+                                        </Grid>
+                                    )}
+                                </div>
+                                <div className="col-sm-6 col-md-6 col-lg-6">
+                                    
+                                    {/*<img style={{width: "100%"}}  src={require("./assets/lightbulb.jpg")} alt=""/>*/}
+                                    <div className={classes.videoPres}>
+                                        {/*<iframe className="videoPresentation" src="https://www.youtube.com/embed/Cv9Xiyd9IOY"*/}
+                                        {/*        frameBorder="0"*/}
+                                        {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
+                                        {/*        allowFullScreen></iframe>*/}
+                                        <iframe className="videoPresentation"
+                                                src="https://www.youtube.com/embed/-cy4T6UJPdk"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen></iframe>
+                                    </div>
+                                      
+                                </div>
+                                
+                                {/*<Grid item xs={1}></Grid>*/}
+                            </div>
+                            <div className="row" >
+                                <Grid alignItems={"center"}>
                                     <a type="button"
-                                       className={classes.dwlPdf}
-                                       onClick={this.handleOpenModal}
+                                    className={classes.dwlPdf}
+                                    onClick={this.handleOpenModal}
                                     >{translate("En_savoir_plus")}
                                     </a>
                                     <Modal dialogClassName ={"ModalContent"} show={this.state.openModal} onHide={this.handleCloseModal}>
@@ -355,21 +377,6 @@ And so dear parent, CDAD Compass devoted to your course is poised to knowing wha
                                         </Modal.Footer>
                                     </Modal>
                                 </Grid>
-                                <Grid alignItems={"center"} item xs={5}>
-                                    {/*<img style={{width: "100%"}}  src={require("./assets/lightbulb.jpg")} alt=""/>*/}
-                                    <div className={classes.videoPres}>
-                                        {/*<iframe className="videoPresentation" src="https://www.youtube.com/embed/Cv9Xiyd9IOY"*/}
-                                        {/*        frameBorder="0"*/}
-                                        {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
-                                        {/*        allowFullScreen></iframe>*/}
-                                        <iframe className="videoPresentation"
-                                                src="https://www.youtube.com/embed/-cy4T6UJPdk"
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen></iframe>
-                                    </div>
-                                </Grid>
-                                {/*<Grid item xs={1}></Grid>*/}
                             </div>
                         </div>
 
