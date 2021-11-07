@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Log from './Log';
 import Deroul from './Deroul';
 import './Comp.css';
+import '../index.css';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import TokenApi from "./TokenApi";
 import ReactGA from "react-ga";
@@ -24,7 +25,20 @@ const styles = theme => ({
   apbar: {
       flexGrow: 1,
 
-  }
+  },
+  Menu: {
+       
+    "@media (max-width: 746px)": {
+        visibility: "hidden"
+    }
+  },
+
+    MenuMobile: {
+       
+      "@media (max-width: 746px)": {
+          visibility: "visible"
+      }
+    },
 });
 
 
@@ -85,14 +99,16 @@ changeLangue = (lg) =>{
     this.setState({locale: localStorage.getItem("locale_lg") });
 }
 
+ 
   render() {
+    
     return (
       <div>
       <IntlProvider locale={this.state.locale}>
       <AppBar style =  {{background : '#7c1c18' }} elevation={0} >
-        <Toolbar >
+        <Toolbar>
           <Button href="/"> <Log/> </Button>
-          <Grid container alignItems="flex-start" justify="center" direction="row">
+          <Grid container alignItems="flex-start" justify="center" direction="row" className="responsiveMenu"  >
           
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/expertises">{translate("Nos_expertises")}</Button>
                                  
@@ -103,9 +119,11 @@ changeLangue = (lg) =>{
 
           </Grid>
             
-          <IconButton onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
-          <IconButton onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
+          <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
+          <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
            
+          <Deroul/>
+
         </Toolbar>
       </AppBar>
       </IntlProvider>

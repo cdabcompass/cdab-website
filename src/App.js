@@ -181,6 +181,13 @@ const styles = theme => ({
        marginLeft: '50px', 
        alignText: 'center'
     },
+
+    responsiveLeftMenu: {
+       
+        "@media (max-width: 746px)": {
+            visibility: "hidden"
+        }
+    }
     
 
 });
@@ -262,7 +269,7 @@ class App extends Component {
                     <div className={classes.container}>
                             {/* <MenuBar/>*/}
                             <Header/>
-                        <div style = {{position: 'relative'}} >
+                        <div style = {{position: 'relative'}} className={classes.responsiveLeftMenu} >
 
                             <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '360px',background : '#FFC300'  , marginTop: '200px', marginLeft: '50px', alignText: 'center'}}>
                                 <Grid style =  {{}}   container   direction="column">
