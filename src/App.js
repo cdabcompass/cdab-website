@@ -412,28 +412,33 @@ class App extends Component {
                                 <p className="expTitle">{translate("TEMOIGNAGES")}</p>
                             </div>
                              
-                            <Grid style={{textAlign: "center"}} container spacing={3}>
-                                <Grid item xs={4} md={4}>
-                                    <iframe style={{height: "320px",width : "480px",marginLeft : "10px"}} src="https://player.vimeo.com/video/582899743"
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen> </iframe>
-                                </Grid>
-                                <Grid item xs={4} md={4}>
-                                    <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/635224135" 
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen></iframe>
-                                </Grid>
-                                <Grid item xs={4} md={4}>
-                                    <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/583327058" 
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen></iframe>
-                                </Grid>
-                               
-                            </Grid>
-                            
+                            <div className="row" >
+                                <div className="col-sm-12 col-md-6 col-lg-4 center">
+                                     
+                                        <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/582899743"
+                                                    frameBorder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen> </iframe>
+                                  
+                                </div>
+                                <div className="col-sm-12 col-md-6 col-lg-4 center">
+                                    
+                                        <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/635224135" 
+                                                    frameBorder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen></iframe>
+                                    
+                                </div>
+                                <div className="col-sm-12 col-md-12 col-lg-4 center">
+                                     
+                                        <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/583327058" 
+                                                    frameBorder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen></iframe>
+                                 
+                                </div>
+                            </div>
+
                             <br/>
                             <div>
                                 <a type="button"
