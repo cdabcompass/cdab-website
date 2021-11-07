@@ -375,7 +375,7 @@ class PanelTeacher extends Component {
 
                                             <p>N.B : </p>
                                             <strong>Niveau de compréhension (A,B,C,D)</strong>
-                                            <strong>A:>16 - B:16~14 - C:14~12: - D:~10</strong>
+                                            <strong>A:{'>'}16 - B:16~14 - C:14~12: - D:~10</strong>
                                         </div>
                                         <Button type="submit" className={classes.btnQuiz}
                                         >

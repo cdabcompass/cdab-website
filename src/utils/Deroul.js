@@ -3,6 +3,14 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import { Paper, MenuList, MenuItem } from '@mui/material';
 import Sidebar from './Sidebar';
+import '../index.css';
+import translate from "../i18n/messages/translate";
+import {
+  IconFlagUS,
+  IconFlagFR
+} from 'material-ui-flags';
+import {LOCALES,IntlProvider} from "../i18n";
+import IconButton from '@material-ui/core/IconButton';
 
 export default function Deroul() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -15,7 +23,7 @@ export default function Deroul() {
   };
 
   return (
-    <div>
+    <div className="responsiveMobile">
       <Button
         id="basic-button"
         aria-controls="basic-menu"
@@ -24,7 +32,7 @@ export default function Deroul() {
         style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
         onClick={handleClick}
       >
-        CDAB
+        MENU
       </Button>
       <Menu
         id="basic-menu"
@@ -39,21 +47,45 @@ export default function Deroul() {
         <Button
           style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
           onClick={handleClose}
-          href="/nos_produits"
-        >Nos produits</Button>
+          href="/cdab/plus_infos">{translate("QUI_SOMMES_NOUS")}</Button>
         <br/>
         <Button
           style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
           onClick={handleClose}
-          href="/nos_realisations"
-        >Nos realisations</Button>
+          href="/expertises">{translate("Nos_expertises")}</Button>
         <br/>
         <Button
           style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
           onClick={handleClose}
-          href="/nos_locaux"
-        >Nos locaux</Button>
+          href="/training">{translate("Training")}</Button>
         <br/>
+        <Button
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
+          onClick={handleClose}
+          href="/coaching">{translate("Coach_cdab")}</Button>
+        <br/>
+        <Button
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
+          onClick={handleClose}
+          href="/nos_realisations">{translate("Nos_realisations")}</Button>
+        <br/>
+        <Button
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
+          onClick={handleClose}
+          href="/nos_produits_evenements/produits">{translate("Nos_produits")}</Button>
+        <br/>
+        <Button
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
+          onClick={handleClose}
+          href="/nos_locaux">{translate("Nos_locaux")}</Button>
+        <br/>
+        
+        <Button
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
+          onClick={handleClose}
+          href="/connexion">{translate("Connexion")}</Button>
+        <br/>
+ 
       </Menu>
 
      {/* <Sidebar/> */}
