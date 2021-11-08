@@ -572,7 +572,7 @@ class QuizPrincipal extends Component {
                                 </div>
                                 <div>
                                     <TextField
-                                        label="Nom-prenom-numero-Frère-1"
+                                        label="Nom-prenom-numero-Statut-Frère-1"
                                         value={this.state.curBrother1}
                                         name={"curBrother1"}
                                         onChange={this.handleChange}
@@ -581,7 +581,7 @@ class QuizPrincipal extends Component {
                                         className={classes.textField}
                                     />
                                     <TextField
-                                        label="Nom-prenom-numero-Frère-2"
+                                        label="Nom-prenom-numero-Statut-Frère-2"
                                         value={this.state.curBrother2}
                                         name={"curBrother2"}
                                         onChange={this.handleChange}
@@ -590,7 +590,7 @@ class QuizPrincipal extends Component {
                                         className={classes.textField}
                                     />
                                     <TextField
-                                        label="Nom-prenom-numero-Frère-3"
+                                        label="Nom-prenom-numero-Statut-Frère-3"
                                         value={this.state.curBrother3}
                                         name={"curBrother3"}
                                         onChange={this.handleChange}
@@ -601,7 +601,7 @@ class QuizPrincipal extends Component {
                                 </div>
                                 <div>
                                     <TextField
-                                        label="Nom-prenom-numero-Soeur-1"
+                                        label="Nom-prenom-numero-Statut-Soeur-1"
                                         value={this.state.curSister1}
                                         name={"curSister1"}
                                         onChange={this.handleChange}
@@ -610,7 +610,7 @@ class QuizPrincipal extends Component {
                                         className={classes.textField}
                                     />
                                     <TextField
-                                        label="Nom-prenom-numero-Soeur-2"
+                                        label="Nom-prenom-numero-Statut-Soeur-2"
                                         value={this.state.curSister2}
                                         name={"curSister2"}
                                         onChange={this.handleChange}
@@ -619,7 +619,7 @@ class QuizPrincipal extends Component {
                                         className={classes.textField}
                                     />
                                     <TextField
-                                        label="Nom-prenom-numero-Soeur-3"
+                                        label="Nom-prenom-numero-Statut-Soeur-3"
                                         value={this.state.curSister3}
                                         name={"curSister3"}
                                         onChange={this.handleChange}
