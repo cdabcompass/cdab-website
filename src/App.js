@@ -13,6 +13,11 @@ import MessengerCustomerChat from "react-messenger-customer-chat";
 import {LOCALES,IntlProvider} from "./i18n";
 import translate from "./i18n/messages/translate";
 import {FrenshData, EnglishData} from "./articlesData/articleData"
+import {
+    IconFlagUS,
+    IconFlagFR
+} from 'material-ui-flags';
+import IconButton from '@material-ui/core/IconButton';
 
 const styles = theme => ({
     container: {
@@ -270,6 +275,7 @@ class App extends Component {
                     <div className={classes.container}>
                             {/* <MenuBar/>*/}
                             <Header/>
+   
                         <div style = {{position: 'relative'}} className={classes.responsiveLeftMenu} >
 
                             <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '360px',background : '#FFC300'  , marginTop: '200px', marginLeft: '50px', alignText: 'center'}}>
@@ -382,9 +388,12 @@ class App extends Component {
                         </div>
 
                         <div className={classes.expertises}>
-                            <div style={{marginBottom: "100px"}}>
-                                <p className="expTitle">{translate("NOS_EXPERTISES")}</p>
+                            <div style={{background : "#FFC300",justifyContent: "center", alignItems: "center",marginBottom: "30px",marginTop: "30px",paddingTop : "40px"}} className="row col-sm-12 col-md-12 col-lg-12">
+                                <div style={{marginBottom: "0px",background : "#fffbe8"}}>
+                                    <p style = {{color : '#7c1c18' }} className="expTitle">{translate("NOS_EXPERTISES")}</p>
+                                </div>
                             </div>
+                           
 
                             <ExpertisesComponents/>
 
@@ -409,11 +418,15 @@ class App extends Component {
                         </div>
 
                         <div className={classes.expertises}>
-                            <div style={{marginBottom: "100px"}}>
-                                <p className="expTitle">{translate("TEMOIGNAGES")}</p>
+                            <div style={{background : "#FFC300",justifyContent: "center", alignItems: "center",marginBottom: "30px",marginTop: "30px",paddingTop : "40px"}} className="row col-sm-12 col-md-12 col-lg-12">
+                                <div style={{marginBottom: "0px",background : "#fffbe8"}}>
+                                    <p style = {{color : '#7c1c18' }} className="expTitle">{translate("TEMOIGNAGES")}</p>
+                                </div>
                             </div>
-                             
+                              
                             <div className="row" >
+                                
+ 
                                 <div className="col-sm-12 col-md-6 col-lg-4 center">
                                      
                                         <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/582899743"
