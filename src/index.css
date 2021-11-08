@@ -270,6 +270,11 @@ code {
   margin-right: 250px;
 }
 
+.contSome {
+  margin-top: 200px;
+  text-align: center;
+}
+
 .contain{
   text-align: initial;
   margin-left: 250px;
