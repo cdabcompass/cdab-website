@@ -314,6 +314,16 @@ code {
   }
 }
 
+.close-image {
+  cursor: pointer;
+  display: block;
+  float: right;  
+  z-index: 15;
+  position: absolute; /*newly added*/
+  right: 5px; /*newly added*/
+  top: 5px;/*newly added*/
+}
+
 @media (max-width: 500px) {
   .magTitle{
     width: 90% !important;
