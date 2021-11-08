@@ -13,7 +13,7 @@ export default {
         'VOIR_PLUS': 'VOIR PLUS',
         'En_savoir_plus': 'En savoir plus',
         'Nos_expertises': 'NOS EXPERTISES',
-        'Training': 'ENTRAINEMENT',
+        'Training': 'TRAINING',
         'Coach_cdab': 'COACH-CDAB',
         'Nos_produits_Nos_evenements': 'Nos produits/Nos evenements',
         'Nos_realisations': 'NOS RÉALISATIONS',
