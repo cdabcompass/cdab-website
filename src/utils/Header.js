@@ -105,7 +105,7 @@ changeLangue = (lg) =>{
     return (
       <div>
       <IntlProvider locale={this.state.locale}>
-      <AppBar style =  {{background : '#7c1c18' }} elevation={0} >
+      <AppBar style =  {{background : '#7c1c18', height: "100px"}} elevation={0} >
         <Toolbar>
           <Button href="/"> <Log/> </Button>
 
