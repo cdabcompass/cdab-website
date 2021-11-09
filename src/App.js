@@ -306,7 +306,7 @@ class App extends Component {
 
                             <div style =  {{background : '#a14627' }} className="textAboutUs" className="row" >
                                 {/*<Grid item xs={1}></Grid>*/}
-                                <div className="col-sm-6 col-md-5 col-lg-6">
+                                <div className="col-sm-6 col-md-6 col-lg-6">
                                     {localStorage.getItem("locale_lg")==="fr-fr" && (
                                         <Grid alignItems={"center"}   className={classes.txtUs}>
                                             CDAB Compass est une structure éducative qui vous aide à détecter  le profil d'un  apprenant donné. Elle vous aide à  révéler  de façon précise et concise  le meilleur  de votre enfant, non seulement  sur sa vie éducative,  mais aussi professionnelle.  Sur ce ,cher parent , CDAB compass s'engage à vos côtés  à  connaître  le profil de votre enfant et à y apporter des solutions  qui vous aide :
@@ -412,10 +412,9 @@ class App extends Component {
                                 </div>
                             </div>
                               
-                            <div className="row" >
-                                
- 
-                                <div className="col-sm-12 col-md-6 col-lg-4 center">
+                            <div style={{textAlign: "center"}}  className="row" >
+                                 
+                                <div className="col-sm-12 col-md-12 col-lg-12 center">
                                      
                                         <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/582899743"
                                                     frameBorder="0"
@@ -423,7 +422,7 @@ class App extends Component {
                                                     allowFullScreen> </iframe>
                                   
                                 </div>
-                                <div className="col-sm-12 col-md-6 col-lg-4 center">
+                                <div className="col-sm-12 col-md-12 col-lg-12 center">
                                     
                                         <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/635224135" 
                                                     frameBorder="0"
@@ -431,7 +430,7 @@ class App extends Component {
                                                     allowFullScreen></iframe>
                                     
                                 </div>
-                                <div className="col-sm-12 col-md-12 col-lg-4 center">
+                                <div className="col-sm-12 col-md-12 col-lg-12 center">
                                      
                                         <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/583327058" 
                                                     frameBorder="0"

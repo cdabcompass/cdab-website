@@ -4,6 +4,7 @@ import SchoolIcon from '@material-ui/icons/School';
 import FindInPageIcon from '@material-ui/icons/FindInPage';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
+import 'bootstrap/dist/css/bootstrap.css';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import HomeIcon from '@material-ui/icons/Home';
 import CardCustom from "./CardCustom";
@@ -36,6 +37,7 @@ class ExpertisesComponents extends Component {
         const {classes} = this.props;
         return (
             <div style={{width: "100%"}}>
+            {/*     
                 <Row className={classes.cards}>
                     <Col xs={12} md={6} lg={4}>
                         {localStorage.getItem("locale_lg")==="fr-fr" &&(
@@ -113,7 +115,104 @@ class ExpertisesComponents extends Component {
                         )}
                     </Col>
                 </Row>
+             */}
+                {localStorage.getItem("locale_lg")==="fr-fr" &&(
+                <div style={{margin: "60px"}}>
+                    <div className="row" style={{marginBottom: "50px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                            <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_find_in_page_48px-256.png" style={{width: "50%", borderRadius: "25px", color : "#FFC300"}} className="card-img-top" alt="..."/>
+                            
+                            <div className="card-body">
+                                <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Profil"}</strong> </li> </ul> </h5>
+                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }} >La détection du profil est une phase à travers laquelle nous vous aidons à travers des tests adéquat à découvrir et à connaître la personnalité de l'apprenant, à faire ressortir ses capacités, améliorer ses aptitudes et affermir son environnement Social. Ainsi dit, cette phase est importante et primordiale pour l’apprenant et sa famille.</p>
+                                <a href="/expertises/profil_etudiant" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
+                            </div>
+                        </div>
+
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                            <img src="https://cdn4.iconfinder.com/data/icons/success-filloutline/64/certificate-patent-education-diploma-degree-256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                            <div className="card-body">
+                                <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Projet d’étude national \n ou international"}</strong> </li> </ul> </h5>
+                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>Un projet d’étude est une feuille de route permettant à l'apprenant d’asseoir son parcours scolaire ,estudiantin ou de formation . Il fait preuve de la volonté à atteindre l’univers professionnel. Ainsi ,il comporte les aspirations post-bac et post-brevet des apprenants.</p>
+                                <a href="/expertises/projet_etude" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                            <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/user-account-profile-human-avatar-face-head--256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                            <div className="card-body">
+                                <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Potential"}</strong> </li> </ul> </h5>
+                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>Cette expertise met en relief la méthodologie, l’organisation de travail de l’apprenant dans son espace . il apprend à être autonome et responsable assez rapidement au bout de deux mois.</p>
+                                <a href="/expertises/potential" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
+                            </div>
+                        </div>
+
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                            <img src="https://cdn1.iconfinder.com/data/icons/feather-2/24/book-256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                            <div className="card-body">
+                                <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Professionnel"}</strong> </li> </ul> </h5>
+                                <p className="card-text">S’épanouir dans son emploi est nécessaire à part l’aspect financier. On peut ainsi se recycler ou entreprendre à tout âge.</p>
+                                <a href="/expertises/professional" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 )}
+
+                {localStorage.getItem("locale_lg")==="en-us" &&(
+                <div style={{margin: "60px"}}>
+                    <div className="row" style={{marginBottom: "50px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                            <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_find_in_page_48px-256.png" style={{width: "50%", borderRadius: "25px", color : "#FFC300"}} className="card-img-top" alt="..."/>
+                            
+                            <div className="card-body">
+                                <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Profile"}</strong> </li> </ul> </h5>
+                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }} >The profile detection phase remains a mystery to some and a game of games for others.
+                                In fact, this phase consists in discovering the child and his environment quite simply.</p>
+                                <a href="/expertises/profil_etudiant" className="btn" style={{color : "#BA4A1A"}}>LEARN MORE</a>
+                            </div>
+                        </div>
+
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                            <img src="https://cdn4.iconfinder.com/data/icons/success-filloutline/64/certificate-patent-education-diploma-degree-256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                            <div className="card-body">
+                                <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"National study project \n or international"}</strong> </li> </ul> </h5>
+                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>A study project is a roadmap for profiling one's student career. The study project shows
+                                our desire to reach the professional world. It includes the post-baccalaureate and post-diploma aspirations of learners.</p>
+                                <a href="/expertises/projet_etude" className="btn" style={{color : "#BA4A1A"}}>LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                            <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/user-account-profile-human-avatar-face-head--256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                            <div className="card-body">
+                                <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Potentiel"}</strong> </li> </ul> </h5>
+                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>The CDAB COMPASS educational structure, also specialized in the support and guidance of learners
+                                on all academic, university and even professional levels, attaches importance to this expertise.</p>
+                                <a href="/expertises/potential" className="btn" style={{color : "#BA4A1A"}}>LEARN MORE</a>
+                            </div>
+                        </div>
+
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                            <img src="https://cdn1.iconfinder.com/data/icons/feather-2/24/book-256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                            <div className="card-body">
+                                <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Professional"}</strong> </li> </ul> </h5>
+                                <p className="card-text">Many are those who do not have a professional project, who are embarking on a career
+                                just because their parents want them to do this job.</p>
+                                <a href="/expertises/professional" className="btn" style={{color : "#BA4A1A"}}>LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 )}
+
             </div>
+             
+                
         );
     }
 }
