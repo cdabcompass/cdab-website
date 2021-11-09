@@ -376,16 +376,21 @@ class App extends Component {
                         </div>
 
                         <div className={classes.expertises}>
+                            <div style={{marginBottom: "30px"}} className="row">
+                                <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("NOS_EXPERTISES")}</p>
+                            </div>
+
+                            {/* 
                             <div style={{background : "#FFC300",justifyContent: "center", alignItems: "center",marginBottom: "30px",marginTop: "30px",paddingTop : "40px"}} className="row col-sm-12 col-md-12 col-lg-12">
                                 <div style={{marginBottom: "0px",background : "#fffbe8"}}>
                                     <p style = {{color : '#7c1c18' }} className="expTitle">{translate("NOS_EXPERTISES")}</p>
                                 </div>
                             </div>
-                           
+                           */}
 
                             <ExpertisesComponents/>
-
-                            <br/>
+ 
+                            {/* 
                             { localStorage.getItem("situation") !== "Parent" && (
 
                                 <button type="button"
@@ -403,14 +408,14 @@ class App extends Component {
                                 >{translate("PASSER_VOTRE_TEST")}
                                 </button>
                             )}
+                            */}
                         </div>
 
                         <div className={classes.expertises}>
-                            <div style={{background : "#FFC300",justifyContent: "center", alignItems: "center",marginBottom: "30px",marginTop: "30px",paddingTop : "40px"}} className="row col-sm-12 col-md-12 col-lg-12">
-                                <div style={{marginBottom: "0px",background : "#fffbe8"}}>
-                                    <p style = {{color : '#7c1c18' }} className="expTitle">{translate("TEMOIGNAGES")}</p>
-                                </div>
+                            <div style={{marginBottom: "30px"}} className="row">
+                                <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("TEMOIGNAGES")}</p>
                             </div>
+                           
                               
                             <div style={{textAlign: "center"}}  className="row" >
                                  
@@ -450,27 +455,11 @@ class App extends Component {
                             </div>
                         </div>
 
-                        <div className={classes.countries}>
-                            <div style={{marginBottom: "50px",textAlign: "center"}}>
-                                <p className={classes.sTitle}>{translate("Emplacement")}</p>
+                        <div className={classes.expertises}>
+                            <div style={{marginBottom: "30px"}} className="row">
+                                <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("NOS_ACTUALITES")}</p>
                             </div>
-
-                            <div className={classes.countriesFlag} style={{textAlign: "center"}}>
-                                <div><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></div>
-                                <div><img title={"Sénegal"}  className={classes.drapeau}  src={require("./assets/sn.png")} alt=""/></div>
-                                <div><img title={"Côte d'ivoire"} className={classes.drapeau}  src={require("./assets/ci.png")} alt=""/></div>
-                                <div><img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
-                            </div>
-
-                            <div style={{marginTop: "50px",textAlign: "center"}}>
-                                <p className={classes.subTitle}>{translate("Emplacement_contact")}</p>
-                            </div>
-                        </div>
-
-                        <div className={classes.actualite}>
-                            <div style={{marginBottom: "50px",textAlign: "center"}}>
-                                <p className={classes.sTitle}>{translate("NOS_ACTUALITES")}</p>
-                            </div>
+                            
 
                             {/* <div className={classes.actuCard}>
                                 <div className={classes.cardBody}>
@@ -522,6 +511,46 @@ class App extends Component {
                             </div>
                         </div>
 
+                        <div className={classes.expertises}>
+                            <div style={{marginBottom: "0px"}} className="row">
+                                <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("Emplacement")}</p>
+                            </div>
+                            {/*
+                            <div style={{marginBottom: "50px",textAlign: "center"}}>
+                                <p className={classes.sTitle}> </p>
+                            </div>
+                                */}
+                            
+                        </div>
+                        <div className={classes.countries}>
+                            <div style={{marginBottom: "50px",textAlign: "center"}}>
+                                <p className={classes.sTitle}>{translate("Etudes")} : </p>
+                            </div>
+                            <div className={classes.countriesFlag} style={{textAlign: "center"}}>
+                                <div><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></div>
+                                <div><img title={"Sénegal"}  className={classes.drapeau}  src={require("./assets/sn.png")} alt=""/></div>
+                                <div><img title={"Côte d'ivoire"} className={classes.drapeau}  src={require("./assets/ci.png")} alt=""/></div>
+                                <div><img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
+                                <div><img title={"Dubai"} className={classes.drapeau}  src={require("./assets/dubai.png")} alt=""/></div>
+                                <div><img title={"Etats-Unis"} className={classes.drapeau}  src={require("./assets/usa.png")} alt=""/></div>
+                                <div><img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></div>
+                            </div>
+                        </div>
+
+                        <div className={classes.countries}>
+                            <div style={{marginBottom: "50px",textAlign: "center"}}>
+                                <p className={classes.sTitle}>{translate("Professionnel")} : </p>
+                            </div>
+                            <div className={classes.countriesFlag} style={{textAlign: "center"}}>
+                                <div><img title={"Allemagne"} className={classes.drapeau}  src={require("./assets/allemagne.png")} alt=""/></div>
+                                <div><img title={"Canada"}  className={classes.drapeau}  src={require("./assets/canada.png")} alt=""/></div>
+                            </div>
+                        </div>
+
+                        <div style={{marginTop: "50px",textAlign: "center"}}>
+                                <p className={classes.subTitle}>{translate("Emplacement_contact")}</p>
+                        </div>
+                      
                     </div>
                     <div>
                         <MessengerCustomerChat
