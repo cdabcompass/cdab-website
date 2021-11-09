@@ -22,6 +22,13 @@ const styles = theme => ({
         fontWeight: "bold",
         textDecoration: "underline"
     },
+    expertises: {
+        display: "flex",
+        marginTop: "100px",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column"
+    },
     subTitle: {}
 });
 
@@ -57,8 +64,11 @@ class Expertises extends Component {
                         <MenuBar/>
                     </div>
                     <div style={{marginTop: "200px"}}>
-                        <div className={classes.titles}>
-                            <p className={classes.title}>{translate("NOS_EXPERTISES")}</p>
+                        <div className={classes.expertises}>
+                             
+                            <div style={{marginBottom: "30px"}} className="row">
+                                <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("NOS_EXPERTISES")}</p>
+                            </div>
                             <p className={classes.subTitle}>{translate("Expr_desc")}</p>
                         </div>
                         <ExpertisesComponents/>

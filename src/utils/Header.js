@@ -32,7 +32,7 @@ const styles = theme => ({
         visibility: "hidden"
     }
   },
-
+    
     MenuMobile: {
        
       "@media (max-width: 746px)": {
@@ -77,6 +77,15 @@ handleMenu = (e) => {
     });
 };
 
+specificPath = (path) =>{
+  if(localStorage.getItem("token") !== null){
+      window.location.href = "/quiz"+path;
+  }else{
+      alert("Veuillez tout d'abord créer un compte ou vous connecter!");
+      window.location.href = '/connexion';
+  }
+};
+
 handleClose = (e) => {
   this.setState({
       anchor: null,
@@ -111,15 +120,30 @@ changeLangue = (lg) =>{
 
           <Grid container alignItems="flex-start" justify="center" direction="row" className="responsiveMenu"  >
 
+          <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/">{translate("accueil")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/expertises">{translate("Nos_expertises")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/training">{translate("Training")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/coaching">{translate("Coach_cdab")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/nos_realisations">{translate("Nos_realisations")}</Button>
-          <Button style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Connexion")}</Button>
-
+          { localStorage.getItem("situation") !== "Parent" && (
+            <Button  
+            style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
+            
+            onClick={() => this.specificPath("/principal_quiz")}
+            >{translate("PASSER_VOTRE_TEST")}
+            </Button>
+            )}
+            { localStorage.getItem("situation") === "Parent" && (
+            <Button  
+            style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
+                    
+                    onClick={() => this.specificPath("/parent1")}
+            >{translate("PASSER_VOTRE_TEST")}
+            </Button>
+          )}
           </Grid>
 
-            
+          <Button style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Connexion")}</Button>  
           <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
           <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
            

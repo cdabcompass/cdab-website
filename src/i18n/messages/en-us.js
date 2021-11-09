@@ -6,7 +6,7 @@ export default {
         'NOS_EXPERTISES': 'OUR EXPERTISES',
         'TEMOIGNAGES': 'TESTIMONIALS',
         'PASSER_VOTRE_TEST': 'PASS YOUR TEST',
-        'Emplacement': 'We are currently present in 4 countries',
+        'Emplacement': 'Country of Operation',
         'Emplacement_contact': 'Please do not hesitate to contact us online if you are in another country.',
         'NOS_ACTUALITES': 'OUR NEWS',
         'VOIR_PLUS': 'SEE MORE',
@@ -29,5 +29,8 @@ export default {
 
         'Nos_produits' : 'OUR PRODUCTS',
         'Nos_evenements' : 'OUR EVENTS',
+        'accueil' : 'HOME',
+        'Etudes' : 'Studies',
+        'Professionnel' : 'Professionnal',
     }
 }
