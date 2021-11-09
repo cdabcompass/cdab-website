@@ -312,8 +312,8 @@ class App extends Component {
                         </div>
 
                         <div className={classes.aboutUs}>
-                            <div style={{marginBottom: "30px"}}>
-                                <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("QUI_SOMMES_NOUS")}</p>
+                            <div style={{marginBottom: "30px"}} className="row">
+                                <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("QUI_SOMMES_NOUS")}</p>
                             </div>
 
                             <div style =  {{background : '#a14627' }} className="textAboutUs" className="row" >

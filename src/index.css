@@ -263,6 +263,12 @@ code {
   box-shadow: 4px 4px 20px 0px rgba(146, 125, 250, 0.5)
 }
 
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: #FFC300;
+}
+
 .contAll {
   margin-top: 200px;
   text-align: center;
