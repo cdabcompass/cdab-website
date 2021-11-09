@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
 import CardCustom from "../utils/CardCustom";
 import {IntlProvider} from "../i18n";
+import Sidemenu from "../utils/Sidemenu";
 
 const styles = theme => ({
     container: {
@@ -40,8 +41,9 @@ class Temoignages extends Component {
                 <div className={classes.container}>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
-                    <div style={{marginTop: "200px"}}>
+                    <div style={{marginTop: "300px"}}>
                         <div className={classes.titles}>
                             <p className={classes.title}>Témoignages</p>
                         </div>

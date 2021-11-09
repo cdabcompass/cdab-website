@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import Button from "@material-ui/core/Button";
 import FooterBar from "../utils/FooterBar";
 import {IntlProvider} from "../i18n";
+import Sidemenu from "../utils/Sidemenu";
 
 const styles = theme => ({
     container: {
@@ -62,8 +63,9 @@ class Products extends Component {
                 <div className={classes.container}>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
-                    <div style={{marginTop: "200px"}}>
+                    <div style={{marginTop: "300px"}}>
                         <div className={classes.titles}>
                             <p className={classes.title}>E-book</p>
                             <p className={classes.subTitle}>2 €</p>

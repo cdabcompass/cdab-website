@@ -267,6 +267,8 @@ code {
   height: 50px;
   width: 50px;
   background-color: #FFC300;
+  position: absolute;
+  margin-left: -120px;
 }
 
 .contAll {

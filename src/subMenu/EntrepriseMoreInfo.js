@@ -8,6 +8,7 @@ import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
 import {IntlProvider} from "../i18n";
 import translate from "../i18n/messages/translate";
+import Sidemenu from "../utils/Sidemenu";
 
 const styles = theme => ({
     container: {
@@ -36,10 +37,14 @@ class EntrepriseMoreInfo extends Component {
                 <div className={classes.container}>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
                     <div>
                         <div className="contSome">
-                            <h1 style =  {{color : '#7c1c18', marginBottom : "30px" }}>{translate("QUI_SOMMES_NOUS")}</h1>
+                            <div style={{marginBottom: "30px"}} >
+                                <div style={{marginTop : "22px"}} className="square"></div> <h1 style =  {{color : '#7c1c18', marginBottom : "30px" }}>{translate("QUI_SOMMES_NOUS")}</h1>
+                            </div>
+                            
                             <div style =  {{background : '#a14627', paddingLeft: "250px", paddingRight: "250px", paddingTop : "50px" }}  className="row"   className={classes.containDetails}>
                                 {localStorage.getItem("locale_lg")==="fr-fr" && (
                                     <div style={{textAlign: "justify"}}>

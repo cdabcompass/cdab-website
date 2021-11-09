@@ -6,6 +6,7 @@ import FooterBar from "../utils/FooterBar";
 import Helmet from "react-helmet";
 import translate from "../i18n/messages/translate";
 import {IntlProvider} from "../i18n";
+import Sidemenu from "../utils/Sidemenu";
 
 const styles = theme => ({
     container: {
@@ -34,6 +35,7 @@ class Expertises extends Component {
         const {classes} = this.props;
         return (
             <IntlProvider locale={localStorage.getItem("locale_lg")}>
+                <Sidemenu/>
                 <div className={classes.container}>
                     <Helmet>
                         <meta charSet="utf-8"/>

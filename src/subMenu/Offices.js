@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import {Col, Row} from "react-bootstrap";
 import FooterBar from "../utils/FooterBar";
 import {IntlProvider} from "../i18n";
+import Sidemenu from "../utils/Sidemenu";
 
 const styles = theme => ({
     container: {
@@ -55,8 +56,9 @@ class Office extends Component {
                 <div className={classes.container}>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
-                    <div style={{marginTop: "200px"}}>
+                    <div style={{marginTop: "300px"}}>
                         <div className={classes.titles}>
                             <p className={classes.title}>Nos locaux</p>
                         </div>
