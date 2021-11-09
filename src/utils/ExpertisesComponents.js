@@ -117,9 +117,9 @@ class ExpertisesComponents extends Component {
                 </Row>
              */}
                 {localStorage.getItem("locale_lg")==="fr-fr" &&(
-                <div style={{margin: "60px"}}>
+                <div id="expertiseid" style={{margin: "60px"}}>
                     <div className="row" style={{marginBottom: "50px"}}>
-                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_find_in_page_48px-256.png" style={{width: "50%", borderRadius: "25px", color : "#FFC300"}} className="card-img-top" alt="..."/>
                             
                             <div className="card-body">
@@ -129,7 +129,7 @@ class ExpertisesComponents extends Component {
                             </div>
                         </div>
 
-                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src="https://cdn4.iconfinder.com/data/icons/success-filloutline/64/certificate-patent-education-diploma-degree-256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Projet d’étude national \n ou international"}</strong> </li> </ul> </h5>
@@ -140,7 +140,7 @@ class ExpertisesComponents extends Component {
                     </div>
 
                     <div className="row">
-                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/user-account-profile-human-avatar-face-head--256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Potential"}</strong> </li> </ul> </h5>
@@ -149,7 +149,7 @@ class ExpertisesComponents extends Component {
                             </div>
                         </div>
 
-                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src="https://cdn1.iconfinder.com/data/icons/feather-2/24/book-256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Professionnel"}</strong> </li> </ul> </h5>
@@ -164,7 +164,7 @@ class ExpertisesComponents extends Component {
                 {localStorage.getItem("locale_lg")==="en-us" &&(
                 <div style={{margin: "60px"}}>
                     <div className="row" style={{marginBottom: "50px"}}>
-                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_find_in_page_48px-256.png" style={{width: "50%", borderRadius: "25px", color : "#FFC300"}} className="card-img-top" alt="..."/>
                             
                             <div className="card-body">
@@ -175,7 +175,7 @@ class ExpertisesComponents extends Component {
                             </div>
                         </div>
 
-                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{ flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src="https://cdn4.iconfinder.com/data/icons/success-filloutline/64/certificate-patent-education-diploma-degree-256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"National study project \n or international"}</strong> </li> </ul> </h5>
@@ -187,7 +187,7 @@ class ExpertisesComponents extends Component {
                     </div>
 
                     <div className="row">
-                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/user-account-profile-human-avatar-face-head--256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Potentiel"}</strong> </li> </ul> </h5>
@@ -197,7 +197,7 @@ class ExpertisesComponents extends Component {
                             </div>
                         </div>
 
-                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{width: "18rem", flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                        <div className="card col-sm-12 col-md-12 col-lg-6" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src="https://cdn1.iconfinder.com/data/icons/feather-2/24/book-256.png" style={{width: "50%", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title"><ul> <li style={{color: "#FFC300"}}><strong>{"Professional"}</strong> </li> </ul> </h5>
