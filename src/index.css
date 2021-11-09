@@ -263,6 +263,14 @@ code {
   box-shadow: 4px 4px 20px 0px rgba(146, 125, 250, 0.5)
 }
 
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: #FFC300;
+  position: absolute;
+  margin-left: -120px;
+}
+
 .contAll {
   margin-top: 200px;
   text-align: center;
@@ -304,7 +312,22 @@ code {
     max-width: 50% !important;
   }
 }
-  
+
+@media (max-width: 500px) {
+  .square {
+    height: 20px;
+    width: 20px;
+    background-color: #FFC300;
+    position: absolute;
+    margin-left: -120px;
+    margin-top: 2px !important;
+  }
+
+  #expertiseid {
+    margin: "0px";
+  }
+}
+ 
 @media (max-width: 746px) {
   .responsiveMenu{
     visibility: hidden !important;

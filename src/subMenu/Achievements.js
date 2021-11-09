@@ -9,6 +9,7 @@ import PollIcon from '@material-ui/icons/Poll';
 import FooterBar from "../utils/FooterBar";
 import translate from "../i18n/messages/translate";
 import {IntlProvider} from "../i18n";
+import Sidemenu from "../utils/Sidemenu";
 
 
 const styles = theme => ({
@@ -53,11 +54,13 @@ class Achievements extends Component {
                 <div className={classes.container}>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
-                    <div style={{marginTop: "200px"}}>
+                    <div style={{marginTop: "300px"}}>
                         <div className={classes.titles}>
                             <p className="subTitle">{translate("Nos_realisations")}</p>
                         </div>
+                      
                         {localStorage.getItem("locale_lg")==="fr-fr" &&(
                             <Row className={classes.cards}>
                                 <Col xs={12} md={6} lg={4}>
