@@ -124,7 +124,7 @@ class ExpertisesComponents extends Component {
                             
                             <div className="card-body">
                                 <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Profil"}</strong> </li> </ul> </h5>
-                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }} >La détection du profil est une phase à travers laquelle nous vous aidons à travers des tests adéquat à découvrir et à connaître la personnalité de l'apprenant, à faire ressortir ses capacités, améliorer ses aptitudes et affermir son environnement Social. Ainsi dit, cette phase est importante et primordiale pour l’apprenant et sa famille.</p>
+                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }} >La détection du profil est une phase à travers laquelle nous vous aidons à travers des tests adéquat à découvrir et à connaître la personnalité de l'apprenant, à faire ressortir ses capacités, améliorer ses aptitudes et affermir son environnement Social.</p>
                                 <a href="/expertises/profil_etudiant" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
                             </div>
                         </div>
@@ -137,7 +137,7 @@ class ExpertisesComponents extends Component {
                             <img src={require("../assets/PROJETDETUDES.png")} style={{width: "50%",height: "60%", marginLeft: "-15px" , borderRadius: "25px"}} className="card-img-top" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Projet d’étude national \n ou international"}</strong> </li> </ul> </h5>
-                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>Un projet d’étude est une feuille de route permettant à l'apprenant d’asseoir son parcours scolaire ,estudiantin ou de formation . Il fait preuve de la volonté à atteindre l’univers professionnel. Ainsi ,il comporte les aspirations post-bac et post-brevet des apprenants.</p>
+                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>Un projet d’étude est une feuille de route permettant à l'apprenant d’asseoir son parcours scolaire ,estudiantin ou de formation . Il fait preuve de la volonté à atteindre l’univers professionnel.</p>
                                 <a href="/expertises/projet_etude" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
                             </div>
                         </div>
@@ -187,7 +187,7 @@ class ExpertisesComponents extends Component {
                             <div className="card-body">
                                 <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"National study project \n or international"}</strong> </li> </ul> </h5>
                                 <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>A study project is a roadmap for profiling one's student career. The study project shows
-                                our desire to reach the professional world. It includes the post-baccalaureate and post-diploma aspirations of learners.</p>
+                                our desire to reach the professional world.</p>
                                 <a href="/expertises/projet_etude" className="btn" style={{color : "#BA4A1A"}}>LEARN MORE</a>
                             </div>
                         </div>
