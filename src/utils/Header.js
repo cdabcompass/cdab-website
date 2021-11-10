@@ -143,7 +143,7 @@ changeLangue = (lg) =>{
           )}
           </Grid>
 
-          <Button style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Connexion")}</Button>  
+          <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Connexion")}</Button>  
           <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
           <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
            
