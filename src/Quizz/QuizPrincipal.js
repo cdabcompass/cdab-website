@@ -178,6 +178,25 @@ class QuizPrincipal extends Component {
 
 
             errBirthday: "",
+            nbrDeces:"",
+            nbrDecesMere:"",
+            fatherWhaNumber:"",
+            motherWhaNumber:"",
+            departHeur:"",
+            retourHeur:"",
+            departHeurMere:"",
+            retourHeurMere:"",
+            famillyFinanceStatut:"",
+            autonomieFinanceStatut:"",
+
+            childMarriage:"",
+            childOutMarriage:"",
+            fiancee:"",
+            relationShipWithChild:"",
+            relationShipWithoutChild:"",
+            singleWithChild:"",
+            singleWithoutCHild:"",
+
         };
     }
 
@@ -222,21 +241,29 @@ class QuizPrincipal extends Component {
             "<p>Nature de la famille  : </p><h3>"+this.state.natureFamily+"</h3>"+
             "<p>Père ou tuteur</p>"+
             "<p>Situation du père biologique : </p><h3>"+this.state.fatherAlive+"</h3>"+
+            "<p>Nombre d'année passé depuis le décès : </p><h3>"+this.state.nbrDeces+"</h3>"+
             "<p>Statut : </p><h3>"+this.state.fatherStatut+"</h3>"+
             "<p>Profession du père ou du tuteur : </p><h3>"+this.state.fatherWork+"</h3>"+
             "<p>Numéro : </p><h3>"+this.state.fatherNumber+"</h3>"+
+            "<p>Numéro whatsapp : </p><h3>"+this.state.fatherWhaNumber+"</h3>"+
             "<p>Il revient à la maison : </p><h3>"+this.state.homStayFather+"</h3>"+
+            "<p>Heure de départ : </p><h3>"+this.state.departHeur+"</h3>"+
+            "<p>Heure de retour : </p><h3>"+this.state.retourHeur+"</h3>"+
             "<p>Qualité des relations avec le père (0~9) : </p><h3>"+this.state.relationShipFather+"</h3>"+
             "<p>Mère ou tutrice</p>"+
             "<p>Situation de la mère biologique : </p><h3>"+this.state.motherAlive+"</h3>"+
+            "<p>Nombre d'année passé depuis le décès : </p><h3>"+this.state.nbrDecesMere+"</h3>"+
             "<p>Statut : </p><h3>"+this.state.motherStatut+"</h3>"+
             "<p>Profession de la mère ou tutrice : </p><h3>"+this.state.motherWork+"</h3>"+
             "<p>Numéro : </p><h3>"+this.state.motherNumber+"</h3>"+
             "<p>Il revient à la maison : </p><h3>"+this.state.homStayMother+"</h3>"+
+            "<p>Heure de départ : </p><h3>"+this.state.departHeurMere+"</h3>"+
+            "<p>Heure de retour : </p><h3>"+this.state.retourHeurMere+"</h3>"+
             "<p>Qualité des relations avec le mère (0~9) : </p><h3>"+this.state.relationShipMother+"</h3>"+
             "<p>Lieu d’habitation actuel : </p><h3>"+this.state.userCity+"</h3>"+
             "<p>Nombre de fois de repas dans la journée : </p><h3>"+this.state.foodByDay+"</h3>"+
             "<p>Horaires de repas dans la journée : </p><h3>"+this.state.foodTimeInDay+"</h3>"+
+            "<p>Situation financière de la famille : </p><h3>"+this.state.famillyFinanceStatut+"</h3>"+
             "<p>Parles tu d’éducation sexuelle avec les parents : </p><h3>"+this.state.aboutSexeWithParents+"</h3>"+
             "<p>Horaires de repas dans la journée : </p><h3>"+this.state.aboutSexeWithParents+"</h3>"+
             "<p>Raison : </p><h3>"+this.state.aboutSexeWithParentsRaison+"</h3>"+
@@ -659,15 +686,15 @@ class QuizPrincipal extends Component {
                                                 name="natureFamily" value={this.state.natureFamily} onChange={this.handleChange}>
                                         <FormControlLabel value="Monogame" control={<Radio required={true}
                                                                                            classes={{root: classes.radio, checked: classes.checked}}/>} label="Monogame" />
-                                        <FormControlLabel value="Séparée" control={<Radio required={true}
+                                        {/*<FormControlLabel value="Séparée" control={<Radio required={true}
                                                                                           classes={{root: classes.radio, checked: classes.checked}}/>} label="Séparée" />
                                         <FormControlLabel value="Divrocée" control={<Radio required={true}
-                                                                                           classes={{root: classes.radio, checked: classes.checked}}/>} label="Divrocée" />
+                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="Divrocée" />*/}
                                         <FormControlLabel value="Polygame" control={<Radio required={true}
                                                                                            classes={{root: classes.radio, checked: classes.checked}}/>} label="Polygame" />
                                     </RadioGroup>
                                 </div>
-
+                                   <br/>                                                       
                                 <div>
                                     <FormLabel required={true} component="legend">Situtation du père ou tuteur</FormLabel>
                                     <RadioGroup style={{display: "block"}} aria-label="natureBrothers"
@@ -676,6 +703,18 @@ class QuizPrincipal extends Component {
                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="Vivant" />
                                         <FormControlLabel value="Décédé" control={<Radio required={true}
                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="Décédé" />
+                                        {/*Depuis ajouté*/}
+                                        <p style={{color: "rgba(0, 0, 0, 0.54)"}}>S'il est décédé, Depuis combien d'années ?</p>
+                                            <TextField
+                                                inputProps={{ min: "0", max: "10", step: "1" }}
+                                                placeholder={"3"}
+                                                value={this.state.nbrDeces}
+                                                name={"nbrDeces"}
+                                                onChange={this.handleChange}
+                                                type={"number"}
+                                                required={true}
+                                                className={classes.textField}
+                                            />
                                     </RadioGroup>
                                 </div>
                                 <div>
@@ -713,13 +752,43 @@ class QuizPrincipal extends Component {
                                         required={true}
                                         className={classes.textField}
                                     />
+                                    <TextField
+                                        value={this.state.fatherWhaNumber}
+                                        name={"fatherWhaNumber"}
+                                        label="Numéro whatsapp du père (+indicatif)"
+                                        onChange={this.handleChange}
+                                        type={"tel"}
+                                        required={true}
+                                        className={classes.textField}
+                                    />
                                 </div>
                                 <div>
                                     <FormLabel required={true} component="legend">Il revient à la maison : </FormLabel>
                                     <RadioGroup style={{display: "block"}}
                                                 name="homStayFather" value={this.state.homStayFather} onChange={this.handleChange}>
+                                                    
                                         <FormControlLabel value="Chaque jour" control={<Radio required={true}
                                                                                               classes={{root: classes.radio, checked: classes.checked}}/>} label="Chaque jour" />
+                                           <p style={{color: "rgba(0, 0, 0, 0.54)"}}>S'il revient à la maison,</p>
+                                                    <TextField
+                                                        placeholder={"Heure de départ"}
+                                                        value={this.state.departHeur}
+                                                        name={"departHeur"}
+                                                        onChange={this.handleChange}
+                                                        type={"text"}
+                                                        required={true}
+                                                        className={classes.textField}
+                                                    />
+                                                    <TextField
+                                                        placeholder={"Heure de retour"}
+                                                        value={this.state.retourHeur}
+                                                        name={"retourHeur"}
+                                                        onChange={this.handleChange}
+                                                        type={"text"}
+                                                        required={true}
+                                                        className={classes.textField}
+                                                    />
+                                                    <br/>                                                   
                                         <FormControlLabel value="Une fois / semaine" control={<Radio required={true}
                                                                                                      classes={{root: classes.radio, checked: classes.checked}}/>} label="Une fois / semaine" />
                                         <FormControlLabel value="Une fois / mois" control={<Radio required={true}
@@ -727,6 +796,7 @@ class QuizPrincipal extends Component {
                                         <FormControlLabel value="Une fois / anée" control={<Radio required={true}
                                                                                                   classes={{root: classes.radio, checked: classes.checked}}/>} label="Une fois / année" />
                                     </RadioGroup>
+                                    
                                 </div>
                                 <div>
                                     <br/>
@@ -753,6 +823,17 @@ class QuizPrincipal extends Component {
                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="Vivant" />
                                         <FormControlLabel value="Décédé" control={<Radio required={true}
                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="Décédé" />
+                                                <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Si elle est décédé, Depuis combien d'années ?</p>
+                                                    <TextField
+                                                        inputProps={{ min: "0", max: "10", step: "1" }}
+                                                        placeholder={"3"}
+                                                        value={this.state.nbrDecesMere}
+                                                        name={"nbrDecesMere"}
+                                                        onChange={this.handleChange}
+                                                        type={"number"}
+                                                        required={true}
+                                                        className={classes.textField}
+                                                    />
                                     </RadioGroup>
                                 </div>
                                 <div>
@@ -790,6 +871,15 @@ class QuizPrincipal extends Component {
                                         required={true}
                                         className={classes.textField}
                                     />
+                                    <TextField
+                                        value={this.state.motherWhaNumber}
+                                        name={"motherWhaNumber"}
+                                        label="Numéro whatsapp de la mère (+indicatif)"
+                                        onChange={this.handleChange}
+                                        type={"tel"}
+                                        required={true}
+                                        className={classes.textField}
+                                    />
                                 </div>
                                 <div>
                                     <FormLabel component="legend">Elle revient à la maison : </FormLabel>
@@ -797,6 +887,26 @@ class QuizPrincipal extends Component {
                                                 name="homStayMother" value={this.state.homStayMother} onChange={this.handleChange}>
                                         <FormControlLabel value="Chaque jour" control={<Radio required={true}
                                                                                               classes={{root: classes.radio, checked: classes.checked}}/>} label="Chaque jour" />
+                                                <p style={{color: "rgba(0, 0, 0, 0.54)"}}>S'il revient à la maison,</p>
+                                                    <TextField
+                                                        placeholder={"Heure de départ"}
+                                                        value={this.state.departHeurMere}
+                                                        name={"departHeurMere"}
+                                                        onChange={this.handleChange}
+                                                        type={"text"}
+                                                        required={true}
+                                                        className={classes.textField}
+                                                    />
+                                                    <TextField
+                                                        placeholder={"Heure de retour"}
+                                                        value={this.state.retourHeurMere}
+                                                        name={"retourHeurMere"}
+                                                        onChange={this.handleChange}
+                                                        type={"text"}
+                                                        required={true}
+                                                        className={classes.textField}
+                                                    />
+                                                    <br/>    
                                         <FormControlLabel value="Une fois / semaine" control={<Radio required={true}
                                                                                                      classes={{root: classes.radio, checked: classes.checked}}/>} label="Une fois / semaine" />
                                         <FormControlLabel value="Une fois / mois" control={<Radio required={true}
@@ -850,7 +960,34 @@ class QuizPrincipal extends Component {
                                         className={classes.textField}
                                     />
                                 </div>
+                                {/*Ajout de la situation aisé*/}                                                             
+                                <div>
+                                    <FormLabel component="legend">Je considère que je viens d’une famille</FormLabel>
+                                    <RadioGroup style={{display: "block"}}
+                                                name="famillyFinanceStatut" value={this.state.famillyFinanceStatut} onChange={this.handleChange}>
+                                        <FormControlLabel value="Aisée" control={<Radio required={true}
+                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="Aisée" />
+                                        <FormControlLabel value="Moyenne" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Moyenne" />
+                                        <FormControlLabel value="Modeteste" control={<Radio required={true}
+                                                                                               classes={{root: classes.radio, checked: classes.checked}}/>} label="Modeteste" />
+                                    </RadioGroup>
+                                </div>
+
+                                <div>
+                                    <FormLabel component="legend">Je suis autonome au niveau des finances</FormLabel>
+                                    <RadioGroup style={{display: "block"}}
+                                                name="autonomieFinanceStatut" value={this.state.autonomieFinanceStatut} onChange={this.handleChange}>
+                                        <FormControlLabel value="Totalement" control={<Radio required={true}
+                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="Totalement" />
+                                        <FormControlLabel value="Partiellement" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Partiellement" />
+                                        <FormControlLabel value="Pas du tout" control={<Radio required={true}
+                                                                                               classes={{root: classes.radio, checked: classes.checked}}/>} label="Pas du tout" />
+                                    </RadioGroup>
+                                </div>
                             </div>
+
                             {(localStorage.getItem("situation") !== "Primaire") &&
                             (localStorage.getItem("situation") !== "College")
                             && (
@@ -875,6 +1012,70 @@ class QuizPrincipal extends Component {
                                                 required={true}
                                                 className={classes.textField}
                                             />
+                                        </div>
+                                        <div>
+                                        <FormLabel required={true} component="legend">Mariée avec enfants : </FormLabel>
+                                            <RadioGroup style={{display: "block"}}
+                                                        name="childMarriage" value={this.state.childMarriage} onChange={this.handleChange}>
+                                                <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                                <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                            </RadioGroup>
+
+                                            <FormLabel required={true} component="legend">Mariée sans enfants : </FormLabel>
+                                            <RadioGroup style={{display: "block"}}
+                                                        name="childOutMarriage" value={this.state.childOutMarriage} onChange={this.handleChange}>
+                                                <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                                <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                            </RadioGroup>
+
+                                            <FormLabel required={true} component="legend">Fiancée : </FormLabel>
+                                            <RadioGroup style={{display: "block"}}
+                                                        name="fiancee" value={this.state.fiancee} onChange={this.handleChange}>
+                                                <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                                <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                            </RadioGroup>
+
+                                            <FormLabel required={true} component="legend">En couple (concubinage) avec enfant : </FormLabel>
+                                            <RadioGroup style={{display: "block"}}
+                                                        name="relationShipWithChild" value={this.state.relationShipWithChild} onChange={this.handleChange}>
+                                                <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                                <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                            </RadioGroup>
+
+                                            <FormLabel required={true} component="legend">En couple (concubinage) sans enfant : </FormLabel>
+                                            <RadioGroup style={{display: "block"}}
+                                                        name="relationShipWithoutChild" value={this.state.relationShipWithoutChild} onChange={this.handleChange}>
+                                                <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                                <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                            </RadioGroup>
+
+                                            <FormLabel required={true} component="legend">Célibataire avec enfant : </FormLabel>
+                                            <RadioGroup style={{display: "block"}}
+                                                        name="singleWithChild" value={this.state.singleWithChild} onChange={this.handleChange}>
+                                                <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                                <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                            </RadioGroup>
+
+                                            <FormLabel required={true} component="legend">Célibataire sans enfant : </FormLabel>
+                                            <RadioGroup style={{display: "block"}}
+                                                        name="singleWithChild" value={this.state.singleWi} onChange={this.handleChange}>
+                                                <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                                <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                            </RadioGroup>
                                         </div>
                                         <div>
                                             <FormLabel required={true} component="legend">As-tu un(e) petit(e) ami(e) : </FormLabel>
