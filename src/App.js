@@ -415,52 +415,65 @@ class App extends Component {
                             <div style={{marginBottom: "30px"}} className="row">
                                 <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("TEMOIGNAGES")}</p>
                             </div>
-                           
-                              
-                            <div style={{textAlign: "center", background : '#a14627'}}  className="row" >
-                                 
-                                <div className="col-sm-12 col-md-12 col-lg-12 center">
-                                     
-                                        <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/582899743"
-                                                    frameBorder="0"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowFullScreen> </iframe>
-                                  
-                                </div>
-                                <div className="col-sm-12 col-md-12 col-lg-12 center">
-                                    
-                                        <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/635224135" 
-                                                    frameBorder="0"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowFullScreen></iframe>
-                                    
-                                </div>
-                                <div className="col-sm-12 col-md-12 col-lg-12 center">
-                                     
-                                        <iframe style={{height: "320px",width : "480px"}} src="https://player.vimeo.com/video/583327058" 
-                                                    frameBorder="0"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowFullScreen></iframe>
-                                 
-                                </div>
+                        </div>  
+                            
+                        <div style={{textAlign: "center", background : '#a14627', paddingTop : '10px', paddingBottom :'10px', marginBottom : '-2px'}} className="row">
+                            
+                            <div className="col-sm-6 col-md-6 col-lg-6 center">
+                                
+                                    <iframe style={{height: "320px",width : "480px"}} src="https://www.youtube.com/embed/IQsj1K0eglg"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen> </iframe>
+                            
                             </div>
 
-                            <br/>
-                            <div>
-                                <a type="button"
-                                   className={classes.btnreport}
-                                   onClick={this.redirectReportage}
-                                >{translate("VOIR_PLUS")}
-                                </a>
+                            <div className="col-sm-6 col-md-6 col-lg-6 center">
+                                
+                                    <iframe style={{height: "320px",width : "480px"}} src="https://www.youtube.com/embed/Q2NPLS6VPP8" 
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen></iframe>
+                                
                             </div>
+
                         </div>
 
+                        <div style={{textAlign: "center", background : '#a14627', paddingTop : '10px', paddingBottom :'10px'}} className="row">  
+
+                            <div className="col-sm-6 col-md-6 col-lg-6 center">
+                                
+                                    <iframe style={{height: "320px",width : "480px"}} src="https://www.youtube.com/embed/qqOLjKiUjLg" 
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen></iframe>
+                            
+                            </div>
+
+                            <div className="col-sm-6 col-md-6 col-lg-6 center">
+                                
+                                    <iframe style={{height: "320px",width : "480px"}} src="https://www.youtube.com/embed/H4X1DnqN_eQ" 
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen></iframe>
+                            
+                            </div>
+                        </div>
+ 
+                        <br/>
+                        <div style={{textAlign: "center"}}>
+                            <a type="button"
+                                className={classes.btnreport}
+                                onClick={this.redirectReportage}
+                            >{translate("VOIR_PLUS")}
+                            </a>
+                        </div>
+                        
                         <div className={classes.expertises}>
                             <div style={{marginBottom: "30px"}} className="row">
                                 <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("NOS_ACTUALITES")}</p>
                             </div>
                             
-
                             {/* <div className={classes.actuCard}>
                                 <div className={classes.cardBody}>
                                     <h5>Examens de fin d’année scolaire 2020 : Côte d'ivoire</h5>
@@ -519,8 +532,7 @@ class App extends Component {
                             <div style={{marginBottom: "50px",textAlign: "center"}}>
                                 <p className={classes.sTitle}> </p>
                             </div>
-                                */}
-                            
+                            */}
                         </div>
                         <div style =  {{background : '#5b5b5b', paddingBottom : '30px', marginBottom : '-20px' }}>
                             <div className={classes.countries}>
@@ -562,7 +574,7 @@ class App extends Component {
                             pageId="454141181441870"
                             appId="238909897689414"
                         />
-                        
+
                         <FooterBar/>
                     </div>
                 </div>
