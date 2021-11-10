@@ -522,7 +522,7 @@ class App extends Component {
                                 */}
                             
                         </div>
-                        <div style =  {{background : '#a14627', marginBottom : '10px' }}>
+                        <div style =  {{background : '#5b5b5b', paddingBottom : '30px', marginBottom : '-20px' }}>
                             <div className={classes.countries}>
                                 <div style={{marginBottom: "50px",textAlign: "center"}}>
                                     <p className={classes.sTitle} style =  {{color : '#fff' }}>{translate("Etudes")} : </p>
@@ -551,6 +551,10 @@ class App extends Component {
                             <div style={{marginTop: "50px",textAlign: "center", color : '#fff'}}>
                                     <p className={classes.subTitle}>{translate("Emplacement_contact")}</p>
                             </div>
+
+                            <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><img width={25} src={require("./assets/state_dr.png")}/></button>
+                            <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.FRENCH)}><img width={25} src={require("./assets/france_dr.png")}/></button>
+
                         </div>
                     </div>
                     <div>
@@ -558,9 +562,7 @@ class App extends Component {
                             pageId="454141181441870"
                             appId="238909897689414"
                         />
-                        <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><img width={25} src={require("./assets/state_dr.png")}/></button>
-                        <button className={classes.btnTrade} onClick={()=>this.changeLangue(LOCALES.FRENCH)}><img width={25} src={require("./assets/france_dr.png")}/></button>
-
+                        
                         <FooterBar/>
                     </div>
                 </div>
