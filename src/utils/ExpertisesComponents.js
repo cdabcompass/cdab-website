@@ -36,7 +36,7 @@ class ExpertisesComponents extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div style={{width: "100%",background : '#a14627' }}>
+            <div style={{width: "100%",background : '#fec601', opacity :'0.8'}}>
             {/*     
                 <Row className={classes.cards}>
                     <Col xs={12} md={6} lg={4}>
