@@ -147,7 +147,7 @@ class ExpertisesComponents extends Component {
                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src={require("../assets/POTENTIAL.png")} style={{width: "50%", height: "80%",  marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Potential"}</strong> </li> </ul> </h5>
+                                <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Potentiel"}</strong> </li> </ul> </h5>
                                 <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>Cette expertise met en relief la méthodologie, l’organisation de travail de l’apprenant dans son espace . il apprend à être autonome et responsable assez rapidement au bout de deux mois.</p>
                                 <a href="/expertises/potential" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
                             </div>
@@ -197,7 +197,7 @@ class ExpertisesComponents extends Component {
                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src={require("../assets/POTENTIAL.png")} style={{width: "50%", height: "80%",  marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Potentiel"}</strong> </li> </ul> </h5>
+                                <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Potential"}</strong> </li> </ul> </h5>
                                 <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>The CDAB COMPASS educational structure, also specialized in the support and guidance of learners
                                 on all academic, university and even professional levels, attaches importance to this expertise.</p>
                                 <a href="/expertises/potential" className="btn" style={{color : "#BA4A1A"}}>LEARN MORE</a>
