@@ -2038,11 +2038,74 @@ class QuizPrincipal extends Component {
                                     </RadioGroup>
                                     {this.state.professionalsExperience === "Oui" &&(
                                         <div>
-                                            
+                                        <TextField
+                                        label="secteur d’activités"
+                                        placeholder="le commerce, la logistique, la restauration..."
+                                        name={"activitySector"}
+                                        value={this.state.activitySector}
+                                        onChange={this.handleChange}
+                                        type={"text"}
+                                        required={true}
+                                        className={classes.textField}
+                                        /> 
+                                        <TextField
+                                        label="Nombre de mois"
+                                        placeholder="8"
+                                        name={"activitySectorTime"}
+                                        value={this.state.activitySectorTime}
+                                        onChange={this.handleChange}
+                                        type={"text"}
+                                        required={true}
+                                        className={classes.textField}
+                                        /> 
+                                        <RadioGroup style={{display: "block"}}
+                                                    name="jobStatut" value={this.state.jobStatut} onChange={this.handleChange}>Statut Professionnel Actuel  
+                                        <br/> <FormControlLabel value="En stage" control={<Radio required={true}
+                                                                                        classes={{root: classes.radio, checked: classes.checked}}/>} label="En stage" />
+                                            <FormControlLabel value="En contrat de travail " control={<Radio required={true}
+                                                                                        classes={{root: classes.radio, checked: classes.checked}}/>} label="En contrat de travail " />
+                                            <FormControlLabel value="En intérim " control={<Radio required={true}
+                                                                                        classes={{root: classes.radio, checked: classes.checked}}/>} label="En intérim" />
+                                            <FormControlLabel value="A la maison" control={<Radio required={true}
+                                                                                        classes={{root: classes.radio, checked: classes.checked}}/>} label="A la maison" />
+                                        </RadioGroup>
+                                        <div>
+                                        <TextField
+                                        label="secteur d’activités"
+                                        placeholder="le commerce, la logistique, la restauration..."
+                                        name={"activitySectorJobStatut"}
+                                        value={this.state.activitySectorJobStatut}
+                                        onChange={this.handleChange}
+                                        type={"text"}
+                                        required={true}
+                                        className={classes.textField}
+                                        /> 
+                                        <TextField
+                                        label="Nombre de mois"
+                                        placeholder="8"
+                                        name={"activitySectorTimeJobStatut"}
+                                        value={this.state.activitySectorTimeJobStatut}
+                                        onChange={this.handleChange}
+                                        type={"text"}
+                                        required={true}
+                                        className={classes.textField}
+                                        /> 
+                                        </div>
+
                                         </div>
                                     )}
 
+                                   
                                     <br/>
+                                    <TextField
+                                        label="Expliquez en quelques lignes votre situation actuelle"
+                                        name={"actualSituation"}
+                                        value={this.state.actualSituation}
+                                        onChange={this.handleChange}
+                                        type={"text"}
+                                        required={true}
+                                        className={classes.textField}
+                                    />
                                     <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Métier envisagé : </p>
                                     <TextField
                                         label="Médécin"
