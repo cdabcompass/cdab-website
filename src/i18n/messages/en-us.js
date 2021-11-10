@@ -6,7 +6,7 @@ export default {
         'NOS_EXPERTISES': 'OUR EXPERTISES',
         'TEMOIGNAGES': 'TESTIMONIALS',
         'PASSER_VOTRE_TEST': 'PASS YOUR TEST',
-        'Emplacement': 'Country of Operation',
+        'Emplacement': 'Study and work abroad',
         'Emplacement_contact': 'Please do not hesitate to contact us online if you are in another country.',
         'NOS_ACTUALITES': 'OUR NEWS',
         'VOIR_PLUS': 'SEE MORE',

@@ -417,7 +417,7 @@ class App extends Component {
                             </div>
                            
                               
-                            <div style={{textAlign: "center"}}  className="row" >
+                            <div style={{textAlign: "center", background : '#a14627'}}  className="row" >
                                  
                                 <div className="col-sm-12 col-md-12 col-lg-12 center">
                                      
@@ -522,35 +522,36 @@ class App extends Component {
                                 */}
                             
                         </div>
-                        <div className={classes.countries}>
-                            <div style={{marginBottom: "50px",textAlign: "center"}}>
-                                <p className={classes.sTitle}>{translate("Etudes")} : </p>
+                        <div style =  {{background : '#a14627', marginBottom : '10px' }}>
+                            <div className={classes.countries}>
+                                <div style={{marginBottom: "50px",textAlign: "center"}}>
+                                    <p className={classes.sTitle} style =  {{color : '#fff' }}>{translate("Etudes")} : </p>
+                                </div>
+                                <div className={classes.countriesFlag} style={{textAlign: "center"}}>
+                                    <div><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></div>
+                                    <div><img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></div>
+                                    <div><img title={"Etats-Unis"} className={classes.drapeau}  src={require("./assets/usa.png")} alt=""/></div>
+                                    <div><img title={"Sénegal"}  className={classes.drapeau}  src={require("./assets/sn.png")} alt=""/></div>
+                                    <div><img title={"Dubai"} className={classes.drapeau}  src={require("./assets/dubai.png")} alt=""/></div>
+                                    <div><img title={"Côte d'ivoire"} className={classes.drapeau}  src={require("./assets/ci.png")} alt=""/></div>
+                                    <div><img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
+                                </div>
                             </div>
-                            <div className={classes.countriesFlag} style={{textAlign: "center"}}>
-                                <div><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></div>
-                                <div><img title={"Sénegal"}  className={classes.drapeau}  src={require("./assets/sn.png")} alt=""/></div>
-                                <div><img title={"Côte d'ivoire"} className={classes.drapeau}  src={require("./assets/ci.png")} alt=""/></div>
-                                <div><img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
-                                <div><img title={"Dubai"} className={classes.drapeau}  src={require("./assets/dubai.png")} alt=""/></div>
-                                <div><img title={"Etats-Unis"} className={classes.drapeau}  src={require("./assets/usa.png")} alt=""/></div>
-                                <div><img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></div>
-                            </div>
-                        </div>
 
-                        <div className={classes.countries}>
-                            <div style={{marginBottom: "50px",textAlign: "center"}}>
-                                <p className={classes.sTitle}>{translate("Professionnel")} : </p>
+                            <div className={classes.countries}>
+                                <div style={{marginBottom: "50px",textAlign: "center"}}>
+                                    <p className={classes.sTitle} style =  {{color : '#fff' }}>{translate("Professionnel")} : </p>
+                                </div>
+                                <div className={classes.countriesFlag} style={{textAlign: "center"}}>
+                                    <div><img title={"Allemagne"} className={classes.drapeau}  src={require("./assets/allemagne.png")} alt=""/></div>
+                                    <div><img title={"Canada"}  className={classes.drapeau}  src={require("./assets/canada.png")} alt=""/></div>
+                                </div>
                             </div>
-                            <div className={classes.countriesFlag} style={{textAlign: "center"}}>
-                                <div><img title={"Allemagne"} className={classes.drapeau}  src={require("./assets/allemagne.png")} alt=""/></div>
-                                <div><img title={"Canada"}  className={classes.drapeau}  src={require("./assets/canada.png")} alt=""/></div>
-                            </div>
-                        </div>
 
-                        <div style={{marginTop: "50px",textAlign: "center"}}>
-                                <p className={classes.subTitle}>{translate("Emplacement_contact")}</p>
+                            <div style={{marginTop: "50px",textAlign: "center", color : '#fff'}}>
+                                    <p className={classes.subTitle}>{translate("Emplacement_contact")}</p>
+                            </div>
                         </div>
-                      
                     </div>
                     <div>
                         <MessengerCustomerChat

@@ -7,7 +7,7 @@ export default {
         'NOS_EXPERTISES': 'NOS EXPERTISES',
         'TEMOIGNAGES': 'TEMOIGNAGES',
         'PASSER_VOTRE_TEST': 'PASSER VOTRE TEST',
-        'Emplacement': 'Pays D\'Intervention',
+        'Emplacement': 'Etude et Travail à L\'Etranger',
         'Emplacement_contact': 'N’hésitez pas à nous contacter en ligne si vous êtes dans un autre pays.',
         'NOS_ACTUALITES': 'NOS ACTUALITES',
         'VOIR_PLUS': 'VOIR PLUS',
@@ -30,7 +30,7 @@ export default {
         
         'Nos_produits' : 'NOS PRODUITS',
         'Nos_evenements' : 'NOS EVENEMENTS',
-        'accueil' : 'ACCEUIL',
+        'accueil' : 'ACCUEIL',
         'Etudes' : 'Etudes',
         'Professionnel' : 'Professionnel',
     }
