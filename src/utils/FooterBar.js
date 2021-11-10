@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar/AppBar";
-import FooterAddress from './FooterAddress';
-import FooterSocial from './FooterSocial';
 import {withStyles} from "@material-ui/core";
 
 const styles = theme => ({
@@ -35,7 +33,7 @@ class FooterBar extends Component {
         return (
             <div className="footBar">
                 <div className="footer">
-                    {/*<div className="siegeSocial">
+                    <div className="siegeSocial">
                         <h5 className="footerTitle">SIEGE SOCIAL</h5>
                         <p>
                             1, Place de la Gare<br/>
@@ -69,14 +67,12 @@ class FooterBar extends Component {
                             Quartier Hédzranawoé<br/>
                             +228 91 38 49 12<br/>+228 96 35 53 07
                         </p>
-                         </div>*/}
-
-                         <div>
-                            <FooterAddress />
-                            <FooterSocial />
-                         </div>
+                    </div>
                     <div className="siegeSocial">
-                        
+                        <h5 className="footerTitle">Contact</h5>
+                        <p>
+                            contact@cdabcompass.com
+                        </p>
                         {this.state.isAdmin && (
                             <div className={classes.adminColor}
                                 onClick={()=>{window.location.href = '/panelAdmin'}}>
