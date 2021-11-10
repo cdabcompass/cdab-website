@@ -197,6 +197,10 @@ class QuizPrincipal extends Component {
             singleWithChild:"",
             singleWithoutCHild:"",
 
+            studyLevel:"",
+            bacYear:"",
+            studyFiliaire:'',
+
         };
     }
 
@@ -1070,12 +1074,14 @@ class QuizPrincipal extends Component {
 
                                             <FormLabel required={true} component="legend">Célibataire sans enfant : </FormLabel>
                                             <RadioGroup style={{display: "block"}}
-                                                        name="singleWithChild" value={this.state.singleWi} onChange={this.handleChange}>
+                                                        name="singleWithoutCHild" value={this.state.singleWithoutCHild} onChange={this.handleChange}>
                                                 <FormControlLabel value="Oui" control={<Radio required={true}
                                                                                               classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
                                                 <FormControlLabel value="Non" control={<Radio required={true}
                                                                                               classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
                                             </RadioGroup>
+
+                                            
                                         </div>
                                         <div>
                                             <FormLabel required={true} component="legend">As-tu un(e) petit(e) ami(e) : </FormLabel>
@@ -1163,8 +1169,12 @@ class QuizPrincipal extends Component {
                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Grand Père" />
                                         <FormControlLabel value="Grand Mère" control={<Radio required={true}
                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Grand Mère" />
-                                        <FormControlLabel value="Seul(e) ou à l'internat" control={<Radio required={true}
-                                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="Seul(e) ou à l'internat" />
+                                        <FormControlLabel value="à l'internat" control={<Radio required={true}
+                                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="à l'internat" />
+                                        <FormControlLabel value="Seul(e) " control={<Radio required={true}
+                                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="Seul(e)" />
+                                        <FormControlLabel value="En couple" control={<Radio required={true}
+                                                                                                          classes={{root: classes.radio, checked: classes.checked}}/>} label="En couple" />
                                     </RadioGroup>
                                 </div>
 
@@ -1218,19 +1228,111 @@ class QuizPrincipal extends Component {
                             </div>
 
                             <div className={classes.containerQuizs}>
-                                <h3>Parcours scolaire</h3>
+                                <h3>Parcours universitaire ou parcours formation professionnelle post bac</h3>
                                 <div><br/>
-                                    <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Niveau d'études actuel : </p>
-                                    <TextField
-                                        label="Terminal C ou 4ème"
-                                        value={this.state.schoolLevel}
-                                        name={"schoolLevel"}
-                                        onChange={this.handleChange}
-                                        type={"text"}
-                                        required={true}
-                                        className={classes.textField}
-                                    />
+                                    <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Parcours Scolaire : </p>
+                                    <FormLabel required={true} component="legend">Niveau d'étude actuel ?</FormLabel>
+                                    <RadioGroup style={{display: "block"}}
+                                                        name="studyLevel" value={this.state.studyLevel} onChange={this.handleChange}>
+                                                <FormControlLabel value="Primaire" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Primaire" />
+                                                <FormControlLabel value="Collège" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Collège" />
+                                                <FormControlLabel value="Lycée" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Lycée" />
+                                                <FormControlLabel value="Post-Bac" control={<Radio required={true}
+                                                                                              classes={{root: classes.radio, checked: classes.checked}}/>} label="Post-Bac" />
+                                                
+                                            
+                                            </RadioGroup>
                                 </div>
+                                        {this.state.studyLevel === "Post-Bac" && (
+                                            <div>
+                                                <TextField
+                                                    label ="Année d'obtention du Bac"
+                                                    placeholder={"2014"}
+                                                    value={this.state.bacYear}
+                                                    name={"bacYear"}
+                                                    onChange={this.handleChange}
+                                                    type={"number"}
+                                                    required={true}
+                                                    className={classes.textField}
+                                                />
+                                                <TextField
+                                                    label="Niveau d'étude"
+                                                    placeholder={"Bac"}
+                                                    value={this.state.schoolLevel}
+                                                    name={"schoolLevel"}
+                                                    onChange={this.handleChange}
+                                                    type={"text"}
+                                                    required={true}
+                                                    className={classes.textField}
+                                                />
+                                                <TextField
+                                                    label="Filiaire"
+                                                    placeholder={"Informatique"}
+                                                    value={this.state.studyFiliaire}
+                                                    name={"studyFiliaire"}
+                                                    onChange={this.handleChange}
+                                                    type={"text"}
+                                                    required={true}
+                                                    className={classes.textField}
+                                                />
+                                                <TextField
+                                                    label="Raison du choix de la formation actuelle"
+                                                    placeholder={""}
+                                                    value={this.state.formationChoice}
+                                                    name={"formationChoice"}
+                                                    onChange={this.handleChange}
+                                                    type={"text"}
+                                                    required={true}
+                                                    className={classes.textField}
+                                                />
+                                                <TextField
+                                                    label="Raison du choix de l'établissement'"
+                                                    placeholder={""}
+                                                    value={this.state.univChoice}
+                                                    name={"univChoice"}
+                                                    onChange={this.handleChange}
+                                                    type={"text"}
+                                                    required={true}
+                                                    className={classes.textField}
+                                                />
+                                                <FormLabel required={true} component="legend">Êtes-vous encore étudiant en activité : </FormLabel>
+                                                <RadioGroup style={{display: "block"}}
+                                                            name="studentStatut" value={this.state.studentStatut} onChange={this.handleChange}>
+                                                    <FormControlLabel value="diplômé" control={<Radio required={true}
+                                                                                                classes={{root: classes.radio, checked: classes.checked}}/>} label="diplômé" />
+                                                    <FormControlLabel value="non diplômé" control={<Radio required={true}
+                                                                                                classes={{root: classes.radio, checked: classes.checked}}/>} label="non diplômé" />
+                                                </RadioGroup>
+                                                {this.state.studentStatut === "diplômé" && (<div>
+                                                    <TextField
+                                                    label ="Année d'obtention du diplôme universitaire"
+                                                    placeholder={"2014"}
+                                                    value={this.state.univGraduateYear}
+                                                    name={"univGraduateYear"}
+                                                    onChange={this.handleChange}
+                                                    type={"number"}
+                                                    required={true}
+                                                    className={classes.textField}
+                                                />
+                                                </div>)}
+                                                {this.state.studentStatut === "non diplômé" && (<div>
+                                                    <TextField
+                                                    label ="Année d’arrêt des études et raisons"
+                                                    placeholder={"2014"}
+                                                    value={this.state.univNonGraduateYearAndRaison}
+                                                    name={"univNonGraduateYearAndRaison"}
+                                                    onChange={this.handleChange}
+                                                    type={"text"}
+                                                    required={true}
+                                                    className={classes.textField}
+                                                />
+                                                </div>)}
+                                                
+                                            </div>
+                                        )}                                    
                                 <FormLabel required={true} component="legend">J'ai déjà redoublé une classe : </FormLabel>
                                 <RadioGroup style={{display: "block"}}
                                             name="repeatClass" value={this.state.repeatClass} onChange={this.handleChange}>
@@ -1253,7 +1355,7 @@ class QuizPrincipal extends Component {
                                     </div>
                                 )}
                                 <div><br/>
-                                    <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Nom et lieu de l’établissement fréquenté actuellement :</p>
+                                    <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Nom et lieu de l’établissement de formation actuelle :</p>
                                     <TextField
                                         label="Ecole International St. Jean"
                                         value={this.state.actualSchool}
@@ -1264,7 +1366,7 @@ class QuizPrincipal extends Component {
                                         className={classes.textField}
                                     />
                                     <TextField
-                                        label="Raison du choix de l'école"
+                                        label="Raison du choix de l'établissement"
                                         value={this.state.raisonActualSchool}
                                         name={"raisonActualSchool"}
                                         onChange={this.handleChange}
@@ -1313,7 +1415,7 @@ class QuizPrincipal extends Component {
                                         <FormControlLabel value="Non" control={<Radio required={true}
                                                                                       classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
                                     </RadioGroup>
-                                    {this.state.comeSchoolAlone === "Oui" &&(
+                                    {this.state.comeSchoolAlone === "Non" &&(
                                         <div>
                                             <TextField
                                                 label="Accompagné par ?"
@@ -1435,7 +1537,7 @@ class QuizPrincipal extends Component {
                                 <div><br/>
                                     <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Moyenne générale 6ème-5ème : </p>
                                     <TextField
-                                        label="16.78"
+                                        label="Moyenne générale 6ème"
                                         value={this.state.moyCl6}
                                         name={"moyCl6"}
                                         onChange={this.handleChange}
@@ -1444,7 +1546,7 @@ class QuizPrincipal extends Component {
                                         className={classes.textField}
                                     />
                                     <TextField
-                                        label="16.78"
+                                        label="Moyenne générale 5ème"
                                         value={this.state.moyCl5}
                                         name={"moyCl5"}
                                         onChange={this.handleChange}
@@ -1456,7 +1558,7 @@ class QuizPrincipal extends Component {
                                 <div><br/>
                                     <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Moyenne générale 4ème-3ème : </p>
                                     <TextField
-                                        label="16.78"
+                                        label="Moyenne générale 4ème"
                                         value={this.state.moyCl4}
                                         name={"moyCl4"}
                                         onChange={this.handleChange}
@@ -1465,7 +1567,7 @@ class QuizPrincipal extends Component {
                                         className={classes.textField}
                                     />
                                     <TextField
-                                        label="16.78"
+                                        label="Moyenne générale 3ème"
                                         value={this.state.moyCl3}
                                         name={"moyCl3"}
                                         onChange={this.handleChange}
@@ -1513,8 +1615,7 @@ class QuizPrincipal extends Component {
                                         </div>
                                     )}
                                 </div>
-                                }
-
+                                    }
                                 <div><br/>
                                     <p style={{color: "black"}}>Matières principales et leurs moyennes : </p>
                                     <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Ecrivez la matière et sa moyenne générale </p>
@@ -1526,7 +1627,7 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={true}
                                         className={classes.textField}
-                                    />
+                                        />
                                     <TextField
                                         label="Nom de la matière - Moyenne générale"
                                         value={this.state.principMat2}
@@ -1535,7 +1636,7 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={true}
                                         className={classes.textField}
-                                    />
+                                        />
                                     <TextField
                                         label="Nom de la matière - Moyenne générale"
                                         value={this.state.principMat3}
@@ -1544,7 +1645,7 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={true}
                                         className={classes.textField}
-                                    />
+                                        />
                                     <TextField
                                         label="Nom de la matière - Moyenne générale"
                                         value={this.state.principMat4}
@@ -1553,7 +1654,7 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={false}
                                         className={classes.textField}
-                                    />
+                                        />
                                     <TextField
                                         label="Nom de la matière - Moyenne générale"
                                         value={this.state.principMat5}
@@ -1562,7 +1663,7 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={false}
                                         className={classes.textField}
-                                    />
+                                        />
                                     <TextField
                                         label="Nom de la matière - Moyenne générale"
                                         value={this.state.principMat6}
@@ -1571,7 +1672,7 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={false}
                                         className={classes.textField}
-                                    />
+                                        />
                                     <TextField
                                         label="Nom de la matière - Moyenne générale"
                                         value={this.state.principMat7}
@@ -1580,7 +1681,7 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={false}
                                         className={classes.textField}
-                                    />
+                                        />
                                     <TextField
                                         label="Nom de la matière - Moyenne générale"
                                         value={this.state.principMat8}
@@ -1589,7 +1690,7 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={false}
                                         className={classes.textField}
-                                    />
+                                        />
                                     <TextField
                                         label="Nom de la matière - Moyenne générale"
                                         value={this.state.principMat9}
@@ -1598,7 +1699,7 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={false}
                                         className={classes.textField}
-                                    />
+                                        />
                                     <TextField
                                         label="Nom de la matière - Moyenne générale"
                                         value={this.state.principMat10}
@@ -1607,9 +1708,10 @@ class QuizPrincipal extends Component {
                                         type={"text"}
                                         required={false}
                                         className={classes.textField}
-                                    />
+                                        />
                                 </div>
 
+                                   
                                 <div><br/>
                                     <p style={{color: "black"}}>Comment je me comporte en classe: </p>
                                     <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Ecrivez la matière et choisissez la manière dont vous vous comportez entre ses options </p>
@@ -1625,7 +1727,8 @@ class QuizPrincipal extends Component {
                                         </ol>
                                     </p>
                                     <TextField
-                                        label="Nom de la matière - Note (1~7) (Maths - 2)"
+                                        label="Nom de la matière - Note (1~7) "
+                                        placeholder="(Maths - 2)"
                                         value={this.state.comportMat1}
                                         name={"comportMat1"}
                                         onChange={this.handleChange}
@@ -1772,6 +1875,35 @@ class QuizPrincipal extends Component {
                                         <FormControlLabel value="tik-tok" control={<Radio required={true}
                                                                                           classes={{root: classes.radio, checked: classes.checked}}/>} label="tik-tok" />
                                     </RadioGroup>
+
+                                    <FormLabel required={true} component="legend">Raison d'utilisation de ce réseau: </FormLabel><br/>
+                                    <FormLabel required={true} component="legend"> discuter avec les membres de la famille : lien de parenté :  </FormLabel>
+                                    <RadioGroup style={{display: "block"}}
+                                                name="raisonSocialNetwork" value={this.state.raisonSocialNetwork} onChange={this.handleChange}>
+                                        <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                           classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                        <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                                classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                    </RadioGroup>
+
+                                    <FormLabel required={true} component="legend"> discuter avec les membres de la famille : lien de parenté :  </FormLabel>
+                                    <RadioGroup style={{display: "block"}}
+                                                name="raisonSocialNetwork" value={this.state.raisonSocialNetwork} onChange={this.handleChange}>
+                                        <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                           classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                        <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                                classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                    </RadioGroup>
+
+                                    <FormLabel required={true} component="legend"> discuter avec ses amis d’enfance, d’école, du quartier</FormLabel>
+                                    <RadioGroup style={{display: "block"}}
+                                                name="raisonSocialNetwork" value={this.state.raisonSocialNetwork} onChange={this.handleChange}>
+                                        <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                           classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                        <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                                classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                    </RadioGroup>
+
                                 </div>
 
                                 <div>
@@ -1897,6 +2029,19 @@ class QuizPrincipal extends Component {
                             <div className={classes.containerQuizs}>
                                 <h3>Perspectives professionnelles</h3>
                                 <div>
+                                    <RadioGroup style={{display: "block"}}
+                                                name="professionalsExperience" value={this.state.professionalsExperience} onChange={this.handleChange}>Expérience professionnelle acquise 
+                                       <br/> <FormControlLabel value="Oui" control={<Radio required={true}
+                                                                                      classes={{root: classes.radio, checked: classes.checked}}/>} label="Oui" />
+                                        <FormControlLabel value="Non" control={<Radio required={true}
+                                                                                      classes={{root: classes.radio, checked: classes.checked}}/>} label="Non" />
+                                    </RadioGroup>
+                                    {this.state.professionalsExperience === "Oui" &&(
+                                        <div>
+                                            
+                                        </div>
+                                    )}
+
                                     <br/>
                                     <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Métier envisagé : </p>
                                     <TextField
