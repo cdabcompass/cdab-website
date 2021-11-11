@@ -117,7 +117,7 @@ class ExpertisesComponents extends Component {
                 </Row>
              */}
                 {localStorage.getItem("locale_lg")==="fr-fr" &&(
-                <div id="expertiseid" style={{margin: "60px"}}>
+                <div id="expertiseid" style={{margin: "60px", paddingTop: "50px",paddingBottom: "50px"}}>
                     <div className="row" style={{marginBottom: "50px"}}>
                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src={require("../assets/PROFIL.png")} style={{width: "50%", height: "60%" , marginLeft: "-15px", borderRadius: "25px", color : "#FFC300"}} className="card-img-top" alt="..."/>
