@@ -47,6 +47,11 @@ export default function Deroul() {
         <Button
           style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
           onClick={handleClose}
+          href="/">{translate("accueil")}</Button>
+        <br/>
+        <Button
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
+          onClick={handleClose}
           href="/cdab/plus_infos">{translate("QUI_SOMMES_NOUS")}</Button>
         <br/>
         <Button
@@ -79,11 +84,32 @@ export default function Deroul() {
           onClick={handleClose}
           href="/nos_locaux">{translate("Nos_locaux")}</Button>
         <br/>
+
+        {localStorage.getItem("situation") !== "Parent" && (
+        <Button  
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}  
+          onClick={() => this.specificPath("/principal_quiz")}
+           >{translate("PASSER_VOTRE_TEST")}
+         </Button> 
+        )}
+
+        {localStorage.getItem("situation") === "Parent" && (
+        <Button  
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}       
+          onClick={() => this.specificPath("/parent1")}
+          >{translate("PASSER_VOTRE_TEST")}
+        </Button>
+        )}
         
         <Button
           style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
           onClick={handleClose}
-          href="/connexion">{translate("Connexion")}</Button>
+          href="/connexion">{translate("Login")}</Button>
+        <br/>
+        <Button
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
+          onClick={handleClose}
+          href="/inscription">{translate("Inscription")}</Button>
         <br/>
  
       </Menu>

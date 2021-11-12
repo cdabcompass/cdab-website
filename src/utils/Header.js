@@ -118,7 +118,23 @@ changeLangue = (lg) =>{
         <Toolbar>
           <Button href="/"> <Log/> </Button>
 
-          <Grid container alignItems="flex-start" justify="center" direction="row" className="responsiveMenu"  >
+          <Grid container alignItems="flex-end" justify="flex-end" direction="row" className="responsiveMenu"  >
+
+          <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Login")}</Button>  
+          <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/inscription"><AccountCircleIcon/>{translate("Inscription")}</Button>  
+          
+          <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
+          <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
+          
+          </Grid>
+  
+          <Deroul/>
+        </Toolbar>
+
+        <Toolbar className="responsiveMenu2">
+          <Button href="/">  </Button>
+
+          <Grid container alignItems="flex-start" justify="flex-start" direction="row" className="responsiveMenu">
 
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/">{translate("accueil")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/expertises">{translate("Nos_expertises")}</Button>
@@ -142,17 +158,14 @@ changeLangue = (lg) =>{
             </Button>
           )}
           </Grid>
-
-          <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Connexion")}</Button>  
-          <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
-          <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
-           
-          <Deroul/>
-
+ 
         </Toolbar>
       </AppBar>
+
+      
       </IntlProvider>
-    </div>
+      </div>
+    
     )
   }
 }

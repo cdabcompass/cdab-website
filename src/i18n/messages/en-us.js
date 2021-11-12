@@ -19,13 +19,14 @@ export default {
         'Nos_locaux': 'OUR OFFICES',
         'Deconnexion': 'Logout',
         'Connexion_Inscription': 'SignIn-SignUp',
-        'Connexion': 'Login',
+        'Login': 'Login',
         'Inscription': 'Register',
         'Expr_desc': 'We support you during each of these processes',
         'Passer_le_test_general': 'Pass general test ',
         'Proceder_au_paiement': 'Proceed to payment',
         'Passer_test_specifique': 'Take the specific test',
         'Connexion' : 'Login / Registration',
+      
 
         'Nos_produits' : 'OUR PRODUCTS',
         'Nos_evenements' : 'OUR EVENTS',

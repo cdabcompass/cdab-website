@@ -328,9 +328,21 @@ code {
   }
 }
  
+@media (min-width: 747px) {
+  
+  .responsiveMenu2{
+    margin-top: -13px !important;
+  }
+ 
+}
+
 @media (max-width: 746px) {
   .responsiveMenu{
     visibility: hidden !important;
+  }
+
+  .responsiveMenu2{
+    margin-top: 0px !important;
   }
  
 }
