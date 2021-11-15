@@ -5,12 +5,15 @@ import { Paper, MenuList, MenuItem } from '@mui/material';
 import Sidebar from './Sidebar';
 import '../index.css';
 import translate from "../i18n/messages/translate";
+import TokenApi from "./TokenApi";
 import {
   IconFlagUS,
   IconFlagFR
 } from 'material-ui-flags';
 import {LOCALES,IntlProvider} from "../i18n";
 import IconButton from '@material-ui/core/IconButton';
+
+
 
 export default function Deroul() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -21,8 +24,8 @@ export default function Deroul() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  disconnect = () => {
+  
+  const disconnect = () => {
     TokenApi.logout();
     window.location = "/connexion";
   };
@@ -133,7 +136,7 @@ export default function Deroul() {
           {localStorage.getItem("token") !== null && (
            <Button className="responsiveMenu" 
            style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} 
-           onClick={() => this.disconnect()}><AccountCircleIcon/>{translate("Deconnexion")}</Button>  
+           onClick={() => this.disconnect()}>{translate("Deconnexion")}</Button>  
           
           )}
  
