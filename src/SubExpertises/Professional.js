@@ -4,6 +4,7 @@ import MenuBar from "../utils/MenuBar";
 import DetailsPageBanner from "../utils/DetailsPageBanner";
 import Button from "@material-ui/core/Button";
 import FooterBar from "../utils/FooterBar";
+import Sidemenu from "../utils/Sidemenu";
 import Helmet from "react-helmet";
 import {IntlProvider} from "../i18n";
 
@@ -63,6 +64,7 @@ class Professional extends Component {
 
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
                     <div style={{marginTop: "100px",marginBottom: "100px"}}>
                         {localStorage.getItem("locale_lg")==="fr-fr" &&(

@@ -7,6 +7,7 @@ import {Modal} from "react-bootstrap";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
+import Sidemenu from "../utils/Sidemenu";
 import FooterBar from "../utils/FooterBar";
 import Helmet from "react-helmet";
 import {IntlProvider} from "../i18n";
@@ -109,6 +110,7 @@ class StudentHousing extends Component {
                     </Helmet>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
                     <div style={{marginTop: "100px",marginBottom: "100px"}}>
                         <DetailsPageBanner

@@ -3,6 +3,7 @@ import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import DetailsPageBanner from "../utils/DetailsPageBanner";
 import Button from "@material-ui/core/Button";
+import Sidemenu from "../utils/Sidemenu";
 import FooterBar from "../utils/FooterBar";
 import Helmet from "react-helmet";
 import {IntlProvider} from "../i18n";
@@ -61,6 +62,7 @@ class ScolarOrientation extends Component {
                     </Helmet>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
                     <div style={{marginTop: "100px", marginBottom: "100px"}}>
                         <DetailsPageBanner

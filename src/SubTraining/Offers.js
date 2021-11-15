@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
+import Sidemenu from "../utils/Sidemenu";
 import CardCustom from "../utils/CardCustom";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
@@ -111,6 +112,7 @@ class Offers extends Component {
                 <div className={classes.container}>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
                     <div style={{marginTop: "200px",
                         marginRight: "auto",

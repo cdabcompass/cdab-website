@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
+import Sidemenu from "../utils/Sidemenu";
 import {IntlProvider} from "../i18n";
 
 const styles = theme => ({
@@ -34,6 +35,7 @@ class Parents extends Component {
                 <div className={classes.container}>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
                     <div style={{marginTop: "200px"}}>
                         <div className={classes.titles}>

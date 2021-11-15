@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
+import Sidemenu from "../utils/Sidemenu";
 import Helmet from "react-helmet";
 import {IntlProvider} from "../i18n";
 
@@ -41,8 +42,9 @@ class Formations extends Component {
                     </Helmet>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
-                    <div className="subMenu">
+                    <div className="subMenu" >
                         Pourquoi se former ?<br/><br/>
                         <strong>La formation</strong> peut se définir du point de vu général comme étant un apprentissage de
                         connaissances et de méthodes de travail mais aussi d’une expérimentation nouvelle dans divers
