@@ -137,7 +137,7 @@ changeLangue = (lg) =>{
 
            { localStorage.getItem("token") !== null && (
            <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} 
-           onClick={() => this.disconnect}><AccountCircleIcon/>{translate("Deconnexion")}</Button>  
+           onClick={() => this.disconnect()}><AccountCircleIcon/>{translate("Deconnexion")}</Button>  
           
           )}
 
