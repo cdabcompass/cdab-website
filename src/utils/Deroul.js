@@ -22,6 +22,11 @@ export default function Deroul() {
     setAnchorEl(null);
   };
 
+  disconnect = () => {
+    TokenApi.logout();
+    window.location = "/connexion";
+  };
+
   return (
     <div className="responsiveMobile">
       <Button
@@ -44,6 +49,13 @@ export default function Deroul() {
         }}
 
       >
+        {localStorage.getItem("token") !== null && (
+           <h6 className="responsiveMenu" style =  {{ color : 'white'}}>{translate("connecte_comme")} {localStorage.getItem("firstName")} {localStorage.getItem("lastName")}</h6>  
+        )}
+        { localStorage.getItem("token") !== null && (
+        <br/>   
+        )}
+        
         <Button
           style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
           onClick={handleClose}
@@ -100,17 +112,30 @@ export default function Deroul() {
           >{translate("PASSER_VOTRE_TEST")}
         </Button>
         )}
-        
-        <Button
-          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
-          onClick={handleClose}
-          href="/connexion">{translate("Login")}</Button>
+         
         <br/>
-        <Button
-          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
-          onClick={handleClose}
-          href="/inscription">{translate("Inscription")}</Button>
-        <br/>
+
+          {localStorage.getItem("token") === null && (
+           <Button
+           style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
+           onClick={handleClose}
+           href="/connexion">{translate("Login")}</Button>
+          )}
+ 
+          <br/>
+          {localStorage.getItem("token") === null && (
+           <Button
+           style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}
+           onClick={handleClose}
+           href="/inscription">{translate("Inscription")}</Button>
+          )}
+
+          {localStorage.getItem("token") !== null && (
+           <Button className="responsiveMenu" 
+           style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} 
+           onClick={() => this.disconnect()}><AccountCircleIcon/>{translate("Deconnexion")}</Button>  
+          
+          )}
  
       </Menu>
 
