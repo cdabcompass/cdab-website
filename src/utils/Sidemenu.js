@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 
 function Sidemenu(){
   return(
-    <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '360px',background : '#FFC300'  , marginTop: '170px', marginLeft: '50px', alignText: 'center'}}>
+    <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '380px',background : '#FFC300'  , marginTop: '120px', marginLeft: '50px', alignText: 'center'}}>
         <Grid style =  {{}}   container   direction="column">
 
         <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/cdab/plus_infos"><strong>{translate("QUI_SOMMES_NOUS")}</strong></Button>

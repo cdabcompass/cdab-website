@@ -120,8 +120,27 @@ changeLangue = (lg) =>{
 
           <Grid container alignItems="flex-end" justify="flex-end" direction="row" className="responsiveMenu"  >
 
-          <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Login")}</Button>  
-          <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/inscription"><AccountCircleIcon/>{translate("Inscription")}</Button>  
+          { localStorage.getItem("token") === null && (
+           <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Login")}</Button>  
+          
+          )}
+
+          { localStorage.getItem("token") !== null && (
+           <h4 className="responsiveMenu" style =  {{ color : 'white',marginRight : '15px'}}>{translate("connecte_comme")} {localStorage.getItem("firstName")} {localStorage.getItem("lastName")}</h4>  
+          
+          )}
+
+          { localStorage.getItem("token") === null && (
+           <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/inscription"><AccountCircleIcon/>{translate("Inscription")}</Button>  
+          
+          )}
+
+           { localStorage.getItem("token") !== null && (
+           <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} 
+           onClick={() => this.disconnect}><AccountCircleIcon/>{translate("Deconnexion")}</Button>  
+          
+          )}
+
           
           <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
           <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
@@ -141,7 +160,7 @@ changeLangue = (lg) =>{
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/training">{translate("Training")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/coaching">{translate("Coach_cdab")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/nos_realisations">{translate("Nos_realisations")}</Button>
-          { localStorage.getItem("situation") !== "Parent" && (
+           { localStorage.getItem("situation") !== "Parent" && (
             <Button  
             style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
             
@@ -156,7 +175,7 @@ changeLangue = (lg) =>{
                     onClick={() => this.specificPath("/parent1")}
             >{translate("PASSER_VOTRE_TEST")}
             </Button>
-          )}
+           )}
           </Grid>
  
         </Toolbar>

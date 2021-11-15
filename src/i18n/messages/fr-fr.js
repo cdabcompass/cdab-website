@@ -29,9 +29,10 @@ export default {
         'Connexion' : 'Connexion / Inscription',
         
         'Nos_produits' : 'NOS PRODUITS',
-        'Nos_evenements' : 'NOS EVENEMENTS',
+        'Nos_evenements' : 'NOS EVENEMENTS / NOS PARTNAIRES',
         'accueil' : 'ACCUEIL',
         'Etudes' : 'Etudes',
         'Professionnel' : 'Professionnel',
+        'connecte_comme' : 'Bienvenue '
     }
 }

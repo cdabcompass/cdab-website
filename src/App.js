@@ -309,7 +309,7 @@ class App extends Component {
                                 <div className="col-sm-6 col-md-6 col-lg-6">
                                     {localStorage.getItem("locale_lg")==="fr-fr" && (
                                         <Grid alignItems={"center"}   className={classes.txtUs}>
-                                            CDAB Compass est une structure éducative qui vous aide à détecter  le profil d'un  apprenant donné. Elle vous aide à  révéler  de façon précise et concise  le meilleur  de votre enfant, non seulement  sur sa vie éducative,  mais aussi professionnelle.  Sur ce ,cher parent , CDAB compass s'engage à vos côtés  à  connaître  le profil de votre enfant et à y apporter des solutions  qui vous aide :
+                                            CDAB Compass est une structure éducative qui vous aide à détecter  le profil d'un  apprenant donné. Elle vous aide à  révéler  de façon précise et concise  le meilleur  de votre enfant, non seulement  sur sa vie éducative,  mais aussi professionnelle.  Sur ce ,cher parent , CDAB Compass s'engage à vos côtés  à  connaître  le profil de votre enfant et à y apporter des solutions  qui vous aide :
                                             <br/><br/>
                                             <ul>
                                                 <li><strong>sur la personnalité à</strong> faire ressortir son potentiel et ses talents ,le rendre autonome ,le rendre responsable,</li>

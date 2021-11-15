@@ -29,9 +29,10 @@ export default {
       
 
         'Nos_produits' : 'OUR PRODUCTS',
-        'Nos_evenements' : 'OUR EVENTS',
+        'Nos_evenements' : 'OUR EVENTS / OUR PARTNERS',
         'accueil' : 'HOME',
         'Etudes' : 'Studies',
         'Professionnel' : 'Professionnal',
+        'connecte_comme' : 'Welcome '
     }
 }
