@@ -2,6 +2,13 @@ import React, {Component} from 'react';
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import {withStyles} from "@material-ui/core";
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { Icon, Button, Grid } from '@mui/material';
+
 
 const styles = theme => ({
     adminColor: {
@@ -10,6 +17,13 @@ const styles = theme => ({
         fontWeight: 'bold'
     }
 });
+
+const Item = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: 'white',
+  }));
 
 class FooterBar extends Component {
     constructor(props){
@@ -33,6 +47,35 @@ class FooterBar extends Component {
         return (
             <div className="footBar">
                 <div className="footer">
+
+                    <div className="siegeSocial">
+                    <h5 className="footerTitle"> </h5>
+                        <Button
+                            style =  {{background : '#0669e1', color : 'white', borderRadius: 10 }}
+                            href="https://www.facebook.com/CedricCoachCdab"><FacebookIcon/>
+                                facebook
+                        </Button>
+                       
+                    </div>
+                    <div className="siegeSocial">
+                    <h5 className="footerTitle"> </h5>
+                        <Button
+                            style =  {{background : '#1a8cd8', color : 'white', borderRadius: 10 }}
+                            href="https://twitter.com/cdabcompass"><TwitterIcon/>
+                                Twitter
+                        </Button>
+                       
+                    </div>
+                    <div className="siegeSocial">
+                     <h5 className="footerTitle"> </h5>
+                        <Button
+                            style =  {{background : ' #8a3ab9', color : 'white', borderRadius: 10 }}
+                            href="https://www.instagram.com/cdab.compass/"><InstagramIcon/>
+                                Instagram
+                        </Button>
+                       
+                    </div>
+                    {/*  
                     <div className="siegeSocial">
                         <h5 className="footerTitle">SIEGE SOCIAL</h5>
                         <p>
@@ -68,6 +111,7 @@ class FooterBar extends Component {
                             +228 91 38 49 12<br/>+228 96 35 53 07
                         </p>
                     </div>
+                */}
                     <div className="siegeSocial">
                         <h5 className="footerTitle">Contact</h5>
                         <p>
