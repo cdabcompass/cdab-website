@@ -66,7 +66,7 @@ class Expertises extends Component {
                     <div>
                         <MenuBar/>
                     </div>
-                    <div style={{marginTop: "200px"}}>
+                    <div style={{marginTop: "60px"}}>
                         
                         <div className={classes.expertises}>
                              

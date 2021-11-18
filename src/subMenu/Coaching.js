@@ -96,7 +96,7 @@ class Coaching extends Component {
                         <MenuBar/>
                         <Sidemenu/>
                     </div>
-                    <div style={{marginTop: "300px"}}>
+                    <div style={{marginTop: "260px"}}>
 
                         
                     <div className={classes.aboutUs}>
