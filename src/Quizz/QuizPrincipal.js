@@ -199,8 +199,14 @@ class QuizPrincipal extends Component {
 
             studyLevel:"",
             bacYear:"",
-            studyFiliaire:'',
-
+            studyFiliaire:"",
+            professionalsExperience:"",
+            activitySector:"",
+            activitySectorTime:"",
+            jobStatut:"",
+            activitySectorJobStatut:"",
+            activitySectorTimeJobStatut:"",
+            actualSituation:"",
         };
     }
 
@@ -223,15 +229,23 @@ class QuizPrincipal extends Component {
         e.preventDefault();
         let result = "<p style='color: darkred'>Solde : </p><h3>"+this.state.msgUserPay+"</h3>"+
             "<p>Date du jour : </p><h3>"+this.state.curTime+"</h3>"+
+
+            "<p><strong>Identité</strong></p>"+
+            
             "<p>Nom : </p><h3>"+this.state.lastName+"</h3>"+
             "<p>Prénom : </p><h3>"+this.state.firstName+"</h3>"+
-            "<p>Email : </p><h3>"+localStorage.getItem("email")+"</h3>"+
             "<p>Date et lieu de Naissance : </p><h3>"+this.state.birthday+" - "+this.state.birthdayCity+"</h3>"+
             "<p>Sexe : </p><h3>"+this.state.gender+"</h3>"+
             "<p>Numéro : </p><h3>"+this.state.userNumber+"</h3>"+
-            "<p>Carte d'identité : </p><h3>"+this.state.idCard+"</h3>"+
+
+            "<p><strong>Pièce d’identité disponible</strong></p>"+
+
             "<p>Acte de naissance  : </p><h3>"+this.state.birthCertificate+"</h3>"+
+            "<p>Carte d'identité : </p><h3>"+this.state.idCard+"</h3>"+
             "<p>Passeport : </p><h3>"+this.state.passport+"</h3>"+
+
+            "<p><strong>Situation Familiale</strong></p>"+
+
             "<p>Nombre de frères  : </p><h3>"+this.state.curBrothers+"</h3>"+
             "<p>Frère 1  : </p><h3>"+this.state.curBrother1+"</h3>"+
             "<p>Frère 2  : </p><h3>"+this.state.curBrother2+"</h3>"+
@@ -243,7 +257,9 @@ class QuizPrincipal extends Component {
             "<p>Nature des frères et soeurs  : </p><h3>"+this.state.natureBrothers+"</h3>"+
             "<p>Qualité des relations avec les frères et sœurs (0~10) : </p><h3>"+this.state.relationShipMif+"</h3>"+
             "<p>Nature de la famille  : </p><h3>"+this.state.natureFamily+"</h3>"+
-            "<p>Père ou tuteur</p>"+
+
+            "<p><strong>Père ou tuteur</strong></p>"+
+
             "<p>Situation du père biologique : </p><h3>"+this.state.fatherAlive+"</h3>"+
             "<p>Nombre d'année passé depuis le décès : </p><h3>"+this.state.nbrDeces+"</h3>"+
             "<p>Statut : </p><h3>"+this.state.fatherStatut+"</h3>"+
@@ -254,7 +270,9 @@ class QuizPrincipal extends Component {
             "<p>Heure de départ : </p><h3>"+this.state.departHeur+"</h3>"+
             "<p>Heure de retour : </p><h3>"+this.state.retourHeur+"</h3>"+
             "<p>Qualité des relations avec le père (0~9) : </p><h3>"+this.state.relationShipFather+"</h3>"+
-            "<p>Mère ou tutrice</p>"+
+
+            "<p><strong>Mère ou tutrice</strong></p>"+
+
             "<p>Situation de la mère biologique : </p><h3>"+this.state.motherAlive+"</h3>"+
             "<p>Nombre d'année passé depuis le décès : </p><h3>"+this.state.nbrDecesMere+"</h3>"+
             "<p>Statut : </p><h3>"+this.state.motherStatut+"</h3>"+
@@ -264,33 +282,64 @@ class QuizPrincipal extends Component {
             "<p>Heure de départ : </p><h3>"+this.state.departHeurMere+"</h3>"+
             "<p>Heure de retour : </p><h3>"+this.state.retourHeurMere+"</h3>"+
             "<p>Qualité des relations avec le mère (0~9) : </p><h3>"+this.state.relationShipMother+"</h3>"+
-            "<p>Lieu d’habitation actuel : </p><h3>"+this.state.userCity+"</h3>"+
-            "<p>Nombre de fois de repas dans la journée : </p><h3>"+this.state.foodByDay+"</h3>"+
-            "<p>Horaires de repas dans la journée : </p><h3>"+this.state.foodTimeInDay+"</h3>"+
-            "<p>Situation financière de la famille : </p><h3>"+this.state.famillyFinanceStatut+"</h3>"+
+            "<p>Quartier actuel où j’habite  : </p><h3>"+this.state.userCity+"</h3>"+
+            "<p>Je mange combien de fois par jour : </p><h3>"+this.state.foodByDay+"</h3>"+
+            "<p>Je mange à quelles heures dans la journée : </p><h3>"+this.state.foodTimeInDay+"</h3>"+
+            "<p>Je considère que je viens d’une famille  : </p><h3>"+this.state.famillyFinanceStatut+"</h3>"+
+
+            "<p><strong>Autonomie financière </strong></p>"+
+
+            "<p>Je suis autonome au niveau des finances : </p><h3>"+this.state.autonomieFinanceStatut+"</h3>"+
+
+            "<p><strong>Relation intime</strong></p>"+
+            
             "<p>Parles tu d’éducation sexuelle avec les parents : </p><h3>"+this.state.aboutSexeWithParents+"</h3>"+
-            "<p>Horaires de repas dans la journée : </p><h3>"+this.state.aboutSexeWithParents+"</h3>"+
-            "<p>Raison : </p><h3>"+this.state.aboutSexeWithParentsRaison+"</h3>"+
+            "<p>Raison explicative : </p><h3>"+this.state.aboutSexeWithParentsRaison+"</h3>"+
+
+            "<p><strong>Statut marital</strong></p>"+
+
             "<p>As-tu un(e) petit(e) ami(e) : </p><h3>"+this.state.boyOrGirlFriends+"</h3>"+
             "<p>Raison : </p><h3>"+this.state.boyOrGirlFriendsRaison+"</h3>"+
             "<p>les parents sont au courant de cette relation amoureuse : </p><h3>"+this.state.parentsKnowRelationShip+"</h3>"+
             "<p>J’ai eu ma première relation sexuelle à l’âge de: </p><h3>"+this.state.ageFirstRapport+"</h3>"+
             "<p>Je peux m’abstenir de relation sexuelle : </p><h3>"+this.state.waitingSexe+"</h3>"+
             "<p>Raison : </p><h3>"+this.state.waitSexeRaison+"</h3>"+
+
+            "<p><strong>Cadre Familial</strong></p>"+
+
             "<p>Je vis actuellement avec : </p><h3>"+this.state.lifeSmbWithOrAlone+"</h3>"+
             "<p>Joie de vivre : </p><h3>"+this.state.joyOfLiving+"</h3>"+
             "<p>Combativité : </p><h3>"+this.state.spritFighting+"</h3>"+
+
+            "<p>Description personnelle de soi :</p>"+
+
             "<p>Ce que J’aime en général : </p><h3>"+this.state.isLikeIt+"</h3>"+
             "<p>Ce que Je n’aime pas en général :</p><h3>"+this.state.notLikeIt+"</h3>"+
+
+            "<p><strong>Parcours universitaire ou parcours formation professionnelle post bac</strong></p>"+
+            
+            "<p>Année d’obtention du bac  : </p><h3>"+this.state.bacYear+"</h3>"+
             "<p>Niveau d’études actuel : </p><h3>"+this.state.schoolLevel+"</h3>"+
-            "<p>J’ai déjà redoublé une classe : </p><h3>"+this.state.repeatClass+"</h3>"+
+            "<p>Filière  : </p><h3>"+this.state.studyFiliaire+"</h3>"+
+            "<p>Université ou école privée ou formation en cours  : </p><h3>"+this.state.actualSchool+"</h3>"+ 
+            "<p>J’ai déjà redoublé un niveau : </p><h3>"+this.state.repeatClass+"</h3>"+
             "<p>Laquelle : </p><h3>"+this.state.repeatWichClass+"</h3>"+
-            "<p>Nom et lieu de l’établissement fréquenté actuellement : </p><h3>"+this.state.actualSchool+"</h3>"+
-            "<p>Raison : </p><h3>"+this.state.raisonActualSchool+"</h3>"+
+            "<p>Raison du choix de la formation actuelle : </p><h3>"+this.state.formationChoice+"</h3>"+
+            "<p>Raison du choix de l’établissement actuel : </p><h3>"+this.state.raisonActualSchool+"</h3>"+
             "<p>Temps de parcours pour venir à l’école : </p><h3>"+this.state.timeComeToSchool+"</h3>"+
             "<p>Moyen de transport pour venir à l’école : </p><h3>"+this.state.meanOfTransport+"</h3>"+
             "<p>Je viens à l’école seul(e): </p><h3>"+this.state.comeSchoolAlone+"</h3>"+
             "<p>Accompagné(e) par :  </p><h3>"+this.state.parentHelpToGoSchool+"</h3>"+
+
+            "<p><strong>Système d’études au lycée</strong></p>"+
+
+            "<p>Système d’études : </p><h3>"+this.state.schoolSystemLyc+"</h3>"+
+            "<p>Lequel :</p><h3>"+this.state.schoolSystemDescLyc+"</h3>"+
+            "<p>Moyenne générale en 2nd : </p><h3>"+this.state.moy2nd+"</h3>"+
+            "<p>Moyenne générale en 1ere : </p><h3>"+this.state.moy1ere+"</h3>"+
+            "<p>Moyenne générale en Tle : </p><h3>"+this.state.moyTle+"</h3>"+
+            
+ /*           
             "<p>Système d’études au primaire :</p><h3>"+this.state.schoolSystem+"</h3>"+
             "<p>Lequel :</p><h3>"+this.state.schoolSystemDesc+"</h3>"+
             "<p>Moyenne générale en CE1 : </p><h3>"+this.state.moyCE1+"</h3>"+
@@ -304,8 +353,8 @@ class QuizPrincipal extends Component {
             "<p>Moyenne générale en 5eme : </p><h3>"+this.state.moyCl5+"</h3>"+
             "<p>Moyenne générale en 4eme : </p><h3>"+this.state.moyCl4+"</h3>"+
             "<p>Moyenne générale en 3eme : </p><h3>"+this.state.moyCl3+"</h3>"+
-
-            "<p>Matières principales et notes</p>"+
+*/
+            "<p>Matières principales au Lycée notes</p>"+
             "<table>\n" +
             "    <tbody>\n" +
             "        <tr>\n" +
@@ -383,15 +432,11 @@ class QuizPrincipal extends Component {
             "          </tr>\n" +
             "    </tbody>\n" +
             "</table>"+
+ 
+            "<p><strong>Réseaux sociaux</strong></p>"+
 
-            "<p>Collège d’obtention du diplôme national du brevet ou brevet d’études du premier cycle : </p><h3>"+this.state.collegeSchool+"</h3>"+
-            "<p>Système d’études au lycée  : </p><h3>"+this.state.schoolSystemLyc+"</h3>"+
-            "<p>Lequel :</p><h3>"+this.state.schoolSystemDescLyc+"</h3>"+
-            "<p>Moyenne générale en 2nd : </p><h3>"+this.state.moy2nd+"</h3>"+
-            "<p>Moyenne générale en 1ere : </p><h3>"+this.state.moy1ere+"</h3>"+
-            "<p>Moyenne générale en Tle : </p><h3>"+this.state.moyTle+"</h3>"+
-            "<p>Lycée de fin d'etude : </p><h3>"+this.state.lyceeSchool+"</h3>"+
-            "<p>1ere Réseau social le plus utilisée : </p><h3>"+this.state.firstSocialMedia+"</h3>"+
+            /*"<p>Collège d’obtention du diplôme national du brevet ou brevet d’études du premier cycle : </p><h3>"+this.state.collegeSchool+"</h3>"+ */
+            "<p>1er Réseau social le plus utilisée : </p><h3>"+this.state.firstSocialMedia+"</h3>"+
             "<p>2eme Réseau social le plus utilisée : </p><h3>"+this.state.secSocialMedia+"</h3>"+
             "<p>3eme Réseau social le plus utilisée : </p><h3>"+this.state.thrSocialMedia+"</h3>"+
             "<p>4eme Réseau social le plus utilisée : </p><h3>"+this.state.furSocialMedia+"</h3>"+
@@ -400,19 +445,34 @@ class QuizPrincipal extends Component {
             <p>Moyen de conexion :</p>+
             "<p>Mobile :</p><h3>"+this.state.connectTelSocialMedia+"</h3>"+
             "<p>Pc :</p><h3>"+this.state.connectPcSocialMedia+"</h3>"+
-            "<p>Perspectives professionnelles</p>"+
-            "<p>Métier envisagé :</p><h3>"+this.state.planedJob+"</h3>"+
-            "<p>Raison :</p><h3>"+this.state.planedJobRaison+"</h3>"+
+
+            "<p><strong>Perspectives professionnelles</strong></p>"+
+            
+            "<p>Expérience professionnelle acquise  :</p><h3>"+this.state.professionalsExperience+"</h3>"+
+            "<p>Si oui, le secteur d’activité :</p><h3>"+this.state.activitySector+"</h3>"+
+            "<p>Nombre de mois :</p><h3>"+this.state.activitySectorTime+"</h3>"+
+
+            "<p>Statut Professionnel Actuel :</p><h3>"+this.state.jobStatut+"</h3>"+
+            "<p>Si oui, le secteur d’activité :</p><h3>"+this.state.activitySectorJobStatut+"</h3>"+
+            "<p>Nombre de mois :</p><h3>"+this.state.activitySectorTimeJobStatut+"</h3>"+
+
+            "<p>Expliquez en quelques lignes votre situation actuelle :</p><h3>"+this.state.actualSituation+"</h3>"+
+
+            "<p>Métier envisagé plus tard:</p><h3>"+this.state.planedJob+"</h3>"+
+            "<p>Raison ou motivations de ce métier envisagé :</p><h3>"+this.state.planedJobRaison+"</h3>"+
             "<p>Le choix est motivé par : </p>"+
             "<p>Les conseils scolaires : </p><h3>"+this.state.planedJobBySchool+"</h3>"+
             "<p>Les conseils de la famille : </p><h3>"+this.state.planedJobByFamily+"</h3>"+
             "<p>Les conseils des amis : </p><h3>"+this.state.planedJobByFriends+"</h3>"+
             "<p>Je veux continuer mes études post-bac : </p><h3>"+this.state.studyChoice+"</h3>"+
             "<p>Raison : </p><h3>"+this.state.studyChoiceRaison+"</h3>"+
+
+            "<p><strong>Maison</strong></p>"+
+
             "<p>Heure moyenne à laquelle je me réveille le matin chaque jour : </p><h3>"+this.state.morningWakeUpTime+"</h3>"+
-            "<p>Ce que je fais le matin en général avant de venir à l’école : </p><h3>"+this.state.doingBeforeGoToSchool+"</h3>"+
+            "<p>Ce que je fais le matin en général avant d’aller à l’établissement : </p><h3>"+this.state.doingBeforeGoToSchool+"</h3>"+
             "<p>Heure moyenne à laquelle je me couche le soir chaque jour : </p><h3>"+this.state.nightSleepTime+"</h3>"+
-            "<p>Ce que je fais le soir en général après avoir quitté à l’école : </p><h3>"+this.state.doingAfterGoToSchool+"</h3>"+
+            "<p>Ce que je fais le soir en général après avoir quitté à l’établissement : </p><h3>"+this.state.doingAfterGoToSchool+"</h3>"+
             "<p>J’aime les loisirs suivants:</p>"+
             "<p>Lire ou aller la bibliothèque : </p><h3>"+this.state.readBooks+"</h3>"+
             "<p>Regarder la télévision : </p><h3>"+this.state.seeTv+"</h3>"+
@@ -1278,6 +1338,7 @@ class QuizPrincipal extends Component {
                                                     required={true}
                                                     className={classes.textField}
                                                 />
+                                                 
                                                 <TextField
                                                     label="Raison du choix de la formation actuelle"
                                                     placeholder={""}
@@ -1289,7 +1350,7 @@ class QuizPrincipal extends Component {
                                                     className={classes.textField}
                                                 />
                                                 <TextField
-                                                    label="Raison du choix de l'établissement'"
+                                                    label="Raison du choix de l'établissement"
                                                     placeholder={""}
                                                     value={this.state.univChoice}
                                                     name={"univChoice"}
@@ -1430,6 +1491,8 @@ class QuizPrincipal extends Component {
                                     )
                                     }
                                 </div>
+
+{/*}
                                 <div>
                                     <FormLabel required={true} component="legend">Système d’études au primaire : </FormLabel>
                                     <RadioGroup style={{display: "block"}}
@@ -1508,9 +1571,6 @@ class QuizPrincipal extends Component {
                                     />
                                 </div>
 
-
-
-
                                 <div>
                                     <FormLabel required={true} component="legend">Système d’études au collège : </FormLabel>
                                     <RadioGroup style={{display: "block"}}
@@ -1588,7 +1648,7 @@ class QuizPrincipal extends Component {
                                         className={classes.textField}
                                     />
                                 </div>
-
+*/}
 
 
                                 {localStorage.getItem("situation") !== "College" &&
@@ -1620,7 +1680,7 @@ class QuizPrincipal extends Component {
                                     <p style={{color: "black"}}>Matières principales et leurs moyennes : </p>
                                     <p style={{color: "rgba(0, 0, 0, 0.54)"}}>Ecrivez la matière et sa moyenne générale </p>
                                     <TextField
-                                        label="Nom de la matière - Moyenne générale (Maths-15)"
+                                        label="Nom de la matière - Moyenne générale (Ex : Maths-15)"
                                         value={this.state.principMat1}
                                         name={"principMat1"}
                                         onChange={this.handleChange}
@@ -2270,7 +2330,7 @@ class QuizPrincipal extends Component {
                                     </RadioGroup>
                                     <div>
                                         <TextField
-                                            label="Pour aller"
+                                            label="Pour aller (à la plage, en ville, faire la fête, ou ailleurs )"
                                             name={"goTo"}
                                             value={this.state.goTo}
                                             onChange={this.handleChange}
