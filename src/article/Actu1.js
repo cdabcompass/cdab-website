@@ -4,6 +4,7 @@ import ActuCustom from "../utils/ActuCustom";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
 import {IntlProvider} from "../i18n";
+import Sidemenu from "../utils/Sidemenu";
 
 const styles = theme => ({
     container: {
@@ -26,6 +27,7 @@ class Actu1 extends Component {
                 <div className={classes.container}>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
                     <div>
                         <ActuCustom

@@ -4,6 +4,7 @@ import ActuCustom from "../utils/ActuCustom";
 import MenuBar from "../utils/MenuBar";
 import FooterBar from "../utils/FooterBar";
 import {IntlProvider} from "../i18n";
+import Sidemenu from "../utils/Sidemenu";
 
 const styles = theme => ({
     container: {
@@ -21,8 +22,8 @@ const styles = theme => ({
     },
     contain:{
         textAlign: "initial",
-        marginLeft: "250px",
-        marginRight: "250px",
+        marginLeft: "260px",
+        marginRight: "260px",
         marginTop: "25px"
     }
 });
@@ -41,6 +42,7 @@ class Actu4 extends Component {
                 <div className={classes.container}>
                     <div>
                         <MenuBar/>
+                        <Sidemenu/>
                     </div>
                     <div>
                         <ActuCustom

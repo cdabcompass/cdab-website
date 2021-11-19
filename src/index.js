@@ -16,6 +16,11 @@ import Login from "./connexion/Login";
 import Actu1 from "./article/Actu1";
 import Actu2 from "./article/Actu2";
 import Actu3 from "./article/Actu3";
+import Actu4 from "./article/Actu4";
+import Actu5 from "./article/Actu5";
+import Actu6 from "./article/Actu6";
+import Actu7 from "./article/Actu7";
+import Actu8 from "./article/Actu8";
 import Training from "./subMenu/Training";
 import Formations from "./SubTraining/Formations";
 import Intership from "./SubTraining/Intership";
@@ -36,8 +41,6 @@ import QuizPrimaire from "./Quizz/QuizPrimaire";
 import PaymentView from "./utils/PaymentView";
 import Products from "./subMenu/Products";
 import EbookPayView from "./utils/EbookPayView";
-import Actu4 from "./article/Actu4";
-import Actu5 from "./article/Actu5";
 import PanelAdmin from "./adminAccess/PanelAdmin";
 import RecoverAccount1 from "./RecoverAccount/RecoverAccount1";
 import RecoverAccount2 from "./RecoverAccount/RecoverAccount2";
@@ -95,7 +98,9 @@ const routing = (
                 <Route exact path="/actu/3" component={Actu3}/>
                 <Route exact path="/actu/4" component={Actu4}/>
                 <Route exact path="/actu/5" component={Actu5}/>
-
+                <Route exact path="/actu/6" component={Actu6}/>
+                <Route exact path="/actu/7" component={Actu7}/>
+                <Route exact path="/actu/8" component={Actu8}/>
 
                 <Route exact path="/cdab/plus_infos" component={EntrepriseMoreInfo}/>
 

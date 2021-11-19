@@ -276,7 +276,7 @@ class App extends Component {
                     <div className={classes.container}>
                             {/* <MenuBar/>*/}
                             <Header/>
-   
+                             
                         <div style = {{position: 'relative'}} className={classes.responsiveLeftMenu} >
                             <Sidemenu/>
  
@@ -540,7 +540,7 @@ class App extends Component {
                                     <p className={classes.sTitle} style =  {{color : '#fff' }}>{translate("Etudes")} : </p>
                                 </div>
                                 <div className={classes.countriesFlag} style={{textAlign: "center"}}>
-                                    <div><a href={require("./assets/doc/PFRANCE.pdf")} target="_blank"><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></a></div>
+                                    <div><a href="https://bit.ly/DocFrance" target="_blank"><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></a></div>
                                     <div><img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></div>
                                     <div><img title={"Etats-Unis"} className={classes.drapeau}  src={require("./assets/usa.png")} alt=""/></div>
                                     <div><img title={"Sénegal"}  className={classes.drapeau}  src={require("./assets/sn.png")} alt=""/></div>
@@ -555,7 +555,7 @@ class App extends Component {
                                     <p className={classes.sTitle} style =  {{color : '#fff' }}>{translate("Professionnel")} : </p>
                                 </div>
                                 <div className={classes.countriesFlag} style={{textAlign: "center"}}>
-                                    <div><a href={require("./assets/doc/PALLEMAGNE.pdf")} target="_blank"><img title={"Allemagne"} className={classes.drapeau}  src={require("./assets/allemagne.png")} alt=""/></a></div>
+                                    <div><a href="https://bit.ly/DocAllemagne" target="_blank"><img title={"Allemagne"} className={classes.drapeau}  src={require("./assets/allemagne.png")} alt=""/></a></div>
                                     <div><img title={"Canada"}  className={classes.drapeau}  src={require("./assets/canada.png")} alt=""/></div>
                                 </div>
                             </div>
