@@ -53,7 +53,7 @@ export default function Deroul() {
 
       >
         {localStorage.getItem("token") !== null && (
-           <h6 className="responsiveMenu" style =  {{ color : 'white'}}>{translate("connecte_comme")} {localStorage.getItem("firstName")} {localStorage.getItem("lastName")}</h6>  
+           <h6 className="responsiveMenu" style =  {{ color : 'black'}}>{translate("connecte_comme")} {localStorage.getItem("firstName")} {localStorage.getItem("lastName")}</h6>  
         )}
         { localStorage.getItem("token") !== null && (
         <br/>   
