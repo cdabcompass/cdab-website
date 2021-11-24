@@ -175,6 +175,7 @@ class QuizPrincipal extends Component {
             comportMat5: "",
             comportMat6: "",
             comportMat7: "",
+            comportMat8: "",
 
 
             errBirthday: "",
@@ -207,6 +208,11 @@ class QuizPrincipal extends Component {
             activitySectorJobStatut:"",
             activitySectorTimeJobStatut:"",
             actualSituation:"",
+            formationChoice:"",
+            studentStatut:"",
+            univNonGraduateYearAndRaison:"",
+
+            raisonSocialNetwork:"",
         };
     }
 
@@ -1352,16 +1358,7 @@ class QuizPrincipal extends Component {
                                                     required={true}
                                                     className={classes.textField}
                                                 />
-                                                <TextField
-                                                    label="Raison du choix de l'établissement"
-                                                    placeholder={""}
-                                                    value={this.state.univChoice}
-                                                    name={"univChoice"}
-                                                    onChange={this.handleChange}
-                                                    type={"text"}
-                                                    required={true}
-                                                    className={classes.textField}
-                                                />
+                                               
                                                 <FormLabel required={true} component="legend">Êtes-vous encore étudiant en activité : </FormLabel>
                                                 <RadioGroup style={{display: "block"}}
                                                             name="studentStatut" value={this.state.studentStatut} onChange={this.handleChange}>
