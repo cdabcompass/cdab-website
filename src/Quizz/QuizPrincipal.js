@@ -225,6 +225,24 @@ class QuizPrincipal extends Component {
         }
     }
 
+/*           
+            "<p>Système d’études au primaire :</p><h3>"+this.state.schoolSystem+"</h3>"+
+            "<p>Lequel :</p><h3>"+this.state.schoolSystemDesc+"</h3>"+
+            "<p>Moyenne générale en CE1 : </p><h3>"+this.state.moyCE1+"</h3>"+
+            "<p>Moyenne générale en CE2 : </p><h3>"+this.state.moyCE2+"</h3>"+
+            "<p>Moyenne générale en CM1 : </p><h3>"+this.state.moyCM1+"</h3>"+
+            "<p>Moyenne générale en CM2 : </p><h3>"+this.state.moyCM2+"</h3>"+
+            "<p>Ecole primaire du passage au collège ou du certificat d’études primaire : </p><h3>"+this.state.primarySchool+"</h3>"+
+            "<p>Système d’études au collège : </p><h3>"+this.state.schoolSystemCol+"</h3>"+
+            "<p>Lequel :</p><h3>"+this.state.schoolSystemDescCol+"</h3>"+
+            "<p>Moyenne générale en 6eme : </p><h3>"+this.state.moyCl6+"</h3>"+
+            "<p>Moyenne générale en 5eme : </p><h3>"+this.state.moyCl5+"</h3>"+
+            "<p>Moyenne générale en 4eme : </p><h3>"+this.state.moyCl4+"</h3>"+
+            "<p>Moyenne générale en 3eme : </p><h3>"+this.state.moyCl3+"</h3>"+
+*/
+
+/*"<p>Collège d’obtention du diplôme national du brevet ou brevet d’études du premier cycle : </p><h3>"+this.state.collegeSchool+"</h3>"+ */
+            
     submitAnswers = (e) => {
         e.preventDefault();
         let result = "<p style='color: darkred'>Solde : </p><h3>"+this.state.msgUserPay+"</h3>"+
@@ -339,21 +357,7 @@ class QuizPrincipal extends Component {
             "<p>Moyenne générale en 1ere : </p><h3>"+this.state.moy1ere+"</h3>"+
             "<p>Moyenne générale en Tle : </p><h3>"+this.state.moyTle+"</h3>"+
             
- /*           
-            "<p>Système d’études au primaire :</p><h3>"+this.state.schoolSystem+"</h3>"+
-            "<p>Lequel :</p><h3>"+this.state.schoolSystemDesc+"</h3>"+
-            "<p>Moyenne générale en CE1 : </p><h3>"+this.state.moyCE1+"</h3>"+
-            "<p>Moyenne générale en CE2 : </p><h3>"+this.state.moyCE2+"</h3>"+
-            "<p>Moyenne générale en CM1 : </p><h3>"+this.state.moyCM1+"</h3>"+
-            "<p>Moyenne générale en CM2 : </p><h3>"+this.state.moyCM2+"</h3>"+
-            "<p>Ecole primaire du passage au collège ou du certificat d’études primaire : </p><h3>"+this.state.primarySchool+"</h3>"+
-            "<p>Système d’études au collège : </p><h3>"+this.state.schoolSystemCol+"</h3>"+
-            "<p>Lequel :</p><h3>"+this.state.schoolSystemDescCol+"</h3>"+
-            "<p>Moyenne générale en 6eme : </p><h3>"+this.state.moyCl6+"</h3>"+
-            "<p>Moyenne générale en 5eme : </p><h3>"+this.state.moyCl5+"</h3>"+
-            "<p>Moyenne générale en 4eme : </p><h3>"+this.state.moyCl4+"</h3>"+
-            "<p>Moyenne générale en 3eme : </p><h3>"+this.state.moyCl3+"</h3>"+
-*/
+ 
             "<p>Matières principales au Lycée notes</p>"+
             "<table>\n" +
             "    <tbody>\n" +
@@ -435,7 +439,6 @@ class QuizPrincipal extends Component {
  
             "<p><strong>Réseaux sociaux</strong></p>"+
 
-            /*"<p>Collège d’obtention du diplôme national du brevet ou brevet d’études du premier cycle : </p><h3>"+this.state.collegeSchool+"</h3>"+ */
             "<p>1er Réseau social le plus utilisée : </p><h3>"+this.state.firstSocialMedia+"</h3>"+
             "<p>2eme Réseau social le plus utilisée : </p><h3>"+this.state.secSocialMedia+"</h3>"+
             "<p>3eme Réseau social le plus utilisée : </p><h3>"+this.state.thrSocialMedia+"</h3>"+
