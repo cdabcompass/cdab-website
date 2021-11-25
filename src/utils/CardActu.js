@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core";
 import Card from "@material-ui/core/Card/Card";
 import TouchAppIcon from '@material-ui/icons/TouchApp';
+import '../index.css';
 
 const styles = theme => ({
     cardActu:{
@@ -26,8 +27,9 @@ const styles = theme => ({
     },
     description: {
         //height: "150px",
-        textAlign: "justify",
-        marginBottom: "20px"
+        
+        
+
     },
     readMore: {
         boxShadow: "4px 4px 20px 0px rgb(212 212 212 / 31%)",
@@ -64,7 +66,7 @@ class CardActu extends Component {
                         <div className={classes.titleCardActu} variant="h5" component="h2">
                             {title}
                         </div>
-                        <div className={classes.description} variant="body2" component="p">
+                        <div className={classes.description} variant="body2" component="p" className="CardActualiatieTrunk">
                             {description}
                         </div>
                         <div className={classes.readMore}>

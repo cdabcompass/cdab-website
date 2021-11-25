@@ -187,6 +187,19 @@ code {
   width: 500px;
 }
 
+.CardActualiatieTrunk {
+  overflow: "hidden";
+  max-height: 8rem;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  text-align: justify;
+  margin-bottom: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
 .styleInput{
   width: 500px;
 }
