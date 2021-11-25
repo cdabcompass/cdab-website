@@ -277,7 +277,7 @@ class App extends Component {
                             {/* <MenuBar/>*/}
                             <Header/>
                              
-                        <div style = {{position: 'relative'}} className={classes.responsiveLeftMenu} >
+                        <div style = {{position: 'relative'}}>
                             <Sidemenu/>
  
                             <div className="imageCarousel">
@@ -536,17 +536,36 @@ class App extends Component {
                         </div>
                         <div style =  {{background : '#5b5b5b', paddingBottom : '30px', marginBottom : '-20px' }}>
                             <div className={classes.countries}>
-                                <div style={{marginBottom: "50px",textAlign: "center"}}>
+                                <div style={{textAlign: "center"}}>
                                     <p className={classes.sTitle} style =  {{color : '#fff' }}>{translate("Etudes")} : </p>
                                 </div>
-                                <div className={classes.countriesFlag} style={{textAlign: "center"}}>
-                                    <div><a href={require("./assets/doc/PFRANCE.pdf")} target="_blank"><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></a></div>
-                                    <div><img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></div>
-                                    <div><img title={"Etats-Unis"} className={classes.drapeau}  src={require("./assets/usa.png")} alt=""/></div>
-                                    <div><img title={"Sénegal"}  className={classes.drapeau}  src={require("./assets/sn.png")} alt=""/></div>
-                                    <div><img title={"Dubai"} className={classes.drapeau}  src={require("./assets/dubai.png")} alt=""/></div>
-                                    <div><img title={"Côte d'ivoire"} className={classes.drapeau}  src={require("./assets/ci.png")} alt=""/></div>
-                                    <div><img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
+                                <div className="responsiveMenu">
+                                    <div className={classes.countriesFlag} style={{textAlign: "center", marginTop: "50px"}}>
+                                        <div><a href={require("./assets/doc/PFRANCE.pdf")} target="_blank"><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></a></div>
+                                        <div><img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></div>
+                                        <div><img title={"Etats-Unis"} className={classes.drapeau}  src={require("./assets/usa.png")} alt=""/></div>
+                                        <div><img title={"Sénegal"}  className={classes.drapeau}  src={require("./assets/sn.png")} alt=""/></div>
+                                        <div><img title={"Dubai"} className={classes.drapeau}  src={require("./assets/dubai.png")} alt=""/></div>
+                                        <div><img title={"Côte d'ivoire"} className={classes.drapeau}  src={require("./assets/ci.png")} alt=""/></div>
+                                        <div><img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
+                                    </div>
+                                </div>
+                                <div style={{textAlign: "center", display: "none"}} className="row responsiveDisplay">
+                            
+                                    <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <a href={require("./assets/doc/PFRANCE.pdf")} target="_blank"><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></a></div>
+
+                                    <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></div>
+
+                                    <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <img title={"Etats-Unis"} className={classes.drapeau}  src={require("./assets/usa.png")} alt=""/></div>
+
+                                    <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <img title={"Sénegal"}  className={classes.drapeau}  src={require("./assets/sn.png")} alt=""/></div>
+
+                                    <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <img title={"Dubai"} className={classes.drapeau}  src={require("./assets/dubai.png")} alt=""/></div>
+
+                                    <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <img title={"Côte d'ivoire"} className={classes.drapeau}  src={require("./assets/ci.png")} alt=""/></div>
+
+                                    <div className="col-sm-12 center"> <img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
+
                                 </div>
                             </div>
 

@@ -357,6 +357,10 @@ code {
   .responsiveMenu2{
     margin-top: 0px !important;
   }
+
+  .responsiveDisplay{
+    display: block !important;
+  }
  
 }
 
@@ -365,6 +369,7 @@ code {
   .responsiveMobile{
     visibility: hidden !important;
   }
+ 
 }
 
 .close-image {
@@ -491,10 +496,11 @@ code {
   .dv-toolbar{
     display: grid !important;
   }
-
+/*
   .imageCarousel{
     margin-top: 0px !important;
   }
+  */
 
   .eachCarousel{
     height: 200px !important;

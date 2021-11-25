@@ -3,11 +3,11 @@ import React from 'react'
 import Button from "react-bootstrap/Button";
 import translate from "../i18n/messages/translate";
 import Grid from "@material-ui/core/Grid";
- 
+import '../index.css';
 
 function Sidemenu(){
   return(
-    <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '380px',background : '#FFC300'  , marginTop: '110px', marginLeft: '50px', alignText: 'center'}}>
+    <div style = {{position: 'absolute', zIndex: '10', opacity: '0.85', width : '200px', height: '380px',background : '#FFC300'  , marginTop: '110px', marginLeft: '50px', alignText: 'center'}} className="responsiveMenu">
         <Grid style =  {{}}   container   direction="column">
 
         <Button style = {{border: '1px solid white',background : '#FFC300',textTransform: 'none', fontSize: '16px',  margin: '10px', color : 'white'}} href="/cdab/plus_infos"><strong>{translate("QUI_SOMMES_NOUS")}</strong></Button>

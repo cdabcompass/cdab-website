@@ -101,12 +101,19 @@ homePage = () => {
     window.location = "/";
 };
 
+refreshPage = () =>{
+  window.location.reload(false);
+}
+
 changeLangue = (lg) =>{
     localStorage.setItem("locale_lg",lg);
     console.log("test test test "+localStorage.getItem("locale_lg"));
    
     this.setState({locale: localStorage.getItem("locale_lg") });
+    
 }
+
+
 
  
   render() {
@@ -114,7 +121,7 @@ changeLangue = (lg) =>{
     return (
       <div>
       <IntlProvider locale={this.state.locale}>
-      <AppBar style =  {{background : '#7c1c18', height: "100px"}} elevation={0} >
+      <AppBar style =  {{background : '#7c1c18', height: "100px", position : 'absolute'}} elevation={0} >
         <Toolbar>
           <Button href="/"> <Log/> </Button>
 
