@@ -6,6 +6,7 @@ import TouchAppIcon from '@material-ui/icons/TouchApp';
 const styles = theme => ({
     cardActu:{
         width: "90%",
+        height: "550px",
         cursor: "pointer",
         margin: "0 auto",
         boxShadow: "4px 4px 20px 0px rgb(146 125 250 / 50%)",
@@ -25,7 +26,8 @@ const styles = theme => ({
     },
     description: {
         //height: "150px",
-        textAlign: "justify"
+        textAlign: "justify",
+        marginBottom: "20px"
     },
     readMore: {
         boxShadow: "4px 4px 20px 0px rgb(212 212 212 / 31%)",
@@ -36,6 +38,15 @@ const styles = theme => ({
             boxShadow: "4px 4px 20px 0px rgb(226 157 31 / 31%)",
         }
     },
+    main_div: {
+        position: "relative",
+    }
+    ,
+    sub_div :{
+        position: "absolute",
+        bottom: "0px",
+    }
+    ,
 });
 
 class CardActu extends Component {

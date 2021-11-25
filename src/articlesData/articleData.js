@@ -20,14 +20,14 @@ export const FrenshData = [
         title: "La détection de profil : CDAB Compass s'y engage aussi à Accra au Ghana",
         description: "Dans le but d’aider les apprenants et les responsables des écoles à mieux " +
         "développer leurs méthodes et à investir beaucoup plus dans l’avenir professionnelle des apprenants," +
-        "la structure CDAB Compass dépose désormais aussi ses valises au GHANA à Accra .",
+        "la structure CDAB Compass dépose désormais aussi ses valises au GHANA à Accra.",
         link: "/actu/6",
         image: "actu6.jpeg"
     },
     {
         title: 'Le profil de l’apprenant, une nécessité pour votre enfant',
         description: "Nous n’apprenons pas tous de la même manière. Notre personnalité "+
-        "et notre entourage ont un impact direct sur nos façons d’appréhender, d’apprendre et d’assimiler les choses.",
+        "et notre entourage ont un impact direct sur nos façons d’appréhender, d’apprendre et d’assimiler les choses.\n",
         link: "/actu/5",
         image: "https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396__340.jpg"
     },
