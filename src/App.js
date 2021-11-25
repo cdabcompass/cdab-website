@@ -421,7 +421,7 @@ class App extends Component {
                             
                             <div className="col-sm-6 col-md-6 col-lg-6 center">
                                 
-                                    <iframe style={{height: "320px",width : "480px"}} src="https://www.youtube.com/embed/IQsj1K0eglg"
+                                    <iframe style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/IQsj1K0eglg"
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen> </iframe>
@@ -430,7 +430,7 @@ class App extends Component {
 
                             <div className="col-sm-6 col-md-6 col-lg-6 center">
                                 
-                                    <iframe style={{height: "320px",width : "480px"}} src="https://www.youtube.com/embed/Q2NPLS6VPP8" 
+                                    <iframe style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/Q2NPLS6VPP8" 
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>
@@ -443,7 +443,7 @@ class App extends Component {
 
                             <div className="col-sm-6 col-md-6 col-lg-6 center">
                                 
-                                    <iframe style={{height: "320px",width : "480px"}} src="https://www.youtube.com/embed/qqOLjKiUjLg" 
+                                    <iframe style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/qqOLjKiUjLg" 
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>
@@ -452,7 +452,7 @@ class App extends Component {
 
                             <div className="col-sm-6 col-md-6 col-lg-6 center">
                                 
-                                    <iframe style={{height: "320px",width : "480px"}} src="https://www.youtube.com/embed/H4X1DnqN_eQ" 
+                                    <iframe style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/H4X1DnqN_eQ" 
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>
@@ -550,7 +550,7 @@ class App extends Component {
                                         <div><img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
                                     </div>
                                 </div>
-                                <div style={{textAlign: "center", display: "none"}} className="row responsiveDisplay">
+                                <div style={{textAlign: "center", marginTop :'-30px', marginBottom :'-30px', display: "none"}} className="row responsiveDisplay">
                             
                                     <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <a href={require("./assets/doc/PFRANCE.pdf")} target="_blank"><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></a></div>
 
@@ -564,7 +564,7 @@ class App extends Component {
 
                                     <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <img title={"Côte d'ivoire"} className={classes.drapeau}  src={require("./assets/ci.png")} alt=""/></div>
 
-                                    <div className="col-sm-12 center"> <img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
+                                    <div className="col-sm-12 center" > <img title={"Togo"} className={classes.drapeau}  src={require("./assets/tg.png")} alt=""/></div>
 
                                 </div>
                             </div>
