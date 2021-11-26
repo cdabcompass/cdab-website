@@ -304,7 +304,7 @@ class App extends Component {
                                 <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("QUI_SOMMES_NOUS")}</p>
                             </div>
 
-                            <div style =  {{background : '#a14627' }} className="textAboutUs" className="row" >
+                            <div style =  {{background : '#a14627' }} className="textAboutUs">
                                 {/*<Grid item xs={1}></Grid>*/}
                                 <div className="col-sm-6 col-md-6 col-lg-6">
                                     {localStorage.getItem("locale_lg")==="fr-fr" && (
@@ -417,11 +417,11 @@ class App extends Component {
                             </div>
                         </div>  
                             
-                        <div style={{textAlign: "center", background : '#a14627', paddingTop : '10px', paddingBottom :'10px', marginBottom : '-2px'}} className="row">
+                        <div style={{textAlign: "center", background : '#a14627', paddingTop : '10px', paddingBottom :'10px', marginBottom : '-2px',marginLeft: '0px',marginRight: '0px'}} className="row">
                             
                             <div className="col-sm-6 col-md-6 col-lg-6 center">
                                 
-                                    <iframe style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/IQsj1K0eglg"
+                                    <iframe className="frameResponsive" style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/IQsj1K0eglg"
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen> </iframe>
@@ -430,7 +430,7 @@ class App extends Component {
 
                             <div className="col-sm-6 col-md-6 col-lg-6 center">
                                 
-                                    <iframe style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/Q2NPLS6VPP8" 
+                                    <iframe className="frameResponsive" style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/Q2NPLS6VPP8" 
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>
@@ -439,11 +439,11 @@ class App extends Component {
 
                         </div>
 
-                        <div style={{textAlign: "center", background : '#a14627', paddingTop : '10px', paddingBottom :'10px'}} className="row">  
+                        <div style={{textAlign: "center", background : '#a14627', paddingTop : '10px', paddingBottom :'10px', marginLeft: '0px',marginRight: '0px'}} className="row">  
 
                             <div className="col-sm-6 col-md-6 col-lg-6 center">
                                 
-                                    <iframe style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/qqOLjKiUjLg" 
+                                    <iframe className="frameResponsive" style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/qqOLjKiUjLg" 
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>
@@ -452,7 +452,7 @@ class App extends Component {
 
                             <div className="col-sm-6 col-md-6 col-lg-6 center">
                                 
-                                    <iframe style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/H4X1DnqN_eQ" 
+                                    <iframe className="frameResponsive" style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/H4X1DnqN_eQ" 
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>

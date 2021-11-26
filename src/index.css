@@ -377,6 +377,10 @@ code {
   .cardlastResponsive{
     margin-bottom: 50px !important;
   }
+
+  .frameResponsive{
+    width: 100% !important;
+  }
   
  
 }
