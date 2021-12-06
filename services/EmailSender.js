@@ -36,7 +36,7 @@ module.exports = {
                 secure: true,
                 auth: {
                     user: 'answers-quiz@cdabcompass.com',
-                    pass: 'tXNmBqJgVbiMbBI0'
+                    pass: '@Cdab!mL2022'
                 }
             });
             transporter.sendMail(mailOptions, (err, info) => {

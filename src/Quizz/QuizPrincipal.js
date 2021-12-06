@@ -511,6 +511,7 @@ class QuizPrincipal extends Component {
             })
             .catch(err=>{
                 if(err.response.status === 409){
+                    alert("Une erreur est survenue au niveau du serveur, veuillez reprendre plutard svp!");
                 }
             });
 

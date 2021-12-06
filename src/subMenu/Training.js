@@ -65,11 +65,11 @@ class Training extends Component {
                     </div>
                     
                     
-                    <div style={{marginTop: "200px"}}>
+                    <div style={{marginTop: "260px"}}>
                         
                         <div className={classes.training}>
                              
-                             <div style={{marginBottom: "30px"}} className="row">
+                             <div style={{marginBottom: "-30px"}} className="row">
                                  <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("Training")}</p>
                              </div>
                              

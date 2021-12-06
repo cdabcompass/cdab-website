@@ -66,14 +66,15 @@ class Expertises extends Component {
                     <div>
                         <MenuBar/>
                     </div>
-                    <div style={{marginTop: "60px"}}>
+                    <div style={{marginTop: "200px"}}>
                         
                         <div className={classes.expertises}>
                              
-                            <div style={{marginBottom: "30px"}} className="row">
+                            <div style={{marginBottom: "-70px"}} className="row">
                                 <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("NOS_EXPERTISES")}</p>
+                                
                             </div>
-                            <p className={classes.subTitle}>{translate("Expr_desc")}</p>
+                           {/* <p className={classes.subTitle}>{translate("Expr_desc")}</p> */}
                         </div>
 
                         <ExpertisesComponents/>
