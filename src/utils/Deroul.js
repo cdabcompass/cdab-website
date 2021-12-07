@@ -4,7 +4,7 @@ import Menu from '@mui/material/Menu';
 import '../index.css';
 import translate from "../i18n/messages/translate";
 import TokenApi from "./TokenApi";
-
+import {LOCALES,IntlProvider} from "../i18n";
 
 
 
@@ -48,7 +48,7 @@ export default function Deroul() {
 
       >
         {localStorage.getItem("token") !== null && (
-           <h6 style =  {{ color : 'black'}}>{translate("connecte_comme")} {localStorage.getItem("firstName")} {localStorage.getItem("lastName")}</h6>  
+           <h6 style =  {{ color : 'black', marginLeft: '10px'}}>{translate("connecte_comme")} {localStorage.getItem("firstName")} {localStorage.getItem("lastName")}</h6>  
         )}
         { localStorage.getItem("token") !== null && (
         <br/>   
@@ -134,6 +134,8 @@ export default function Deroul() {
            onClick={disconnect}>{translate("Deconnexion")}</Button>  
           
           )}
+          <br/>
+
  
       </Menu>
      {/* <Sidebar/> */}

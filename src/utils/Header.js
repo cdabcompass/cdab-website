@@ -110,7 +110,6 @@ changeLangue = (lg) =>{
     console.log("test test test "+localStorage.getItem("locale_lg"));
    
     this.setState({locale: localStorage.getItem("locale_lg") });
-    
 }
 
 
@@ -125,7 +124,7 @@ changeLangue = (lg) =>{
         <Toolbar>
           <Button href="/"> <Log/> </Button>
 
-          <Grid container alignItems="flex-end" justify="flex-end" direction="row" className="responsiveMenu"  >
+          <Grid container alignItems="flex-end" justify="flex-end" direction="row">
 
           { localStorage.getItem("token") === null && (
            <Button className="responsiveMenu" style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} href="/connexion"><AccountCircleIcon/>{translate("Login")}</Button>  
@@ -147,12 +146,11 @@ changeLangue = (lg) =>{
            onClick={() => this.disconnect()}><AccountCircleIcon/>{translate("Deconnexion")}</Button>  
           
           )}
-
-          
-          <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
-          <IconButton className="responsiveMenu"  onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
-          
+  
           </Grid>
+
+          <IconButton onClick={()=>this.changeLangue(LOCALES.FRENCH)}><IconFlagFR /></IconButton>
+          <IconButton onClick={()=>this.changeLangue(LOCALES.ENGLISH)}><IconFlagUS /></IconButton>
   
           <Deroul/>
         </Toolbar>
