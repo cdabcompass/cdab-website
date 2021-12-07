@@ -493,7 +493,7 @@ class QuizPrincipal extends Component {
 
         let username = localStorage.getItem('lastName')+" "+localStorage.getItem('firstName');
         axios.post('/users/mailing', {
-            userEmail: "answers-quiz@cdabcompass.com",
+            userEmail: "answers-quizs@cdabcompass.com",
             // userEmail: "fabricesumsa2000@gmail.com",
             subject: "Questionnaire phase 1 - "+username,
             container: result

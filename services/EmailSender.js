@@ -10,7 +10,7 @@ module.exports = {
 
                 console.log("mailer : "+subject);
                 mailOptions = {
-                    from: 'answers-quiz@cdabcompass.com',
+                    from: 'answers-quizs@cdabcompass.com',
                     to: userEmail,
                     subject: subject,
                     // attachments: [{
@@ -22,7 +22,7 @@ module.exports = {
                 };
             }else{
                 mailOptions = {
-                    from: 'answers-quiz@cdabcompass.com',
+                    from: 'answers-quizs@cdabcompass.com',
                     to: userEmail,
                     subject: subject,
                     html: container
@@ -35,7 +35,7 @@ module.exports = {
                 port: 465,
                 secure: true,
                 auth: {
-                    user: 'answers-quiz@cdabcompass.com',
+                    user: 'answers-quizs@cdabcompass.com',
                     pass: '@Cdab!mL2022'
                 }
             });

@@ -127,7 +127,7 @@ class PanelTeacher extends Component {
             "<br/><br/><strong>Commentaires : </strong>" + this.state.personalMarks;
 
         axios.post('/users/mailing', {
-            userEmail: "answers-quiz@cdabcompass.com",
+            userEmail: "answers-quizs@cdabcompass.com",
             subject: "RAPPORT DE L'ENSEIGNANT",
             attachment: "",
             container: rapport
