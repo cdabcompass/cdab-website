@@ -139,7 +139,7 @@ class Training extends Component {
                                 <div style={{margin: "60px", paddingTop: "50px",paddingBottom: "50px"}}>
                                     <div className="row" style={{marginBottom: "50px"}}>
                                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
-                                            <img src="https://cdn4.iconfinder.com/data/icons/education-school-1/64/board-256.png" style={{width: "50%", height: "60%" , marginLeft: "-15px", borderRadius: "25px", color : "#FFC300"}} className="card-img-top" alt="..."/>
+                                            <img src={require("../assets/form.jpg")} style={{width: "50%", height: "60%" , marginLeft: "-15px", borderRadius: "25px", color : "#FFC300"}} className="card-img-top" alt="..."/>
                                             
                                             <div className="card-body">
                                                 <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Training"}</strong> </li> </ul> </h5>
@@ -156,7 +156,7 @@ class Training extends Component {
                                         </div>
 
                                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
-                                            <img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/03.Office-256.png" style={{width: "50%",height: "60%", marginLeft: "-15px" , borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                                            <img src={require("../assets/stage.jpg")} style={{width: "50%",height: "60%", marginLeft: "-15px" , borderRadius: "25px"}} className="card-img-top" alt="..."/>
                                             <div className="card-body">
                                                 <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Internship"}</strong> </li> </ul> </h5>
                                                 <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>Most of the time, students at the end of their cycle are oriented towards internships with the aim of their 
@@ -169,7 +169,7 @@ class Training extends Component {
 
                                     <div className="row">
                                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
-                                            <img src="https://cdn2.iconfinder.com/data/icons/viiva-business/32/resume-256.png" style={{width: "50%", height: "80%",  marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                                            <img src={require("../assets/cv.jpg")} style={{width: "50%", height: "80%",  marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                                             <div className="card-body">
                                                 <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Advice - CV - Cover letter"}</strong> </li> </ul> </h5>
                                                 <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>The CV (curriculum vitae) is a very common form of recruitment. It has a good proportion
@@ -182,7 +182,7 @@ class Training extends Component {
                                             
                                         </div>
                                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
-                                            <img src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_business_48px-256.png" style={{width: "50%",height: "80%", marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                                            <img src={require("../assets/offres.jpg")} style={{width: "50%",height: "80%", marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                                             <div className="card-body">
                                                 <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Our offers"}</strong> </li> </ul> </h5>
                                                 <p className="card-text">It’s never too late to seize the opportunity to take another step forward.

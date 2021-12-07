@@ -110,7 +110,7 @@ class Achievements extends Component {
                                             
                                         </div>
                                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
-                                            <img src="https://cdn3.iconfinder.com/data/icons/customer-support-24/64/report-service-statistics-call-performance-256.png" style={{width: "50%", height: "80%",  marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                                            <img src={require("../assets/rapport.jpg")} style={{width: "50%", height: "80%",  marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                                             <div className="card-body">
                                                 <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Rapport d'activités"}</strong> </li> </ul> </h5>
                                                 <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>Un projet d’étude est une feuille de route permettant de profiler son parcours estudiantin. Le projet d’étude fait montre de 
@@ -161,7 +161,7 @@ class Achievements extends Component {
                                          
                                      </div>
                                      <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
-                                         <img src="https://cdn3.iconfinder.com/data/icons/customer-support-24/64/report-service-statistics-call-performance-256.png" style={{width: "50%", height: "80%",  marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
+                                         <img src={require("../assets/rapport.jpg")} style={{width: "50%", height: "80%",  marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                                          <div className="card-body">
                                              <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Activity Report"}</strong> </li> </ul> </h5>
                                              <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>A study project is a roadmap for profiling one's student career. The study project shows  
