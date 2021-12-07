@@ -1,17 +1,10 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
-import { Paper, MenuList, MenuItem } from '@mui/material';
-import Sidebar from './Sidebar';
 import '../index.css';
 import translate from "../i18n/messages/translate";
 import TokenApi from "./TokenApi";
-import {
-  IconFlagUS,
-  IconFlagFR
-} from 'material-ui-flags';
-import {LOCALES,IntlProvider} from "../i18n";
-import IconButton from '@material-ui/core/IconButton';
+
 
 
 
@@ -29,6 +22,8 @@ export default function Deroul() {
     TokenApi.logout();
     window.location = "/connexion";
   };
+
+ 
 
   return (
     <div className="responsiveMobile">
@@ -100,18 +95,18 @@ export default function Deroul() {
           href="/nos_locaux">{translate("Nos_locaux")}</Button>
         <br/>
 
-        {localStorage.getItem("situation") !== "Parent" && (
+        {localStorage.getItem("situation") !== "Parent" && localStorage.getItem("token") !== null &&(
         <Button  
           style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}  
-          onClick={() => this.specificPath("/principal_quiz")}
+          href="/quiz/principal_quiz"
            >{translate("PASSER_VOTRE_TEST")}
          </Button> 
         )}
 
-        {localStorage.getItem("situation") === "Parent" && (
+        {localStorage.getItem("situation") === "Parent" && localStorage.getItem("token") !== null &&(
         <Button  
-          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}       
-          onClick={() => this.specificPath("/parent1")}
+          style = {{textTransform: 'none', backgroundColor :'white',  fontSize: '16px',  color : 'black'}}   
+          href="/quiz/parent1"          
           >{translate("PASSER_VOTRE_TEST")}
         </Button>
         )}
@@ -136,12 +131,11 @@ export default function Deroul() {
           {localStorage.getItem("token") !== null && (
            <Button
            style =  {{background : '#e59033', color : 'white', borderRadius: 20 }} 
-           onClick={() => this.disconnect()}>{translate("Deconnexion")}</Button>  
+           onClick={disconnect}>{translate("Deconnexion")}</Button>  
           
           )}
  
       </Menu>
-
      {/* <Sidebar/> */}
 
     </div>
