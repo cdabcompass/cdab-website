@@ -486,6 +486,7 @@ class PanelAdmin extends Component {
                                                     </Button>
                                                 </div>
                                                 <div style={{flex: 1}}>
+                                                    <div>Date inscription : {user.DateRegistration} </div>
                                                     <div>Email : {user.email} </div>
                                                     <div>Numéro : {user.number} </div>
                                                     <div>Ville : {user.city} </div>
