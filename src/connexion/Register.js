@@ -39,8 +39,12 @@ const styles = theme => ({
 class Register extends Component {
     constructor(props){
         super(props);
+        var today = new Date(),
+        date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear() + ' ' +today.getHours() + ':' + today.getMinutes();
+
         this.state = {
-            currentDateTime: Date().toLocaleString(),
+            
+            currentDateTime: date,
 
             errLastName: "",
             errFirstName: "",
@@ -75,7 +79,8 @@ class Register extends Component {
     handleSubmit = (e) =>{
         e.preventDefault();
         if(this.state.password !== this.state.confirmPassword){
-            this.setState({errConPassword: "Vérifiez l'écriture de votre mot de passe"})
+            this.setState({errConPassword: "Vérifiez l'écriture de votre mot de passe"});
+            alert("date "+this.state.currentDateTime);
         }else{
             axios.post('/users/inscription', {
                 lastName: this.state.lastName,

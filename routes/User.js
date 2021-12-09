@@ -17,6 +17,7 @@ route.post('/inscription', async (req,res) => {
     user.city = req.body.city;
     user.situation = req.body.situation;
     user.continent = req.body.continent;
+    user.DateRegistration = req.body.DateRegistration;
 
     if (validator.validate(user.email)){
         userModel.find({email : user.email}, async (err,docs)=>{
