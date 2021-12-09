@@ -79,8 +79,7 @@ class Register extends Component {
     handleSubmit = (e) =>{
         e.preventDefault();
         if(this.state.password !== this.state.confirmPassword){
-            this.setState({errConPassword: "Vérifiez l'écriture de votre mot de passe"});
-            alert("date "+this.state.currentDateTime);
+            this.setState({errConPassword: "Vérifiez l'écriture de votre mot de passe"})
         }else{
             axios.post('/users/inscription', {
                 lastName: this.state.lastName,
