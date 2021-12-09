@@ -40,6 +40,8 @@ class Register extends Component {
     constructor(props){
         super(props);
         this.state = {
+            currentDateTime: Date().toLocaleString(),
+
             errLastName: "",
             errFirstName: "",
             errEmail: "",
@@ -85,6 +87,7 @@ class Register extends Component {
                 city: this.state.city,
                 situation: this.state.situation,
                 continent: this.state.continent,
+                DateRegistration: this.state.currentDateTime
             })
                 .then(res => {
                     console.log("data" + JSON.stringify(res.data));

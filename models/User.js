@@ -60,6 +60,11 @@ const userSchema = mongoose.Schema(
             type: String,
             required: false,
             default: "0000"
+        },
+        DateRegistration: {
+            type: String,
+            required: false,
+            default: ""
         }
     },
 );
