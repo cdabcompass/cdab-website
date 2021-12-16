@@ -27,6 +27,7 @@ export default {
         'Passer_test_specifique': 'Take the specific test',
         'Connexion' : 'Login / Registration',
       
+        'test_specifique': 'SPECIFIC TEST',
 
         'Nos_produits' : 'OUR PRODUCTS',
         'Nos_evenements' : 'OUR EVENTS / OUR PARTNERS',

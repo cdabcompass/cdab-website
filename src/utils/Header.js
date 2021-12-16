@@ -86,6 +86,7 @@ specificPath = (path) =>{
   }
 };
 
+
 handleClose = (e) => {
   this.setState({
       anchor: null,
@@ -180,7 +181,25 @@ changeLangue = (lg) =>{
                     onClick={() => this.specificPath("/parent1")}
             >{translate("PASSER_VOTRE_TEST")}
             </Button>
-           )}
+            )}
+            { localStorage.getItem("situation") !== "Parent" && localStorage.getItem("userAccept") === "true" && (
+            <Button  
+            style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
+            
+            onClick={() => this.specificPath("/post_bac")}
+            >{translate("test_specifique")}
+            </Button>
+            )}
+
+          { localStorage.getItem("situation") === "Parent" && localStorage.getItem("userAccept") === "true" && (
+            <Button  
+            style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
+            
+            onClick={() => this.specificPath("/post_bac")}
+            >{translate("test_specifique")}
+            </Button>
+            )}
+
           </Grid>
  
         </Toolbar>

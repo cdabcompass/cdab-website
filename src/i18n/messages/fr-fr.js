@@ -27,6 +27,8 @@ export default {
         'Proceder_au_paiement': 'Procéder au paiement',
         'Passer_test_specifique': ' Passer le test spécifique',
         'Connexion' : 'Connexion / Inscription',
+
+        'test_specifique': 'TEST SPECIFIQUE',
         
         'Nos_produits' : 'NOS PRODUITS',
         'Nos_evenements' : 'NOS EVENEMENTS / NOS PARTNAIRES',

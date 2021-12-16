@@ -110,6 +110,22 @@ export default function Deroul() {
           >{translate("PASSER_VOTRE_TEST")}
         </Button>
         )}
+
+        {localStorage.getItem("situation") !== "Parent" && localStorage.getItem("userAccept") === "true" && (
+        <Button  
+        style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
+        href="/quiz/post_bac" 
+        >{translate("test_specifique")}
+        </Button>
+        )}
+
+        {localStorage.getItem("situation") === "Parent" && localStorage.getItem("userAccept") === "true" && (
+        <Button  
+        style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
+        href="/quiz/post_bac" 
+        >{translate("test_specifique")}
+        </Button>
+        )}
          
         <br/>
 
