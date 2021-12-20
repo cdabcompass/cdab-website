@@ -173,7 +173,7 @@ class PanelAdmin extends Component {
             "<br/><br/><strong>Recommandations : </strong>"+this.state.reference;
 
         axios.post('/users/mailing', {
-            userEmail: this.state.currentMailer,
+            userEmail: "answers-quizs@cdabcompass.com",//+this.state.currentMailer,
             subject: "RAPPORT DE CONSULTATION ORIENTATION APPRENANT",
             attachment: "",
             container: result
