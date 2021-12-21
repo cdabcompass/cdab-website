@@ -111,9 +111,17 @@ export default function Deroul() {
         </Button>
         )}
       <br/>
-        {localStorage.getItem("userAccept") === "true" && (
+        {localStorage.getItem("situation") !== "Parent" && localStorage.getItem("userAccept") === "true" && (
         <Button  
-        style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
+        style = {{textTransform: 'none',backgroundColor :'white', fontSize: '16px',  color : 'black'}}
+        href="/quiz/post_bac" 
+        >{translate("test_specifique")}
+        </Button>
+        )}
+
+        {localStorage.getItem("situation") === "Parent" && localStorage.getItem("userAccept") === "true" && (
+        <Button  
+        style = {{textTransform: 'none',backgroundColor :'white', fontSize: '16px',  color : 'black'}}
         href="/quiz/post_bac" 
         >{translate("test_specifique")}
         </Button>
