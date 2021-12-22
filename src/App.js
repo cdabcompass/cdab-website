@@ -542,7 +542,7 @@ class App extends Component {
                                 <div className="responsiveMenu">
                                     <div className={classes.countriesFlag} style={{textAlign: "center", marginTop: "50px"}}>
                                         <div><a href={require("./assets/doc/PFRANCE.pdf")} target="_blank"><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></a></div>
-                                        <div><img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></div>
+                                        <div><a href={require("./assets/doc/PBELGIQUE.pdf")} target="_blank"><img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></a></div>
                                         <div><img title={"Canada"} className={classes.drapeau}  src={require("./assets/canada.png")} alt=""/></div>
                                         <div><img title={"Etats-Unis"} className={classes.drapeau}  src={require("./assets/usa.png")} alt=""/></div>
                                    </div>
@@ -558,7 +558,7 @@ class App extends Component {
                             
                                     <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <a href={require("./assets/doc/PFRANCE.pdf")} target="_blank"><img title={"France"} className={classes.drapeau}  src={require("./assets/fr.png")} alt=""/></a></div>
 
-                                    <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></div>
+                                    <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <a href={require("./assets/doc/PBELGIQUE.pdf")} target="_blank"><img title={"Belgique"} className={classes.drapeau}  src={require("./assets/belgique.png")} alt=""/></a></div>
 
                                     <div className="col-sm-12 center" style={{paddingBottom :'30px'}}> <img title={"Canada"} className={classes.drapeau}  src={require("./assets/canada.png")} alt=""/></div>
     
