@@ -788,6 +788,7 @@ class Quiz extends Component {
         // }
 
         //alert("dreamJob1 : "+e.target.value);
+        // /* marginRight: "auto", marginLeft: "auto" */
     };
 
     handlerChangeDream2 = (e) =>{
@@ -846,10 +847,9 @@ class Quiz extends Component {
                         <MenuBar/>
                     </div>
                     {/*ok*/}
-                    <div style={{marginTop: "200px",
-                        marginRight: "auto",
-                        marginLeft: "auto",}}>
- 
+                    <div style={{marginTop: "200px"
+                        }}>
+
                         {localStorage.getItem("locale_lg")==="fr-fr" && (
                             <div className={classes.containerQuizs}>
                                <h1 style={{color: "#b36233"}}>Questionnaire</h1>
