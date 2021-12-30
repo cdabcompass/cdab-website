@@ -1,6 +1,14 @@
   
 export const FrenshData = [
     {
+        title: "Comment bien choisir son université à l’étranger ?",
+        description: "Fuyant les tristes réalités des universités locales, bon nombre d’étudiants préfèrent " +
+        "poursuivre leurs cursus dans des universités étrangères. Comme destination, ces derniers choisissent l’Europe, " +
+        "les Etats-Unis ou encore le Canada et parfois même la Russie.",
+        link: "/actu/9",
+        image: "actu9.jpg"
+    },
+    {
         title: "CDAB Compass à Kpalimé au Collège Protestant d'AGOME-KPALIME",
         description: "Dans sa vision d’accompagner et d‘orienter les apprenants sur tous les plans : " +
         "scolaire, universitaire et même professionnel, la structure CDAB Compass ne se lasse d’apporter " +
@@ -38,7 +46,12 @@ export const FrenshData = [
         link: "/actu/4",
         content: "bonjour",
         image: "https://cdn.pixabay.com/photo/2020/07/05/10/00/student-5372393__340.jpg"
-    },
+    }
+  
+]
+
+/*
+,
     {
         title: 'L’importance d’une bonne orientation',
         description: "Un projet professionnel se définit d’après les objectifs " +
@@ -47,11 +60,6 @@ export const FrenshData = [
         link: "/actu/3",
         image: "https://cdn.pixabay.com/photo/2016/10/19/18/32/compass-1753659__340.jpg"
     }
-  
-]
-
-/*
-
 ,
     {
         title: "La motivation : paramètre utile de réussite",

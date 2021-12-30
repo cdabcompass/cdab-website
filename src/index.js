@@ -21,6 +21,7 @@ import Actu5 from "./article/Actu5";
 import Actu6 from "./article/Actu6";
 import Actu7 from "./article/Actu7";
 import Actu8 from "./article/Actu8";
+import Actu8 from "./article/Actu9";
 import Training from "./subMenu/Training";
 import Formations from "./SubTraining/Formations";
 import Intership from "./SubTraining/Intership";
@@ -101,6 +102,7 @@ const routing = (
                 <Route exact path="/actu/6" component={Actu6}/>
                 <Route exact path="/actu/7" component={Actu7}/>
                 <Route exact path="/actu/8" component={Actu8}/>
+                <Route exact path="/actu/9" component={Actu9}/>
 
                 <Route exact path="/cdab/plus_infos" component={EntrepriseMoreInfo}/>
 
