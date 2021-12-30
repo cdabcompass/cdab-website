@@ -21,7 +21,7 @@ import Actu5 from "./article/Actu5";
 import Actu6 from "./article/Actu6";
 import Actu7 from "./article/Actu7";
 import Actu8 from "./article/Actu8";
-import Actu8 from "./article/Actu9";
+import Actu9 from "./article/Actu9";
 import Training from "./subMenu/Training";
 import Formations from "./SubTraining/Formations";
 import Intership from "./SubTraining/Intership";
