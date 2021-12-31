@@ -444,6 +444,7 @@ class PanelAdmin extends Component {
                                         <AccordionDetails style={{backgroundColor: "white"}}>
 
                                             <div className={classes.userMoreInfo}>
+                                               {localStorage.getItem("firstName") === 'admin' && localStorage.getItem("lastName") === 'admin' && (
                                                 <div style={{flex: 1}}>
                                                     <Button className={classes.btnMoreInfo}
                                                             onClick={()=>
@@ -486,6 +487,7 @@ class PanelAdmin extends Component {
                                                         Editer le rapport
                                                     </Button>
                                                 </div>
+                                                )}
                                                 <div style={{flex: 1}}>
                                                     <div>Date inscription : {user.DateRegistration} </div>
                                                     <div>Email : {user.email} </div>
