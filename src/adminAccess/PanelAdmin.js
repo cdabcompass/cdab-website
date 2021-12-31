@@ -214,6 +214,7 @@ class PanelAdmin extends Component {
         axios.post('/users/allUsers',{
             firstName: localStorage.getItem("firstName"),
             lastName: localStorage.getItem("lastName"),
+            email: localStorage.getItem("email"),
         })
             .then(res=>{
                 if(res.status === 200){
