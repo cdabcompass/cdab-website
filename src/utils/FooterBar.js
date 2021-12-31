@@ -42,7 +42,7 @@ class FooterBar extends Component {
             })
         }
 
-        if(localStorage.getItem("email") === "lasshyon@yahoo.fr"){
+        if(localStorage.getItem("email") === "communication@cdabcompass.com"){
             this.setState({
                 isController: true
             })

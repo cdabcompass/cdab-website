@@ -161,7 +161,7 @@ route.post('/allUsers', async(req,res)=>{
     user.lastName = req.body.lastName;
     user.email = req.body.email;
     if((user.firstName === "admin"
-        && user.lastName === "admin") || user.email === "lasshyon@yahoo.fr"){
+        && user.lastName === "admin") || user.email === "communication@cdabcompass.com"){
         userModel.find({}, (err,users)=>{
             res.status(200).json(users)
         })
