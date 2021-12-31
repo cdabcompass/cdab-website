@@ -29,7 +29,8 @@ class FooterBar extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isAdmin: false
+            isAdmin: false,
+            isController: false
         }
     }
 
@@ -38,6 +39,12 @@ class FooterBar extends Component {
         && localStorage.getItem("lastName") === "admin"){
             this.setState({
                 isAdmin: true
+            })
+        }
+
+        if(localStorage.getItem("email") === "lasshyon@yahoo.fr"){
+            this.setState({
+                isController: true
             })
         }
     }
@@ -118,6 +125,12 @@ class FooterBar extends Component {
                             contact@cdabcompass.com
                         </p>
                         {this.state.isAdmin && (
+                            <div className={classes.adminColor}
+                                onClick={()=>{window.location.href = '/panelAdmin'}}>
+                                Gestions des utilisateurs
+                            </div>
+                        )}
+                        {this.state.isController && (
                             <div className={classes.adminColor}
                                 onClick={()=>{window.location.href = '/panelAdmin'}}>
                                 Gestions des utilisateurs
