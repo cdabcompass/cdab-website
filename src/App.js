@@ -284,7 +284,7 @@ class App extends Component {
                             
                                 <Carousel className={classes.carousell}>
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP1.jpg")} alt=""/></Carousel.Item>
-                                    <Carousel.Item ><video className="eachCarousel" controls><source src={require("./assets/logocdabnew.mp4")} type="video/mp4"/></video></Carousel.Item>
+                                    <Carousel.Item ><video className="eachCarousel" controls autoplay><source src={require("./assets/logocdabnew.mp4")} type="video/mp4"/></video></Carousel.Item>
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/Slide1.jpg")} alt=""/></Carousel.Item>
                                     
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/new_p8.jpg")} alt=""/></Carousel.Item>
