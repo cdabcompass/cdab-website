@@ -26,7 +26,8 @@ const styles = theme => ({
         marginLeft: "10px",
         marginRight: "10px",
         marginTop: "25px"
-    }
+    },
+    
 });
 
 class Actu9 extends Component {

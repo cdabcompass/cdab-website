@@ -14,7 +14,7 @@ const styles = theme => ({
         marginTop: "100px"
     },
     contAll: {
-        marginTop: "200px",
+        marginTop: "50px",
         textAlign: "center",
         marginLeft: "250px",
         marginRight: "250px"

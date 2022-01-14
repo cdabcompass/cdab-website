@@ -94,7 +94,10 @@ code {
 
 .eachCarouselArticle{
   height: 550px;
-  width: 50%;
+  width: 100%;
+  text-align: center;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 
 .expTitle {
@@ -290,7 +293,7 @@ code {
 }
 
 .contAll {
-  margin-top: 200px;
+  margin-top: 50px;
   text-align: center;
   margin-left: 250px;
   margin-right: 250px;
@@ -342,7 +345,7 @@ code {
   }
 
   #expertiseid {
-    margin: "0px";
+    margin: 0px;
   }
 }
  
