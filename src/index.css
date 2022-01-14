@@ -92,6 +92,11 @@ code {
   width: 100%;
 }
 
+.eachCarouselArticle{
+  height: 550px;
+  width: 50%;
+}
+
 .expTitle {
   font-size: 60px;
   font-weight: bold;

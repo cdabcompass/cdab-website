@@ -54,6 +54,9 @@ class Actu4 extends Component {
                         <Sidemenu/>
                     </div>
                     <div>
+                      <img className="eachCarousel"  src="https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396__340.jpg" alt=""/>
+                    </div>
+                    <div>
                         <ActuCustom
                             title={"Le profil de l’apprenant, une nécessité pour votre enfant."}
                             description={["Nous n’apprenons pas tous de la même manière. Notre personnalité et "+

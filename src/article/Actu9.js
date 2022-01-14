@@ -53,6 +53,9 @@ class Actu9 extends Component {
                         <MenuBar/>
                         <Sidemenu/>
                     </div>
+                    <div>
+                      <img className="eachCarousel"  src={require("../assets/actu9.jpg")} alt=""/>
+                    </div>
                     <div className={classes.contain}>
                         <ActuCustom
                             title={"Comment bien choisir son université à l’étranger ?"}

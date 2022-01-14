@@ -53,6 +53,9 @@ class Actu6 extends Component {
                         <MenuBar/>
                         <Sidemenu/>
                     </div>
+                    <div>
+                      <img className="eachCarousel"  src={require("../assets/actu6.jpeg")} alt=""/>
+                    </div>
                     <div className={classes.contain}>
                         <ActuCustom
                             title={"La détection de profil : CDAB COMPASS s'y engage aussi à Accra au Ghana."}

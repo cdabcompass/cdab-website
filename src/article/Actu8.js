@@ -53,6 +53,9 @@ class Actu7 extends Component {
                         <MenuBar/>
                         <Sidemenu/>
                     </div>
+                    <div>
+                      <img className="eachCarousel"  src={require("../assets/actu8.jpg")} alt=""/>
+                    </div>
                     <div className={classes.contain}>
                         <ActuCustom
                             title={"CDAB Compass à Kpalimé au Collège Protestant d'AGOME-KPALIME."}

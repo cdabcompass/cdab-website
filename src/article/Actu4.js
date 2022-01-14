@@ -45,6 +45,9 @@ class Actu4 extends Component {
                         <Sidemenu/>
                     </div>
                     <div>
+                      <img className="eachCarousel"  src="https://cdn.pixabay.com/photo/2020/07/05/10/00/student-5372393__340.jpg" alt=""/>
+                    </div>
+                    <div>
                         <ActuCustom
                             title={"Proclamation des résultats des examens de fin d’année : les taux de réussite une preuve du\n" +
                             "faible niveau scolaire des élèves."}
