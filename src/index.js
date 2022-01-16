@@ -35,6 +35,8 @@ import Quiz1 from "./Quizz/Quiz";
 import Testimonials from "./SubAchievements/Testimonials";
 import {PrivateRoute} from "./utils/PrivateRoute";
 import ActivityReport from "./SubAchievements/ActivityReport";
+import QuizBilanProInitial from "./Quizz/QuizBilanProInitial";
+import QuizProfessionnel from "./Quizz/QuizProfessionnel";
 import QuizPrincipal from "./Quizz/QuizPrincipal";
 import QuizParent1 from "./Quizz/QuizParent1";
 import QuizParent2 from "./Quizz/QuizParent2";
@@ -115,7 +117,9 @@ const routing = (
                 <Route exact path="/temoignages/parents" component={Parents}/>
                 <Route exact path="/temoignages/apprenants" component={Apprenants}/>
 
+                <PrivateRoute exact path="/quiz/bilan_pro_initial" component={QuizBilanProInitial}/>
                 <PrivateRoute exact path="/quiz/principal_quiz" component={QuizPrincipal}/>
+                <PrivateRoute exact path="/quiz/professionnel_quiz" component={QuizProfessionnel}/>
                 <PrivateRoute exact path="/quiz/post_bac" component={Quiz1}/>
                 <PrivateRoute exact path="/quiz/primaire" component={QuizPrimaire}/>
                 <PrivateRoute exact path="/quiz/parent1" component={QuizParent1}/>
