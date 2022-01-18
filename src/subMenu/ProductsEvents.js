@@ -45,9 +45,24 @@ class ProductsEvents extends Component {
                         <Sidemenu/>
                     </div>
                     <div style={{marginTop: "300px"}}>
+
+
+                         <div className={classes.expertises}>
+                             
+                             <div style={{marginBottom: "-70px"}} className="row">
+                                 <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("Nos_produits_Nos_evenements")}</p>
+                                 
+                             </div>
+                            
+                         </div>
+
+                        {/* 
                         <div className={classes.titles}>
                             <p className={classes.title}>{translate("Nos_produits_Nos_evenements")}</p>
                         </div>
+                        
+                        */}
+                        
                         <br/>
                         {localStorage.getItem("locale_lg")==="fr-fr" &&(
                             <div className='productsEvents'>
