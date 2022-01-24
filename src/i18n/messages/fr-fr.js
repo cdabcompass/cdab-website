@@ -33,6 +33,7 @@ export default {
         'Nos_produits' : 'NOS PRODUITS',
         'Nos_evenements' : 'NOS EVENEMENTS / NOS PARTNAIRES',
         'evenements' : 'Evenements',
+        'noslocaux' : 'Nos locaux',
         'accueil' : 'ACCUEIL',
         'Etudes' : 'Etudes',
         'Professionnel' : 'Professionnel',

@@ -32,6 +32,7 @@ export default {
         'Nos_produits' : 'OUR PRODUCTS',
         'Nos_evenements' : 'OUR EVENTS / OUR PARTNERS',
         'evenements' : 'Events',
+        'noslocaux' : 'Our office',
         'accueil' : 'HOME',
         'Etudes' : 'Studies',
         'Professionnel' : 'Professionnal',

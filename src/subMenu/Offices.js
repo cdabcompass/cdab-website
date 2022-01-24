@@ -5,6 +5,7 @@ import {Col, Row} from "react-bootstrap";
 import FooterBar from "../utils/FooterBar";
 import {IntlProvider} from "../i18n";
 import Sidemenu from "../utils/Sidemenu";
+import translate from "../i18n/messages/translate";
 
 const styles = theme => ({
     container: {
@@ -40,6 +41,16 @@ const styles = theme => ({
         marginRight: "0px",
         marginLeft: "0px"
     },
+    expertises: {
+        display: "flex",
+        marginTop: "100px",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        paddingTop: "50px",
+        paddingBottom: "50px",
+
+    },
 });
 
 class Office extends Component {
@@ -58,11 +69,15 @@ class Office extends Component {
                         <MenuBar/>
                         <Sidemenu/>
                     </div>
-                    <div style={{marginTop: "300px"}}>
-                        <div className={classes.titles}>
-                            <p className={classes.title}>Nos locaux</p>
-                        </div>
-                        <div className={classes.offices}>
+                    <div style={{marginTop: "200px"}}>
+                        <div className={classes.expertises} style={{marginBottom: "100px"}}>
+                             
+                             <div style={{marginBottom: "-70px"}} className="row">
+                                 <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("noslocaux")}</p>   
+                             </div>
+                         </div>
+  
+                        <div className={classes.offices} style={{width: "100%",background : '#fec601', opacity :'0.8'}}>
                             <div >
                                 <div >
                                     <img title={"France"} className="drapeau"  src={require("../assets/fr.png")} alt=""/>
