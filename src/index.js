@@ -108,7 +108,6 @@ const routing = (
 
                 <Route exact path="/cdab/plus_infos" component={EntrepriseMoreInfo}/>
 
-
                 <Route exact path="/recuperation/compte/1" component={RecoverAccount1}/>
                 <Route exact path="/recuperation/compte/2" component={RecoverAccount2}/>
 

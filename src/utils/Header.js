@@ -166,7 +166,7 @@ changeLangue = (lg) =>{
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/training">{translate("Training")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/coaching">{translate("Coach_cdab")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/nos_realisations">{translate("Nos_realisations")}</Button>
-           { localStorage.getItem("situation") !== "Parent" && (
+           { localStorage.getItem("situation") !== "Parent" && localStorage.getItem("situation") !== "Professionnel" && (
             <Button  
             style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
             
@@ -182,6 +182,15 @@ changeLangue = (lg) =>{
             >{translate("PASSER_VOTRE_TEST")}
             </Button>
             )}
+            { localStorage.getItem("situation") === "Professionnel" && (
+            <Button  
+            style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
+                    
+                    onClick={() => this.specificPath("/bilan_pro_initial")}
+            >{translate("PASSER_VOTRE_TEST")}
+            </Button>
+            )}
+
             { localStorage.getItem("situation") !== "Parent" && localStorage.getItem("userAccept") === "true" && (
             <Button  
             style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
@@ -191,7 +200,7 @@ changeLangue = (lg) =>{
             </Button>
             )}
 
-          { localStorage.getItem("situation") === "Parent" && localStorage.getItem("userAccept") === "true" && (
+           {localStorage.getItem("situation") === "Parent" && localStorage.getItem("userAccept") === "true" && (
             <Button  
             style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
             

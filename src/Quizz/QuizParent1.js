@@ -188,7 +188,7 @@ class QuizParent1 extends Component {
 
         let username = localStorage.getItem('lastName')+" "+localStorage.getItem('firstName');
         axios.post("/users/mailing", {
-            userEmail: "answers-quizs@cdabcompass.com",
+            userEmail: "profil@cdabcompass.com",//"answers-quizs@cdabcompass.com",
             subject: "Questionnaire phase 1 - "+username,
             container: result
         }).then(res=>{
