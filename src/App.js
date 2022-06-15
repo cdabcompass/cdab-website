@@ -335,7 +335,7 @@ class App extends Component {
                                 <div id="expertiseid" style={{margin: "60px", paddingTop: "50px",paddingBottom: "50px"}}>
                                     <div className="row" style={{marginBottom: "50px"}}>
                                              
-                                        <img className="card cardResponsive col-sm-12 col-md-12 col-lg-5"  src={require("./assets/coach.jpg")} style={{width: "100%", height: "60%" , borderRadius: "25px", color : "#FFC300"}} alt=""/>
+                                        <img className="cardResponsive col-sm-12 col-md-12 col-lg-5"  src={require("./assets/coach.jpg")} style={{width: "100%", height: "60%" , borderRadius: "25px"}} alt=""/>
                                         
 
                                         <div className="col-sm-12 col-md-12 col-lg-1">
