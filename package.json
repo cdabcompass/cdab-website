@@ -10,7 +10,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "@material/menu": "^13.0.0",
-    "@mui/icons-material": "^5.0.5",
+    "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.0.5",
     "@mui/styles": "^5.0.2",
     "@stripe/react-stripe-js": "^1.1.2",
@@ -71,6 +71,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {}
+  }
 }
