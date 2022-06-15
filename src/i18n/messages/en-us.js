@@ -36,6 +36,8 @@ export default {
         'accueil' : 'HOME',
         'Etudes' : 'Studies',
         'Professionnel' : 'Professionnal',
-        'connecte_comme' : 'Welcome '
+        'connecte_comme' : 'Welcome ',
+
+        'LE_COACHING_ÉDUCATIF' : 'LE COACHING ÉDUCATIF'
     }
 }

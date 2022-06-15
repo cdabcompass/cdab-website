@@ -324,6 +324,49 @@ class App extends Component {
                             </div>
                         </div>
 
+                        <div className={classes.expertises}>
+                            <div style={{marginBottom: "30px"}} className="row">
+                                <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("LE_COACHING_ÉDUCATIF")}</p>
+                            </div>
+ 
+                            <div style={{width: "100%",background : '#fec601', opacity :'0.8'}}>
+            
+                                {localStorage.getItem("locale_lg")==="fr-fr" &&(
+                                <div id="expertiseid" style={{margin: "60px", paddingTop: "50px",paddingBottom: "50px"}}>
+                                    <div className="row" style={{marginBottom: "50px"}}>
+                                             
+                                        <img className="card cardResponsive col-sm-12 col-md-12 col-lg-5"  src={require("./assets/coach.jpg")} style={{width: "100%", height: "60%" , borderRadius: "25px", color : "#FFC300"}} alt=""/>
+                                        
+
+                                        <div className="col-sm-12 col-md-12 col-lg-1">
+                                            
+                                        </div>
+
+                                        <div className="card cardResponsive col-sm-12 col-md-12 col-lg-6" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                                            <div className="card-body">
+                                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>Nous proposons pour tous les élèves du primaire, du collège, du lycée et du postbac le  coaching éducatif. C’est un accompagnement permettant d’obtenir des résultats concrets et mesurables dans la vie scolaire et personnelle de l’apprenant. Il met en exergue chez l’apprenant quatre points essentiels : </p>
+                                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>1. L’éveil de son intérêt pour les études (les cours) ou sa formation,</p>
+                                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>2. La mise en valeur de son potentiel de réussite scolaire,</p>
+                                                <p className="card-text" style={{textAlign: "",textJustify: "inter-word" }}>3. Le développement de ses aptitudes à progresser en tenant compte des paramètres personnel, émotionnel et psychologique, </p>
+                                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>4. Et l’harmonisation dans son environnement familial et/ou amical. </p>
+                                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>Tout profil est apte au coaching éducatif. Le coaching éducatif n’est pas la répétition. Le coach éducatif joue un rôle d’accompagnateur personnel afin d’aider l’apprenant à acquérir de nouvelles bases personnelles, de s’améliorer dans ses résultats scolaires, à prendre confiance en lui, à s’organiser, à avoir une méthodologie de travail, et à être autonome et responsable. Le processus du coaching éducatif met l’accent sur la réalisation des objectifs personnels et spécifiques avec l'apprenant. Durant les séances de coaching les objectifs sont fixés avec l’apprenant de manière à obtenir son engagement et sa motivation sur les actions à entreprendre. Chaque séance de coaching  est personnelle et nécessite l’implication des parents ou tuteurs. </p>
+                                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }}>CDAB COMPASS garantit les résultats du suivi du coaching par des améliorations telles que : le changement positif d’attitude, une plus grande confiance en soi, une discipline personnelle, la capacité à mieux gérer les devoirs et par conséquent le progrès scolaire. </p>
+                                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word",fontWeight: "bold" }}>Chaque apprenant est intelligent. Grâce à un suivi de qualité cela lui permet de progresser et d’avoir l’assurance d’atteindre ses objectifs. </p>
+                                                
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+ 
+                                </div>
+                                )}
+ 
+
+                            </div>
+             
+                        </div>
+
+
                         <div className={classes.aboutUs}>
                             <div style={{marginBottom: "30px"}} className="row">
                                 <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("QUI_SOMMES_NOUS")}</p>
