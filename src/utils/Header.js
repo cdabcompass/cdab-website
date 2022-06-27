@@ -204,7 +204,7 @@ changeLangue = (lg) =>{
             <Button  
             style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}}
             
-            onClick={() => this.specificPath("/post_bac")}
+            onClick={() => this.specificPath("/parent2")}
             >{translate("test_specifique")}
             </Button>
             )}
