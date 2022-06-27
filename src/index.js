@@ -11,6 +11,7 @@ import SchoolProject from "./SubExpertises/SchoolProject";
 import Tutoring from "./SubExpertises/Tutoring";
 import StudentDeposit from "./SubExpertises/StudentDeposit";
 import StudentHousing from "./SubExpertises/StudentHousing";
+import ExpertiseCoaching from "./SubExpertises/Coaching";
 import Register from "./connexion/Register";
 import Login from "./connexion/Login";
 import Actu1 from "./article/Actu1";
@@ -76,6 +77,7 @@ const routing = (
                 <Route exact path="/expertises/logement_etudiant" component={StudentHousing}/>
                 <Route exact path="/expertises/potential" component={Potential}/>
                 <Route exact path="/expertises/professional" component={Professional}/>
+                <Route exact path="/expertises/coaching" component={ExpertiseCoaching}/>
 
                 <Route exact path="/training" component={Training}/>
                 <Route exact path="/training/formations" component={Formations}/>

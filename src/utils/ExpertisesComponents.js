@@ -37,87 +37,29 @@ class ExpertisesComponents extends Component {
         const {classes} = this.props;
         return (
             <div style={{width: "100%",background : '#fec601', opacity :'0.8'}}>
-            {/*     
-                <Row className={classes.cards}>
-                    <Col xs={12} md={6} lg={4}>
-                        {localStorage.getItem("locale_lg")==="fr-fr" &&(
-                            <CardCustom
-                                icon={<FindInPageIcon/>}
-                                title={"Profil"}
-                                description={"La détection du profil est une phase à travers laquelle nous vous aidons à travers des tests adéquat à découvrir et à connaître la personnalité de l'apprenant ,à faire ressortir ses capacités, améliorer ses aptitudes et affermir son environnement Social. Ainsi dit ,cette phase est importante et primordiale pour l’apprenant et sa famille."}
-                                onclick={()=>{this.moreInfo("/profil_etudiant")}}
-                            />)}
-                        {localStorage.getItem("locale_lg")==="en-us" &&(
-                            <CardCustom
-                                icon={<FindInPageIcon/>}
-                                title={"Profil"}
-                                description={"The profile detection phase remains a mystery to some and a game of games for others.\n" +
-                                "In fact, this phase consists in discovering the child and his environment quite simply."}
-                                onclick={()=>{this.moreInfo("/profil_etudiant")}}
-                            />)}
-                    </Col>
-                    <Col xs={12} md={6} lg={4}>
-                        {localStorage.getItem("locale_lg")==="fr-fr" &&(
-                            <CardCustom
-                                icon={<SchoolIcon/>}
-                                title={"Projet d’étude national \n ou international"}
-                                description={"Un projet d’étude est une feuille de route permettant à l'apprenant d’asseoir son parcours scolaire ,estudiantin ou de formation . Il fait preuve de la volonté à atteindre l’univers professionnel. Ainsi ,il comporte les aspirations post-bac et post-brevet des apprenants. "}
-                                onclick={()=>{this.moreInfo("/projet_etude")}}
-                            />)}
-                        {localStorage.getItem("locale_lg")==="en-us" &&(
-                            <CardCustom
-                                icon={<SchoolIcon/>}
-                                title={"National study project \n or international"}
-                                description={"A study project is a roadmap for profiling one's student career. The study project shows" +
-                                "our desire to reach the professional world. It includes the post-baccalaureate and post-diploma aspirations of learners."}
-                                onclick={()=>{this.moreInfo("/projet_etude")}}
-                            />
-                        )}
-                    </Col>
-                </Row>
-                <Row className={classes.cards}>
-                    <Col xs={12} md={6} lg={4}>
-                        {localStorage.getItem("locale_lg")==="fr-fr" &&(
-                            <CardCustom
-                                icon={<AccountCircleIcon/>}
-                                title={"Potentiel"}
-                                description={"Cette expertise met en relief la méthodologie ,l’organisation de travail de l’apprenant dans son espace . il apprend à être autonome et responsable assez rapidement au bout de deux mois."}
-                                onclick={()=>{this.moreInfo("/potential")}}
-                            />
-                        )}
-                        {localStorage.getItem("locale_lg")==="en-us" &&(
-                            <CardCustom
-                                icon={<AccountCircleIcon/>}
-                                title={"Potential"}
-                                description={"The CDAB COMPASS educational structure, also specialized in the support and guidance of learners " +
-                                "on all academic, university and even professional levels, attaches importance to this expertise."}
-                                onclick={()=>{this.moreInfo("/potential")}}
-                            />
-                        )}
-                    </Col>
-                    <Col xs={12} md={6} lg={4}>
-                        {localStorage.getItem("locale_lg")==="fr-fr" &&(
-                            <CardCustom
-                                icon={<MenuBookIcon/>}
-                                title={"Professionnel"}
-                                description={"S’épanouir dans son emploi est nécessaire à part l’aspect financier. On peut ainsi se recycler ou entreprendre à tout âge."}
-                                onclick={()=>{this.moreInfo("/professional")}}
-                            />
-                        )}
-                        {localStorage.getItem("locale_lg")==="en-us" &&(
-                            <CardCustom
-                                icon={<MenuBookIcon/>}
-                                title={"Professional"}
-                                description={"Many are those who do not have a professional project, who are embarking on a career\n" +
-                                "just because their parents want them to do this job."}
-                                onclick={()=>{this.moreInfo("/professional")}}
-                            />
-                        )}
-                    </Col>
-                </Row>
-             */}
                 {localStorage.getItem("locale_lg")==="fr-fr" &&(
                 <div id="expertiseid" style={{margin: "60px", paddingTop: "50px",paddingBottom: "50px"}}>
+
+                    <div className="row" style={{marginBottom: "50px"}}>
+                        <div className="col-sm-12 col-md-12 col-lg-3">
+                             
+                        </div>
+
+                        <div className="card cardResponsive col-sm-12 col-md-12 col-lg-6" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                            <img src={require("../assets/coach.jpg")} style={{width: "50%", height: "65%" , marginLeft: "-15px", borderRadius: "25px", color : "#FFC300"}} className="card-img-top imgResponsive" alt="..."/>
+                            
+                            <div className="card-body">
+                                <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Le Coaching Éducatif"}</strong> </li> </ul> </h5>
+                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }} >Avoir des objectifs en tant qu'apprenant est important. Chercher à réussir dans ses études pour atteindre ses objectifs c'est bien. Mais savoir comment réussir dans ses études c'est mieux. Trouver et éveiller ses potentiels pour garantir l'atteinte de ses objectifs c'est prioritaire.</p>
+                                <a href="/expertises/coaching" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-12 col-md-12 col-lg-3">
+                            
+                        </div>
+                    </div>
+
                     <div className="row" style={{marginBottom: "50px"}}>
                         <div className="card cardResponsive col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                             <img src={require("../assets/PROFIL.png")} style={{width: "50%", height: "60%" , marginLeft: "-15px", borderRadius: "25px", color : "#FFC300"}} className="card-img-top imgResponsive" alt="..."/>
