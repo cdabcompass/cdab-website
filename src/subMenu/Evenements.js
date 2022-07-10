@@ -64,6 +64,9 @@ class Evenements extends Component {
                         <br/>
                         <div style={{width: "100%",background : '#fec601', opacity :'0.8'}}>
                             <div style={{textAlign: "center"}}>
+                                <img width="906" height="618"  src={require("../assets/event_cdab.jpg")} alt=""/>
+                            </div>
+                            <div style={{textAlign: "center"}}>
                                 <h3>PARTENAIRES 2021 CDAB</h3>
                                 <iframe width="906" height="518" src="https://www.youtube.com/embed/sq5dqYecyLA" frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
