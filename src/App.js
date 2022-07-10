@@ -288,6 +288,11 @@ class App extends Component {
                             <div className="imageCarousel">
                             
                                 <Carousel className={classes.carousell}>
+
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/lcb.jpg")} alt=""/></Carousel.Item>
+                                   
+                                   <Carousel.Item ><img className="eachCarousel"  src={require("./assets/banner cdablogo.jpg")} alt=""/></Carousel.Item>
+                               
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/NP1.jpg")} alt=""/></Carousel.Item>
                                     
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/banner cdablogo.jpg")} alt=""/></Carousel.Item>
@@ -299,6 +304,7 @@ class App extends Component {
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/P5.jpg")} alt=""/></Carousel.Item>
                                     
                                   */}
+                                    
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/Slide1.jpg")} alt=""/></Carousel.Item>
                                    
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/banner cdablogo.jpg")} alt=""/></Carousel.Item>
