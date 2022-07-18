@@ -520,7 +520,16 @@ class App extends Component {
                             
                         <div style={{textAlign: "center", background : '#a14627', paddingTop : '10px', paddingBottom :'10px', marginBottom : '-2px',marginLeft: '0px',marginRight: '0px'}} className="row">
                             
-                            <div className="col-sm-6 col-md-6 col-lg-6 center">
+                            <div className="col-sm-4 col-md-4 col-lg-4 center">
+                                    
+                                    <iframe className="frameResponsive" style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/6PtTftZ3Y8Q"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen> </iframe>
+                            
+                            </div>
+
+                            <div className="col-sm-4 col-md-4 col-lg-4 center">
                                     
                                     <iframe className="frameResponsive" style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/wL3dheKbSL8"
                                                 frameBorder="0"
@@ -529,7 +538,7 @@ class App extends Component {
                             
                             </div>
   
-                            <div className="col-sm-6 col-md-6 col-lg-6 center">
+                            <div className="col-sm-4 col-md-4 col-lg-4 center">
                                 
                                     <iframe className="frameResponsive" style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/IQsj1K0eglg"
                                                 frameBorder="0"
