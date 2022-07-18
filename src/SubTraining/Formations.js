@@ -45,6 +45,16 @@ class Formations extends Component {
                         <Sidemenu/>
                     </div>
                     <div className="subMenu" >
+
+                        <div className="col-sm-12 col-md-12 col-lg-12 center">
+                                    
+                        <iframe className="frameResponsive" style={{height: "480px",width : "100%"}} src="https://www.youtube.com/embed/i9Gst4821WQ"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen> </iframe>
+                            
+                        </div>
+                        <br/><br/>
                         Pourquoi se former ?<br/><br/>
                         <strong>La formation</strong> peut se définir du point de vu général comme étant un apprentissage de
                         connaissances et de méthodes de travail mais aussi d’une expérimentation nouvelle dans divers
