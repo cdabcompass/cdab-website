@@ -335,6 +335,29 @@ class App extends Component {
                             </div>
                         </div>
 
+                        <div className="row" style={{marginTop: "30px"}}>
+                            <div className="col-sm-3 col-md-3 col-lg-3">
+                                 
+                                
+                            </div>
+
+                            <div className="col-sm-6 col-md-6 col-lg-6" style={{textAlign: "center"}}>
+                                    
+                                <iframe className="frameResponsive" style={{height: "280px",width : "380px"}} src="https://www.youtube.com/embed/pNv-v65-h64"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen> </iframe>
+                            
+                            </div>
+
+                            <div className="col-sm-3 col-md-3 col-lg-3">
+                                    
+                              
+                            
+                            </div>
+                  
+                        </div>
+
                         <div className={classes.expertises}>
                             <div style={{marginBottom: "30px"}} className="row">
                                 <div style={{marginTop : "22px"}} className="square"></div> <p style =  {{color : '#7c1c18' }} className="expTitle">{translate("LE_COACHING_ÉDUCATIF")}</p>

@@ -79,6 +79,21 @@ class Achievements extends Component {
                                 <div id="expertiseid" style={{margin: "60px",  paddingTop: "50px",paddingBottom: "50px"}}>
                                     <div className="row" style={{marginBottom: "50px"}}>
                                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
+                                            <img src="https://cdn4.iconfinder.com/data/icons/desktop-app-free/32/Desktop_Desktop_App_Smartphone_Phone_Android-09-256.png" style={{width: "50%", height: "80%" , marginLeft: "-15px", borderRadius: "25px", color : "#FFC300"}} className="card-img-top" alt="..."/>
+                                            
+                                            <div className="card-body">
+                                                <h5 className="card-title"><ul> <li style={{color: "#a14627"}}><strong>{"Nos Applications"}</strong> </li> </ul> </h5>
+                                                <p className="card-text" style={{textAlign: "justify",textJustify: "inter-word" }} >Découvrez les applications de Cdab Compass spécialement conçu pour ses actuels et futurs clients. 
+                                         Accédez à nos services de manière simplifiée via les applications Cdab.</p>
+                                                <a href="/nos_realisations/applications" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-sm-12 col-md-12 col-lg-2">
+                                            
+                                        </div>
+
+                                        <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                                             <img src="https://cdn0.iconfinder.com/data/icons/map-location-solid-style/91/Map_-_Location_Solid_Style_24-256.png" style={{width: "50%", height: "80%" , marginLeft: "-15px", borderRadius: "25px", color : "#FFC300"}} className="card-img-top" alt="..."/>
                                             
                                             <div className="card-body">
@@ -88,10 +103,9 @@ class Achievements extends Component {
                                                 <a href="/nos_realisations/companyVisits" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div className="col-sm-12 col-md-12 col-lg-2">
-                                            
-                                        </div>
+                                    <div className="row">
 
                                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                                             <img src="https://cdn1.iconfinder.com/data/icons/feather-2/24/pie-chart-256.png" style={{width: "50%",height: "80%", marginLeft: "-15px" , borderRadius: "25px"}} className="card-img-top" alt="..."/>
@@ -102,13 +116,11 @@ class Achievements extends Component {
                                                 <a href="/nos_realisations/testimonials" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div className="row">
                                        
-                                        <div className="col-sm-12 col-md-12 col-lg-3">
+                                        <div className="col-sm-12 col-md-12 col-lg-2">
                                             
                                         </div>
+
                                         <div className="card col-sm-12 col-md-12 col-lg-5" style={{  flexDirection: "row",  borderRadius: "30px", border: "0px"}}>
                                             <img src={require("../assets/rapport.jpg")} style={{width: "50%", height: "80%",  marginLeft: "-15px", borderRadius: "25px"}} className="card-img-top" alt="..."/>
                                             <div className="card-body">
@@ -118,10 +130,7 @@ class Achievements extends Component {
                                                 <a href="/nos_realisations/activityRepport" className="btn" style={{color : "#BA4A1A"}}>EN SAVOIR PLUS</a>
                                             </div>
                                         </div>
-
-                                        <div className="col-sm-12 col-md-12 col-lg-3">
-                                             
-                                        </div>
+ 
                                     </div>
                                 </div>
                                 )}

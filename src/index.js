@@ -32,6 +32,7 @@ import Coaching from "./subMenu/Coaching";
 import Offices from "./subMenu/Offices";
 import Achievements from "./subMenu/Achievements";
 import CompanyVisits from "./SubAchievements/CompanyVisits";
+import Applications from "./SubAchievements/Applications";
 import Quiz1 from "./Quizz/Quiz";
 import Testimonials from "./SubAchievements/Testimonials";
 import {PrivateRoute} from "./utils/PrivateRoute";
@@ -97,6 +98,7 @@ const routing = (
                 <Route exact path="/nos_realisations/companyVisits" component={CompanyVisits}/>
                 <Route exact path="/nos_realisations/testimonials" component={Testimonials}/>
                 <Route exact path="/nos_realisations/activityRepport" component={ActivityReport}/>
+                <Route exact path="/nos_realisations/applications" component={Applications}/>
 
                 <Route exact path="/actu/1" component={Actu1}/>
                 <Route exact path="/actu/2" component={Actu2}/>
