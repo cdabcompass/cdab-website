@@ -291,6 +291,10 @@ class App extends Component {
 
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/conferencecdab.jpg")} alt=""/></Carousel.Item>
                                    
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/conferencecdab.jpg")} alt=""/></Carousel.Item>
+                                    
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/conferencecdab.jpg")} alt=""/></Carousel.Item>
+
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/lcb.jpg")} alt=""/></Carousel.Item>
                                    
                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/banner cdablogo.jpg")} alt=""/></Carousel.Item>
