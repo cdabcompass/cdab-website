@@ -391,11 +391,11 @@ class PanelTeacher extends Component {
                             </Modal.Footer>
                         </Modal>
 
-                        <div>
-                            <h2>Bienvenue&nbsp;
+                        <div style={{marginTop: "200px"}}>
+                            <h3>Bienvenue&nbsp;
                                 {localStorage.getItem("firstName")}&nbsp;
                                 {localStorage.getItem("lastName")}
-                            </h2>
+                            </h3>
                             <Button className={classes.btnMoreInfo}
                                     onClick={() => this.handleOpenModal()}
                             >
