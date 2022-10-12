@@ -289,11 +289,11 @@ class App extends Component {
                             
                                 <Carousel className={classes.carousell}>
 
-                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/conferencecdab.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/cdab_conference.jpg")} alt=""/></Carousel.Item>
                                    
-                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/conferencecdab.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/cdab_conference.jpg")} alt=""/></Carousel.Item>
                                     
-                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/conferencecdab.jpg")} alt=""/></Carousel.Item>
+                                    <Carousel.Item ><img className="eachCarousel"  src={require("./assets/cdab_conference.jpg")} alt=""/></Carousel.Item>
 
                                     <Carousel.Item ><img className="eachCarousel"  src={require("./assets/lcb.jpg")} alt=""/></Carousel.Item>
                                    
