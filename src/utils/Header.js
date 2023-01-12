@@ -163,8 +163,6 @@ changeLangue = (lg) =>{
 
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/">{translate("accueil")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/expertises">{translate("Nos_expertises")}</Button>
-          <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/training">{translate("Training")}</Button>
-          <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/coaching">{translate("Coach_cdab")}</Button>
           <Button style = {{textTransform: 'none', fontSize: '16px',  color : 'white'}} href="/nos_realisations">{translate("Nos_realisations")}</Button>
            { localStorage.getItem("situation") !== "Parent" && localStorage.getItem("situation") !== "Professionnel" && (
             <Button  
